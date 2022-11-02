@@ -2,9 +2,9 @@
 /* eslint-disable */
 /**
  * Dofusdude
- * # A project for you - the developer. The free, always-up-to-date, low-latency, insert-buzzword-here Ankama API for your next cool project!  ## Client SDKs Don\'t write types or functions yourself - I already (kinda) did! 😉 - [Javascript](https://github.com/dofusdude/dofusdude-js) npm i dofusdude-js --save - [Typescript](https://github.com/dofusdude/dofusdude-ts) npm i dofusdude-ts --save - [Go](https://github.com/dofusdude/dodugo) go get -u github.com/dofusdude/dodugo - [Python](https://github.com/dofusdude/dofusdude-py) pip install dofusdude  Everything, including this site, is generated out of the [Docs Repo](https://github.com/dofusdude/api-docs). Consider it the Single Source of Truth. If there is a problem with the SDKs, create an issue there.  Your favorite language is missing? Please let me know!  # Main Features - 🥷 **Seamless Auto-Update** load data in the background when a new Dofus version is released and serving it within 2 minutes with atomic data source switching. No downtime and no effects for the user, just always up-to-date.  - ⚡ **Blazingly Fast** all data in-memory, aggressive caching over short time spans, HTTP/2 multiplexing, written in Go, optimized for low latency, hosted on bare metal in 🇩🇪.  - 🩸 **Dofus 2 Beta** from stable to bleeding edge by replacing /dofus2 with /dofus2beta.  - 🗣️ **Multilingual** supporting _en_, _fr_, _es_, _pt_ including the dropped languages from the Dofus website _de_ and _it_.  - 🧠 **Search by Relevance** allowing typos in name and description, handled by language specific text analysis and indexing by the powerful [Meilisearch](https://www.meilisearch.com) written in Rust.  - 🕵️ **Complete** actual data from the game including items invisible to the encyclopedia like quest items.  - 🖼️ **HD Images** rendering vector graphics into PNGs up to 800x800 px in the background.   ## Current state - Weapons ✅ - Equipment ✅ - Sets ✅ - Resources ✅ - Consumables ✅ - Pets ✅ - Mounts ✅ - Cosmetics/Ceremonial Items ✅ - Harnesses ✅ - Quest Items ✅ - Almanax ✅ - Monsters ❌ - Spells ❌  ... and much more on the Roadmap on my Discord.   ## Deploy now. Use forever. Everything you see here on this site, you can use now and forever. Updates could introduce new fields, new paths or parameter but never break backwards compatibility, so no field or parameter will be deleted.  There is one exception! **The API will _always_ choose being up-to-date over everything else**. So if Ankama decides to drop languages from the game like they did with their website, the API will loose support for them, too.  ## Only the beginning... 🤯 I want this project to be useful and not just add plain GET-categories no one needs.  There is a long list of features I want to add (see the Roadmap on my [Discord](https://discord.gg/3EtHskZD8h)). But they are all focussed on you, the developers. So please let me know what you need. I will change the list based on demand.  # Get started! 🥳 Scroll down and try it for yourself!  Or see how these other awesome projects use it: - [KaellyBot](https://github.com/Kaysoro/KaellyBot) by Kaysoro - [Dofus Craftlist](https://dofuscraftlist-dev.netlify.app) by Lystina - [AlmanaxApp](https://almanaxapp.netlify.app) by Lystina - [luwnarya.fr](https://luwnarya.fr)  I highly recommend using the SDKs for quick results. I use them myself for microservices for the API.  ## Thank you! I highly welcome everyone on my [Discord](https://discord.gg/3EtHskZD8h) to just talk about projects and use cases or give feedback of any kind.  The servers have a fixed monthly cost to provide very fast responses. If you want to help me keeping them running or simply  donate, consider becoming a [GitHub Sponsor](https://github.com/sponsors/dofusdude).  
+ * # A project for you - the developer. The free, always-up-to-date, low-latency, insert-buzzword-here Ankama API for your next cool project!  ## Client SDKs Don\'t write types or functions yourself - I already (kinda) did! 😉 - [Javascript](https://github.com/dofusdude/dofusdude-js) npm i dofusdude-js --save - [Typescript](https://github.com/dofusdude/dofusdude-ts) npm i dofusdude-ts --save - [Go](https://github.com/dofusdude/dodugo) go get -u github.com/dofusdude/dodugo - [Python](https://github.com/dofusdude/dofusdude-py) pip install dofusdude  Everything, including this site, is generated out of the [Docs Repo](https://github.com/dofusdude/api-docs). Consider it the Single Source of Truth. If there is a problem with the SDKs, create an issue there.  Your favorite language is missing? Please let me know!  # Main Features - 🥷 **Seamless Auto-Update** load data in the background when a new Dofus version is released and serving it within 2 minutes with atomic data source switching. No downtime and no effects for the user, just always up-to-date.  - ⚡ **Blazingly Fast** all data in-memory, aggressive caching over short time spans, HTTP/2 multiplexing, written in Go, optimized for low latency, hosted on bare metal in 🇩🇪.  - 📨 **Discord Integration** Ankama related Twitter, RSS and Almanax feeds to post to Discord servers with advanced features like filters or mentions. Use the endpoints as a dev or the official [Web Client](https://discord.dofusdude.com) as a user.  - 🩸 **Dofus 2 Beta** from stable to bleeding edge by replacing /dofus2 with /dofus2beta.  - 🗣️ **Multilingual** supporting _en_, _fr_, _es_, _pt_ including the dropped languages from the Dofus website _de_ and _it_.  - 🧠 **Search by Relevance** allowing typos in name and description, handled by language specific text analysis and indexing by the powerful [Meilisearch](https://www.meilisearch.com) written in Rust.  - 🕵️ **Complete** actual data from the game including items invisible to the encyclopedia like quest items.  - 🖼️ **HD Images** rendering vector graphics into PNGs up to 800x800 px in the background.   ## Current state - Weapons ✅ - Equipment ✅ - Sets ✅ - Resources ✅ - Consumables ✅ - Pets ✅ - Mounts ✅ - Cosmetics/Ceremonial Items ✅ - Harnesses ✅ - Quest Items ✅ - Almanax ✅ - Monsters ❌ - Spells ❌  ... and much more on the Roadmap on my Discord.   ## Deploy now. Use forever. Everything you see here on this site, you can use now and forever. Updates could introduce new fields, new paths or parameter but never break backwards compatibility, so no field or parameter will be deleted.  There is one exception! **The API will _always_ choose being up-to-date over everything else**. So if Ankama decides to drop languages from the game like they did with their website, the API will loose support for them, too.  ## Only the beginning... 🤯 I want this project to be useful and not just add plain GET-categories no one needs.  There is a long list of features I want to add (see the Roadmap on my [Discord](https://discord.gg/3EtHskZD8h)). But they are all focussed on you, the developers. So please let me know what you need. I will change the list based on demand.  # Get started! 🥳 Scroll down and try it for yourself!  Or see how these other awesome projects use it: - [KaellyBot](https://github.com/Kaysoro/KaellyBot) by Kaysoro - [Dofus Craftlist](https://dofuscraftlist-dev.netlify.app) by Lystina - [AlmanaxApp](https://almanaxapp.netlify.app) by Lystina - [luwnarya.fr](https://luwnarya.fr)  I highly recommend using the SDKs for quick results. I use them myself for microservices for the API.  ## Thank you! I highly welcome everyone on my [Discord](https://discord.gg/3EtHskZD8h) to just talk about projects and use cases or give feedback of any kind.  The servers have a fixed monthly cost to provide very fast responses. If you want to help me keeping them running or simply  donate, consider becoming a [GitHub Sponsor](https://github.com/sponsors/dofusdude).  
  *
- * The version of the OpenAPI document: 0.6.0
+ * The version of the OpenAPI document: 0.7.0
  * Contact: stelzo@steado.de
  *
  * NOTE: This class is auto generated by OpenAPI Generator (https://openapi-generator.tech).
@@ -118,6 +118,124 @@ export interface AlmanaxEntryTributeItem {
 /**
  * 
  * @export
+ * @interface AlmanaxWebhook
+ */
+export interface AlmanaxWebhook {
+    /**
+     * 
+     * @type {string}
+     * @memberof AlmanaxWebhook
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {AlmanaxWebhookDailySettings}
+     * @memberof AlmanaxWebhook
+     */
+    'daily_settings'?: AlmanaxWebhookDailySettings;
+    /**
+     * Only post when these bonuses come up. From all available bonuses (ids) from /dofus2/meta/{language}/almanax/bonuses.
+     * @type {Array<string>}
+     * @memberof AlmanaxWebhook
+     */
+    'bonus_whitelist'?: Array<string> | null;
+    /**
+     * Skip the day when these bonuses come up. From all available bonuses (ids) from /dofus2/meta/{language}/almanax/bonuses
+     * @type {Array<string>}
+     * @memberof AlmanaxWebhook
+     */
+    'bonus_blacklist'?: Array<string> | null;
+    /**
+     * Get the available subscriptions with /meta/webhooks/almanax
+     * @type {Array<string>}
+     * @memberof AlmanaxWebhook
+     */
+    'subscriptions'?: Array<string>;
+    /**
+     * If false, it will use common local time formats and weekday translations. If true, the format is YYYY-MM-DD.
+     * @type {boolean}
+     * @memberof AlmanaxWebhook
+     */
+    'iso_date'?: boolean;
+    /**
+     * Almanax bonus ids mapped to array of mentions.
+     * @type {{ [key: string]: Array<CreateAlmanaxWebhookMentionsValueInner>; }}
+     * @memberof AlmanaxWebhook
+     */
+    'mentions'?: { [key: string]: Array<CreateAlmanaxWebhookMentionsValueInner>; } | null;
+    /**
+     * - Daily posts each day, filtering with Black/Whitelist and mentions are applied daily. - Weekly posts the next 7 days (excluding the posting day) once per week at the specified time. With only weekly selected, of all mentions, only prior notices will come through daily. The 7 day preview gets filtered by the Black/Whitelist. - Monthly posts a preview of the next month from first to last date. The post will be on the last day of a month (ignoring day of the week) at the specified time. Mentions and filtering works like weekly. The biggest difference between daily and the other two is that daily always posts the current day while monthly and weekly only show future days. You can always combine the intervals by selecting multiple intervals for one hook or create multiple hooks for the same channel with different settings to get every highly specific combination you want.
+     * @type {Set<string>}
+     * @memberof AlmanaxWebhook
+     */
+    'intervals'?: Set<AlmanaxWebhookIntervalsEnum>;
+    /**
+     * When to post the weekly preview at the specified time.
+     * @type {string}
+     * @memberof AlmanaxWebhook
+     */
+    'weekly_weekday'?: AlmanaxWebhookWeeklyWeekdayEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof AlmanaxWebhook
+     */
+    'created_at'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AlmanaxWebhook
+     */
+    'last_fired_at'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof AlmanaxWebhook
+     */
+    'updated_at'?: string;
+}
+
+export const AlmanaxWebhookIntervalsEnum = {
+    Daily: 'daily',
+    Weekly: 'weekly',
+    Monthly: 'monthly'
+} as const;
+
+export type AlmanaxWebhookIntervalsEnum = typeof AlmanaxWebhookIntervalsEnum[keyof typeof AlmanaxWebhookIntervalsEnum];
+export const AlmanaxWebhookWeeklyWeekdayEnum = {
+    Sunday: 'sunday',
+    Monday: 'monday',
+    Tuesday: 'tuesday',
+    Wednesday: 'wednesday',
+    Thursday: 'thursday',
+    Friday: 'friday',
+    Saturday: 'saturday'
+} as const;
+
+export type AlmanaxWebhookWeeklyWeekdayEnum = typeof AlmanaxWebhookWeeklyWeekdayEnum[keyof typeof AlmanaxWebhookWeeklyWeekdayEnum];
+
+/**
+ * 
+ * @export
+ * @interface AlmanaxWebhookDailySettings
+ */
+export interface AlmanaxWebhookDailySettings {
+    /**
+     * Timezone of your community to determine midnight.
+     * @type {string}
+     * @memberof AlmanaxWebhookDailySettings
+     */
+    'timezone'?: string;
+    /**
+     * Hours added to midnight at the selected timezone. 8 = 8:00 in the morning.
+     * @type {number}
+     * @memberof AlmanaxWebhookDailySettings
+     */
+    'midnight_offset'?: number;
+}
+/**
+ * 
+ * @export
  * @interface ConditionEntry
  */
 export interface ConditionEntry {
@@ -207,6 +325,242 @@ export interface Cosmetic {
      */
     'recipe'?: Array<RecipeEntry> | null;
 }
+/**
+ * 
+ * @export
+ * @interface CreateAlmanaxWebhook
+ */
+export interface CreateAlmanaxWebhook {
+    /**
+     * from all available bonuses (ids) from /dofus2/meta/{language}/almanax/bonuses
+     * @type {Array<string>}
+     * @memberof CreateAlmanaxWebhook
+     */
+    'bonus_whitelist'?: Array<string> | null;
+    /**
+     * from all available bonuses (ids) from /dofus2/meta/{language}/almanax/bonuses
+     * @type {Array<string>}
+     * @memberof CreateAlmanaxWebhook
+     */
+    'bonus_blacklist'?: Array<string> | null;
+    /**
+     * Get the available subscriptions with /meta/webhooks/almanax
+     * @type {Array<string>}
+     * @memberof CreateAlmanaxWebhook
+     */
+    'subscriptions': Array<string>;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateAlmanaxWebhook
+     */
+    'format': CreateAlmanaxWebhookFormatEnum;
+    /**
+     * Discord Webhook URL
+     * @type {string}
+     * @memberof CreateAlmanaxWebhook
+     */
+    'callback': string;
+    /**
+     * 
+     * @type {CreateAlmanaxWebhookDailySettings}
+     * @memberof CreateAlmanaxWebhook
+     */
+    'daily_settings'?: CreateAlmanaxWebhookDailySettings | null;
+    /**
+     * If false, it will use common local time formats and weekday translations. If true, the format is YYYY-MM-DD.
+     * @type {boolean}
+     * @memberof CreateAlmanaxWebhook
+     */
+    'iso_date'?: boolean | null;
+    /**
+     * Almanax bonus ids mapped to array of mentions.
+     * @type {{ [key: string]: Array<CreateAlmanaxWebhookMentionsValueInner>; }}
+     * @memberof CreateAlmanaxWebhook
+     */
+    'mentions'?: { [key: string]: Array<CreateAlmanaxWebhookMentionsValueInner>; } | null;
+    /**
+     * - Daily posts each day, filtering with Black/Whitelist and mentions are applied daily. - Weekly posts the next 7 days (excluding the posting day) once per week at the specified time. With only weekly selected, of all mentions, only prior notices will come through daily. The 7 day preview gets filtered by the Black/Whitelist. - Monthly posts a preview of the next month from first to last date. The post will be on the last day of a month (ignoring day of the week) at the specified time. Mentions and filtering works like weekly. The biggest difference between daily and the other two is that daily always posts the current day while monthly and weekly only show future days. You can always combine the intervals by selecting multiple intervals for one hook or create multiple hooks for the same channel with different settings to get every highly specific combination you want.
+     * @type {Set<string>}
+     * @memberof CreateAlmanaxWebhook
+     */
+    'intervals': Set<CreateAlmanaxWebhookIntervalsEnum>;
+    /**
+     * When to post the weekly preview at the specified time.
+     * @type {string}
+     * @memberof CreateAlmanaxWebhook
+     */
+    'weekly_weekday'?: CreateAlmanaxWebhookWeeklyWeekdayEnum;
+}
+
+export const CreateAlmanaxWebhookFormatEnum = {
+    Discord: 'discord'
+} as const;
+
+export type CreateAlmanaxWebhookFormatEnum = typeof CreateAlmanaxWebhookFormatEnum[keyof typeof CreateAlmanaxWebhookFormatEnum];
+export const CreateAlmanaxWebhookIntervalsEnum = {
+    Daily: 'daily',
+    Weekly: 'weekly',
+    Monthly: 'monthly'
+} as const;
+
+export type CreateAlmanaxWebhookIntervalsEnum = typeof CreateAlmanaxWebhookIntervalsEnum[keyof typeof CreateAlmanaxWebhookIntervalsEnum];
+export const CreateAlmanaxWebhookWeeklyWeekdayEnum = {
+    Sunday: 'sunday',
+    Monday: 'monday',
+    Tuesday: 'tuesday',
+    Wednesday: 'wednesday',
+    Thursday: 'thursday',
+    Friday: 'friday',
+    Saturday: 'saturday'
+} as const;
+
+export type CreateAlmanaxWebhookWeeklyWeekdayEnum = typeof CreateAlmanaxWebhookWeeklyWeekdayEnum[keyof typeof CreateAlmanaxWebhookWeeklyWeekdayEnum];
+
+/**
+ * 
+ * @export
+ * @interface CreateAlmanaxWebhookDailySettings
+ */
+export interface CreateAlmanaxWebhookDailySettings {
+    /**
+     * Timezone of your community to determine midnight.
+     * @type {string}
+     * @memberof CreateAlmanaxWebhookDailySettings
+     */
+    'timezone'?: string | null;
+    /**
+     * Hours added to midnight at the selected timezone. 8 = 8:00 in the morning.
+     * @type {number}
+     * @memberof CreateAlmanaxWebhookDailySettings
+     */
+    'midnight_offset'?: number | null;
+}
+/**
+ * Mention
+ * @export
+ * @interface CreateAlmanaxWebhookMentionsValueInner
+ */
+export interface CreateAlmanaxWebhookMentionsValueInner {
+    /**
+     * User or role ID directly from Discord. Activate developer mode and right click a user or role to get them.
+     * @type {number}
+     * @memberof CreateAlmanaxWebhookMentionsValueInner
+     */
+    'discord_id'?: number;
+    /**
+     * Whether an ID describes a role (true) or user (false). This is needed for formatting the mention command so Discord understands it.
+     * @type {boolean}
+     * @memberof CreateAlmanaxWebhookMentionsValueInner
+     */
+    'is_role'?: boolean;
+    /**
+     * Get a mention days before the bonus comes up. It will post on the specified time. Also works when the interval is not daily.
+     * @type {number}
+     * @memberof CreateAlmanaxWebhookMentionsValueInner
+     */
+    'ping_days_before'?: number | null;
+}
+/**
+ * 
+ * @export
+ * @interface CreateRSSWebhook
+ */
+export interface CreateRSSWebhook {
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof CreateRSSWebhook
+     */
+    'whitelist'?: Array<string> | null;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof CreateRSSWebhook
+     */
+    'blacklist'?: Array<string> | null;
+    /**
+     * Get the available subscriptions with /meta/webhooks/rss
+     * @type {Set<string>}
+     * @memberof CreateRSSWebhook
+     */
+    'subscriptions': Set<string>;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRSSWebhook
+     */
+    'format': CreateRSSWebhookFormatEnum;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateRSSWebhook
+     */
+    'preview_length'?: number | null;
+    /**
+     * Discord Webhook URL
+     * @type {string}
+     * @memberof CreateRSSWebhook
+     */
+    'callback': string;
+}
+
+export const CreateRSSWebhookFormatEnum = {
+    Discord: 'discord'
+} as const;
+
+export type CreateRSSWebhookFormatEnum = typeof CreateRSSWebhookFormatEnum[keyof typeof CreateRSSWebhookFormatEnum];
+
+/**
+ * 
+ * @export
+ * @interface CreateTwitterWebhook
+ */
+export interface CreateTwitterWebhook {
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof CreateTwitterWebhook
+     */
+    'whitelist'?: Array<string> | null;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof CreateTwitterWebhook
+     */
+    'blacklist'?: Array<string> | null;
+    /**
+     * Get the available subscriptions with /meta/webhooks/twitter
+     * @type {Set<string>}
+     * @memberof CreateTwitterWebhook
+     */
+    'subscriptions': Set<string>;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateTwitterWebhook
+     */
+    'format': CreateTwitterWebhookFormatEnum;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateTwitterWebhook
+     */
+    'preview_length'?: number | null;
+    /**
+     * Discord Webhook URL
+     * @type {string}
+     * @memberof CreateTwitterWebhook
+     */
+    'callback': string;
+}
+
+export const CreateTwitterWebhookFormatEnum = {
+    Discord: 'discord'
+} as const;
+
+export type CreateTwitterWebhookFormatEnum = typeof CreateTwitterWebhookFormatEnum[keyof typeof CreateTwitterWebhookFormatEnum];
+
 /**
  * 
  * @export
@@ -428,6 +782,19 @@ export interface GetMetaAlmanaxBonuses200ResponseInner {
      * @memberof GetMetaAlmanaxBonuses200ResponseInner
      */
     'name'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface GetMetaWebhooksTwitter200Response
+ */
+export interface GetMetaWebhooksTwitter200Response {
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof GetMetaWebhooksTwitter200Response
+     */
+    'subscriptions'?: Array<string>;
 }
 /**
  * All images except icon are rendered in the background which can take some time (up to hours if all data is completely generated from scratch). Because of this, they can be null if they are not yet rendered.
@@ -699,6 +1066,143 @@ export interface MountsListPaged {
 /**
  * 
  * @export
+ * @interface PutAlmanaxWebhook
+ */
+export interface PutAlmanaxWebhook {
+    /**
+     * from all available bonuses (ids) from /dofus2/meta/{language}/almanax/bonuses. Delete old entries with empty array []. Just null changes nothing.
+     * @type {Array<string>}
+     * @memberof PutAlmanaxWebhook
+     */
+    'bonus_whitelist'?: Array<string> | null;
+    /**
+     * from all available bonuses (ids) from /dofus2/meta/{language}/almanax/bonuses. Delete old entries with empty array []. Just null changes nothing.
+     * @type {Array<string>}
+     * @memberof PutAlmanaxWebhook
+     */
+    'bonus_blacklist'?: Array<string> | null;
+    /**
+     * Get the available subscriptions with /meta/webhooks/almanax
+     * @type {Array<string>}
+     * @memberof PutAlmanaxWebhook
+     */
+    'subscriptions'?: Array<string> | null;
+    /**
+     * 
+     * @type {CreateAlmanaxWebhookDailySettings}
+     * @memberof PutAlmanaxWebhook
+     */
+    'daily_settings'?: CreateAlmanaxWebhookDailySettings | null;
+    /**
+     * If false, it will use common local time formats and weekday translations. If true, the format is YYYY-MM-DD.
+     * @type {boolean}
+     * @memberof PutAlmanaxWebhook
+     */
+    'iso_date'?: boolean | null;
+    /**
+     * Almanax bonus ids mapped to array of mentions.
+     * @type {{ [key: string]: Array<CreateAlmanaxWebhookMentionsValueInner>; }}
+     * @memberof PutAlmanaxWebhook
+     */
+    'mentions'?: { [key: string]: Array<CreateAlmanaxWebhookMentionsValueInner>; };
+    /**
+     * 
+     * @type {Set<string>}
+     * @memberof PutAlmanaxWebhook
+     */
+    'intervals'?: Set<PutAlmanaxWebhookIntervalsEnum>;
+    /**
+     * When to post the weekly preview at the specified time.
+     * @type {string}
+     * @memberof PutAlmanaxWebhook
+     */
+    'weekly_weekday'?: PutAlmanaxWebhookWeeklyWeekdayEnum;
+}
+
+export const PutAlmanaxWebhookIntervalsEnum = {
+    Daily: 'daily',
+    Weekly: 'weekly',
+    Monthly: 'monthly'
+} as const;
+
+export type PutAlmanaxWebhookIntervalsEnum = typeof PutAlmanaxWebhookIntervalsEnum[keyof typeof PutAlmanaxWebhookIntervalsEnum];
+export const PutAlmanaxWebhookWeeklyWeekdayEnum = {
+    Sunday: 'sunday',
+    Monday: 'monday',
+    Tuesday: 'tuesday',
+    Wednesday: 'wednesday',
+    Thursday: 'thursday',
+    Friday: 'friday',
+    Saturday: 'saturday'
+} as const;
+
+export type PutAlmanaxWebhookWeeklyWeekdayEnum = typeof PutAlmanaxWebhookWeeklyWeekdayEnum[keyof typeof PutAlmanaxWebhookWeeklyWeekdayEnum];
+
+/**
+ * 
+ * @export
+ * @interface PutRSSWebhook
+ */
+export interface PutRSSWebhook {
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof PutRSSWebhook
+     */
+    'whitelist'?: Array<string> | null;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof PutRSSWebhook
+     */
+    'blacklist'?: Array<string> | null;
+    /**
+     * Get the available subscriptions with /meta/webhooks/rss
+     * @type {Set<string>}
+     * @memberof PutRSSWebhook
+     */
+    'subscriptions'?: Set<string> | null;
+    /**
+     * 
+     * @type {number}
+     * @memberof PutRSSWebhook
+     */
+    'preview_length'?: number | null;
+}
+/**
+ * 
+ * @export
+ * @interface PutTwitterWebhook
+ */
+export interface PutTwitterWebhook {
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof PutTwitterWebhook
+     */
+    'whitelist'?: Array<string> | null;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof PutTwitterWebhook
+     */
+    'blacklist'?: Array<string> | null;
+    /**
+     * Get the available subscriptions with /meta/webhooks/twitter
+     * @type {Set<string>}
+     * @memberof PutTwitterWebhook
+     */
+    'subscriptions'?: Set<string> | null;
+    /**
+     * 
+     * @type {number}
+     * @memberof PutTwitterWebhook
+     */
+    'preview_length'?: number | null;
+}
+/**
+ * 
+ * @export
  * @interface RecipeEntry
  */
 export interface RecipeEntry {
@@ -791,6 +1295,74 @@ export interface Resource {
 /**
  * 
  * @export
+ * @interface RssWebhook
+ */
+export interface RssWebhook {
+    /**
+     * 
+     * @type {string}
+     * @memberof RssWebhook
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof RssWebhook
+     */
+    'whitelist'?: Array<string> | null;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof RssWebhook
+     */
+    'blacklist'?: Array<string> | null;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof RssWebhook
+     */
+    'subscriptions'?: Array<string>;
+    /**
+     * 
+     * @type {string}
+     * @memberof RssWebhook
+     */
+    'format'?: RssWebhookFormatEnum;
+    /**
+     * 
+     * @type {number}
+     * @memberof RssWebhook
+     */
+    'preview_length'?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof RssWebhook
+     */
+    'created_at'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof RssWebhook
+     */
+    'last_fired_at'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof RssWebhook
+     */
+    'updated_at'?: string;
+}
+
+export const RssWebhookFormatEnum = {
+    Discord: 'discord'
+} as const;
+
+export type RssWebhookFormatEnum = typeof RssWebhookFormatEnum[keyof typeof RssWebhookFormatEnum];
+
+/**
+ * 
+ * @export
  * @interface SetListEntry
  */
 export interface SetListEntry {
@@ -838,6 +1410,74 @@ export interface SetsListPaged {
      */
     'items'?: Array<SetListEntry>;
 }
+/**
+ * 
+ * @export
+ * @interface TwitterWebhook
+ */
+export interface TwitterWebhook {
+    /**
+     * 
+     * @type {string}
+     * @memberof TwitterWebhook
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof TwitterWebhook
+     */
+    'whitelist'?: Array<string> | null;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof TwitterWebhook
+     */
+    'blacklist'?: Array<string> | null;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof TwitterWebhook
+     */
+    'subscriptions'?: Array<string>;
+    /**
+     * 
+     * @type {string}
+     * @memberof TwitterWebhook
+     */
+    'format'?: TwitterWebhookFormatEnum;
+    /**
+     * 
+     * @type {number}
+     * @memberof TwitterWebhook
+     */
+    'preview_length'?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof TwitterWebhook
+     */
+    'created_at'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof TwitterWebhook
+     */
+    'last_fired_at'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof TwitterWebhook
+     */
+    'updated_at'?: string;
+}
+
+export const TwitterWebhookFormatEnum = {
+    Discord: 'discord'
+} as const;
+
+export type TwitterWebhookFormatEnum = typeof TwitterWebhookFormatEnum[keyof typeof TwitterWebhookFormatEnum];
+
 /**
  * 
  * @export
@@ -4712,6 +5352,1049 @@ export class SetsApi extends BaseAPI {
      */
     public getSetsSingle(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', ankamaId: number, game: 'dofus2' | 'dofus2beta', options?: AxiosRequestConfig) {
         return SetsApiFp(this.configuration).getSetsSingle(language, ankamaId, game, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * WebhooksApi - axios parameter creator
+ * @export
+ */
+export const WebhooksApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Delete a Webhook from the service.
+         * @summary Unregister Almanax Hook
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        deleteWebhooksAlmanaxId: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('deleteWebhooksAlmanaxId', 'id', id)
+            const localVarPath = `/webhooks/almanax/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Delete a Webhook from the service.
+         * @summary Unregister RSS Hook
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        deleteWebhooksRssId: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('deleteWebhooksRssId', 'id', id)
+            const localVarPath = `/webhooks/rss/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Delete a Webhook from the service.
+         * @summary Unregister Twitter Hook
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        deleteWebhooksTwitterId: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('deleteWebhooksTwitterId', 'id', id)
+            const localVarPath = `/webhooks/twitter/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Get a list of all available subscriptions. 
+         * @summary Get Almanax Hook Metainfo
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getMetaWebhooksAlmanax: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/meta/webhooks/almanax`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Get a list of all available subscriptions. 
+         * @summary Get RSS Hook Metainfo
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getMetaWebhooksRss: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/meta/webhooks/rss`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Get a list of all available subscriptions. 
+         * @summary Get Twitter Hook Metainfo
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getMetaWebhooksTwitter: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/meta/webhooks/twitter`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Retrieve details about an existing Almanax Webhook with a given uuid.
+         * @summary Get Almanax Hook
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getWebhooksAlmanaxId: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('getWebhooksAlmanaxId', 'id', id)
+            const localVarPath = `/webhooks/almanax/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Retrieve details about an existing RSS Webhook with a given uuid.
+         * @summary Get RSS Hook
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getWebhooksRssId: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('getWebhooksRssId', 'id', id)
+            const localVarPath = `/webhooks/rss/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Retrieve details about an existing Twitter Webhook with a given uuid.
+         * @summary Get Twitter Hook
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getWebhooksTwitterId: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('getWebhooksTwitterId', 'id', id)
+            const localVarPath = `/webhooks/twitter/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Register a new Webhook to post Almanax updates.
+         * @summary Register Almanax Hook
+         * @param {CreateAlmanaxWebhook} [createAlmanaxWebhook] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postWebhooksAlmanax: async (createAlmanaxWebhook?: CreateAlmanaxWebhook, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/webhooks/almanax`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(createAlmanaxWebhook, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Register a new Webhook to post RSS news as soon as they are posted.
+         * @summary Register RSS Hook
+         * @param {CreateRSSWebhook} [createRSSWebhook] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postWebhooksRss: async (createRSSWebhook?: CreateRSSWebhook, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/webhooks/rss`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(createRSSWebhook, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Register a new Webhook to post Twitter updates as soon as they are posted.
+         * @summary Register Twitter Hook
+         * @param {CreateTwitterWebhook} [createTwitterWebhook] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postWebhooksTwitter: async (createTwitterWebhook?: CreateTwitterWebhook, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/webhooks/twitter`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(createTwitterWebhook, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Update the details of an Almanax Webhook. All fields are optional and arrays will be overwritten, so always put all selected items of an array.
+         * @summary Update Almanax Hook
+         * @param {string} id 
+         * @param {PutAlmanaxWebhook} [putAlmanaxWebhook] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        putWebhooksAlmanaxId: async (id: string, putAlmanaxWebhook?: PutAlmanaxWebhook, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('putWebhooksAlmanaxId', 'id', id)
+            const localVarPath = `/webhooks/almanax/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(putAlmanaxWebhook, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Update the details of a RSS Webhook. All fields are optional and arrays will be overwritten, so always put all selected items of an array.
+         * @summary Update RSS Hook
+         * @param {string} id 
+         * @param {PutRSSWebhook} [putRSSWebhook] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        putWebhooksRssId: async (id: string, putRSSWebhook?: PutRSSWebhook, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('putWebhooksRssId', 'id', id)
+            const localVarPath = `/webhooks/rss/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(putRSSWebhook, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Update the details of a Twitter Webhook. All fields are optional and arrays will be overwritten, so always put all selected items of an array.
+         * @summary Update Twitter Hook
+         * @param {string} id 
+         * @param {PutTwitterWebhook} [putTwitterWebhook] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        putWebhooksTwitterId: async (id: string, putTwitterWebhook?: PutTwitterWebhook, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('putWebhooksTwitterId', 'id', id)
+            const localVarPath = `/webhooks/twitter/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(putTwitterWebhook, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * WebhooksApi - functional programming interface
+ * @export
+ */
+export const WebhooksApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = WebhooksApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * Delete a Webhook from the service.
+         * @summary Unregister Almanax Hook
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async deleteWebhooksAlmanaxId(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.deleteWebhooksAlmanaxId(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * Delete a Webhook from the service.
+         * @summary Unregister RSS Hook
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async deleteWebhooksRssId(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.deleteWebhooksRssId(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * Delete a Webhook from the service.
+         * @summary Unregister Twitter Hook
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async deleteWebhooksTwitterId(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.deleteWebhooksTwitterId(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * Get a list of all available subscriptions. 
+         * @summary Get Almanax Hook Metainfo
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async getMetaWebhooksAlmanax(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GetMetaWebhooksTwitter200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.getMetaWebhooksAlmanax(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * Get a list of all available subscriptions. 
+         * @summary Get RSS Hook Metainfo
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async getMetaWebhooksRss(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GetMetaWebhooksTwitter200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.getMetaWebhooksRss(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * Get a list of all available subscriptions. 
+         * @summary Get Twitter Hook Metainfo
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async getMetaWebhooksTwitter(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GetMetaWebhooksTwitter200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.getMetaWebhooksTwitter(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * Retrieve details about an existing Almanax Webhook with a given uuid.
+         * @summary Get Almanax Hook
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async getWebhooksAlmanaxId(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AlmanaxWebhook>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.getWebhooksAlmanaxId(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * Retrieve details about an existing RSS Webhook with a given uuid.
+         * @summary Get RSS Hook
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async getWebhooksRssId(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RssWebhook>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.getWebhooksRssId(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * Retrieve details about an existing Twitter Webhook with a given uuid.
+         * @summary Get Twitter Hook
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async getWebhooksTwitterId(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TwitterWebhook>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.getWebhooksTwitterId(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * Register a new Webhook to post Almanax updates.
+         * @summary Register Almanax Hook
+         * @param {CreateAlmanaxWebhook} [createAlmanaxWebhook] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async postWebhooksAlmanax(createAlmanaxWebhook?: CreateAlmanaxWebhook, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.postWebhooksAlmanax(createAlmanaxWebhook, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * Register a new Webhook to post RSS news as soon as they are posted.
+         * @summary Register RSS Hook
+         * @param {CreateRSSWebhook} [createRSSWebhook] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async postWebhooksRss(createRSSWebhook?: CreateRSSWebhook, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.postWebhooksRss(createRSSWebhook, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * Register a new Webhook to post Twitter updates as soon as they are posted.
+         * @summary Register Twitter Hook
+         * @param {CreateTwitterWebhook} [createTwitterWebhook] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async postWebhooksTwitter(createTwitterWebhook?: CreateTwitterWebhook, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.postWebhooksTwitter(createTwitterWebhook, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * Update the details of an Almanax Webhook. All fields are optional and arrays will be overwritten, so always put all selected items of an array.
+         * @summary Update Almanax Hook
+         * @param {string} id 
+         * @param {PutAlmanaxWebhook} [putAlmanaxWebhook] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async putWebhooksAlmanaxId(id: string, putAlmanaxWebhook?: PutAlmanaxWebhook, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AlmanaxWebhook>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.putWebhooksAlmanaxId(id, putAlmanaxWebhook, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * Update the details of a RSS Webhook. All fields are optional and arrays will be overwritten, so always put all selected items of an array.
+         * @summary Update RSS Hook
+         * @param {string} id 
+         * @param {PutRSSWebhook} [putRSSWebhook] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async putWebhooksRssId(id: string, putRSSWebhook?: PutRSSWebhook, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RssWebhook>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.putWebhooksRssId(id, putRSSWebhook, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * Update the details of a Twitter Webhook. All fields are optional and arrays will be overwritten, so always put all selected items of an array.
+         * @summary Update Twitter Hook
+         * @param {string} id 
+         * @param {PutTwitterWebhook} [putTwitterWebhook] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async putWebhooksTwitterId(id: string, putTwitterWebhook?: PutTwitterWebhook, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TwitterWebhook>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.putWebhooksTwitterId(id, putTwitterWebhook, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * WebhooksApi - factory interface
+ * @export
+ */
+export const WebhooksApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = WebhooksApiFp(configuration)
+    return {
+        /**
+         * Delete a Webhook from the service.
+         * @summary Unregister Almanax Hook
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        deleteWebhooksAlmanaxId(id: string, options?: any): AxiosPromise<void> {
+            return localVarFp.deleteWebhooksAlmanaxId(id, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Delete a Webhook from the service.
+         * @summary Unregister RSS Hook
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        deleteWebhooksRssId(id: string, options?: any): AxiosPromise<void> {
+            return localVarFp.deleteWebhooksRssId(id, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Delete a Webhook from the service.
+         * @summary Unregister Twitter Hook
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        deleteWebhooksTwitterId(id: string, options?: any): AxiosPromise<void> {
+            return localVarFp.deleteWebhooksTwitterId(id, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Get a list of all available subscriptions. 
+         * @summary Get Almanax Hook Metainfo
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getMetaWebhooksAlmanax(options?: any): AxiosPromise<GetMetaWebhooksTwitter200Response> {
+            return localVarFp.getMetaWebhooksAlmanax(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Get a list of all available subscriptions. 
+         * @summary Get RSS Hook Metainfo
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getMetaWebhooksRss(options?: any): AxiosPromise<GetMetaWebhooksTwitter200Response> {
+            return localVarFp.getMetaWebhooksRss(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Get a list of all available subscriptions. 
+         * @summary Get Twitter Hook Metainfo
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getMetaWebhooksTwitter(options?: any): AxiosPromise<GetMetaWebhooksTwitter200Response> {
+            return localVarFp.getMetaWebhooksTwitter(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Retrieve details about an existing Almanax Webhook with a given uuid.
+         * @summary Get Almanax Hook
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getWebhooksAlmanaxId(id: string, options?: any): AxiosPromise<AlmanaxWebhook> {
+            return localVarFp.getWebhooksAlmanaxId(id, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Retrieve details about an existing RSS Webhook with a given uuid.
+         * @summary Get RSS Hook
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getWebhooksRssId(id: string, options?: any): AxiosPromise<RssWebhook> {
+            return localVarFp.getWebhooksRssId(id, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Retrieve details about an existing Twitter Webhook with a given uuid.
+         * @summary Get Twitter Hook
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getWebhooksTwitterId(id: string, options?: any): AxiosPromise<TwitterWebhook> {
+            return localVarFp.getWebhooksTwitterId(id, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Register a new Webhook to post Almanax updates.
+         * @summary Register Almanax Hook
+         * @param {CreateAlmanaxWebhook} [createAlmanaxWebhook] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postWebhooksAlmanax(createAlmanaxWebhook?: CreateAlmanaxWebhook, options?: any): AxiosPromise<void> {
+            return localVarFp.postWebhooksAlmanax(createAlmanaxWebhook, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Register a new Webhook to post RSS news as soon as they are posted.
+         * @summary Register RSS Hook
+         * @param {CreateRSSWebhook} [createRSSWebhook] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postWebhooksRss(createRSSWebhook?: CreateRSSWebhook, options?: any): AxiosPromise<void> {
+            return localVarFp.postWebhooksRss(createRSSWebhook, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Register a new Webhook to post Twitter updates as soon as they are posted.
+         * @summary Register Twitter Hook
+         * @param {CreateTwitterWebhook} [createTwitterWebhook] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        postWebhooksTwitter(createTwitterWebhook?: CreateTwitterWebhook, options?: any): AxiosPromise<void> {
+            return localVarFp.postWebhooksTwitter(createTwitterWebhook, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Update the details of an Almanax Webhook. All fields are optional and arrays will be overwritten, so always put all selected items of an array.
+         * @summary Update Almanax Hook
+         * @param {string} id 
+         * @param {PutAlmanaxWebhook} [putAlmanaxWebhook] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        putWebhooksAlmanaxId(id: string, putAlmanaxWebhook?: PutAlmanaxWebhook, options?: any): AxiosPromise<AlmanaxWebhook> {
+            return localVarFp.putWebhooksAlmanaxId(id, putAlmanaxWebhook, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Update the details of a RSS Webhook. All fields are optional and arrays will be overwritten, so always put all selected items of an array.
+         * @summary Update RSS Hook
+         * @param {string} id 
+         * @param {PutRSSWebhook} [putRSSWebhook] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        putWebhooksRssId(id: string, putRSSWebhook?: PutRSSWebhook, options?: any): AxiosPromise<RssWebhook> {
+            return localVarFp.putWebhooksRssId(id, putRSSWebhook, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Update the details of a Twitter Webhook. All fields are optional and arrays will be overwritten, so always put all selected items of an array.
+         * @summary Update Twitter Hook
+         * @param {string} id 
+         * @param {PutTwitterWebhook} [putTwitterWebhook] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        putWebhooksTwitterId(id: string, putTwitterWebhook?: PutTwitterWebhook, options?: any): AxiosPromise<TwitterWebhook> {
+            return localVarFp.putWebhooksTwitterId(id, putTwitterWebhook, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * WebhooksApi - object-oriented interface
+ * @export
+ * @class WebhooksApi
+ * @extends {BaseAPI}
+ */
+export class WebhooksApi extends BaseAPI {
+    /**
+     * Delete a Webhook from the service.
+     * @summary Unregister Almanax Hook
+     * @param {string} id 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof WebhooksApi
+     */
+    public deleteWebhooksAlmanaxId(id: string, options?: AxiosRequestConfig) {
+        return WebhooksApiFp(this.configuration).deleteWebhooksAlmanaxId(id, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Delete a Webhook from the service.
+     * @summary Unregister RSS Hook
+     * @param {string} id 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof WebhooksApi
+     */
+    public deleteWebhooksRssId(id: string, options?: AxiosRequestConfig) {
+        return WebhooksApiFp(this.configuration).deleteWebhooksRssId(id, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Delete a Webhook from the service.
+     * @summary Unregister Twitter Hook
+     * @param {string} id 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof WebhooksApi
+     */
+    public deleteWebhooksTwitterId(id: string, options?: AxiosRequestConfig) {
+        return WebhooksApiFp(this.configuration).deleteWebhooksTwitterId(id, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Get a list of all available subscriptions. 
+     * @summary Get Almanax Hook Metainfo
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof WebhooksApi
+     */
+    public getMetaWebhooksAlmanax(options?: AxiosRequestConfig) {
+        return WebhooksApiFp(this.configuration).getMetaWebhooksAlmanax(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Get a list of all available subscriptions. 
+     * @summary Get RSS Hook Metainfo
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof WebhooksApi
+     */
+    public getMetaWebhooksRss(options?: AxiosRequestConfig) {
+        return WebhooksApiFp(this.configuration).getMetaWebhooksRss(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Get a list of all available subscriptions. 
+     * @summary Get Twitter Hook Metainfo
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof WebhooksApi
+     */
+    public getMetaWebhooksTwitter(options?: AxiosRequestConfig) {
+        return WebhooksApiFp(this.configuration).getMetaWebhooksTwitter(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Retrieve details about an existing Almanax Webhook with a given uuid.
+     * @summary Get Almanax Hook
+     * @param {string} id 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof WebhooksApi
+     */
+    public getWebhooksAlmanaxId(id: string, options?: AxiosRequestConfig) {
+        return WebhooksApiFp(this.configuration).getWebhooksAlmanaxId(id, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Retrieve details about an existing RSS Webhook with a given uuid.
+     * @summary Get RSS Hook
+     * @param {string} id 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof WebhooksApi
+     */
+    public getWebhooksRssId(id: string, options?: AxiosRequestConfig) {
+        return WebhooksApiFp(this.configuration).getWebhooksRssId(id, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Retrieve details about an existing Twitter Webhook with a given uuid.
+     * @summary Get Twitter Hook
+     * @param {string} id 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof WebhooksApi
+     */
+    public getWebhooksTwitterId(id: string, options?: AxiosRequestConfig) {
+        return WebhooksApiFp(this.configuration).getWebhooksTwitterId(id, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Register a new Webhook to post Almanax updates.
+     * @summary Register Almanax Hook
+     * @param {CreateAlmanaxWebhook} [createAlmanaxWebhook] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof WebhooksApi
+     */
+    public postWebhooksAlmanax(createAlmanaxWebhook?: CreateAlmanaxWebhook, options?: AxiosRequestConfig) {
+        return WebhooksApiFp(this.configuration).postWebhooksAlmanax(createAlmanaxWebhook, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Register a new Webhook to post RSS news as soon as they are posted.
+     * @summary Register RSS Hook
+     * @param {CreateRSSWebhook} [createRSSWebhook] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof WebhooksApi
+     */
+    public postWebhooksRss(createRSSWebhook?: CreateRSSWebhook, options?: AxiosRequestConfig) {
+        return WebhooksApiFp(this.configuration).postWebhooksRss(createRSSWebhook, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Register a new Webhook to post Twitter updates as soon as they are posted.
+     * @summary Register Twitter Hook
+     * @param {CreateTwitterWebhook} [createTwitterWebhook] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof WebhooksApi
+     */
+    public postWebhooksTwitter(createTwitterWebhook?: CreateTwitterWebhook, options?: AxiosRequestConfig) {
+        return WebhooksApiFp(this.configuration).postWebhooksTwitter(createTwitterWebhook, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Update the details of an Almanax Webhook. All fields are optional and arrays will be overwritten, so always put all selected items of an array.
+     * @summary Update Almanax Hook
+     * @param {string} id 
+     * @param {PutAlmanaxWebhook} [putAlmanaxWebhook] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof WebhooksApi
+     */
+    public putWebhooksAlmanaxId(id: string, putAlmanaxWebhook?: PutAlmanaxWebhook, options?: AxiosRequestConfig) {
+        return WebhooksApiFp(this.configuration).putWebhooksAlmanaxId(id, putAlmanaxWebhook, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Update the details of a RSS Webhook. All fields are optional and arrays will be overwritten, so always put all selected items of an array.
+     * @summary Update RSS Hook
+     * @param {string} id 
+     * @param {PutRSSWebhook} [putRSSWebhook] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof WebhooksApi
+     */
+    public putWebhooksRssId(id: string, putRSSWebhook?: PutRSSWebhook, options?: AxiosRequestConfig) {
+        return WebhooksApiFp(this.configuration).putWebhooksRssId(id, putRSSWebhook, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Update the details of a Twitter Webhook. All fields are optional and arrays will be overwritten, so always put all selected items of an array.
+     * @summary Update Twitter Hook
+     * @param {string} id 
+     * @param {PutTwitterWebhook} [putTwitterWebhook] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof WebhooksApi
+     */
+    public putWebhooksTwitterId(id: string, putTwitterWebhook?: PutTwitterWebhook, options?: AxiosRequestConfig) {
+        return WebhooksApiFp(this.configuration).putWebhooksTwitterId(id, putTwitterWebhook, options).then((request) => request(this.axios, this.basePath));
     }
 }
 

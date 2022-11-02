@@ -1,6 +1,6 @@
 {
   "name": "dofusdude-ts",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "OpenAPI client for dofusdude-ts",
   "author": "OpenAPI-Generator Contributors",
   "repository": {
@@ -18,7 +18,7 @@
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsc --outDir dist/",
+    "build": "tsc ",
     "prepare": "npm run build"
   },
   "dependencies": {
