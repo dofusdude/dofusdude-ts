@@ -2,9 +2,9 @@
 /* eslint-disable */
 /**
  * Dofusdude
- * # A project for you - the developer. The free, always-up-to-date, low-latency, insert-buzzword-here Ankama API for your next cool project!  ## Client SDKs Don\'t write types or functions yourself - I already (kinda) did! 😉 - [Javascript](https://github.com/dofusdude/dofusdude-js) npm i dofusdude-js --save - [Typescript](https://github.com/dofusdude/dofusdude-ts) npm i dofusdude-ts --save - [Go](https://github.com/dofusdude/dodugo) go get -u github.com/dofusdude/dodugo - [Python](https://github.com/dofusdude/dofusdude-py) pip install dofusdude  Everything, including this site, is generated out of the [Docs Repo](https://github.com/dofusdude/api-docs). Consider it the Single Source of Truth. If there is a problem with the SDKs, create an issue there.  Your favorite language is missing? Please let me know!  # Main Features - 🥷 **Seamless Auto-Update** load data in the background when a new Dofus version is released and serving it within 2 minutes with atomic data source switching. No downtime and no effects for the user, just always up-to-date.  - ⚡ **Blazingly Fast** all data in-memory, aggressive caching over short time spans, HTTP/2 multiplexing, written in Go, optimized for low latency, hosted on bare metal in 🇩🇪.  - 📨 **Discord Integration** Ankama related Twitter, RSS and Almanax feeds to post to Discord servers with advanced features like filters or mentions. Use the endpoints as a dev or the official [Web Client](https://discord.dofusdude.com) as a user.  - 🩸 **Dofus 2 Beta** from stable to bleeding edge by replacing /dofus2 with /dofus2beta.  - 🗣️ **Multilingual** supporting _en_, _fr_, _es_, _pt_ including the dropped languages from the Dofus website _de_ and _it_.  - 🧠 **Search by Relevance** allowing typos in name and description, handled by language specific text analysis and indexing by the powerful [Meilisearch](https://www.meilisearch.com) written in Rust.  - 🕵️ **Complete** actual data from the game including items invisible to the encyclopedia like quest items.  - 🖼️ **HD Images** rendering vector graphics into PNGs up to 800x800 px in the background.   ## Current state - Weapons ✅ - Equipment ✅ - Sets ✅ - Resources ✅ - Consumables ✅ - Pets ✅ - Mounts ✅ - Cosmetics/Ceremonial Items ✅ - Harnesses ✅ - Quest Items ✅ - Almanax ✅ - Monsters ❌ - Spells ❌  ... and much more on the Roadmap on my Discord.   ## Deploy now. Use forever. Everything you see here on this site, you can use now and forever. Updates could introduce new fields, new paths or parameter but never break backwards compatibility, so no field or parameter will be deleted.  There is one exception! **The API will _always_ choose being up-to-date over everything else**. So if Ankama decides to drop languages from the game like they did with their website, the API will loose support for them, too.  ## Only the beginning... 🤯 I want this project to be useful and not just add plain GET-categories no one needs.  There is a long list of features I want to add (see the Roadmap on my [Discord](https://discord.gg/3EtHskZD8h)). But they are all focussed on you, the developers. So please let me know what you need. I will change the list based on demand.  # Get started! 🥳 Scroll down and try it for yourself!  Or see how these other awesome projects use it: - [KaellyBot](https://github.com/Kaysoro/KaellyBot) by Kaysoro - [Dofus Craftlist](https://dofuscraftlist-dev.netlify.app) by Lystina - [AlmanaxApp](https://almanaxapp.netlify.app) by Lystina - [luwnarya.fr](https://luwnarya.fr)  I highly recommend using the SDKs for quick results. I use them myself for microservices for the API.  ## Thank you! I highly welcome everyone on my [Discord](https://discord.gg/3EtHskZD8h) to just talk about projects and use cases or give feedback of any kind.  The servers have a fixed monthly cost to provide very fast responses. If you want to help me keeping them running or simply  donate, consider becoming a [GitHub Sponsor](https://github.com/sponsors/dofusdude).  
+ * # A project for you - the developer. The free, always-up-to-date, low-latency, insert-buzzword-here Ankama API for your next cool project!  ## Client SDKs Don\'t write types or functions yourself - I already (kinda) did! 😉 - [Javascript](https://github.com/dofusdude/dofusdude-js) npm i dofusdude-js --save - [Typescript](https://github.com/dofusdude/dofusdude-ts) npm i dofusdude-ts --save - [Go](https://github.com/dofusdude/dodugo) go get -u github.com/dofusdude/dodugo - [Python](https://github.com/dofusdude/dofusdude-py) pip install dofusdude - [PHP](https://github.com/dofusdude/dofusdude-php)  Everything, including this site, is generated out of the [Docs Repo](https://github.com/dofusdude/api-docs). Consider it the Single Source of Truth. If there is a problem with the SDKs, create an issue there.  Your favorite language is missing? Please let me know!  # Main Features - 🥷 **Seamless Auto-Update** load data in the background when a new Dofus version is released and serving it within 2 minutes with atomic data source switching. No downtime and no effects for the user, just always up-to-date.  - ⚡ **Blazingly Fast** all data in-memory, aggressive caching over short time spans, HTTP/2 multiplexing, written in Go, optimized for low latency, hosted on bare metal in 🇩🇪.  - 📨 **Discord Integration** Ankama related Twitter, RSS and Almanax feeds to post to Discord servers with advanced features like filters or mentions. Use the endpoints as a dev or the official [Web Client](https://discord.dofusdude.com) as a user.  - 🩸 **Dofus 2 Beta** from stable to bleeding edge by replacing /dofus2 with /dofus2beta.  - 🗣️ **Multilingual** supporting _en_, _fr_, _es_, _pt_ including the dropped languages from the Dofus website _de_ and _it_.  - 🧠 **Search by Relevance** allowing typos in name and description, handled by language specific text analysis and indexing by the powerful [Meilisearch](https://www.meilisearch.com) written in Rust.  - 🕵️ **Complete** actual data from the game including items invisible to the encyclopedia like quest items.  - 🖼️ **HD Images** rendering vector graphics into PNGs up to 800x800 px in the background.   ## Current state - Weapons ✅ - Equipment ✅ - Sets ✅ - Resources ✅ - Consumables ✅ - Pets ✅ - Mounts ✅ - Cosmetics/Ceremonial Items ✅ - Harnesses ✅ - Quest Items ✅ - Almanax ✅ - Monsters ❌ - Spells ❌  ... and much more on the Roadmap on my Discord.   ## Deploy now. Use forever. Everything you see here on this site, you can use now and forever. Updates could introduce new fields, new paths or parameter but never break backwards compatibility, so no field or parameter will be deleted.  There is one exception! **The API will _always_ choose being up-to-date over everything else**. So if Ankama decides to drop languages from the game like they did with their website, the API will loose support for them, too.  ## Only the beginning... 🤯 I want this project to be useful and not just add plain GET-categories no one needs.  There is a long list of features I want to add (see the Roadmap on my [Discord](https://discord.gg/3EtHskZD8h)). But they are all focussed on you, the developers. So please let me know what you need. I will change the list based on demand.  # Get started! 🥳 Scroll down and try it for yourself!  Or see how these other awesome projects use it: - [KaellyBot](https://github.com/Kaysoro/KaellyBot) by Kaysoro - [Dofus Craftlist](https://dofuscraftlist-dev.netlify.app) by Lystina - [AlmanaxApp](https://almanaxapp.netlify.app) by Lystina  I highly recommend using the SDKs for quick results. I use them myself for microservices for the API.  ## Thank you! I highly welcome everyone on my [Discord](https://discord.gg/3EtHskZD8h) to just talk about projects and use cases or give feedback of any kind.  The servers have a fixed monthly cost to provide very fast responses. If you want to help me keeping them running or simply  donate, consider becoming a [GitHub Sponsor](https://github.com/sponsors/dofusdude). 
  *
- * The version of the OpenAPI document: 0.7.0
+ * The version of the OpenAPI document: 0.7.1
  * Contact: stelzo@steado.de
  *
  * NOTE: This class is auto generated by OpenAPI Generator (https://openapi-generator.tech).
@@ -255,10 +255,35 @@ export interface ConditionEntry {
     'int_value'?: number;
     /**
      * 
-     * @type {EffectsEntryType}
+     * @type {ConditionEntryElement}
      * @memberof ConditionEntry
      */
-    'element'?: EffectsEntryType;
+    'element'?: ConditionEntryElement;
+}
+/**
+ * 
+ * @export
+ * @interface ConditionEntryElement
+ */
+export interface ConditionEntryElement {
+    /**
+     * 
+     * @type {string}
+     * @memberof ConditionEntryElement
+     */
+    'name'?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof ConditionEntryElement
+     */
+    'id'?: number;
+    /**
+     * true if a type is generated from the Api instead of Ankama. In that case, always prefer showing the templated string and omit everything else. The \"name\" field will have an english description of the meta type. An example for such effects are class sets effects.
+     * @type {boolean}
+     * @memberof ConditionEntryElement
+     */
+    'is_meta'?: boolean;
 }
 /**
  * 
@@ -630,6 +655,12 @@ export interface EffectsEntryType {
      * @memberof EffectsEntryType
      */
     'is_meta'?: boolean;
+    /**
+     * Affects target or source actively.
+     * @type {boolean}
+     * @memberof EffectsEntryType
+     */
+    'is_active'?: boolean;
 }
 /**
  * 
@@ -1630,10 +1661,11 @@ export const AllItemsApiAxiosParamCreator = function (configuration?: Configurat
          * @param {string} [filterTypeName] only results with the translated type name across all item_subtypes
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
+         * @param {number} [limit] maximum number of returned results
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsAllSearch: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getItemsAllSearch: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getItemsAllSearch', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -1670,6 +1702,10 @@ export const AllItemsApiAxiosParamCreator = function (configuration?: Configurat
                 localVarQueryParameter['filter[max_level]'] = filterMaxLevel;
             }
 
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
 
     
             setSearchParams(localVarUrlObj, localVarQueryParameter);
@@ -1700,11 +1736,12 @@ export const AllItemsApiFp = function(configuration?: Configuration) {
          * @param {string} [filterTypeName] only results with the translated type name across all item_subtypes
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
+         * @param {number} [limit] maximum number of returned results
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getItemsAllSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ItemsListEntryTyped>>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.getItemsAllSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, options);
+        async getItemsAllSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ItemsListEntryTyped>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.getItemsAllSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -1726,11 +1763,12 @@ export const AllItemsApiFactory = function (configuration?: Configuration, baseP
          * @param {string} [filterTypeName] only results with the translated type name across all item_subtypes
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
+         * @param {number} [limit] maximum number of returned results
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsAllSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, options?: any): AxiosPromise<Array<ItemsListEntryTyped>> {
-            return localVarFp.getItemsAllSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, options).then((request) => request(axios, basePath));
+        getItemsAllSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: any): AxiosPromise<Array<ItemsListEntryTyped>> {
+            return localVarFp.getItemsAllSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -1751,12 +1789,13 @@ export class AllItemsApi extends BaseAPI {
      * @param {string} [filterTypeName] only results with the translated type name across all item_subtypes
      * @param {number} [filterMinLevel] only results which level is equal or above this value
      * @param {number} [filterMaxLevel] only results which level is equal or below this value
+     * @param {number} [limit] maximum number of returned results
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AllItemsApi
      */
-    public getItemsAllSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, options?: AxiosRequestConfig) {
-        return AllItemsApiFp(this.configuration).getItemsAllSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, options).then((request) => request(this.axios, this.basePath));
+    public getItemsAllSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig) {
+        return AllItemsApiFp(this.configuration).getItemsAllSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -2135,10 +2174,11 @@ export const ConsumablesApiAxiosParamCreator = function (configuration?: Configu
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
+         * @param {number} [limit] maximum number of returned results
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsConsumablesSearch: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getItemsConsumablesSearch: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getItemsConsumablesSearch', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -2173,6 +2213,10 @@ export const ConsumablesApiAxiosParamCreator = function (configuration?: Configu
 
             if (filterMaxLevel !== undefined) {
                 localVarQueryParameter['filter[max_level]'] = filterMaxLevel;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
             }
 
 
@@ -2283,11 +2327,12 @@ export const ConsumablesApiFp = function(configuration?: Configuration) {
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
+         * @param {number} [limit] maximum number of returned results
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getItemsConsumablesSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ItemListEntry>>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.getItemsConsumablesSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, options);
+        async getItemsConsumablesSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ItemListEntry>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.getItemsConsumablesSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -2356,11 +2401,12 @@ export const ConsumablesApiFactory = function (configuration?: Configuration, ba
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
+         * @param {number} [limit] maximum number of returned results
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsConsumablesSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, options?: any): AxiosPromise<Array<ItemListEntry>> {
-            return localVarFp.getItemsConsumablesSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, options).then((request) => request(axios, basePath));
+        getItemsConsumablesSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: any): AxiosPromise<Array<ItemListEntry>> {
+            return localVarFp.getItemsConsumablesSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options).then((request) => request(axios, basePath));
         },
         /**
          * Retrieve a specific consumable item with id.
@@ -2431,12 +2477,13 @@ export class ConsumablesApi extends BaseAPI {
      * @param {string} [filterTypeName] only results with the translated type name
      * @param {number} [filterMinLevel] only results which level is equal or above this value
      * @param {number} [filterMaxLevel] only results which level is equal or below this value
+     * @param {number} [limit] maximum number of returned results
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ConsumablesApi
      */
-    public getItemsConsumablesSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, options?: AxiosRequestConfig) {
-        return ConsumablesApiFp(this.configuration).getItemsConsumablesSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, options).then((request) => request(this.axios, this.basePath));
+    public getItemsConsumablesSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig) {
+        return ConsumablesApiFp(this.configuration).getItemsConsumablesSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2606,10 +2653,11 @@ export const CosmeticsApiAxiosParamCreator = function (configuration?: Configura
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
+         * @param {number} [limit] maximum number of returned results
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCosmeticsSearch: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getCosmeticsSearch: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getCosmeticsSearch', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -2644,6 +2692,10 @@ export const CosmeticsApiAxiosParamCreator = function (configuration?: Configura
 
             if (filterMaxLevel !== undefined) {
                 localVarQueryParameter['filter[max_level]'] = filterMaxLevel;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
             }
 
 
@@ -2754,11 +2806,12 @@ export const CosmeticsApiFp = function(configuration?: Configuration) {
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
+         * @param {number} [limit] maximum number of returned results
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getCosmeticsSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ItemListEntry>>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.getCosmeticsSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, options);
+        async getCosmeticsSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ItemListEntry>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.getCosmeticsSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -2827,11 +2880,12 @@ export const CosmeticsApiFactory = function (configuration?: Configuration, base
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
+         * @param {number} [limit] maximum number of returned results
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCosmeticsSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, options?: any): AxiosPromise<Array<ItemListEntry>> {
-            return localVarFp.getCosmeticsSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, options).then((request) => request(axios, basePath));
+        getCosmeticsSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: any): AxiosPromise<Array<ItemListEntry>> {
+            return localVarFp.getCosmeticsSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options).then((request) => request(axios, basePath));
         },
         /**
          * Retrieve a specific cosmetic item with id.
@@ -2902,12 +2956,13 @@ export class CosmeticsApi extends BaseAPI {
      * @param {string} [filterTypeName] only results with the translated type name
      * @param {number} [filterMinLevel] only results which level is equal or above this value
      * @param {number} [filterMaxLevel] only results which level is equal or below this value
+     * @param {number} [limit] maximum number of returned results
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof CosmeticsApi
      */
-    public getCosmeticsSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, options?: AxiosRequestConfig) {
-        return CosmeticsApiFp(this.configuration).getCosmeticsSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, options).then((request) => request(this.axios, this.basePath));
+    public getCosmeticsSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig) {
+        return CosmeticsApiFp(this.configuration).getCosmeticsSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3077,10 +3132,11 @@ export const EquipmentApiAxiosParamCreator = function (configuration?: Configura
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
+         * @param {number} [limit] maximum number of returned results
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsEquipmentSearch: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getItemsEquipmentSearch: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getItemsEquipmentSearch', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -3115,6 +3171,10 @@ export const EquipmentApiAxiosParamCreator = function (configuration?: Configura
 
             if (filterMaxLevel !== undefined) {
                 localVarQueryParameter['filter[max_level]'] = filterMaxLevel;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
             }
 
 
@@ -3225,11 +3285,12 @@ export const EquipmentApiFp = function(configuration?: Configuration) {
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
+         * @param {number} [limit] maximum number of returned results
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getItemsEquipmentSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ItemListEntry>>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.getItemsEquipmentSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, options);
+        async getItemsEquipmentSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ItemListEntry>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.getItemsEquipmentSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3298,11 +3359,12 @@ export const EquipmentApiFactory = function (configuration?: Configuration, base
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
+         * @param {number} [limit] maximum number of returned results
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsEquipmentSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, options?: any): AxiosPromise<Array<ItemListEntry>> {
-            return localVarFp.getItemsEquipmentSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, options).then((request) => request(axios, basePath));
+        getItemsEquipmentSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: any): AxiosPromise<Array<ItemListEntry>> {
+            return localVarFp.getItemsEquipmentSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options).then((request) => request(axios, basePath));
         },
         /**
          * Retrieve a specific equipment item with id.
@@ -3373,12 +3435,13 @@ export class EquipmentApi extends BaseAPI {
      * @param {string} [filterTypeName] only results with the translated type name
      * @param {number} [filterMinLevel] only results which level is equal or above this value
      * @param {number} [filterMaxLevel] only results which level is equal or below this value
+     * @param {number} [limit] maximum number of returned results
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof EquipmentApi
      */
-    public getItemsEquipmentSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, options?: AxiosRequestConfig) {
-        return EquipmentApiFp(this.configuration).getItemsEquipmentSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, options).then((request) => request(this.axios, this.basePath));
+    public getItemsEquipmentSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig) {
+        return EquipmentApiFp(this.configuration).getItemsEquipmentSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3681,10 +3744,11 @@ export const MountsApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {'dofus2' | 'dofus2beta'} game 
          * @param {string} query case sensitive search query
          * @param {string} [filterFamilyName] only results with the translated family name
+         * @param {number} [limit] maximum number of returned results
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getMountsSearch: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterFamilyName?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getMountsSearch: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterFamilyName?: string, limit?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getMountsSearch', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -3711,6 +3775,10 @@ export const MountsApiAxiosParamCreator = function (configuration?: Configuratio
 
             if (filterFamilyName !== undefined) {
                 localVarQueryParameter['filter[family_name]'] = filterFamilyName;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
             }
 
 
@@ -3813,11 +3881,12 @@ export const MountsApiFp = function(configuration?: Configuration) {
          * @param {'dofus2' | 'dofus2beta'} game 
          * @param {string} query case sensitive search query
          * @param {string} [filterFamilyName] only results with the translated family name
+         * @param {number} [limit] maximum number of returned results
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getMountsSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterFamilyName?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<MountListEntry>>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.getMountsSearch(language, game, query, filterFamilyName, options);
+        async getMountsSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterFamilyName?: string, limit?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<MountListEntry>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.getMountsSearch(language, game, query, filterFamilyName, limit, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3878,11 +3947,12 @@ export const MountsApiFactory = function (configuration?: Configuration, basePat
          * @param {'dofus2' | 'dofus2beta'} game 
          * @param {string} query case sensitive search query
          * @param {string} [filterFamilyName] only results with the translated family name
+         * @param {number} [limit] maximum number of returned results
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getMountsSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterFamilyName?: string, options?: any): AxiosPromise<Array<MountListEntry>> {
-            return localVarFp.getMountsSearch(language, game, query, filterFamilyName, options).then((request) => request(axios, basePath));
+        getMountsSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterFamilyName?: string, limit?: number, options?: any): AxiosPromise<Array<MountListEntry>> {
+            return localVarFp.getMountsSearch(language, game, query, filterFamilyName, limit, options).then((request) => request(axios, basePath));
         },
         /**
          * Retrieve a specific mount with id.
@@ -3945,12 +4015,13 @@ export class MountsApi extends BaseAPI {
      * @param {'dofus2' | 'dofus2beta'} game 
      * @param {string} query case sensitive search query
      * @param {string} [filterFamilyName] only results with the translated family name
+     * @param {number} [limit] maximum number of returned results
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MountsApi
      */
-    public getMountsSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterFamilyName?: string, options?: AxiosRequestConfig) {
-        return MountsApiFp(this.configuration).getMountsSearch(language, game, query, filterFamilyName, options).then((request) => request(this.axios, this.basePath));
+    public getMountsSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterFamilyName?: string, limit?: number, options?: AxiosRequestConfig) {
+        return MountsApiFp(this.configuration).getMountsSearch(language, game, query, filterFamilyName, limit, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4162,10 +4233,11 @@ export const QuestItemsApiAxiosParamCreator = function (configuration?: Configur
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
+         * @param {number} [limit] maximum number of returned results
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsQuestSearch: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getItemsQuestSearch: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getItemsQuestSearch', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -4200,6 +4272,10 @@ export const QuestItemsApiAxiosParamCreator = function (configuration?: Configur
 
             if (filterMaxLevel !== undefined) {
                 localVarQueryParameter['filter[max_level]'] = filterMaxLevel;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
             }
 
 
@@ -4281,11 +4357,12 @@ export const QuestItemsApiFp = function(configuration?: Configuration) {
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
+         * @param {number} [limit] maximum number of returned results
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getItemsQuestSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ItemListEntry>>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.getItemsQuestSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, options);
+        async getItemsQuestSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ItemListEntry>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.getItemsQuestSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -4353,11 +4430,12 @@ export const QuestItemsApiFactory = function (configuration?: Configuration, bas
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
+         * @param {number} [limit] maximum number of returned results
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsQuestSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, options?: any): AxiosPromise<Array<ItemListEntry>> {
-            return localVarFp.getItemsQuestSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, options).then((request) => request(axios, basePath));
+        getItemsQuestSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: any): AxiosPromise<Array<ItemListEntry>> {
+            return localVarFp.getItemsQuestSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -4430,12 +4508,13 @@ export class QuestItemsApi extends BaseAPI {
      * @param {string} [filterTypeName] only results with the translated type name
      * @param {number} [filterMinLevel] only results which level is equal or above this value
      * @param {number} [filterMaxLevel] only results which level is equal or below this value
+     * @param {number} [limit] maximum number of returned results
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QuestItemsApi
      */
-    public getItemsQuestSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, options?: AxiosRequestConfig) {
-        return QuestItemsApiFp(this.configuration).getItemsQuestSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, options).then((request) => request(this.axios, this.basePath));
+    public getItemsQuestSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig) {
+        return QuestItemsApiFp(this.configuration).getItemsQuestSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -4518,10 +4597,11 @@ export const ResourcesApiAxiosParamCreator = function (configuration?: Configura
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
+         * @param {number} [limit] maximum number of returned results
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsResourceSearch: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getItemsResourceSearch: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getItemsResourceSearch', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -4556,6 +4636,10 @@ export const ResourcesApiAxiosParamCreator = function (configuration?: Configura
 
             if (filterMaxLevel !== undefined) {
                 localVarQueryParameter['filter[max_level]'] = filterMaxLevel;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
             }
 
 
@@ -4720,11 +4804,12 @@ export const ResourcesApiFp = function(configuration?: Configuration) {
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
+         * @param {number} [limit] maximum number of returned results
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getItemsResourceSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ItemListEntry>>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.getItemsResourceSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, options);
+        async getItemsResourceSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ItemListEntry>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.getItemsResourceSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -4794,11 +4879,12 @@ export const ResourcesApiFactory = function (configuration?: Configuration, base
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
+         * @param {number} [limit] maximum number of returned results
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsResourceSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, options?: any): AxiosPromise<Array<ItemListEntry>> {
-            return localVarFp.getItemsResourceSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, options).then((request) => request(axios, basePath));
+        getItemsResourceSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: any): AxiosPromise<Array<ItemListEntry>> {
+            return localVarFp.getItemsResourceSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options).then((request) => request(axios, basePath));
         },
         /**
          * Retrieve a list of resource items.
@@ -4867,12 +4953,13 @@ export class ResourcesApi extends BaseAPI {
      * @param {string} [filterTypeName] only results with the translated type name
      * @param {number} [filterMinLevel] only results which level is equal or above this value
      * @param {number} [filterMaxLevel] only results which level is equal or below this value
+     * @param {number} [limit] maximum number of returned results
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ResourcesApi
      */
-    public getItemsResourceSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, options?: AxiosRequestConfig) {
-        return ResourcesApiFp(this.configuration).getItemsResourceSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, options).then((request) => request(this.axios, this.basePath));
+    public getItemsResourceSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig) {
+        return ResourcesApiFp(this.configuration).getItemsResourceSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5051,10 +5138,11 @@ export const SetsApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {string} query case sensitive search query
          * @param {number} [filterMinHighestEquipmentLevel] only results where the equipment with the highest level is above or equal to this value
          * @param {number} [filterMaxHighestEquipmentLevel] only results where the equipment with the highest level is below or equal to this value
+         * @param {number} [limit] maximum number of returned results
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSetsSearch: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getSetsSearch: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, limit?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getSetsSearch', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -5085,6 +5173,10 @@ export const SetsApiAxiosParamCreator = function (configuration?: Configuration)
 
             if (filterMaxHighestEquipmentLevel !== undefined) {
                 localVarQueryParameter['filter[max_highest_equipment_level]'] = filterMaxHighestEquipmentLevel;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
             }
 
 
@@ -5192,11 +5284,12 @@ export const SetsApiFp = function(configuration?: Configuration) {
          * @param {string} query case sensitive search query
          * @param {number} [filterMinHighestEquipmentLevel] only results where the equipment with the highest level is above or equal to this value
          * @param {number} [filterMaxHighestEquipmentLevel] only results where the equipment with the highest level is below or equal to this value
+         * @param {number} [limit] maximum number of returned results
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getSetsSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<SetListEntry>>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.getSetsSearch(language, game, query, filterMinHighestEquipmentLevel, filterMaxHighestEquipmentLevel, options);
+        async getSetsSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, limit?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<SetListEntry>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.getSetsSearch(language, game, query, filterMinHighestEquipmentLevel, filterMaxHighestEquipmentLevel, limit, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5262,11 +5355,12 @@ export const SetsApiFactory = function (configuration?: Configuration, basePath?
          * @param {string} query case sensitive search query
          * @param {number} [filterMinHighestEquipmentLevel] only results where the equipment with the highest level is above or equal to this value
          * @param {number} [filterMaxHighestEquipmentLevel] only results where the equipment with the highest level is below or equal to this value
+         * @param {number} [limit] maximum number of returned results
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSetsSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, options?: any): AxiosPromise<Array<SetListEntry>> {
-            return localVarFp.getSetsSearch(language, game, query, filterMinHighestEquipmentLevel, filterMaxHighestEquipmentLevel, options).then((request) => request(axios, basePath));
+        getSetsSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, limit?: number, options?: any): AxiosPromise<Array<SetListEntry>> {
+            return localVarFp.getSetsSearch(language, game, query, filterMinHighestEquipmentLevel, filterMaxHighestEquipmentLevel, limit, options).then((request) => request(axios, basePath));
         },
         /**
          * Retrieve a specific set with id.
@@ -5334,12 +5428,13 @@ export class SetsApi extends BaseAPI {
      * @param {string} query case sensitive search query
      * @param {number} [filterMinHighestEquipmentLevel] only results where the equipment with the highest level is above or equal to this value
      * @param {number} [filterMaxHighestEquipmentLevel] only results where the equipment with the highest level is below or equal to this value
+     * @param {number} [limit] maximum number of returned results
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SetsApi
      */
-    public getSetsSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, options?: AxiosRequestConfig) {
-        return SetsApiFp(this.configuration).getSetsSearch(language, game, query, filterMinHighestEquipmentLevel, filterMaxHighestEquipmentLevel, options).then((request) => request(this.axios, this.basePath));
+    public getSetsSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, limit?: number, options?: AxiosRequestConfig) {
+        return SetsApiFp(this.configuration).getSetsSearch(language, game, query, filterMinHighestEquipmentLevel, filterMaxHighestEquipmentLevel, limit, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
