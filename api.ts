@@ -2,9 +2,9 @@
 /* eslint-disable */
 /**
  * Dofusdude
- * # A project for you - the developer. The free, always-up-to-date, low-latency, insert-buzzword-here Ankama API for your next cool project!  ## Client SDKs Don\'t write types or functions yourself - I already (kinda) did! 😉 - [Javascript](https://github.com/dofusdude/dofusdude-js) npm i dofusdude-js --save - [Typescript](https://github.com/dofusdude/dofusdude-ts) npm i dofusdude-ts --save - [Go](https://github.com/dofusdude/dodugo) go get -u github.com/dofusdude/dodugo - [Python](https://github.com/dofusdude/dofusdude-py) pip install dofusdude - [PHP](https://github.com/dofusdude/dofusdude-php)  Everything, including this site, is generated out of the [Docs Repo](https://github.com/dofusdude/api-docs). Consider it the Single Source of Truth. If there is a problem with the SDKs, create an issue there.  Your favorite language is missing? Please let me know!  # Main Features - 🥷 **Seamless Auto-Update** load data in the background when a new Dofus version is released and serving it within 2 minutes with atomic data source switching. No downtime and no effects for the user, just always up-to-date.  - ⚡ **Blazingly Fast** all data in-memory, aggressive caching over short time spans, HTTP/2 multiplexing, written in Go, optimized for low latency, hosted on bare metal in 🇩🇪.  - 📨 **Discord Integration** Ankama related Twitter, RSS and Almanax feeds to post to Discord servers with advanced features like filters or mentions. Use the endpoints as a dev or the official [Web Client](https://discord.dofusdude.com) as a user.  - 🩸 **Dofus 2 Beta** from stable to bleeding edge by replacing /dofus2 with /dofus2beta.  - 🗣️ **Multilingual** supporting _en_, _fr_, _es_, _pt_ including the dropped languages from the Dofus website _de_ and _it_.  - 🧠 **Search by Relevance** allowing typos in name and description, handled by language specific text analysis and indexing by the powerful [Meilisearch](https://www.meilisearch.com) written in Rust.  - 🕵️ **Complete** actual data from the game including items invisible to the encyclopedia like quest items.  - 🖼️ **HD Images** rendering vector graphics into PNGs up to 800x800 px in the background.   ## Current state - Weapons ✅ - Equipment ✅ - Sets ✅ - Resources ✅ - Consumables ✅ - Pets ✅ - Mounts ✅ - Cosmetics/Ceremonial Items ✅ - Harnesses ✅ - Quest Items ✅ - Almanax ✅ - Monsters ❌ - Spells ❌  ... and much more on the Roadmap on my Discord.   ## Deploy now. Use forever. Everything you see here on this site, you can use now and forever. Updates could introduce new fields, new paths or parameter but never break backwards compatibility, so no field or parameter will be deleted.  There is one exception! **The API will _always_ choose being up-to-date over everything else**. So if Ankama decides to drop languages from the game like they did with their website, the API will loose support for them, too.  ## Only the beginning... 🤯 I want this project to be useful and not just add plain GET-categories no one needs.  There is a long list of features I want to add (see the Roadmap on my [Discord](https://discord.gg/3EtHskZD8h)). But they are all focussed on you, the developers. So please let me know what you need. I will change the list based on demand.  # Get started! 🥳 Scroll down and try it for yourself!  Or see how these other awesome projects use it: - [KaellyBot](https://github.com/Kaysoro/KaellyBot) by Kaysoro - [Dofus Craftlist](https://dofuscraftlist-dev.netlify.app) by Lystina - [AlmanaxApp](https://almanaxapp.netlify.app) by Lystina  I highly recommend using the SDKs for quick results. I use them myself for microservices for the API.  ## Thank you! I highly welcome everyone on my [Discord](https://discord.gg/3EtHskZD8h) to just talk about projects and use cases or give feedback of any kind.  The servers have a fixed monthly cost to provide very fast responses. If you want to help me keeping them running or simply  donate, consider becoming a [GitHub Sponsor](https://github.com/sponsors/dofusdude). 
+ * # A project for you - the developer. The free, always-up-to-date, low-latency, insert-buzzword-here Ankama API for your next cool project!  ## Client SDKs Don\'t write types or functions yourself - I already (kinda) did! 😉 - [Javascript](https://github.com/dofusdude/dofusdude-js) npm i dofusdude-js --save - [Typescript](https://github.com/dofusdude/dofusdude-ts) npm i dofusdude-ts --save - [Go](https://github.com/dofusdude/dodugo) go get -u github.com/dofusdude/dodugo - [Python](https://github.com/dofusdude/dofusdude-py) pip install dofusdude - [PHP](https://github.com/dofusdude/dofusdude-php)  Everything, including this site, is generated out of the [Docs Repo](https://github.com/dofusdude/api-docs). Consider it the Single Source of Truth. If there is a problem with the SDKs, create an issue there.  Your favorite language is missing? Please let me know!  # Main Features - 🥷 **Seamless Auto-Update** load data in the background when a new Dofus version is released and serving it within 2 minutes with atomic data source switching. No downtime and no effects for the user, just always up-to-date.  - ⚡ **Blazingly Fast** all data in-memory, aggressive caching over short time spans, HTTP/2 multiplexing, written in Go, optimized for low latency, hosted on bare metal in 🇩🇪.  - 📨 **Discord Integration** Ankama related Twitter, RSS and Almanax feeds to post to Discord servers with advanced features like filters or mentions. Use the endpoints as a dev or the official [Web Client](https://discord.dofusdude.com) as a user.  - 🩸 **Dofus 2 Beta** from stable to bleeding edge by replacing /dofus2 with /dofus2beta.  - 🗣️ **Multilingual** supporting _en_, _fr_, _es_, _pt_ including the dropped languages from the Dofus website _de_ and _it_.  - 🧠 **Search by Relevance** allowing typos in name and description, handled by language specific text analysis and indexing by the powerful [Meilisearch](https://www.meilisearch.com) written in Rust.  - 🕵️ **Complete** actual data from the game including items invisible to the encyclopedia like quest items.  - 🖼️ **HD Images** rendering vector graphics into PNGs up to 800x800 px in the background.   ## Current state - Weapons ✅ - Equipment ✅ - Sets ✅ - Resources ✅ - Consumables ✅ - Pets ✅ - Mounts ✅ - Cosmetics/Ceremonial Items ✅ - Harnesses ✅ - Quest Items ✅ - Almanax ✅ - Monsters ❌ - Spells ❌  ... and much more on the Roadmap on my Discord.   ## Deploy now. Use forever. Everything you see here on this site, you can use now and forever. Updates could introduce new fields, new paths or parameter but never break backwards compatibility, so no field or parameter will be deleted.  There is one exception! **The API will _always_ choose being up-to-date over everything else**. So if Ankama decides to drop languages from the game like they did with their website, the API will loose support for them, too.  ## Only the beginning... 🤯 I want this project to be useful and not just add plain GET-categories no one needs.  There is a long list of features I want to add (see the Roadmap on my [Discord](https://discord.gg/3EtHskZD8h)). But they are all focussed on you, the developers. So please let me know what you need. I will change the list based on demand.  # Get started! 🥳 Scroll down and try it for yourself!  Or see how these other awesome projects use it: - [KaellyBot](https://github.com/Kaysoro/KaellyBot) by Kaysoro - [Dofus Craftlist](https://dofuscraftlist-dev.netlify.app) by Lystina - [AlmanaxApp](https://almanaxapp.netlify.app) by Lystina - [DofuStuffSimulator](https://dofusstuffsimulator.netlify.app/)  I highly recommend using the SDKs for quick results. I use them myself for parts of the API.  ## Thank you! I highly welcome everyone on my [Discord](https://discord.gg/3EtHskZD8h) to just talk about projects and use cases or give feedback of any kind.  The servers have a fixed monthly cost to provide very fast responses. If you want to help me keeping them running or simply  donate, consider becoming a [GitHub Sponsor](https://github.com/sponsors/dofusdude). 
  *
- * The version of the OpenAPI document: 0.7.1
+ * The version of the OpenAPI document: 0.7.2
  * Contact: stelzo@steado.de
  *
  * NOTE: This class is auto generated by OpenAPI Generator (https://openapi-generator.tech).
@@ -311,10 +311,10 @@ export interface Cosmetic {
     'description'?: string;
     /**
      * 
-     * @type {ItemsListEntryTypedType}
+     * @type {CosmeticType}
      * @memberof Cosmetic
      */
-    'type'?: ItemsListEntryTypedType;
+    'type'?: CosmeticType;
     /**
      * 
      * @type {number}
@@ -351,6 +351,25 @@ export interface Cosmetic {
      * @memberof Cosmetic
      */
     'recipe'?: Array<RecipeEntry> | null;
+}
+/**
+ * 
+ * @export
+ * @interface CosmeticType
+ */
+export interface CosmeticType {
+    /**
+     * 
+     * @type {string}
+     * @memberof CosmeticType
+     */
+    'name'?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CosmeticType
+     */
+    'id'?: number;
 }
 /**
  * 
@@ -795,7 +814,7 @@ export interface EquipmentSet {
      * @type {number}
      * @memberof EquipmentSet
      */
-    'level'?: number;
+    'highest_equipment_level'?: number;
 }
 /**
  * 
@@ -958,6 +977,12 @@ export interface ItemsListEntryTypedType {
      * @memberof ItemsListEntryTypedType
      */
     'name'?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof ItemsListEntryTypedType
+     */
+    'id'?: number;
 }
 /**
  * 
@@ -1284,10 +1309,10 @@ export interface Resource {
     'description'?: string;
     /**
      * 
-     * @type {ItemsListEntryTypedType}
+     * @type {CosmeticType}
      * @memberof Resource
      */
-    'type'?: ItemsListEntryTypedType;
+    'type'?: CosmeticType;
     /**
      * 
      * @type {number}
@@ -1655,8 +1680,8 @@ export const AllItemsApiAxiosParamCreator = function (configuration?: Configurat
         /**
          * Search in all names and descriptions of Dofus items (including all subtypes) with a query.
          * @summary Search All Items
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetItemsAllSearchLanguageEnum} language a valid language code
+         * @param {GetItemsAllSearchGameEnum} game 
          * @param {string} query case sensitive search query
          * @param {string} [filterTypeName] only results with the translated type name across all item_subtypes
          * @param {number} [filterMinLevel] only results which level is equal or above this value
@@ -1665,7 +1690,7 @@ export const AllItemsApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsAllSearch: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getItemsAllSearch: async (language: GetItemsAllSearchLanguageEnum, game: GetItemsAllSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getItemsAllSearch', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -1730,8 +1755,8 @@ export const AllItemsApiFp = function(configuration?: Configuration) {
         /**
          * Search in all names and descriptions of Dofus items (including all subtypes) with a query.
          * @summary Search All Items
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetItemsAllSearchLanguageEnum} language a valid language code
+         * @param {GetItemsAllSearchGameEnum} game 
          * @param {string} query case sensitive search query
          * @param {string} [filterTypeName] only results with the translated type name across all item_subtypes
          * @param {number} [filterMinLevel] only results which level is equal or above this value
@@ -1740,7 +1765,7 @@ export const AllItemsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getItemsAllSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ItemsListEntryTyped>>> {
+        async getItemsAllSearch(language: GetItemsAllSearchLanguageEnum, game: GetItemsAllSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ItemsListEntryTyped>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getItemsAllSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -1757,8 +1782,8 @@ export const AllItemsApiFactory = function (configuration?: Configuration, baseP
         /**
          * Search in all names and descriptions of Dofus items (including all subtypes) with a query.
          * @summary Search All Items
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetItemsAllSearchLanguageEnum} language a valid language code
+         * @param {GetItemsAllSearchGameEnum} game 
          * @param {string} query case sensitive search query
          * @param {string} [filterTypeName] only results with the translated type name across all item_subtypes
          * @param {number} [filterMinLevel] only results which level is equal or above this value
@@ -1767,7 +1792,7 @@ export const AllItemsApiFactory = function (configuration?: Configuration, baseP
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsAllSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: any): AxiosPromise<Array<ItemsListEntryTyped>> {
+        getItemsAllSearch(language: GetItemsAllSearchLanguageEnum, game: GetItemsAllSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: any): AxiosPromise<Array<ItemsListEntryTyped>> {
             return localVarFp.getItemsAllSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options).then((request) => request(axios, basePath));
         },
     };
@@ -1783,8 +1808,8 @@ export class AllItemsApi extends BaseAPI {
     /**
      * Search in all names and descriptions of Dofus items (including all subtypes) with a query.
      * @summary Search All Items
-     * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-     * @param {'dofus2' | 'dofus2beta'} game 
+     * @param {GetItemsAllSearchLanguageEnum} language a valid language code
+     * @param {GetItemsAllSearchGameEnum} game 
      * @param {string} query case sensitive search query
      * @param {string} [filterTypeName] only results with the translated type name across all item_subtypes
      * @param {number} [filterMinLevel] only results which level is equal or above this value
@@ -1794,10 +1819,31 @@ export class AllItemsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AllItemsApi
      */
-    public getItemsAllSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig) {
+    public getItemsAllSearch(language: GetItemsAllSearchLanguageEnum, game: GetItemsAllSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig) {
         return AllItemsApiFp(this.configuration).getItemsAllSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options).then((request) => request(this.axios, this.basePath));
     }
 }
+
+/**
+ * @export
+ */
+export const GetItemsAllSearchLanguageEnum = {
+    En: 'en',
+    Fr: 'fr',
+    De: 'de',
+    It: 'it',
+    Es: 'es',
+    Pt: 'pt'
+} as const;
+export type GetItemsAllSearchLanguageEnum = typeof GetItemsAllSearchLanguageEnum[keyof typeof GetItemsAllSearchLanguageEnum];
+/**
+ * @export
+ */
+export const GetItemsAllSearchGameEnum = {
+    Dofus2: 'dofus2',
+    Dofus2beta: 'dofus2beta'
+} as const;
+export type GetItemsAllSearchGameEnum = typeof GetItemsAllSearchGameEnum[keyof typeof GetItemsAllSearchGameEnum];
 
 
 /**
@@ -1809,12 +1855,12 @@ export const AlmanaxApiAxiosParamCreator = function (configuration?: Configurati
         /**
          * Get a single date. There are not more details in the returned object than the normal range endpoint.
          * @summary Single Almanax Date
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es'} language code
+         * @param {GetAlmanaxDateLanguageEnum} language code
          * @param {string} date yyyy-mm-dd
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAlmanaxDate: async (language: 'en' | 'fr' | 'de' | 'it' | 'es', date: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getAlmanaxDate: async (language: GetAlmanaxDateLanguageEnum, date: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getAlmanaxDate', 'language', language)
             // verify required parameter 'date' is not null or undefined
@@ -1847,7 +1893,7 @@ export const AlmanaxApiAxiosParamCreator = function (configuration?: Configurati
         /**
          * Get a range of dates, defaults to today + 6 following days but can specified by the query parameters.   filter[bonus_type] can be used seperately and does not have an effect on the other parameters.  range[from] changes the start date, everything else defaults to 6 following dates from this start date.  range[to] when used without anything else, it will use today as start date and this parameter as end. All ranges are inclusive.  range[from] + range[to] = inclusive range over the specified dates, should never be farther apart than 35 days.  range[from|to] + range[size] no need to specify the date, just following days with [from] (0 is today) or go backwards in time with only [to] and [size].  Not all combinations are listed but this should give you an idea how to they could work.
          * @summary Almanax Range
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es'} language code
+         * @param {GetAlmanaxRangeLanguageEnum} language code
          * @param {string} [filterBonusType] ids from meta/{language}/almanax/bonuses
          * @param {string} [rangeFrom] yyyy-mm-dd
          * @param {string} [rangeTo] yyyy-mm-dd
@@ -1856,7 +1902,7 @@ export const AlmanaxApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAlmanaxRange: async (language: 'en' | 'fr' | 'de' | 'it' | 'es', filterBonusType?: string, rangeFrom?: string, rangeTo?: string, rangeSize?: number, timezone?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getAlmanaxRange: async (language: GetAlmanaxRangeLanguageEnum, filterBonusType?: string, rangeFrom?: string, rangeTo?: string, rangeSize?: number, timezone?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getAlmanaxRange', 'language', language)
             const localVarPath = `/dofus2/{language}/almanax`
@@ -1878,13 +1924,13 @@ export const AlmanaxApiAxiosParamCreator = function (configuration?: Configurati
 
             if (rangeFrom !== undefined) {
                 localVarQueryParameter['range[from]'] = (rangeFrom as any instanceof Date) ?
-                    (rangeFrom as any).toISOString().substr(0,10) :
+                    (rangeFrom as any).toISOString().substring(0,10) :
                     rangeFrom;
             }
 
             if (rangeTo !== undefined) {
                 localVarQueryParameter['range[to]'] = (rangeTo as any instanceof Date) ?
-                    (rangeTo as any).toISOString().substr(0,10) :
+                    (rangeTo as any).toISOString().substring(0,10) :
                     rangeTo;
             }
 
@@ -1920,19 +1966,19 @@ export const AlmanaxApiFp = function(configuration?: Configuration) {
         /**
          * Get a single date. There are not more details in the returned object than the normal range endpoint.
          * @summary Single Almanax Date
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es'} language code
+         * @param {GetAlmanaxDateLanguageEnum} language code
          * @param {string} date yyyy-mm-dd
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getAlmanaxDate(language: 'en' | 'fr' | 'de' | 'it' | 'es', date: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AlmanaxEntry>> {
+        async getAlmanaxDate(language: GetAlmanaxDateLanguageEnum, date: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AlmanaxEntry>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getAlmanaxDate(language, date, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * Get a range of dates, defaults to today + 6 following days but can specified by the query parameters.   filter[bonus_type] can be used seperately and does not have an effect on the other parameters.  range[from] changes the start date, everything else defaults to 6 following dates from this start date.  range[to] when used without anything else, it will use today as start date and this parameter as end. All ranges are inclusive.  range[from] + range[to] = inclusive range over the specified dates, should never be farther apart than 35 days.  range[from|to] + range[size] no need to specify the date, just following days with [from] (0 is today) or go backwards in time with only [to] and [size].  Not all combinations are listed but this should give you an idea how to they could work.
          * @summary Almanax Range
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es'} language code
+         * @param {GetAlmanaxRangeLanguageEnum} language code
          * @param {string} [filterBonusType] ids from meta/{language}/almanax/bonuses
          * @param {string} [rangeFrom] yyyy-mm-dd
          * @param {string} [rangeTo] yyyy-mm-dd
@@ -1941,7 +1987,7 @@ export const AlmanaxApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getAlmanaxRange(language: 'en' | 'fr' | 'de' | 'it' | 'es', filterBonusType?: string, rangeFrom?: string, rangeTo?: string, rangeSize?: number, timezone?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<AlmanaxEntry>>> {
+        async getAlmanaxRange(language: GetAlmanaxRangeLanguageEnum, filterBonusType?: string, rangeFrom?: string, rangeTo?: string, rangeSize?: number, timezone?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<AlmanaxEntry>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getAlmanaxRange(language, filterBonusType, rangeFrom, rangeTo, rangeSize, timezone, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -1958,18 +2004,18 @@ export const AlmanaxApiFactory = function (configuration?: Configuration, basePa
         /**
          * Get a single date. There are not more details in the returned object than the normal range endpoint.
          * @summary Single Almanax Date
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es'} language code
+         * @param {GetAlmanaxDateLanguageEnum} language code
          * @param {string} date yyyy-mm-dd
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAlmanaxDate(language: 'en' | 'fr' | 'de' | 'it' | 'es', date: string, options?: any): AxiosPromise<AlmanaxEntry> {
+        getAlmanaxDate(language: GetAlmanaxDateLanguageEnum, date: string, options?: any): AxiosPromise<AlmanaxEntry> {
             return localVarFp.getAlmanaxDate(language, date, options).then((request) => request(axios, basePath));
         },
         /**
          * Get a range of dates, defaults to today + 6 following days but can specified by the query parameters.   filter[bonus_type] can be used seperately and does not have an effect on the other parameters.  range[from] changes the start date, everything else defaults to 6 following dates from this start date.  range[to] when used without anything else, it will use today as start date and this parameter as end. All ranges are inclusive.  range[from] + range[to] = inclusive range over the specified dates, should never be farther apart than 35 days.  range[from|to] + range[size] no need to specify the date, just following days with [from] (0 is today) or go backwards in time with only [to] and [size].  Not all combinations are listed but this should give you an idea how to they could work.
          * @summary Almanax Range
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es'} language code
+         * @param {GetAlmanaxRangeLanguageEnum} language code
          * @param {string} [filterBonusType] ids from meta/{language}/almanax/bonuses
          * @param {string} [rangeFrom] yyyy-mm-dd
          * @param {string} [rangeTo] yyyy-mm-dd
@@ -1978,7 +2024,7 @@ export const AlmanaxApiFactory = function (configuration?: Configuration, basePa
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAlmanaxRange(language: 'en' | 'fr' | 'de' | 'it' | 'es', filterBonusType?: string, rangeFrom?: string, rangeTo?: string, rangeSize?: number, timezone?: string, options?: any): AxiosPromise<Array<AlmanaxEntry>> {
+        getAlmanaxRange(language: GetAlmanaxRangeLanguageEnum, filterBonusType?: string, rangeFrom?: string, rangeTo?: string, rangeSize?: number, timezone?: string, options?: any): AxiosPromise<Array<AlmanaxEntry>> {
             return localVarFp.getAlmanaxRange(language, filterBonusType, rangeFrom, rangeTo, rangeSize, timezone, options).then((request) => request(axios, basePath));
         },
     };
@@ -1994,20 +2040,20 @@ export class AlmanaxApi extends BaseAPI {
     /**
      * Get a single date. There are not more details in the returned object than the normal range endpoint.
      * @summary Single Almanax Date
-     * @param {'en' | 'fr' | 'de' | 'it' | 'es'} language code
+     * @param {GetAlmanaxDateLanguageEnum} language code
      * @param {string} date yyyy-mm-dd
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AlmanaxApi
      */
-    public getAlmanaxDate(language: 'en' | 'fr' | 'de' | 'it' | 'es', date: string, options?: AxiosRequestConfig) {
+    public getAlmanaxDate(language: GetAlmanaxDateLanguageEnum, date: string, options?: AxiosRequestConfig) {
         return AlmanaxApiFp(this.configuration).getAlmanaxDate(language, date, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * Get a range of dates, defaults to today + 6 following days but can specified by the query parameters.   filter[bonus_type] can be used seperately and does not have an effect on the other parameters.  range[from] changes the start date, everything else defaults to 6 following dates from this start date.  range[to] when used without anything else, it will use today as start date and this parameter as end. All ranges are inclusive.  range[from] + range[to] = inclusive range over the specified dates, should never be farther apart than 35 days.  range[from|to] + range[size] no need to specify the date, just following days with [from] (0 is today) or go backwards in time with only [to] and [size].  Not all combinations are listed but this should give you an idea how to they could work.
      * @summary Almanax Range
-     * @param {'en' | 'fr' | 'de' | 'it' | 'es'} language code
+     * @param {GetAlmanaxRangeLanguageEnum} language code
      * @param {string} [filterBonusType] ids from meta/{language}/almanax/bonuses
      * @param {string} [rangeFrom] yyyy-mm-dd
      * @param {string} [rangeTo] yyyy-mm-dd
@@ -2017,10 +2063,33 @@ export class AlmanaxApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AlmanaxApi
      */
-    public getAlmanaxRange(language: 'en' | 'fr' | 'de' | 'it' | 'es', filterBonusType?: string, rangeFrom?: string, rangeTo?: string, rangeSize?: number, timezone?: string, options?: AxiosRequestConfig) {
+    public getAlmanaxRange(language: GetAlmanaxRangeLanguageEnum, filterBonusType?: string, rangeFrom?: string, rangeTo?: string, rangeSize?: number, timezone?: string, options?: AxiosRequestConfig) {
         return AlmanaxApiFp(this.configuration).getAlmanaxRange(language, filterBonusType, rangeFrom, rangeTo, rangeSize, timezone, options).then((request) => request(this.axios, this.basePath));
     }
 }
+
+/**
+ * @export
+ */
+export const GetAlmanaxDateLanguageEnum = {
+    En: 'en',
+    Fr: 'fr',
+    De: 'de',
+    It: 'it',
+    Es: 'es'
+} as const;
+export type GetAlmanaxDateLanguageEnum = typeof GetAlmanaxDateLanguageEnum[keyof typeof GetAlmanaxDateLanguageEnum];
+/**
+ * @export
+ */
+export const GetAlmanaxRangeLanguageEnum = {
+    En: 'en',
+    Fr: 'fr',
+    De: 'de',
+    It: 'it',
+    Es: 'es'
+} as const;
+export type GetAlmanaxRangeLanguageEnum = typeof GetAlmanaxRangeLanguageEnum[keyof typeof GetAlmanaxRangeLanguageEnum];
 
 
 /**
@@ -2032,17 +2101,17 @@ export const ConsumablesApiAxiosParamCreator = function (configuration?: Configu
         /**
          * Retrieve all consumable items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Consumables
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
-         * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+         * @param {GetAllItemsConsumablesListLanguageEnum} language a valid language code
+         * @param {GetAllItemsConsumablesListGameEnum} game 
+         * @param {GetAllItemsConsumablesListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
-         * @param {'gzip'} [acceptEncoding] optional compression for saving bandwidth
+         * @param {GetAllItemsConsumablesListAcceptEncodingEnum} [acceptEncoding] optional compression for saving bandwidth
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAllItemsConsumablesList: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: 'gzip', options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getAllItemsConsumablesList: async (language: GetAllItemsConsumablesListLanguageEnum, game: GetAllItemsConsumablesListGameEnum, sortLevel?: GetAllItemsConsumablesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsConsumablesListAcceptEncodingEnum, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getAllItemsConsumablesList', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -2095,19 +2164,19 @@ export const ConsumablesApiAxiosParamCreator = function (configuration?: Configu
         /**
          * Retrieve a list of consumable items.
          * @summary List Consumables
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
-         * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+         * @param {GetItemsConsumablesListLanguageEnum} language a valid language code
+         * @param {GetItemsConsumablesListGameEnum} game 
+         * @param {GetItemsConsumablesListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
          * @param {number} [pageSize] size of the results from the list. -1 disables pagination and gets all in one response.
          * @param {number} [pageNumber] page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
-         * @param {Set<'recipe' | 'description' | 'conditions' | 'effects'>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+         * @param {Set<GetItemsConsumablesListFieldsItemEnum>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsConsumablesList: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<'recipe' | 'description' | 'conditions' | 'effects'>, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getItemsConsumablesList: async (language: GetItemsConsumablesListLanguageEnum, game: GetItemsConsumablesListGameEnum, sortLevel?: GetItemsConsumablesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsConsumablesListFieldsItemEnum>, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getItemsConsumablesList', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -2168,8 +2237,8 @@ export const ConsumablesApiAxiosParamCreator = function (configuration?: Configu
         /**
          * Search in all names and descriptions of consumable items with a query.
          * @summary Search Consumables
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetItemsConsumablesSearchLanguageEnum} language a valid language code
+         * @param {GetItemsConsumablesSearchGameEnum} game 
          * @param {string} query case sensitive search query
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
@@ -2178,7 +2247,7 @@ export const ConsumablesApiAxiosParamCreator = function (configuration?: Configu
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsConsumablesSearch: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getItemsConsumablesSearch: async (language: GetItemsConsumablesSearchLanguageEnum, game: GetItemsConsumablesSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getItemsConsumablesSearch', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -2233,13 +2302,13 @@ export const ConsumablesApiAxiosParamCreator = function (configuration?: Configu
         /**
          * Retrieve a specific consumable item with id.
          * @summary Single Consumables
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
+         * @param {GetItemsConsumablesSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetItemsConsumablesSingleGameEnum} game 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsConsumablesSingle: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', ankamaId: number, game: 'dofus2' | 'dofus2beta', options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getItemsConsumablesSingle: async (language: GetItemsConsumablesSingleLanguageEnum, ankamaId: number, game: GetItemsConsumablesSingleGameEnum, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getItemsConsumablesSingle', 'language', language)
             // verify required parameter 'ankamaId' is not null or undefined
@@ -2285,44 +2354,44 @@ export const ConsumablesApiFp = function(configuration?: Configuration) {
         /**
          * Retrieve all consumable items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Consumables
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
-         * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+         * @param {GetAllItemsConsumablesListLanguageEnum} language a valid language code
+         * @param {GetAllItemsConsumablesListGameEnum} game 
+         * @param {GetAllItemsConsumablesListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
-         * @param {'gzip'} [acceptEncoding] optional compression for saving bandwidth
+         * @param {GetAllItemsConsumablesListAcceptEncodingEnum} [acceptEncoding] optional compression for saving bandwidth
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getAllItemsConsumablesList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: 'gzip', options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
+        async getAllItemsConsumablesList(language: GetAllItemsConsumablesListLanguageEnum, game: GetAllItemsConsumablesListGameEnum, sortLevel?: GetAllItemsConsumablesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsConsumablesListAcceptEncodingEnum, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getAllItemsConsumablesList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, acceptEncoding, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * Retrieve a list of consumable items.
          * @summary List Consumables
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
-         * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+         * @param {GetItemsConsumablesListLanguageEnum} language a valid language code
+         * @param {GetItemsConsumablesListGameEnum} game 
+         * @param {GetItemsConsumablesListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
          * @param {number} [pageSize] size of the results from the list. -1 disables pagination and gets all in one response.
          * @param {number} [pageNumber] page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
-         * @param {Set<'recipe' | 'description' | 'conditions' | 'effects'>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+         * @param {Set<GetItemsConsumablesListFieldsItemEnum>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getItemsConsumablesList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<'recipe' | 'description' | 'conditions' | 'effects'>, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
+        async getItemsConsumablesList(language: GetItemsConsumablesListLanguageEnum, game: GetItemsConsumablesListGameEnum, sortLevel?: GetItemsConsumablesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsConsumablesListFieldsItemEnum>, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getItemsConsumablesList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, pageSize, pageNumber, fieldsItem, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * Search in all names and descriptions of consumable items with a query.
          * @summary Search Consumables
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetItemsConsumablesSearchLanguageEnum} language a valid language code
+         * @param {GetItemsConsumablesSearchGameEnum} game 
          * @param {string} query case sensitive search query
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
@@ -2331,20 +2400,20 @@ export const ConsumablesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getItemsConsumablesSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ItemListEntry>>> {
+        async getItemsConsumablesSearch(language: GetItemsConsumablesSearchLanguageEnum, game: GetItemsConsumablesSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ItemListEntry>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getItemsConsumablesSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * Retrieve a specific consumable item with id.
          * @summary Single Consumables
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
+         * @param {GetItemsConsumablesSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetItemsConsumablesSingleGameEnum} game 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getItemsConsumablesSingle(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', ankamaId: number, game: 'dofus2' | 'dofus2beta', options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Resource>> {
+        async getItemsConsumablesSingle(language: GetItemsConsumablesSingleLanguageEnum, ankamaId: number, game: GetItemsConsumablesSingleGameEnum, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Resource>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getItemsConsumablesSingle(language, ankamaId, game, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -2361,42 +2430,42 @@ export const ConsumablesApiFactory = function (configuration?: Configuration, ba
         /**
          * Retrieve all consumable items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Consumables
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
-         * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+         * @param {GetAllItemsConsumablesListLanguageEnum} language a valid language code
+         * @param {GetAllItemsConsumablesListGameEnum} game 
+         * @param {GetAllItemsConsumablesListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
-         * @param {'gzip'} [acceptEncoding] optional compression for saving bandwidth
+         * @param {GetAllItemsConsumablesListAcceptEncodingEnum} [acceptEncoding] optional compression for saving bandwidth
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAllItemsConsumablesList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: 'gzip', options?: any): AxiosPromise<ItemsListPaged> {
+        getAllItemsConsumablesList(language: GetAllItemsConsumablesListLanguageEnum, game: GetAllItemsConsumablesListGameEnum, sortLevel?: GetAllItemsConsumablesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsConsumablesListAcceptEncodingEnum, options?: any): AxiosPromise<ItemsListPaged> {
             return localVarFp.getAllItemsConsumablesList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, acceptEncoding, options).then((request) => request(axios, basePath));
         },
         /**
          * Retrieve a list of consumable items.
          * @summary List Consumables
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
-         * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+         * @param {GetItemsConsumablesListLanguageEnum} language a valid language code
+         * @param {GetItemsConsumablesListGameEnum} game 
+         * @param {GetItemsConsumablesListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
          * @param {number} [pageSize] size of the results from the list. -1 disables pagination and gets all in one response.
          * @param {number} [pageNumber] page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
-         * @param {Set<'recipe' | 'description' | 'conditions' | 'effects'>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+         * @param {Set<GetItemsConsumablesListFieldsItemEnum>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsConsumablesList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<'recipe' | 'description' | 'conditions' | 'effects'>, options?: any): AxiosPromise<ItemsListPaged> {
+        getItemsConsumablesList(language: GetItemsConsumablesListLanguageEnum, game: GetItemsConsumablesListGameEnum, sortLevel?: GetItemsConsumablesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsConsumablesListFieldsItemEnum>, options?: any): AxiosPromise<ItemsListPaged> {
             return localVarFp.getItemsConsumablesList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, pageSize, pageNumber, fieldsItem, options).then((request) => request(axios, basePath));
         },
         /**
          * Search in all names and descriptions of consumable items with a query.
          * @summary Search Consumables
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetItemsConsumablesSearchLanguageEnum} language a valid language code
+         * @param {GetItemsConsumablesSearchGameEnum} game 
          * @param {string} query case sensitive search query
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
@@ -2405,19 +2474,19 @@ export const ConsumablesApiFactory = function (configuration?: Configuration, ba
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsConsumablesSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: any): AxiosPromise<Array<ItemListEntry>> {
+        getItemsConsumablesSearch(language: GetItemsConsumablesSearchLanguageEnum, game: GetItemsConsumablesSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: any): AxiosPromise<Array<ItemListEntry>> {
             return localVarFp.getItemsConsumablesSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options).then((request) => request(axios, basePath));
         },
         /**
          * Retrieve a specific consumable item with id.
          * @summary Single Consumables
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
+         * @param {GetItemsConsumablesSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetItemsConsumablesSingleGameEnum} game 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsConsumablesSingle(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', ankamaId: number, game: 'dofus2' | 'dofus2beta', options?: any): AxiosPromise<Resource> {
+        getItemsConsumablesSingle(language: GetItemsConsumablesSingleLanguageEnum, ankamaId: number, game: GetItemsConsumablesSingleGameEnum, options?: any): AxiosPromise<Resource> {
             return localVarFp.getItemsConsumablesSingle(language, ankamaId, game, options).then((request) => request(axios, basePath));
         },
     };
@@ -2433,46 +2502,46 @@ export class ConsumablesApi extends BaseAPI {
     /**
      * Retrieve all consumable items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
      * @summary List All Consumables
-     * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-     * @param {'dofus2' | 'dofus2beta'} game 
-     * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+     * @param {GetAllItemsConsumablesListLanguageEnum} language a valid language code
+     * @param {GetAllItemsConsumablesListGameEnum} game 
+     * @param {GetAllItemsConsumablesListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
      * @param {string} [filterTypeName] only results with the translated type name
      * @param {number} [filterMinLevel] only results which level is equal or above this value
      * @param {number} [filterMaxLevel] only results which level is equal or below this value
-     * @param {'gzip'} [acceptEncoding] optional compression for saving bandwidth
+     * @param {GetAllItemsConsumablesListAcceptEncodingEnum} [acceptEncoding] optional compression for saving bandwidth
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ConsumablesApi
      */
-    public getAllItemsConsumablesList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: 'gzip', options?: AxiosRequestConfig) {
+    public getAllItemsConsumablesList(language: GetAllItemsConsumablesListLanguageEnum, game: GetAllItemsConsumablesListGameEnum, sortLevel?: GetAllItemsConsumablesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsConsumablesListAcceptEncodingEnum, options?: AxiosRequestConfig) {
         return ConsumablesApiFp(this.configuration).getAllItemsConsumablesList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, acceptEncoding, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * Retrieve a list of consumable items.
      * @summary List Consumables
-     * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-     * @param {'dofus2' | 'dofus2beta'} game 
-     * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+     * @param {GetItemsConsumablesListLanguageEnum} language a valid language code
+     * @param {GetItemsConsumablesListGameEnum} game 
+     * @param {GetItemsConsumablesListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
      * @param {string} [filterTypeName] only results with the translated type name
      * @param {number} [filterMinLevel] only results which level is equal or above this value
      * @param {number} [filterMaxLevel] only results which level is equal or below this value
      * @param {number} [pageSize] size of the results from the list. -1 disables pagination and gets all in one response.
      * @param {number} [pageNumber] page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
-     * @param {Set<'recipe' | 'description' | 'conditions' | 'effects'>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+     * @param {Set<GetItemsConsumablesListFieldsItemEnum>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ConsumablesApi
      */
-    public getItemsConsumablesList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<'recipe' | 'description' | 'conditions' | 'effects'>, options?: AxiosRequestConfig) {
+    public getItemsConsumablesList(language: GetItemsConsumablesListLanguageEnum, game: GetItemsConsumablesListGameEnum, sortLevel?: GetItemsConsumablesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsConsumablesListFieldsItemEnum>, options?: AxiosRequestConfig) {
         return ConsumablesApiFp(this.configuration).getItemsConsumablesList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, pageSize, pageNumber, fieldsItem, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * Search in all names and descriptions of consumable items with a query.
      * @summary Search Consumables
-     * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-     * @param {'dofus2' | 'dofus2beta'} game 
+     * @param {GetItemsConsumablesSearchLanguageEnum} language a valid language code
+     * @param {GetItemsConsumablesSearchGameEnum} game 
      * @param {string} query case sensitive search query
      * @param {string} [filterTypeName] only results with the translated type name
      * @param {number} [filterMinLevel] only results which level is equal or above this value
@@ -2482,24 +2551,138 @@ export class ConsumablesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ConsumablesApi
      */
-    public getItemsConsumablesSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig) {
+    public getItemsConsumablesSearch(language: GetItemsConsumablesSearchLanguageEnum, game: GetItemsConsumablesSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig) {
         return ConsumablesApiFp(this.configuration).getItemsConsumablesSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * Retrieve a specific consumable item with id.
      * @summary Single Consumables
-     * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
+     * @param {GetItemsConsumablesSingleLanguageEnum} language a valid language code
      * @param {number} ankamaId identifier
-     * @param {'dofus2' | 'dofus2beta'} game 
+     * @param {GetItemsConsumablesSingleGameEnum} game 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ConsumablesApi
      */
-    public getItemsConsumablesSingle(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', ankamaId: number, game: 'dofus2' | 'dofus2beta', options?: AxiosRequestConfig) {
+    public getItemsConsumablesSingle(language: GetItemsConsumablesSingleLanguageEnum, ankamaId: number, game: GetItemsConsumablesSingleGameEnum, options?: AxiosRequestConfig) {
         return ConsumablesApiFp(this.configuration).getItemsConsumablesSingle(language, ankamaId, game, options).then((request) => request(this.axios, this.basePath));
     }
 }
+
+/**
+ * @export
+ */
+export const GetAllItemsConsumablesListLanguageEnum = {
+    En: 'en',
+    Fr: 'fr',
+    De: 'de',
+    It: 'it',
+    Es: 'es',
+    Pt: 'pt'
+} as const;
+export type GetAllItemsConsumablesListLanguageEnum = typeof GetAllItemsConsumablesListLanguageEnum[keyof typeof GetAllItemsConsumablesListLanguageEnum];
+/**
+ * @export
+ */
+export const GetAllItemsConsumablesListGameEnum = {
+    Dofus2: 'dofus2',
+    Dofus2beta: 'dofus2beta'
+} as const;
+export type GetAllItemsConsumablesListGameEnum = typeof GetAllItemsConsumablesListGameEnum[keyof typeof GetAllItemsConsumablesListGameEnum];
+/**
+ * @export
+ */
+export const GetAllItemsConsumablesListSortLevelEnum = {
+    Asc: 'asc',
+    Desc: 'desc'
+} as const;
+export type GetAllItemsConsumablesListSortLevelEnum = typeof GetAllItemsConsumablesListSortLevelEnum[keyof typeof GetAllItemsConsumablesListSortLevelEnum];
+/**
+ * @export
+ */
+export const GetAllItemsConsumablesListAcceptEncodingEnum = {
+    Gzip: 'gzip'
+} as const;
+export type GetAllItemsConsumablesListAcceptEncodingEnum = typeof GetAllItemsConsumablesListAcceptEncodingEnum[keyof typeof GetAllItemsConsumablesListAcceptEncodingEnum];
+/**
+ * @export
+ */
+export const GetItemsConsumablesListLanguageEnum = {
+    En: 'en',
+    Fr: 'fr',
+    De: 'de',
+    It: 'it',
+    Es: 'es',
+    Pt: 'pt'
+} as const;
+export type GetItemsConsumablesListLanguageEnum = typeof GetItemsConsumablesListLanguageEnum[keyof typeof GetItemsConsumablesListLanguageEnum];
+/**
+ * @export
+ */
+export const GetItemsConsumablesListGameEnum = {
+    Dofus2: 'dofus2',
+    Dofus2beta: 'dofus2beta'
+} as const;
+export type GetItemsConsumablesListGameEnum = typeof GetItemsConsumablesListGameEnum[keyof typeof GetItemsConsumablesListGameEnum];
+/**
+ * @export
+ */
+export const GetItemsConsumablesListSortLevelEnum = {
+    Asc: 'asc',
+    Desc: 'desc'
+} as const;
+export type GetItemsConsumablesListSortLevelEnum = typeof GetItemsConsumablesListSortLevelEnum[keyof typeof GetItemsConsumablesListSortLevelEnum];
+/**
+ * @export
+ */
+export const GetItemsConsumablesListFieldsItemEnum = {
+    Recipe: 'recipe',
+    Description: 'description',
+    Conditions: 'conditions',
+    Effects: 'effects'
+} as const;
+export type GetItemsConsumablesListFieldsItemEnum = typeof GetItemsConsumablesListFieldsItemEnum[keyof typeof GetItemsConsumablesListFieldsItemEnum];
+/**
+ * @export
+ */
+export const GetItemsConsumablesSearchLanguageEnum = {
+    En: 'en',
+    Fr: 'fr',
+    De: 'de',
+    It: 'it',
+    Es: 'es',
+    Pt: 'pt'
+} as const;
+export type GetItemsConsumablesSearchLanguageEnum = typeof GetItemsConsumablesSearchLanguageEnum[keyof typeof GetItemsConsumablesSearchLanguageEnum];
+/**
+ * @export
+ */
+export const GetItemsConsumablesSearchGameEnum = {
+    Dofus2: 'dofus2',
+    Dofus2beta: 'dofus2beta'
+} as const;
+export type GetItemsConsumablesSearchGameEnum = typeof GetItemsConsumablesSearchGameEnum[keyof typeof GetItemsConsumablesSearchGameEnum];
+/**
+ * @export
+ */
+export const GetItemsConsumablesSingleLanguageEnum = {
+    En: 'en',
+    Fr: 'fr',
+    De: 'de',
+    It: 'it',
+    Es: 'es',
+    Pt: 'pt'
+} as const;
+export type GetItemsConsumablesSingleLanguageEnum = typeof GetItemsConsumablesSingleLanguageEnum[keyof typeof GetItemsConsumablesSingleLanguageEnum];
+/**
+ * @export
+ */
+export const GetItemsConsumablesSingleGameEnum = {
+    Dofus2: 'dofus2',
+    Dofus2beta: 'dofus2beta'
+} as const;
+export type GetItemsConsumablesSingleGameEnum = typeof GetItemsConsumablesSingleGameEnum[keyof typeof GetItemsConsumablesSingleGameEnum];
 
 
 /**
@@ -2511,17 +2694,17 @@ export const CosmeticsApiAxiosParamCreator = function (configuration?: Configura
         /**
          * Retrieve all cosmetic items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Cosmetics
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
-         * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+         * @param {GetAllCosmeticsListLanguageEnum} language a valid language code
+         * @param {GetAllCosmeticsListGameEnum} game 
+         * @param {GetAllCosmeticsListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
-         * @param {'gzip'} [acceptEncoding] optional compression for saving bandwidth
+         * @param {GetAllCosmeticsListAcceptEncodingEnum} [acceptEncoding] optional compression for saving bandwidth
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAllCosmeticsList: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: 'gzip', options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getAllCosmeticsList: async (language: GetAllCosmeticsListLanguageEnum, game: GetAllCosmeticsListGameEnum, sortLevel?: GetAllCosmeticsListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllCosmeticsListAcceptEncodingEnum, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getAllCosmeticsList', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -2574,19 +2757,19 @@ export const CosmeticsApiAxiosParamCreator = function (configuration?: Configura
         /**
          * Retrieve a list of cosmetic items.
          * @summary List Cosmetics
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
-         * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+         * @param {GetCosmeticsListLanguageEnum} language a valid language code
+         * @param {GetCosmeticsListGameEnum} game 
+         * @param {GetCosmeticsListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
          * @param {number} [pageSize] size of the results from the list. -1 disables pagination and gets all in one response.
          * @param {number} [pageNumber] page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
-         * @param {Set<'recipe' | 'description' | 'conditions' | 'effects'>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+         * @param {Set<GetCosmeticsListFieldsItemEnum>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCosmeticsList: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<'recipe' | 'description' | 'conditions' | 'effects'>, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getCosmeticsList: async (language: GetCosmeticsListLanguageEnum, game: GetCosmeticsListGameEnum, sortLevel?: GetCosmeticsListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetCosmeticsListFieldsItemEnum>, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getCosmeticsList', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -2647,8 +2830,8 @@ export const CosmeticsApiAxiosParamCreator = function (configuration?: Configura
         /**
          * Search in all names and descriptions of cosmetic items with a query.
          * @summary Search Cosmetics
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetCosmeticsSearchLanguageEnum} language a valid language code
+         * @param {GetCosmeticsSearchGameEnum} game 
          * @param {string} query case sensitive search query
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
@@ -2657,7 +2840,7 @@ export const CosmeticsApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCosmeticsSearch: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getCosmeticsSearch: async (language: GetCosmeticsSearchLanguageEnum, game: GetCosmeticsSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getCosmeticsSearch', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -2712,13 +2895,13 @@ export const CosmeticsApiAxiosParamCreator = function (configuration?: Configura
         /**
          * Retrieve a specific cosmetic item with id.
          * @summary Single Cosmetics
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
+         * @param {GetCosmeticsSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetCosmeticsSingleGameEnum} game 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCosmeticsSingle: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', ankamaId: number, game: 'dofus2' | 'dofus2beta', options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getCosmeticsSingle: async (language: GetCosmeticsSingleLanguageEnum, ankamaId: number, game: GetCosmeticsSingleGameEnum, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getCosmeticsSingle', 'language', language)
             // verify required parameter 'ankamaId' is not null or undefined
@@ -2764,44 +2947,44 @@ export const CosmeticsApiFp = function(configuration?: Configuration) {
         /**
          * Retrieve all cosmetic items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Cosmetics
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
-         * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+         * @param {GetAllCosmeticsListLanguageEnum} language a valid language code
+         * @param {GetAllCosmeticsListGameEnum} game 
+         * @param {GetAllCosmeticsListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
-         * @param {'gzip'} [acceptEncoding] optional compression for saving bandwidth
+         * @param {GetAllCosmeticsListAcceptEncodingEnum} [acceptEncoding] optional compression for saving bandwidth
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getAllCosmeticsList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: 'gzip', options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
+        async getAllCosmeticsList(language: GetAllCosmeticsListLanguageEnum, game: GetAllCosmeticsListGameEnum, sortLevel?: GetAllCosmeticsListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllCosmeticsListAcceptEncodingEnum, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getAllCosmeticsList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, acceptEncoding, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * Retrieve a list of cosmetic items.
          * @summary List Cosmetics
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
-         * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+         * @param {GetCosmeticsListLanguageEnum} language a valid language code
+         * @param {GetCosmeticsListGameEnum} game 
+         * @param {GetCosmeticsListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
          * @param {number} [pageSize] size of the results from the list. -1 disables pagination and gets all in one response.
          * @param {number} [pageNumber] page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
-         * @param {Set<'recipe' | 'description' | 'conditions' | 'effects'>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+         * @param {Set<GetCosmeticsListFieldsItemEnum>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getCosmeticsList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<'recipe' | 'description' | 'conditions' | 'effects'>, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
+        async getCosmeticsList(language: GetCosmeticsListLanguageEnum, game: GetCosmeticsListGameEnum, sortLevel?: GetCosmeticsListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetCosmeticsListFieldsItemEnum>, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getCosmeticsList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, pageSize, pageNumber, fieldsItem, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * Search in all names and descriptions of cosmetic items with a query.
          * @summary Search Cosmetics
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetCosmeticsSearchLanguageEnum} language a valid language code
+         * @param {GetCosmeticsSearchGameEnum} game 
          * @param {string} query case sensitive search query
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
@@ -2810,20 +2993,20 @@ export const CosmeticsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getCosmeticsSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ItemListEntry>>> {
+        async getCosmeticsSearch(language: GetCosmeticsSearchLanguageEnum, game: GetCosmeticsSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ItemListEntry>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getCosmeticsSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * Retrieve a specific cosmetic item with id.
          * @summary Single Cosmetics
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
+         * @param {GetCosmeticsSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetCosmeticsSingleGameEnum} game 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getCosmeticsSingle(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', ankamaId: number, game: 'dofus2' | 'dofus2beta', options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Cosmetic>> {
+        async getCosmeticsSingle(language: GetCosmeticsSingleLanguageEnum, ankamaId: number, game: GetCosmeticsSingleGameEnum, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Cosmetic>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getCosmeticsSingle(language, ankamaId, game, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -2840,42 +3023,42 @@ export const CosmeticsApiFactory = function (configuration?: Configuration, base
         /**
          * Retrieve all cosmetic items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Cosmetics
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
-         * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+         * @param {GetAllCosmeticsListLanguageEnum} language a valid language code
+         * @param {GetAllCosmeticsListGameEnum} game 
+         * @param {GetAllCosmeticsListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
-         * @param {'gzip'} [acceptEncoding] optional compression for saving bandwidth
+         * @param {GetAllCosmeticsListAcceptEncodingEnum} [acceptEncoding] optional compression for saving bandwidth
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAllCosmeticsList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: 'gzip', options?: any): AxiosPromise<ItemsListPaged> {
+        getAllCosmeticsList(language: GetAllCosmeticsListLanguageEnum, game: GetAllCosmeticsListGameEnum, sortLevel?: GetAllCosmeticsListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllCosmeticsListAcceptEncodingEnum, options?: any): AxiosPromise<ItemsListPaged> {
             return localVarFp.getAllCosmeticsList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, acceptEncoding, options).then((request) => request(axios, basePath));
         },
         /**
          * Retrieve a list of cosmetic items.
          * @summary List Cosmetics
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
-         * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+         * @param {GetCosmeticsListLanguageEnum} language a valid language code
+         * @param {GetCosmeticsListGameEnum} game 
+         * @param {GetCosmeticsListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
          * @param {number} [pageSize] size of the results from the list. -1 disables pagination and gets all in one response.
          * @param {number} [pageNumber] page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
-         * @param {Set<'recipe' | 'description' | 'conditions' | 'effects'>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+         * @param {Set<GetCosmeticsListFieldsItemEnum>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCosmeticsList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<'recipe' | 'description' | 'conditions' | 'effects'>, options?: any): AxiosPromise<ItemsListPaged> {
+        getCosmeticsList(language: GetCosmeticsListLanguageEnum, game: GetCosmeticsListGameEnum, sortLevel?: GetCosmeticsListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetCosmeticsListFieldsItemEnum>, options?: any): AxiosPromise<ItemsListPaged> {
             return localVarFp.getCosmeticsList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, pageSize, pageNumber, fieldsItem, options).then((request) => request(axios, basePath));
         },
         /**
          * Search in all names and descriptions of cosmetic items with a query.
          * @summary Search Cosmetics
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetCosmeticsSearchLanguageEnum} language a valid language code
+         * @param {GetCosmeticsSearchGameEnum} game 
          * @param {string} query case sensitive search query
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
@@ -2884,19 +3067,19 @@ export const CosmeticsApiFactory = function (configuration?: Configuration, base
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCosmeticsSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: any): AxiosPromise<Array<ItemListEntry>> {
+        getCosmeticsSearch(language: GetCosmeticsSearchLanguageEnum, game: GetCosmeticsSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: any): AxiosPromise<Array<ItemListEntry>> {
             return localVarFp.getCosmeticsSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options).then((request) => request(axios, basePath));
         },
         /**
          * Retrieve a specific cosmetic item with id.
          * @summary Single Cosmetics
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
+         * @param {GetCosmeticsSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetCosmeticsSingleGameEnum} game 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCosmeticsSingle(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', ankamaId: number, game: 'dofus2' | 'dofus2beta', options?: any): AxiosPromise<Cosmetic> {
+        getCosmeticsSingle(language: GetCosmeticsSingleLanguageEnum, ankamaId: number, game: GetCosmeticsSingleGameEnum, options?: any): AxiosPromise<Cosmetic> {
             return localVarFp.getCosmeticsSingle(language, ankamaId, game, options).then((request) => request(axios, basePath));
         },
     };
@@ -2912,46 +3095,46 @@ export class CosmeticsApi extends BaseAPI {
     /**
      * Retrieve all cosmetic items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
      * @summary List All Cosmetics
-     * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-     * @param {'dofus2' | 'dofus2beta'} game 
-     * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+     * @param {GetAllCosmeticsListLanguageEnum} language a valid language code
+     * @param {GetAllCosmeticsListGameEnum} game 
+     * @param {GetAllCosmeticsListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
      * @param {string} [filterTypeName] only results with the translated type name
      * @param {number} [filterMinLevel] only results which level is equal or above this value
      * @param {number} [filterMaxLevel] only results which level is equal or below this value
-     * @param {'gzip'} [acceptEncoding] optional compression for saving bandwidth
+     * @param {GetAllCosmeticsListAcceptEncodingEnum} [acceptEncoding] optional compression for saving bandwidth
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof CosmeticsApi
      */
-    public getAllCosmeticsList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: 'gzip', options?: AxiosRequestConfig) {
+    public getAllCosmeticsList(language: GetAllCosmeticsListLanguageEnum, game: GetAllCosmeticsListGameEnum, sortLevel?: GetAllCosmeticsListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllCosmeticsListAcceptEncodingEnum, options?: AxiosRequestConfig) {
         return CosmeticsApiFp(this.configuration).getAllCosmeticsList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, acceptEncoding, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * Retrieve a list of cosmetic items.
      * @summary List Cosmetics
-     * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-     * @param {'dofus2' | 'dofus2beta'} game 
-     * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+     * @param {GetCosmeticsListLanguageEnum} language a valid language code
+     * @param {GetCosmeticsListGameEnum} game 
+     * @param {GetCosmeticsListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
      * @param {string} [filterTypeName] only results with the translated type name
      * @param {number} [filterMinLevel] only results which level is equal or above this value
      * @param {number} [filterMaxLevel] only results which level is equal or below this value
      * @param {number} [pageSize] size of the results from the list. -1 disables pagination and gets all in one response.
      * @param {number} [pageNumber] page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
-     * @param {Set<'recipe' | 'description' | 'conditions' | 'effects'>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+     * @param {Set<GetCosmeticsListFieldsItemEnum>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof CosmeticsApi
      */
-    public getCosmeticsList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<'recipe' | 'description' | 'conditions' | 'effects'>, options?: AxiosRequestConfig) {
+    public getCosmeticsList(language: GetCosmeticsListLanguageEnum, game: GetCosmeticsListGameEnum, sortLevel?: GetCosmeticsListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetCosmeticsListFieldsItemEnum>, options?: AxiosRequestConfig) {
         return CosmeticsApiFp(this.configuration).getCosmeticsList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, pageSize, pageNumber, fieldsItem, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * Search in all names and descriptions of cosmetic items with a query.
      * @summary Search Cosmetics
-     * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-     * @param {'dofus2' | 'dofus2beta'} game 
+     * @param {GetCosmeticsSearchLanguageEnum} language a valid language code
+     * @param {GetCosmeticsSearchGameEnum} game 
      * @param {string} query case sensitive search query
      * @param {string} [filterTypeName] only results with the translated type name
      * @param {number} [filterMinLevel] only results which level is equal or above this value
@@ -2961,24 +3144,138 @@ export class CosmeticsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CosmeticsApi
      */
-    public getCosmeticsSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig) {
+    public getCosmeticsSearch(language: GetCosmeticsSearchLanguageEnum, game: GetCosmeticsSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig) {
         return CosmeticsApiFp(this.configuration).getCosmeticsSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * Retrieve a specific cosmetic item with id.
      * @summary Single Cosmetics
-     * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
+     * @param {GetCosmeticsSingleLanguageEnum} language a valid language code
      * @param {number} ankamaId identifier
-     * @param {'dofus2' | 'dofus2beta'} game 
+     * @param {GetCosmeticsSingleGameEnum} game 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof CosmeticsApi
      */
-    public getCosmeticsSingle(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', ankamaId: number, game: 'dofus2' | 'dofus2beta', options?: AxiosRequestConfig) {
+    public getCosmeticsSingle(language: GetCosmeticsSingleLanguageEnum, ankamaId: number, game: GetCosmeticsSingleGameEnum, options?: AxiosRequestConfig) {
         return CosmeticsApiFp(this.configuration).getCosmeticsSingle(language, ankamaId, game, options).then((request) => request(this.axios, this.basePath));
     }
 }
+
+/**
+ * @export
+ */
+export const GetAllCosmeticsListLanguageEnum = {
+    En: 'en',
+    Fr: 'fr',
+    De: 'de',
+    It: 'it',
+    Es: 'es',
+    Pt: 'pt'
+} as const;
+export type GetAllCosmeticsListLanguageEnum = typeof GetAllCosmeticsListLanguageEnum[keyof typeof GetAllCosmeticsListLanguageEnum];
+/**
+ * @export
+ */
+export const GetAllCosmeticsListGameEnum = {
+    Dofus2: 'dofus2',
+    Dofus2beta: 'dofus2beta'
+} as const;
+export type GetAllCosmeticsListGameEnum = typeof GetAllCosmeticsListGameEnum[keyof typeof GetAllCosmeticsListGameEnum];
+/**
+ * @export
+ */
+export const GetAllCosmeticsListSortLevelEnum = {
+    Asc: 'asc',
+    Desc: 'desc'
+} as const;
+export type GetAllCosmeticsListSortLevelEnum = typeof GetAllCosmeticsListSortLevelEnum[keyof typeof GetAllCosmeticsListSortLevelEnum];
+/**
+ * @export
+ */
+export const GetAllCosmeticsListAcceptEncodingEnum = {
+    Gzip: 'gzip'
+} as const;
+export type GetAllCosmeticsListAcceptEncodingEnum = typeof GetAllCosmeticsListAcceptEncodingEnum[keyof typeof GetAllCosmeticsListAcceptEncodingEnum];
+/**
+ * @export
+ */
+export const GetCosmeticsListLanguageEnum = {
+    En: 'en',
+    Fr: 'fr',
+    De: 'de',
+    It: 'it',
+    Es: 'es',
+    Pt: 'pt'
+} as const;
+export type GetCosmeticsListLanguageEnum = typeof GetCosmeticsListLanguageEnum[keyof typeof GetCosmeticsListLanguageEnum];
+/**
+ * @export
+ */
+export const GetCosmeticsListGameEnum = {
+    Dofus2: 'dofus2',
+    Dofus2beta: 'dofus2beta'
+} as const;
+export type GetCosmeticsListGameEnum = typeof GetCosmeticsListGameEnum[keyof typeof GetCosmeticsListGameEnum];
+/**
+ * @export
+ */
+export const GetCosmeticsListSortLevelEnum = {
+    Asc: 'asc',
+    Desc: 'desc'
+} as const;
+export type GetCosmeticsListSortLevelEnum = typeof GetCosmeticsListSortLevelEnum[keyof typeof GetCosmeticsListSortLevelEnum];
+/**
+ * @export
+ */
+export const GetCosmeticsListFieldsItemEnum = {
+    Recipe: 'recipe',
+    Description: 'description',
+    Conditions: 'conditions',
+    Effects: 'effects'
+} as const;
+export type GetCosmeticsListFieldsItemEnum = typeof GetCosmeticsListFieldsItemEnum[keyof typeof GetCosmeticsListFieldsItemEnum];
+/**
+ * @export
+ */
+export const GetCosmeticsSearchLanguageEnum = {
+    En: 'en',
+    Fr: 'fr',
+    De: 'de',
+    It: 'it',
+    Es: 'es',
+    Pt: 'pt'
+} as const;
+export type GetCosmeticsSearchLanguageEnum = typeof GetCosmeticsSearchLanguageEnum[keyof typeof GetCosmeticsSearchLanguageEnum];
+/**
+ * @export
+ */
+export const GetCosmeticsSearchGameEnum = {
+    Dofus2: 'dofus2',
+    Dofus2beta: 'dofus2beta'
+} as const;
+export type GetCosmeticsSearchGameEnum = typeof GetCosmeticsSearchGameEnum[keyof typeof GetCosmeticsSearchGameEnum];
+/**
+ * @export
+ */
+export const GetCosmeticsSingleLanguageEnum = {
+    En: 'en',
+    Fr: 'fr',
+    De: 'de',
+    It: 'it',
+    Es: 'es',
+    Pt: 'pt'
+} as const;
+export type GetCosmeticsSingleLanguageEnum = typeof GetCosmeticsSingleLanguageEnum[keyof typeof GetCosmeticsSingleLanguageEnum];
+/**
+ * @export
+ */
+export const GetCosmeticsSingleGameEnum = {
+    Dofus2: 'dofus2',
+    Dofus2beta: 'dofus2beta'
+} as const;
+export type GetCosmeticsSingleGameEnum = typeof GetCosmeticsSingleGameEnum[keyof typeof GetCosmeticsSingleGameEnum];
 
 
 /**
@@ -2990,17 +3287,17 @@ export const EquipmentApiAxiosParamCreator = function (configuration?: Configura
         /**
          * Retrieve all equipment items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Equipment
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
-         * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+         * @param {GetAllItemsEquipmentListLanguageEnum} language a valid language code
+         * @param {GetAllItemsEquipmentListGameEnum} game 
+         * @param {GetAllItemsEquipmentListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
-         * @param {'gzip'} [acceptEncoding] optional compression for saving bandwidth
+         * @param {GetAllItemsEquipmentListAcceptEncodingEnum} [acceptEncoding] optional compression for saving bandwidth
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAllItemsEquipmentList: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: 'gzip', options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getAllItemsEquipmentList: async (language: GetAllItemsEquipmentListLanguageEnum, game: GetAllItemsEquipmentListGameEnum, sortLevel?: GetAllItemsEquipmentListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsEquipmentListAcceptEncodingEnum, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getAllItemsEquipmentList', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -3053,19 +3350,19 @@ export const EquipmentApiAxiosParamCreator = function (configuration?: Configura
         /**
          * Retrieve a list of equipment items.
          * @summary List Equipment
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
-         * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+         * @param {GetItemsEquipmentListLanguageEnum} language a valid language code
+         * @param {GetItemsEquipmentListGameEnum} game 
+         * @param {GetItemsEquipmentListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
          * @param {number} [pageSize] size of the results from the list. -1 disables pagination and gets all in one response.
          * @param {number} [pageNumber] page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
-         * @param {Set<'recipe' | 'description' | 'conditions' | 'effects' | 'is_weapon' | 'pods' | 'parent_set' | 'critical_hit_probability' | 'critical_hit_bonus' | 'is_two_handed' | 'max_cast_per_turn' | 'ap_cost' | 'range'>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+         * @param {Set<GetItemsEquipmentListFieldsItemEnum>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsEquipmentList: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<'recipe' | 'description' | 'conditions' | 'effects' | 'is_weapon' | 'pods' | 'parent_set' | 'critical_hit_probability' | 'critical_hit_bonus' | 'is_two_handed' | 'max_cast_per_turn' | 'ap_cost' | 'range'>, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getItemsEquipmentList: async (language: GetItemsEquipmentListLanguageEnum, game: GetItemsEquipmentListGameEnum, sortLevel?: GetItemsEquipmentListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsEquipmentListFieldsItemEnum>, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getItemsEquipmentList', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -3126,8 +3423,8 @@ export const EquipmentApiAxiosParamCreator = function (configuration?: Configura
         /**
          * Search in all names and descriptions of equipment items with a query.
          * @summary Search Equipment
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetItemsEquipmentSearchLanguageEnum} language a valid language code
+         * @param {GetItemsEquipmentSearchGameEnum} game 
          * @param {string} query case sensitive search query
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
@@ -3136,7 +3433,7 @@ export const EquipmentApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsEquipmentSearch: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getItemsEquipmentSearch: async (language: GetItemsEquipmentSearchLanguageEnum, game: GetItemsEquipmentSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getItemsEquipmentSearch', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -3191,13 +3488,13 @@ export const EquipmentApiAxiosParamCreator = function (configuration?: Configura
         /**
          * Retrieve a specific equipment item with id.
          * @summary Single Equipment
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
+         * @param {GetItemsEquipmentSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetItemsEquipmentSingleGameEnum} game 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsEquipmentSingle: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', ankamaId: number, game: 'dofus2' | 'dofus2beta', options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getItemsEquipmentSingle: async (language: GetItemsEquipmentSingleLanguageEnum, ankamaId: number, game: GetItemsEquipmentSingleGameEnum, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getItemsEquipmentSingle', 'language', language)
             // verify required parameter 'ankamaId' is not null or undefined
@@ -3243,44 +3540,44 @@ export const EquipmentApiFp = function(configuration?: Configuration) {
         /**
          * Retrieve all equipment items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Equipment
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
-         * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+         * @param {GetAllItemsEquipmentListLanguageEnum} language a valid language code
+         * @param {GetAllItemsEquipmentListGameEnum} game 
+         * @param {GetAllItemsEquipmentListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
-         * @param {'gzip'} [acceptEncoding] optional compression for saving bandwidth
+         * @param {GetAllItemsEquipmentListAcceptEncodingEnum} [acceptEncoding] optional compression for saving bandwidth
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getAllItemsEquipmentList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: 'gzip', options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
+        async getAllItemsEquipmentList(language: GetAllItemsEquipmentListLanguageEnum, game: GetAllItemsEquipmentListGameEnum, sortLevel?: GetAllItemsEquipmentListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsEquipmentListAcceptEncodingEnum, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getAllItemsEquipmentList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, acceptEncoding, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * Retrieve a list of equipment items.
          * @summary List Equipment
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
-         * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+         * @param {GetItemsEquipmentListLanguageEnum} language a valid language code
+         * @param {GetItemsEquipmentListGameEnum} game 
+         * @param {GetItemsEquipmentListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
          * @param {number} [pageSize] size of the results from the list. -1 disables pagination and gets all in one response.
          * @param {number} [pageNumber] page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
-         * @param {Set<'recipe' | 'description' | 'conditions' | 'effects' | 'is_weapon' | 'pods' | 'parent_set' | 'critical_hit_probability' | 'critical_hit_bonus' | 'is_two_handed' | 'max_cast_per_turn' | 'ap_cost' | 'range'>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+         * @param {Set<GetItemsEquipmentListFieldsItemEnum>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getItemsEquipmentList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<'recipe' | 'description' | 'conditions' | 'effects' | 'is_weapon' | 'pods' | 'parent_set' | 'critical_hit_probability' | 'critical_hit_bonus' | 'is_two_handed' | 'max_cast_per_turn' | 'ap_cost' | 'range'>, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
+        async getItemsEquipmentList(language: GetItemsEquipmentListLanguageEnum, game: GetItemsEquipmentListGameEnum, sortLevel?: GetItemsEquipmentListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsEquipmentListFieldsItemEnum>, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getItemsEquipmentList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, pageSize, pageNumber, fieldsItem, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * Search in all names and descriptions of equipment items with a query.
          * @summary Search Equipment
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetItemsEquipmentSearchLanguageEnum} language a valid language code
+         * @param {GetItemsEquipmentSearchGameEnum} game 
          * @param {string} query case sensitive search query
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
@@ -3289,20 +3586,20 @@ export const EquipmentApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getItemsEquipmentSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ItemListEntry>>> {
+        async getItemsEquipmentSearch(language: GetItemsEquipmentSearchLanguageEnum, game: GetItemsEquipmentSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ItemListEntry>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getItemsEquipmentSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * Retrieve a specific equipment item with id.
          * @summary Single Equipment
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
+         * @param {GetItemsEquipmentSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetItemsEquipmentSingleGameEnum} game 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getItemsEquipmentSingle(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', ankamaId: number, game: 'dofus2' | 'dofus2beta', options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Weapon>> {
+        async getItemsEquipmentSingle(language: GetItemsEquipmentSingleLanguageEnum, ankamaId: number, game: GetItemsEquipmentSingleGameEnum, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Weapon>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getItemsEquipmentSingle(language, ankamaId, game, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -3319,42 +3616,42 @@ export const EquipmentApiFactory = function (configuration?: Configuration, base
         /**
          * Retrieve all equipment items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Equipment
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
-         * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+         * @param {GetAllItemsEquipmentListLanguageEnum} language a valid language code
+         * @param {GetAllItemsEquipmentListGameEnum} game 
+         * @param {GetAllItemsEquipmentListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
-         * @param {'gzip'} [acceptEncoding] optional compression for saving bandwidth
+         * @param {GetAllItemsEquipmentListAcceptEncodingEnum} [acceptEncoding] optional compression for saving bandwidth
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAllItemsEquipmentList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: 'gzip', options?: any): AxiosPromise<ItemsListPaged> {
+        getAllItemsEquipmentList(language: GetAllItemsEquipmentListLanguageEnum, game: GetAllItemsEquipmentListGameEnum, sortLevel?: GetAllItemsEquipmentListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsEquipmentListAcceptEncodingEnum, options?: any): AxiosPromise<ItemsListPaged> {
             return localVarFp.getAllItemsEquipmentList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, acceptEncoding, options).then((request) => request(axios, basePath));
         },
         /**
          * Retrieve a list of equipment items.
          * @summary List Equipment
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
-         * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+         * @param {GetItemsEquipmentListLanguageEnum} language a valid language code
+         * @param {GetItemsEquipmentListGameEnum} game 
+         * @param {GetItemsEquipmentListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
          * @param {number} [pageSize] size of the results from the list. -1 disables pagination and gets all in one response.
          * @param {number} [pageNumber] page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
-         * @param {Set<'recipe' | 'description' | 'conditions' | 'effects' | 'is_weapon' | 'pods' | 'parent_set' | 'critical_hit_probability' | 'critical_hit_bonus' | 'is_two_handed' | 'max_cast_per_turn' | 'ap_cost' | 'range'>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+         * @param {Set<GetItemsEquipmentListFieldsItemEnum>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsEquipmentList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<'recipe' | 'description' | 'conditions' | 'effects' | 'is_weapon' | 'pods' | 'parent_set' | 'critical_hit_probability' | 'critical_hit_bonus' | 'is_two_handed' | 'max_cast_per_turn' | 'ap_cost' | 'range'>, options?: any): AxiosPromise<ItemsListPaged> {
+        getItemsEquipmentList(language: GetItemsEquipmentListLanguageEnum, game: GetItemsEquipmentListGameEnum, sortLevel?: GetItemsEquipmentListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsEquipmentListFieldsItemEnum>, options?: any): AxiosPromise<ItemsListPaged> {
             return localVarFp.getItemsEquipmentList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, pageSize, pageNumber, fieldsItem, options).then((request) => request(axios, basePath));
         },
         /**
          * Search in all names and descriptions of equipment items with a query.
          * @summary Search Equipment
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetItemsEquipmentSearchLanguageEnum} language a valid language code
+         * @param {GetItemsEquipmentSearchGameEnum} game 
          * @param {string} query case sensitive search query
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
@@ -3363,19 +3660,19 @@ export const EquipmentApiFactory = function (configuration?: Configuration, base
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsEquipmentSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: any): AxiosPromise<Array<ItemListEntry>> {
+        getItemsEquipmentSearch(language: GetItemsEquipmentSearchLanguageEnum, game: GetItemsEquipmentSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: any): AxiosPromise<Array<ItemListEntry>> {
             return localVarFp.getItemsEquipmentSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options).then((request) => request(axios, basePath));
         },
         /**
          * Retrieve a specific equipment item with id.
          * @summary Single Equipment
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
+         * @param {GetItemsEquipmentSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetItemsEquipmentSingleGameEnum} game 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsEquipmentSingle(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', ankamaId: number, game: 'dofus2' | 'dofus2beta', options?: any): AxiosPromise<Weapon> {
+        getItemsEquipmentSingle(language: GetItemsEquipmentSingleLanguageEnum, ankamaId: number, game: GetItemsEquipmentSingleGameEnum, options?: any): AxiosPromise<Weapon> {
             return localVarFp.getItemsEquipmentSingle(language, ankamaId, game, options).then((request) => request(axios, basePath));
         },
     };
@@ -3391,46 +3688,46 @@ export class EquipmentApi extends BaseAPI {
     /**
      * Retrieve all equipment items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
      * @summary List All Equipment
-     * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-     * @param {'dofus2' | 'dofus2beta'} game 
-     * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+     * @param {GetAllItemsEquipmentListLanguageEnum} language a valid language code
+     * @param {GetAllItemsEquipmentListGameEnum} game 
+     * @param {GetAllItemsEquipmentListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
      * @param {string} [filterTypeName] only results with the translated type name
      * @param {number} [filterMinLevel] only results which level is equal or above this value
      * @param {number} [filterMaxLevel] only results which level is equal or below this value
-     * @param {'gzip'} [acceptEncoding] optional compression for saving bandwidth
+     * @param {GetAllItemsEquipmentListAcceptEncodingEnum} [acceptEncoding] optional compression for saving bandwidth
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof EquipmentApi
      */
-    public getAllItemsEquipmentList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: 'gzip', options?: AxiosRequestConfig) {
+    public getAllItemsEquipmentList(language: GetAllItemsEquipmentListLanguageEnum, game: GetAllItemsEquipmentListGameEnum, sortLevel?: GetAllItemsEquipmentListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsEquipmentListAcceptEncodingEnum, options?: AxiosRequestConfig) {
         return EquipmentApiFp(this.configuration).getAllItemsEquipmentList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, acceptEncoding, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * Retrieve a list of equipment items.
      * @summary List Equipment
-     * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-     * @param {'dofus2' | 'dofus2beta'} game 
-     * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+     * @param {GetItemsEquipmentListLanguageEnum} language a valid language code
+     * @param {GetItemsEquipmentListGameEnum} game 
+     * @param {GetItemsEquipmentListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
      * @param {string} [filterTypeName] only results with the translated type name
      * @param {number} [filterMinLevel] only results which level is equal or above this value
      * @param {number} [filterMaxLevel] only results which level is equal or below this value
      * @param {number} [pageSize] size of the results from the list. -1 disables pagination and gets all in one response.
      * @param {number} [pageNumber] page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
-     * @param {Set<'recipe' | 'description' | 'conditions' | 'effects' | 'is_weapon' | 'pods' | 'parent_set' | 'critical_hit_probability' | 'critical_hit_bonus' | 'is_two_handed' | 'max_cast_per_turn' | 'ap_cost' | 'range'>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+     * @param {Set<GetItemsEquipmentListFieldsItemEnum>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof EquipmentApi
      */
-    public getItemsEquipmentList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<'recipe' | 'description' | 'conditions' | 'effects' | 'is_weapon' | 'pods' | 'parent_set' | 'critical_hit_probability' | 'critical_hit_bonus' | 'is_two_handed' | 'max_cast_per_turn' | 'ap_cost' | 'range'>, options?: AxiosRequestConfig) {
+    public getItemsEquipmentList(language: GetItemsEquipmentListLanguageEnum, game: GetItemsEquipmentListGameEnum, sortLevel?: GetItemsEquipmentListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsEquipmentListFieldsItemEnum>, options?: AxiosRequestConfig) {
         return EquipmentApiFp(this.configuration).getItemsEquipmentList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, pageSize, pageNumber, fieldsItem, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * Search in all names and descriptions of equipment items with a query.
      * @summary Search Equipment
-     * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-     * @param {'dofus2' | 'dofus2beta'} game 
+     * @param {GetItemsEquipmentSearchLanguageEnum} language a valid language code
+     * @param {GetItemsEquipmentSearchGameEnum} game 
      * @param {string} query case sensitive search query
      * @param {string} [filterTypeName] only results with the translated type name
      * @param {number} [filterMinLevel] only results which level is equal or above this value
@@ -3440,24 +3737,147 @@ export class EquipmentApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof EquipmentApi
      */
-    public getItemsEquipmentSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig) {
+    public getItemsEquipmentSearch(language: GetItemsEquipmentSearchLanguageEnum, game: GetItemsEquipmentSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig) {
         return EquipmentApiFp(this.configuration).getItemsEquipmentSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * Retrieve a specific equipment item with id.
      * @summary Single Equipment
-     * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
+     * @param {GetItemsEquipmentSingleLanguageEnum} language a valid language code
      * @param {number} ankamaId identifier
-     * @param {'dofus2' | 'dofus2beta'} game 
+     * @param {GetItemsEquipmentSingleGameEnum} game 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof EquipmentApi
      */
-    public getItemsEquipmentSingle(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', ankamaId: number, game: 'dofus2' | 'dofus2beta', options?: AxiosRequestConfig) {
+    public getItemsEquipmentSingle(language: GetItemsEquipmentSingleLanguageEnum, ankamaId: number, game: GetItemsEquipmentSingleGameEnum, options?: AxiosRequestConfig) {
         return EquipmentApiFp(this.configuration).getItemsEquipmentSingle(language, ankamaId, game, options).then((request) => request(this.axios, this.basePath));
     }
 }
+
+/**
+ * @export
+ */
+export const GetAllItemsEquipmentListLanguageEnum = {
+    En: 'en',
+    Fr: 'fr',
+    De: 'de',
+    It: 'it',
+    Es: 'es',
+    Pt: 'pt'
+} as const;
+export type GetAllItemsEquipmentListLanguageEnum = typeof GetAllItemsEquipmentListLanguageEnum[keyof typeof GetAllItemsEquipmentListLanguageEnum];
+/**
+ * @export
+ */
+export const GetAllItemsEquipmentListGameEnum = {
+    Dofus2: 'dofus2',
+    Dofus2beta: 'dofus2beta'
+} as const;
+export type GetAllItemsEquipmentListGameEnum = typeof GetAllItemsEquipmentListGameEnum[keyof typeof GetAllItemsEquipmentListGameEnum];
+/**
+ * @export
+ */
+export const GetAllItemsEquipmentListSortLevelEnum = {
+    Asc: 'asc',
+    Desc: 'desc'
+} as const;
+export type GetAllItemsEquipmentListSortLevelEnum = typeof GetAllItemsEquipmentListSortLevelEnum[keyof typeof GetAllItemsEquipmentListSortLevelEnum];
+/**
+ * @export
+ */
+export const GetAllItemsEquipmentListAcceptEncodingEnum = {
+    Gzip: 'gzip'
+} as const;
+export type GetAllItemsEquipmentListAcceptEncodingEnum = typeof GetAllItemsEquipmentListAcceptEncodingEnum[keyof typeof GetAllItemsEquipmentListAcceptEncodingEnum];
+/**
+ * @export
+ */
+export const GetItemsEquipmentListLanguageEnum = {
+    En: 'en',
+    Fr: 'fr',
+    De: 'de',
+    It: 'it',
+    Es: 'es',
+    Pt: 'pt'
+} as const;
+export type GetItemsEquipmentListLanguageEnum = typeof GetItemsEquipmentListLanguageEnum[keyof typeof GetItemsEquipmentListLanguageEnum];
+/**
+ * @export
+ */
+export const GetItemsEquipmentListGameEnum = {
+    Dofus2: 'dofus2',
+    Dofus2beta: 'dofus2beta'
+} as const;
+export type GetItemsEquipmentListGameEnum = typeof GetItemsEquipmentListGameEnum[keyof typeof GetItemsEquipmentListGameEnum];
+/**
+ * @export
+ */
+export const GetItemsEquipmentListSortLevelEnum = {
+    Asc: 'asc',
+    Desc: 'desc'
+} as const;
+export type GetItemsEquipmentListSortLevelEnum = typeof GetItemsEquipmentListSortLevelEnum[keyof typeof GetItemsEquipmentListSortLevelEnum];
+/**
+ * @export
+ */
+export const GetItemsEquipmentListFieldsItemEnum = {
+    Recipe: 'recipe',
+    Description: 'description',
+    Conditions: 'conditions',
+    Effects: 'effects',
+    IsWeapon: 'is_weapon',
+    Pods: 'pods',
+    ParentSet: 'parent_set',
+    CriticalHitProbability: 'critical_hit_probability',
+    CriticalHitBonus: 'critical_hit_bonus',
+    IsTwoHanded: 'is_two_handed',
+    MaxCastPerTurn: 'max_cast_per_turn',
+    ApCost: 'ap_cost',
+    Range: 'range'
+} as const;
+export type GetItemsEquipmentListFieldsItemEnum = typeof GetItemsEquipmentListFieldsItemEnum[keyof typeof GetItemsEquipmentListFieldsItemEnum];
+/**
+ * @export
+ */
+export const GetItemsEquipmentSearchLanguageEnum = {
+    En: 'en',
+    Fr: 'fr',
+    De: 'de',
+    It: 'it',
+    Es: 'es',
+    Pt: 'pt'
+} as const;
+export type GetItemsEquipmentSearchLanguageEnum = typeof GetItemsEquipmentSearchLanguageEnum[keyof typeof GetItemsEquipmentSearchLanguageEnum];
+/**
+ * @export
+ */
+export const GetItemsEquipmentSearchGameEnum = {
+    Dofus2: 'dofus2',
+    Dofus2beta: 'dofus2beta'
+} as const;
+export type GetItemsEquipmentSearchGameEnum = typeof GetItemsEquipmentSearchGameEnum[keyof typeof GetItemsEquipmentSearchGameEnum];
+/**
+ * @export
+ */
+export const GetItemsEquipmentSingleLanguageEnum = {
+    En: 'en',
+    Fr: 'fr',
+    De: 'de',
+    It: 'it',
+    Es: 'es',
+    Pt: 'pt'
+} as const;
+export type GetItemsEquipmentSingleLanguageEnum = typeof GetItemsEquipmentSingleLanguageEnum[keyof typeof GetItemsEquipmentSingleLanguageEnum];
+/**
+ * @export
+ */
+export const GetItemsEquipmentSingleGameEnum = {
+    Dofus2: 'dofus2',
+    Dofus2beta: 'dofus2beta'
+} as const;
+export type GetItemsEquipmentSingleGameEnum = typeof GetItemsEquipmentSingleGameEnum[keyof typeof GetItemsEquipmentSingleGameEnum];
 
 
 /**
@@ -3469,11 +3889,11 @@ export const MetaApiAxiosParamCreator = function (configuration?: Configuration)
         /**
          * Get all the available bonuses and their id for filtering them in the range endpoint.
          * @summary Available Almanax Bonuses
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es'} language 
+         * @param {GetMetaAlmanaxBonusesLanguageEnum} language 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getMetaAlmanaxBonuses: async (language: 'en' | 'fr' | 'de' | 'it' | 'es', options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getMetaAlmanaxBonuses: async (language: GetMetaAlmanaxBonusesLanguageEnum, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getMetaAlmanaxBonuses', 'language', language)
             const localVarPath = `/dofus2/meta/{language}/almanax/bonuses`
@@ -3543,11 +3963,11 @@ export const MetaApiFp = function(configuration?: Configuration) {
         /**
          * Get all the available bonuses and their id for filtering them in the range endpoint.
          * @summary Available Almanax Bonuses
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es'} language 
+         * @param {GetMetaAlmanaxBonusesLanguageEnum} language 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getMetaAlmanaxBonuses(language: 'en' | 'fr' | 'de' | 'it' | 'es', options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<GetMetaAlmanaxBonuses200ResponseInner>>> {
+        async getMetaAlmanaxBonuses(language: GetMetaAlmanaxBonusesLanguageEnum, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<GetMetaAlmanaxBonuses200ResponseInner>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getMetaAlmanaxBonuses(language, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -3574,11 +3994,11 @@ export const MetaApiFactory = function (configuration?: Configuration, basePath?
         /**
          * Get all the available bonuses and their id for filtering them in the range endpoint.
          * @summary Available Almanax Bonuses
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es'} language 
+         * @param {GetMetaAlmanaxBonusesLanguageEnum} language 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getMetaAlmanaxBonuses(language: 'en' | 'fr' | 'de' | 'it' | 'es', options?: any): AxiosPromise<Array<GetMetaAlmanaxBonuses200ResponseInner>> {
+        getMetaAlmanaxBonuses(language: GetMetaAlmanaxBonusesLanguageEnum, options?: any): AxiosPromise<Array<GetMetaAlmanaxBonuses200ResponseInner>> {
             return localVarFp.getMetaAlmanaxBonuses(language, options).then((request) => request(axios, basePath));
         },
         /**
@@ -3603,12 +4023,12 @@ export class MetaApi extends BaseAPI {
     /**
      * Get all the available bonuses and their id for filtering them in the range endpoint.
      * @summary Available Almanax Bonuses
-     * @param {'en' | 'fr' | 'de' | 'it' | 'es'} language 
+     * @param {GetMetaAlmanaxBonusesLanguageEnum} language 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MetaApi
      */
-    public getMetaAlmanaxBonuses(language: 'en' | 'fr' | 'de' | 'it' | 'es', options?: AxiosRequestConfig) {
+    public getMetaAlmanaxBonuses(language: GetMetaAlmanaxBonusesLanguageEnum, options?: AxiosRequestConfig) {
         return MetaApiFp(this.configuration).getMetaAlmanaxBonuses(language, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -3624,6 +4044,18 @@ export class MetaApi extends BaseAPI {
     }
 }
 
+/**
+ * @export
+ */
+export const GetMetaAlmanaxBonusesLanguageEnum = {
+    En: 'en',
+    Fr: 'fr',
+    De: 'de',
+    It: 'it',
+    Es: 'es'
+} as const;
+export type GetMetaAlmanaxBonusesLanguageEnum = typeof GetMetaAlmanaxBonusesLanguageEnum[keyof typeof GetMetaAlmanaxBonusesLanguageEnum];
+
 
 /**
  * MountsApi - axios parameter creator
@@ -3634,14 +4066,14 @@ export const MountsApiAxiosParamCreator = function (configuration?: Configuratio
         /**
          * Retrieve all mounts with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Mounts
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetAllMountsListLanguageEnum} language a valid language code
+         * @param {GetAllMountsListGameEnum} game 
          * @param {string} [filterFamilyName] only results with the translated family name
-         * @param {'gzip'} [acceptEncoding] optional compression for saving bandwidth
+         * @param {GetAllMountsListAcceptEncodingEnum} [acceptEncoding] optional compression for saving bandwidth
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAllMountsList: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', filterFamilyName?: string, acceptEncoding?: 'gzip', options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getAllMountsList: async (language: GetAllMountsListLanguageEnum, game: GetAllMountsListGameEnum, filterFamilyName?: string, acceptEncoding?: GetAllMountsListAcceptEncodingEnum, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getAllMountsList', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -3682,16 +4114,16 @@ export const MountsApiAxiosParamCreator = function (configuration?: Configuratio
         /**
          * Retrieve a list of mounts.
          * @summary List Mounts
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetMountsListLanguageEnum} language a valid language code
+         * @param {GetMountsListGameEnum} game 
          * @param {string} [filterFamilyName] only results with the translated family name
          * @param {number} [pageSize] size of the results from the list. -1 disables pagination and gets all in one response.
          * @param {number} [pageNumber] page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
-         * @param {Set<'effects'>} [fieldsMount] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+         * @param {Set<GetMountsListFieldsMountEnum>} [fieldsMount] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getMountsList: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', filterFamilyName?: string, pageSize?: number, pageNumber?: number, fieldsMount?: Set<'effects'>, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getMountsList: async (language: GetMountsListLanguageEnum, game: GetMountsListGameEnum, filterFamilyName?: string, pageSize?: number, pageNumber?: number, fieldsMount?: Set<GetMountsListFieldsMountEnum>, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getMountsList', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -3740,15 +4172,15 @@ export const MountsApiAxiosParamCreator = function (configuration?: Configuratio
         /**
          * Search in all names and descriptions of mounts with a query.
          * @summary Search Mounts
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetMountsSearchLanguageEnum} language a valid language code
+         * @param {GetMountsSearchGameEnum} game 
          * @param {string} query case sensitive search query
          * @param {string} [filterFamilyName] only results with the translated family name
          * @param {number} [limit] maximum number of returned results
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getMountsSearch: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterFamilyName?: string, limit?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getMountsSearch: async (language: GetMountsSearchLanguageEnum, game: GetMountsSearchGameEnum, query: string, filterFamilyName?: string, limit?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getMountsSearch', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -3795,13 +4227,13 @@ export const MountsApiAxiosParamCreator = function (configuration?: Configuratio
         /**
          * Retrieve a specific mount with id.
          * @summary Single Mounts
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
+         * @param {GetMountsSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetMountsSingleGameEnum} game 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getMountsSingle: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', ankamaId: number, game: 'dofus2' | 'dofus2beta', options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getMountsSingle: async (language: GetMountsSingleLanguageEnum, ankamaId: number, game: GetMountsSingleGameEnum, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getMountsSingle', 'language', language)
             // verify required parameter 'ankamaId' is not null or undefined
@@ -3847,58 +4279,58 @@ export const MountsApiFp = function(configuration?: Configuration) {
         /**
          * Retrieve all mounts with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Mounts
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetAllMountsListLanguageEnum} language a valid language code
+         * @param {GetAllMountsListGameEnum} game 
          * @param {string} [filterFamilyName] only results with the translated family name
-         * @param {'gzip'} [acceptEncoding] optional compression for saving bandwidth
+         * @param {GetAllMountsListAcceptEncodingEnum} [acceptEncoding] optional compression for saving bandwidth
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getAllMountsList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', filterFamilyName?: string, acceptEncoding?: 'gzip', options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MountsListPaged>> {
+        async getAllMountsList(language: GetAllMountsListLanguageEnum, game: GetAllMountsListGameEnum, filterFamilyName?: string, acceptEncoding?: GetAllMountsListAcceptEncodingEnum, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MountsListPaged>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getAllMountsList(language, game, filterFamilyName, acceptEncoding, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * Retrieve a list of mounts.
          * @summary List Mounts
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetMountsListLanguageEnum} language a valid language code
+         * @param {GetMountsListGameEnum} game 
          * @param {string} [filterFamilyName] only results with the translated family name
          * @param {number} [pageSize] size of the results from the list. -1 disables pagination and gets all in one response.
          * @param {number} [pageNumber] page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
-         * @param {Set<'effects'>} [fieldsMount] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+         * @param {Set<GetMountsListFieldsMountEnum>} [fieldsMount] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getMountsList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', filterFamilyName?: string, pageSize?: number, pageNumber?: number, fieldsMount?: Set<'effects'>, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MountsListPaged>> {
+        async getMountsList(language: GetMountsListLanguageEnum, game: GetMountsListGameEnum, filterFamilyName?: string, pageSize?: number, pageNumber?: number, fieldsMount?: Set<GetMountsListFieldsMountEnum>, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MountsListPaged>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getMountsList(language, game, filterFamilyName, pageSize, pageNumber, fieldsMount, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * Search in all names and descriptions of mounts with a query.
          * @summary Search Mounts
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetMountsSearchLanguageEnum} language a valid language code
+         * @param {GetMountsSearchGameEnum} game 
          * @param {string} query case sensitive search query
          * @param {string} [filterFamilyName] only results with the translated family name
          * @param {number} [limit] maximum number of returned results
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getMountsSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterFamilyName?: string, limit?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<MountListEntry>>> {
+        async getMountsSearch(language: GetMountsSearchLanguageEnum, game: GetMountsSearchGameEnum, query: string, filterFamilyName?: string, limit?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<MountListEntry>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getMountsSearch(language, game, query, filterFamilyName, limit, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * Retrieve a specific mount with id.
          * @summary Single Mounts
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
+         * @param {GetMountsSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetMountsSingleGameEnum} game 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getMountsSingle(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', ankamaId: number, game: 'dofus2' | 'dofus2beta', options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Mount>> {
+        async getMountsSingle(language: GetMountsSingleLanguageEnum, ankamaId: number, game: GetMountsSingleGameEnum, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Mount>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getMountsSingle(language, ankamaId, game, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -3915,55 +4347,55 @@ export const MountsApiFactory = function (configuration?: Configuration, basePat
         /**
          * Retrieve all mounts with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Mounts
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetAllMountsListLanguageEnum} language a valid language code
+         * @param {GetAllMountsListGameEnum} game 
          * @param {string} [filterFamilyName] only results with the translated family name
-         * @param {'gzip'} [acceptEncoding] optional compression for saving bandwidth
+         * @param {GetAllMountsListAcceptEncodingEnum} [acceptEncoding] optional compression for saving bandwidth
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAllMountsList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', filterFamilyName?: string, acceptEncoding?: 'gzip', options?: any): AxiosPromise<MountsListPaged> {
+        getAllMountsList(language: GetAllMountsListLanguageEnum, game: GetAllMountsListGameEnum, filterFamilyName?: string, acceptEncoding?: GetAllMountsListAcceptEncodingEnum, options?: any): AxiosPromise<MountsListPaged> {
             return localVarFp.getAllMountsList(language, game, filterFamilyName, acceptEncoding, options).then((request) => request(axios, basePath));
         },
         /**
          * Retrieve a list of mounts.
          * @summary List Mounts
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetMountsListLanguageEnum} language a valid language code
+         * @param {GetMountsListGameEnum} game 
          * @param {string} [filterFamilyName] only results with the translated family name
          * @param {number} [pageSize] size of the results from the list. -1 disables pagination and gets all in one response.
          * @param {number} [pageNumber] page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
-         * @param {Set<'effects'>} [fieldsMount] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+         * @param {Set<GetMountsListFieldsMountEnum>} [fieldsMount] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getMountsList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', filterFamilyName?: string, pageSize?: number, pageNumber?: number, fieldsMount?: Set<'effects'>, options?: any): AxiosPromise<MountsListPaged> {
+        getMountsList(language: GetMountsListLanguageEnum, game: GetMountsListGameEnum, filterFamilyName?: string, pageSize?: number, pageNumber?: number, fieldsMount?: Set<GetMountsListFieldsMountEnum>, options?: any): AxiosPromise<MountsListPaged> {
             return localVarFp.getMountsList(language, game, filterFamilyName, pageSize, pageNumber, fieldsMount, options).then((request) => request(axios, basePath));
         },
         /**
          * Search in all names and descriptions of mounts with a query.
          * @summary Search Mounts
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetMountsSearchLanguageEnum} language a valid language code
+         * @param {GetMountsSearchGameEnum} game 
          * @param {string} query case sensitive search query
          * @param {string} [filterFamilyName] only results with the translated family name
          * @param {number} [limit] maximum number of returned results
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getMountsSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterFamilyName?: string, limit?: number, options?: any): AxiosPromise<Array<MountListEntry>> {
+        getMountsSearch(language: GetMountsSearchLanguageEnum, game: GetMountsSearchGameEnum, query: string, filterFamilyName?: string, limit?: number, options?: any): AxiosPromise<Array<MountListEntry>> {
             return localVarFp.getMountsSearch(language, game, query, filterFamilyName, limit, options).then((request) => request(axios, basePath));
         },
         /**
          * Retrieve a specific mount with id.
          * @summary Single Mounts
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
+         * @param {GetMountsSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetMountsSingleGameEnum} game 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getMountsSingle(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', ankamaId: number, game: 'dofus2' | 'dofus2beta', options?: any): AxiosPromise<Mount> {
+        getMountsSingle(language: GetMountsSingleLanguageEnum, ankamaId: number, game: GetMountsSingleGameEnum, options?: any): AxiosPromise<Mount> {
             return localVarFp.getMountsSingle(language, ankamaId, game, options).then((request) => request(axios, basePath));
         },
     };
@@ -3979,40 +4411,40 @@ export class MountsApi extends BaseAPI {
     /**
      * Retrieve all mounts with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
      * @summary List All Mounts
-     * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-     * @param {'dofus2' | 'dofus2beta'} game 
+     * @param {GetAllMountsListLanguageEnum} language a valid language code
+     * @param {GetAllMountsListGameEnum} game 
      * @param {string} [filterFamilyName] only results with the translated family name
-     * @param {'gzip'} [acceptEncoding] optional compression for saving bandwidth
+     * @param {GetAllMountsListAcceptEncodingEnum} [acceptEncoding] optional compression for saving bandwidth
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MountsApi
      */
-    public getAllMountsList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', filterFamilyName?: string, acceptEncoding?: 'gzip', options?: AxiosRequestConfig) {
+    public getAllMountsList(language: GetAllMountsListLanguageEnum, game: GetAllMountsListGameEnum, filterFamilyName?: string, acceptEncoding?: GetAllMountsListAcceptEncodingEnum, options?: AxiosRequestConfig) {
         return MountsApiFp(this.configuration).getAllMountsList(language, game, filterFamilyName, acceptEncoding, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * Retrieve a list of mounts.
      * @summary List Mounts
-     * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-     * @param {'dofus2' | 'dofus2beta'} game 
+     * @param {GetMountsListLanguageEnum} language a valid language code
+     * @param {GetMountsListGameEnum} game 
      * @param {string} [filterFamilyName] only results with the translated family name
      * @param {number} [pageSize] size of the results from the list. -1 disables pagination and gets all in one response.
      * @param {number} [pageNumber] page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
-     * @param {Set<'effects'>} [fieldsMount] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+     * @param {Set<GetMountsListFieldsMountEnum>} [fieldsMount] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MountsApi
      */
-    public getMountsList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', filterFamilyName?: string, pageSize?: number, pageNumber?: number, fieldsMount?: Set<'effects'>, options?: AxiosRequestConfig) {
+    public getMountsList(language: GetMountsListLanguageEnum, game: GetMountsListGameEnum, filterFamilyName?: string, pageSize?: number, pageNumber?: number, fieldsMount?: Set<GetMountsListFieldsMountEnum>, options?: AxiosRequestConfig) {
         return MountsApiFp(this.configuration).getMountsList(language, game, filterFamilyName, pageSize, pageNumber, fieldsMount, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * Search in all names and descriptions of mounts with a query.
      * @summary Search Mounts
-     * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-     * @param {'dofus2' | 'dofus2beta'} game 
+     * @param {GetMountsSearchLanguageEnum} language a valid language code
+     * @param {GetMountsSearchGameEnum} game 
      * @param {string} query case sensitive search query
      * @param {string} [filterFamilyName] only results with the translated family name
      * @param {number} [limit] maximum number of returned results
@@ -4020,24 +4452,119 @@ export class MountsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof MountsApi
      */
-    public getMountsSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterFamilyName?: string, limit?: number, options?: AxiosRequestConfig) {
+    public getMountsSearch(language: GetMountsSearchLanguageEnum, game: GetMountsSearchGameEnum, query: string, filterFamilyName?: string, limit?: number, options?: AxiosRequestConfig) {
         return MountsApiFp(this.configuration).getMountsSearch(language, game, query, filterFamilyName, limit, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * Retrieve a specific mount with id.
      * @summary Single Mounts
-     * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
+     * @param {GetMountsSingleLanguageEnum} language a valid language code
      * @param {number} ankamaId identifier
-     * @param {'dofus2' | 'dofus2beta'} game 
+     * @param {GetMountsSingleGameEnum} game 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MountsApi
      */
-    public getMountsSingle(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', ankamaId: number, game: 'dofus2' | 'dofus2beta', options?: AxiosRequestConfig) {
+    public getMountsSingle(language: GetMountsSingleLanguageEnum, ankamaId: number, game: GetMountsSingleGameEnum, options?: AxiosRequestConfig) {
         return MountsApiFp(this.configuration).getMountsSingle(language, ankamaId, game, options).then((request) => request(this.axios, this.basePath));
     }
 }
+
+/**
+ * @export
+ */
+export const GetAllMountsListLanguageEnum = {
+    En: 'en',
+    Fr: 'fr',
+    De: 'de',
+    It: 'it',
+    Es: 'es',
+    Pt: 'pt'
+} as const;
+export type GetAllMountsListLanguageEnum = typeof GetAllMountsListLanguageEnum[keyof typeof GetAllMountsListLanguageEnum];
+/**
+ * @export
+ */
+export const GetAllMountsListGameEnum = {
+    Dofus2: 'dofus2',
+    Dofus2beta: 'dofus2beta'
+} as const;
+export type GetAllMountsListGameEnum = typeof GetAllMountsListGameEnum[keyof typeof GetAllMountsListGameEnum];
+/**
+ * @export
+ */
+export const GetAllMountsListAcceptEncodingEnum = {
+    Gzip: 'gzip'
+} as const;
+export type GetAllMountsListAcceptEncodingEnum = typeof GetAllMountsListAcceptEncodingEnum[keyof typeof GetAllMountsListAcceptEncodingEnum];
+/**
+ * @export
+ */
+export const GetMountsListLanguageEnum = {
+    En: 'en',
+    Fr: 'fr',
+    De: 'de',
+    It: 'it',
+    Es: 'es',
+    Pt: 'pt'
+} as const;
+export type GetMountsListLanguageEnum = typeof GetMountsListLanguageEnum[keyof typeof GetMountsListLanguageEnum];
+/**
+ * @export
+ */
+export const GetMountsListGameEnum = {
+    Dofus2: 'dofus2',
+    Dofus2beta: 'dofus2beta'
+} as const;
+export type GetMountsListGameEnum = typeof GetMountsListGameEnum[keyof typeof GetMountsListGameEnum];
+/**
+ * @export
+ */
+export const GetMountsListFieldsMountEnum = {
+    Effects: 'effects'
+} as const;
+export type GetMountsListFieldsMountEnum = typeof GetMountsListFieldsMountEnum[keyof typeof GetMountsListFieldsMountEnum];
+/**
+ * @export
+ */
+export const GetMountsSearchLanguageEnum = {
+    En: 'en',
+    Fr: 'fr',
+    De: 'de',
+    It: 'it',
+    Es: 'es',
+    Pt: 'pt'
+} as const;
+export type GetMountsSearchLanguageEnum = typeof GetMountsSearchLanguageEnum[keyof typeof GetMountsSearchLanguageEnum];
+/**
+ * @export
+ */
+export const GetMountsSearchGameEnum = {
+    Dofus2: 'dofus2',
+    Dofus2beta: 'dofus2beta'
+} as const;
+export type GetMountsSearchGameEnum = typeof GetMountsSearchGameEnum[keyof typeof GetMountsSearchGameEnum];
+/**
+ * @export
+ */
+export const GetMountsSingleLanguageEnum = {
+    En: 'en',
+    Fr: 'fr',
+    De: 'de',
+    It: 'it',
+    Es: 'es',
+    Pt: 'pt'
+} as const;
+export type GetMountsSingleLanguageEnum = typeof GetMountsSingleLanguageEnum[keyof typeof GetMountsSingleLanguageEnum];
+/**
+ * @export
+ */
+export const GetMountsSingleGameEnum = {
+    Dofus2: 'dofus2',
+    Dofus2beta: 'dofus2beta'
+} as const;
+export type GetMountsSingleGameEnum = typeof GetMountsSingleGameEnum[keyof typeof GetMountsSingleGameEnum];
 
 
 /**
@@ -4049,17 +4576,17 @@ export const QuestItemsApiAxiosParamCreator = function (configuration?: Configur
         /**
          * Retrieve all quest items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Quest Items
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
-         * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+         * @param {GetAllItemsQuestListLanguageEnum} language a valid language code
+         * @param {GetAllItemsQuestListGameEnum} game 
+         * @param {GetAllItemsQuestListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
-         * @param {'gzip'} [acceptEncoding] optional compression for saving bandwidth
+         * @param {GetAllItemsQuestListAcceptEncodingEnum} [acceptEncoding] optional compression for saving bandwidth
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAllItemsQuestList: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: 'gzip', options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getAllItemsQuestList: async (language: GetAllItemsQuestListLanguageEnum, game: GetAllItemsQuestListGameEnum, sortLevel?: GetAllItemsQuestListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsQuestListAcceptEncodingEnum, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getAllItemsQuestList', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -4112,13 +4639,13 @@ export const QuestItemsApiAxiosParamCreator = function (configuration?: Configur
         /**
          * Retrieve a specific quest item with id.
          * @summary Single Quest Items
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
+         * @param {GetItemQuestSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetItemQuestSingleGameEnum} game 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemQuestSingle: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', ankamaId: number, game: 'dofus2' | 'dofus2beta', options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getItemQuestSingle: async (language: GetItemQuestSingleLanguageEnum, ankamaId: number, game: GetItemQuestSingleGameEnum, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getItemQuestSingle', 'language', language)
             // verify required parameter 'ankamaId' is not null or undefined
@@ -4154,19 +4681,19 @@ export const QuestItemsApiAxiosParamCreator = function (configuration?: Configur
         /**
          * Retrieve a list of quest items.
          * @summary List Quest Items
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
-         * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+         * @param {GetItemsQuestListLanguageEnum} language a valid language code
+         * @param {GetItemsQuestListGameEnum} game 
+         * @param {GetItemsQuestListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
          * @param {number} [pageSize] size of the results from the list. -1 disables pagination and gets all in one response.
          * @param {number} [pageNumber] page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
-         * @param {Set<'recipe' | 'description' | 'conditions' | 'effects'>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+         * @param {Set<GetItemsQuestListFieldsItemEnum>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsQuestList: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<'recipe' | 'description' | 'conditions' | 'effects'>, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getItemsQuestList: async (language: GetItemsQuestListLanguageEnum, game: GetItemsQuestListGameEnum, sortLevel?: GetItemsQuestListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsQuestListFieldsItemEnum>, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getItemsQuestList', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -4227,8 +4754,8 @@ export const QuestItemsApiAxiosParamCreator = function (configuration?: Configur
         /**
          * Search in all names and descriptions of quest items with a query.
          * @summary Search Quest Items
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetItemsQuestSearchLanguageEnum} language a valid language code
+         * @param {GetItemsQuestSearchGameEnum} game 
          * @param {string} query case sensitive search query
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
@@ -4237,7 +4764,7 @@ export const QuestItemsApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsQuestSearch: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getItemsQuestSearch: async (language: GetItemsQuestSearchLanguageEnum, game: GetItemsQuestSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getItemsQuestSearch', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -4302,57 +4829,57 @@ export const QuestItemsApiFp = function(configuration?: Configuration) {
         /**
          * Retrieve all quest items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Quest Items
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
-         * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+         * @param {GetAllItemsQuestListLanguageEnum} language a valid language code
+         * @param {GetAllItemsQuestListGameEnum} game 
+         * @param {GetAllItemsQuestListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
-         * @param {'gzip'} [acceptEncoding] optional compression for saving bandwidth
+         * @param {GetAllItemsQuestListAcceptEncodingEnum} [acceptEncoding] optional compression for saving bandwidth
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getAllItemsQuestList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: 'gzip', options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
+        async getAllItemsQuestList(language: GetAllItemsQuestListLanguageEnum, game: GetAllItemsQuestListGameEnum, sortLevel?: GetAllItemsQuestListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsQuestListAcceptEncodingEnum, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getAllItemsQuestList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, acceptEncoding, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * Retrieve a specific quest item with id.
          * @summary Single Quest Items
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
+         * @param {GetItemQuestSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetItemQuestSingleGameEnum} game 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getItemQuestSingle(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', ankamaId: number, game: 'dofus2' | 'dofus2beta', options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Resource>> {
+        async getItemQuestSingle(language: GetItemQuestSingleLanguageEnum, ankamaId: number, game: GetItemQuestSingleGameEnum, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Resource>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getItemQuestSingle(language, ankamaId, game, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * Retrieve a list of quest items.
          * @summary List Quest Items
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
-         * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+         * @param {GetItemsQuestListLanguageEnum} language a valid language code
+         * @param {GetItemsQuestListGameEnum} game 
+         * @param {GetItemsQuestListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
          * @param {number} [pageSize] size of the results from the list. -1 disables pagination and gets all in one response.
          * @param {number} [pageNumber] page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
-         * @param {Set<'recipe' | 'description' | 'conditions' | 'effects'>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+         * @param {Set<GetItemsQuestListFieldsItemEnum>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getItemsQuestList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<'recipe' | 'description' | 'conditions' | 'effects'>, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
+        async getItemsQuestList(language: GetItemsQuestListLanguageEnum, game: GetItemsQuestListGameEnum, sortLevel?: GetItemsQuestListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsQuestListFieldsItemEnum>, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getItemsQuestList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, pageSize, pageNumber, fieldsItem, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * Search in all names and descriptions of quest items with a query.
          * @summary Search Quest Items
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetItemsQuestSearchLanguageEnum} language a valid language code
+         * @param {GetItemsQuestSearchGameEnum} game 
          * @param {string} query case sensitive search query
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
@@ -4361,7 +4888,7 @@ export const QuestItemsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getItemsQuestSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ItemListEntry>>> {
+        async getItemsQuestSearch(language: GetItemsQuestSearchLanguageEnum, game: GetItemsQuestSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ItemListEntry>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getItemsQuestSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -4378,54 +4905,54 @@ export const QuestItemsApiFactory = function (configuration?: Configuration, bas
         /**
          * Retrieve all quest items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Quest Items
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
-         * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+         * @param {GetAllItemsQuestListLanguageEnum} language a valid language code
+         * @param {GetAllItemsQuestListGameEnum} game 
+         * @param {GetAllItemsQuestListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
-         * @param {'gzip'} [acceptEncoding] optional compression for saving bandwidth
+         * @param {GetAllItemsQuestListAcceptEncodingEnum} [acceptEncoding] optional compression for saving bandwidth
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAllItemsQuestList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: 'gzip', options?: any): AxiosPromise<ItemsListPaged> {
+        getAllItemsQuestList(language: GetAllItemsQuestListLanguageEnum, game: GetAllItemsQuestListGameEnum, sortLevel?: GetAllItemsQuestListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsQuestListAcceptEncodingEnum, options?: any): AxiosPromise<ItemsListPaged> {
             return localVarFp.getAllItemsQuestList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, acceptEncoding, options).then((request) => request(axios, basePath));
         },
         /**
          * Retrieve a specific quest item with id.
          * @summary Single Quest Items
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
+         * @param {GetItemQuestSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetItemQuestSingleGameEnum} game 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemQuestSingle(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', ankamaId: number, game: 'dofus2' | 'dofus2beta', options?: any): AxiosPromise<Resource> {
+        getItemQuestSingle(language: GetItemQuestSingleLanguageEnum, ankamaId: number, game: GetItemQuestSingleGameEnum, options?: any): AxiosPromise<Resource> {
             return localVarFp.getItemQuestSingle(language, ankamaId, game, options).then((request) => request(axios, basePath));
         },
         /**
          * Retrieve a list of quest items.
          * @summary List Quest Items
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
-         * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+         * @param {GetItemsQuestListLanguageEnum} language a valid language code
+         * @param {GetItemsQuestListGameEnum} game 
+         * @param {GetItemsQuestListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
          * @param {number} [pageSize] size of the results from the list. -1 disables pagination and gets all in one response.
          * @param {number} [pageNumber] page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
-         * @param {Set<'recipe' | 'description' | 'conditions' | 'effects'>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+         * @param {Set<GetItemsQuestListFieldsItemEnum>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsQuestList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<'recipe' | 'description' | 'conditions' | 'effects'>, options?: any): AxiosPromise<ItemsListPaged> {
+        getItemsQuestList(language: GetItemsQuestListLanguageEnum, game: GetItemsQuestListGameEnum, sortLevel?: GetItemsQuestListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsQuestListFieldsItemEnum>, options?: any): AxiosPromise<ItemsListPaged> {
             return localVarFp.getItemsQuestList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, pageSize, pageNumber, fieldsItem, options).then((request) => request(axios, basePath));
         },
         /**
          * Search in all names and descriptions of quest items with a query.
          * @summary Search Quest Items
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetItemsQuestSearchLanguageEnum} language a valid language code
+         * @param {GetItemsQuestSearchGameEnum} game 
          * @param {string} query case sensitive search query
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
@@ -4434,7 +4961,7 @@ export const QuestItemsApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsQuestSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: any): AxiosPromise<Array<ItemListEntry>> {
+        getItemsQuestSearch(language: GetItemsQuestSearchLanguageEnum, game: GetItemsQuestSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: any): AxiosPromise<Array<ItemListEntry>> {
             return localVarFp.getItemsQuestSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options).then((request) => request(axios, basePath));
         },
     };
@@ -4450,60 +4977,60 @@ export class QuestItemsApi extends BaseAPI {
     /**
      * Retrieve all quest items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
      * @summary List All Quest Items
-     * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-     * @param {'dofus2' | 'dofus2beta'} game 
-     * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+     * @param {GetAllItemsQuestListLanguageEnum} language a valid language code
+     * @param {GetAllItemsQuestListGameEnum} game 
+     * @param {GetAllItemsQuestListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
      * @param {string} [filterTypeName] only results with the translated type name
      * @param {number} [filterMinLevel] only results which level is equal or above this value
      * @param {number} [filterMaxLevel] only results which level is equal or below this value
-     * @param {'gzip'} [acceptEncoding] optional compression for saving bandwidth
+     * @param {GetAllItemsQuestListAcceptEncodingEnum} [acceptEncoding] optional compression for saving bandwidth
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QuestItemsApi
      */
-    public getAllItemsQuestList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: 'gzip', options?: AxiosRequestConfig) {
+    public getAllItemsQuestList(language: GetAllItemsQuestListLanguageEnum, game: GetAllItemsQuestListGameEnum, sortLevel?: GetAllItemsQuestListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsQuestListAcceptEncodingEnum, options?: AxiosRequestConfig) {
         return QuestItemsApiFp(this.configuration).getAllItemsQuestList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, acceptEncoding, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * Retrieve a specific quest item with id.
      * @summary Single Quest Items
-     * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
+     * @param {GetItemQuestSingleLanguageEnum} language a valid language code
      * @param {number} ankamaId identifier
-     * @param {'dofus2' | 'dofus2beta'} game 
+     * @param {GetItemQuestSingleGameEnum} game 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QuestItemsApi
      */
-    public getItemQuestSingle(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', ankamaId: number, game: 'dofus2' | 'dofus2beta', options?: AxiosRequestConfig) {
+    public getItemQuestSingle(language: GetItemQuestSingleLanguageEnum, ankamaId: number, game: GetItemQuestSingleGameEnum, options?: AxiosRequestConfig) {
         return QuestItemsApiFp(this.configuration).getItemQuestSingle(language, ankamaId, game, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * Retrieve a list of quest items.
      * @summary List Quest Items
-     * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-     * @param {'dofus2' | 'dofus2beta'} game 
-     * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+     * @param {GetItemsQuestListLanguageEnum} language a valid language code
+     * @param {GetItemsQuestListGameEnum} game 
+     * @param {GetItemsQuestListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
      * @param {string} [filterTypeName] only results with the translated type name
      * @param {number} [filterMinLevel] only results which level is equal or above this value
      * @param {number} [filterMaxLevel] only results which level is equal or below this value
      * @param {number} [pageSize] size of the results from the list. -1 disables pagination and gets all in one response.
      * @param {number} [pageNumber] page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
-     * @param {Set<'recipe' | 'description' | 'conditions' | 'effects'>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+     * @param {Set<GetItemsQuestListFieldsItemEnum>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QuestItemsApi
      */
-    public getItemsQuestList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<'recipe' | 'description' | 'conditions' | 'effects'>, options?: AxiosRequestConfig) {
+    public getItemsQuestList(language: GetItemsQuestListLanguageEnum, game: GetItemsQuestListGameEnum, sortLevel?: GetItemsQuestListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsQuestListFieldsItemEnum>, options?: AxiosRequestConfig) {
         return QuestItemsApiFp(this.configuration).getItemsQuestList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, pageSize, pageNumber, fieldsItem, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * Search in all names and descriptions of quest items with a query.
      * @summary Search Quest Items
-     * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-     * @param {'dofus2' | 'dofus2beta'} game 
+     * @param {GetItemsQuestSearchLanguageEnum} language a valid language code
+     * @param {GetItemsQuestSearchGameEnum} game 
      * @param {string} query case sensitive search query
      * @param {string} [filterTypeName] only results with the translated type name
      * @param {number} [filterMinLevel] only results which level is equal or above this value
@@ -4513,10 +5040,124 @@ export class QuestItemsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof QuestItemsApi
      */
-    public getItemsQuestSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig) {
+    public getItemsQuestSearch(language: GetItemsQuestSearchLanguageEnum, game: GetItemsQuestSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig) {
         return QuestItemsApiFp(this.configuration).getItemsQuestSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options).then((request) => request(this.axios, this.basePath));
     }
 }
+
+/**
+ * @export
+ */
+export const GetAllItemsQuestListLanguageEnum = {
+    En: 'en',
+    Fr: 'fr',
+    De: 'de',
+    It: 'it',
+    Es: 'es',
+    Pt: 'pt'
+} as const;
+export type GetAllItemsQuestListLanguageEnum = typeof GetAllItemsQuestListLanguageEnum[keyof typeof GetAllItemsQuestListLanguageEnum];
+/**
+ * @export
+ */
+export const GetAllItemsQuestListGameEnum = {
+    Dofus2: 'dofus2',
+    Dofus2beta: 'dofus2beta'
+} as const;
+export type GetAllItemsQuestListGameEnum = typeof GetAllItemsQuestListGameEnum[keyof typeof GetAllItemsQuestListGameEnum];
+/**
+ * @export
+ */
+export const GetAllItemsQuestListSortLevelEnum = {
+    Asc: 'asc',
+    Desc: 'desc'
+} as const;
+export type GetAllItemsQuestListSortLevelEnum = typeof GetAllItemsQuestListSortLevelEnum[keyof typeof GetAllItemsQuestListSortLevelEnum];
+/**
+ * @export
+ */
+export const GetAllItemsQuestListAcceptEncodingEnum = {
+    Gzip: 'gzip'
+} as const;
+export type GetAllItemsQuestListAcceptEncodingEnum = typeof GetAllItemsQuestListAcceptEncodingEnum[keyof typeof GetAllItemsQuestListAcceptEncodingEnum];
+/**
+ * @export
+ */
+export const GetItemQuestSingleLanguageEnum = {
+    En: 'en',
+    Fr: 'fr',
+    De: 'de',
+    It: 'it',
+    Es: 'es',
+    Pt: 'pt'
+} as const;
+export type GetItemQuestSingleLanguageEnum = typeof GetItemQuestSingleLanguageEnum[keyof typeof GetItemQuestSingleLanguageEnum];
+/**
+ * @export
+ */
+export const GetItemQuestSingleGameEnum = {
+    Dofus2: 'dofus2',
+    Dofus2beta: 'dofus2beta'
+} as const;
+export type GetItemQuestSingleGameEnum = typeof GetItemQuestSingleGameEnum[keyof typeof GetItemQuestSingleGameEnum];
+/**
+ * @export
+ */
+export const GetItemsQuestListLanguageEnum = {
+    En: 'en',
+    Fr: 'fr',
+    De: 'de',
+    It: 'it',
+    Es: 'es',
+    Pt: 'pt'
+} as const;
+export type GetItemsQuestListLanguageEnum = typeof GetItemsQuestListLanguageEnum[keyof typeof GetItemsQuestListLanguageEnum];
+/**
+ * @export
+ */
+export const GetItemsQuestListGameEnum = {
+    Dofus2: 'dofus2',
+    Dofus2beta: 'dofus2beta'
+} as const;
+export type GetItemsQuestListGameEnum = typeof GetItemsQuestListGameEnum[keyof typeof GetItemsQuestListGameEnum];
+/**
+ * @export
+ */
+export const GetItemsQuestListSortLevelEnum = {
+    Asc: 'asc',
+    Desc: 'desc'
+} as const;
+export type GetItemsQuestListSortLevelEnum = typeof GetItemsQuestListSortLevelEnum[keyof typeof GetItemsQuestListSortLevelEnum];
+/**
+ * @export
+ */
+export const GetItemsQuestListFieldsItemEnum = {
+    Recipe: 'recipe',
+    Description: 'description',
+    Conditions: 'conditions',
+    Effects: 'effects'
+} as const;
+export type GetItemsQuestListFieldsItemEnum = typeof GetItemsQuestListFieldsItemEnum[keyof typeof GetItemsQuestListFieldsItemEnum];
+/**
+ * @export
+ */
+export const GetItemsQuestSearchLanguageEnum = {
+    En: 'en',
+    Fr: 'fr',
+    De: 'de',
+    It: 'it',
+    Es: 'es',
+    Pt: 'pt'
+} as const;
+export type GetItemsQuestSearchLanguageEnum = typeof GetItemsQuestSearchLanguageEnum[keyof typeof GetItemsQuestSearchLanguageEnum];
+/**
+ * @export
+ */
+export const GetItemsQuestSearchGameEnum = {
+    Dofus2: 'dofus2',
+    Dofus2beta: 'dofus2beta'
+} as const;
+export type GetItemsQuestSearchGameEnum = typeof GetItemsQuestSearchGameEnum[keyof typeof GetItemsQuestSearchGameEnum];
 
 
 /**
@@ -4528,17 +5169,17 @@ export const ResourcesApiAxiosParamCreator = function (configuration?: Configura
         /**
          * Retrieve all resource items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Resources
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
-         * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+         * @param {GetAllItemsResourcesListLanguageEnum} language a valid language code
+         * @param {GetAllItemsResourcesListGameEnum} game 
+         * @param {GetAllItemsResourcesListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
-         * @param {'gzip'} [acceptEncoding] optional compression for saving bandwidth
+         * @param {GetAllItemsResourcesListAcceptEncodingEnum} [acceptEncoding] optional compression for saving bandwidth
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAllItemsResourcesList: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: 'gzip', options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getAllItemsResourcesList: async (language: GetAllItemsResourcesListLanguageEnum, game: GetAllItemsResourcesListGameEnum, sortLevel?: GetAllItemsResourcesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsResourcesListAcceptEncodingEnum, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getAllItemsResourcesList', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -4591,8 +5232,8 @@ export const ResourcesApiAxiosParamCreator = function (configuration?: Configura
         /**
          * Search in all names and descriptions of resource items with a query.
          * @summary Search Resources
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetItemsResourceSearchLanguageEnum} language a valid language code
+         * @param {GetItemsResourceSearchGameEnum} game 
          * @param {string} query case sensitive search query
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
@@ -4601,7 +5242,7 @@ export const ResourcesApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsResourceSearch: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getItemsResourceSearch: async (language: GetItemsResourceSearchLanguageEnum, game: GetItemsResourceSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getItemsResourceSearch', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -4656,19 +5297,19 @@ export const ResourcesApiAxiosParamCreator = function (configuration?: Configura
         /**
          * Retrieve a list of resource items.
          * @summary List Resources
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
-         * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+         * @param {GetItemsResourcesListLanguageEnum} language a valid language code
+         * @param {GetItemsResourcesListGameEnum} game 
+         * @param {GetItemsResourcesListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
          * @param {number} [pageSize] size of the results from the list. -1 disables pagination and gets all in one response.
          * @param {number} [pageNumber] page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
-         * @param {Set<'recipe' | 'description' | 'conditions' | 'effects'>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+         * @param {Set<GetItemsResourcesListFieldsItemEnum>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsResourcesList: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<'recipe' | 'description' | 'conditions' | 'effects'>, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getItemsResourcesList: async (language: GetItemsResourcesListLanguageEnum, game: GetItemsResourcesListGameEnum, sortLevel?: GetItemsResourcesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsResourcesListFieldsItemEnum>, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getItemsResourcesList', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -4729,13 +5370,13 @@ export const ResourcesApiAxiosParamCreator = function (configuration?: Configura
         /**
          * Retrieve a specific resource item with id.
          * @summary Single Resources
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
+         * @param {GetItemsResourcesSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetItemsResourcesSingleGameEnum} game 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsResourcesSingle: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', ankamaId: number, game: 'dofus2' | 'dofus2beta', options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getItemsResourcesSingle: async (language: GetItemsResourcesSingleLanguageEnum, ankamaId: number, game: GetItemsResourcesSingleGameEnum, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getItemsResourcesSingle', 'language', language)
             // verify required parameter 'ankamaId' is not null or undefined
@@ -4781,25 +5422,25 @@ export const ResourcesApiFp = function(configuration?: Configuration) {
         /**
          * Retrieve all resource items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Resources
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
-         * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+         * @param {GetAllItemsResourcesListLanguageEnum} language a valid language code
+         * @param {GetAllItemsResourcesListGameEnum} game 
+         * @param {GetAllItemsResourcesListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
-         * @param {'gzip'} [acceptEncoding] optional compression for saving bandwidth
+         * @param {GetAllItemsResourcesListAcceptEncodingEnum} [acceptEncoding] optional compression for saving bandwidth
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getAllItemsResourcesList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: 'gzip', options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
+        async getAllItemsResourcesList(language: GetAllItemsResourcesListLanguageEnum, game: GetAllItemsResourcesListGameEnum, sortLevel?: GetAllItemsResourcesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsResourcesListAcceptEncodingEnum, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getAllItemsResourcesList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, acceptEncoding, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * Search in all names and descriptions of resource items with a query.
          * @summary Search Resources
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetItemsResourceSearchLanguageEnum} language a valid language code
+         * @param {GetItemsResourceSearchGameEnum} game 
          * @param {string} query case sensitive search query
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
@@ -4808,39 +5449,39 @@ export const ResourcesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getItemsResourceSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ItemListEntry>>> {
+        async getItemsResourceSearch(language: GetItemsResourceSearchLanguageEnum, game: GetItemsResourceSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ItemListEntry>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getItemsResourceSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * Retrieve a list of resource items.
          * @summary List Resources
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
-         * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+         * @param {GetItemsResourcesListLanguageEnum} language a valid language code
+         * @param {GetItemsResourcesListGameEnum} game 
+         * @param {GetItemsResourcesListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
          * @param {number} [pageSize] size of the results from the list. -1 disables pagination and gets all in one response.
          * @param {number} [pageNumber] page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
-         * @param {Set<'recipe' | 'description' | 'conditions' | 'effects'>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+         * @param {Set<GetItemsResourcesListFieldsItemEnum>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getItemsResourcesList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<'recipe' | 'description' | 'conditions' | 'effects'>, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
+        async getItemsResourcesList(language: GetItemsResourcesListLanguageEnum, game: GetItemsResourcesListGameEnum, sortLevel?: GetItemsResourcesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsResourcesListFieldsItemEnum>, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getItemsResourcesList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, pageSize, pageNumber, fieldsItem, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * Retrieve a specific resource item with id.
          * @summary Single Resources
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
+         * @param {GetItemsResourcesSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetItemsResourcesSingleGameEnum} game 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getItemsResourcesSingle(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', ankamaId: number, game: 'dofus2' | 'dofus2beta', options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Resource>> {
+        async getItemsResourcesSingle(language: GetItemsResourcesSingleLanguageEnum, ankamaId: number, game: GetItemsResourcesSingleGameEnum, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Resource>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getItemsResourcesSingle(language, ankamaId, game, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -4857,24 +5498,24 @@ export const ResourcesApiFactory = function (configuration?: Configuration, base
         /**
          * Retrieve all resource items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Resources
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
-         * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+         * @param {GetAllItemsResourcesListLanguageEnum} language a valid language code
+         * @param {GetAllItemsResourcesListGameEnum} game 
+         * @param {GetAllItemsResourcesListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
-         * @param {'gzip'} [acceptEncoding] optional compression for saving bandwidth
+         * @param {GetAllItemsResourcesListAcceptEncodingEnum} [acceptEncoding] optional compression for saving bandwidth
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAllItemsResourcesList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: 'gzip', options?: any): AxiosPromise<ItemsListPaged> {
+        getAllItemsResourcesList(language: GetAllItemsResourcesListLanguageEnum, game: GetAllItemsResourcesListGameEnum, sortLevel?: GetAllItemsResourcesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsResourcesListAcceptEncodingEnum, options?: any): AxiosPromise<ItemsListPaged> {
             return localVarFp.getAllItemsResourcesList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, acceptEncoding, options).then((request) => request(axios, basePath));
         },
         /**
          * Search in all names and descriptions of resource items with a query.
          * @summary Search Resources
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetItemsResourceSearchLanguageEnum} language a valid language code
+         * @param {GetItemsResourceSearchGameEnum} game 
          * @param {string} query case sensitive search query
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
@@ -4883,37 +5524,37 @@ export const ResourcesApiFactory = function (configuration?: Configuration, base
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsResourceSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: any): AxiosPromise<Array<ItemListEntry>> {
+        getItemsResourceSearch(language: GetItemsResourceSearchLanguageEnum, game: GetItemsResourceSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: any): AxiosPromise<Array<ItemListEntry>> {
             return localVarFp.getItemsResourceSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options).then((request) => request(axios, basePath));
         },
         /**
          * Retrieve a list of resource items.
          * @summary List Resources
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
-         * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+         * @param {GetItemsResourcesListLanguageEnum} language a valid language code
+         * @param {GetItemsResourcesListGameEnum} game 
+         * @param {GetItemsResourcesListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
          * @param {number} [pageSize] size of the results from the list. -1 disables pagination and gets all in one response.
          * @param {number} [pageNumber] page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
-         * @param {Set<'recipe' | 'description' | 'conditions' | 'effects'>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+         * @param {Set<GetItemsResourcesListFieldsItemEnum>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsResourcesList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<'recipe' | 'description' | 'conditions' | 'effects'>, options?: any): AxiosPromise<ItemsListPaged> {
+        getItemsResourcesList(language: GetItemsResourcesListLanguageEnum, game: GetItemsResourcesListGameEnum, sortLevel?: GetItemsResourcesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsResourcesListFieldsItemEnum>, options?: any): AxiosPromise<ItemsListPaged> {
             return localVarFp.getItemsResourcesList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, pageSize, pageNumber, fieldsItem, options).then((request) => request(axios, basePath));
         },
         /**
          * Retrieve a specific resource item with id.
          * @summary Single Resources
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
+         * @param {GetItemsResourcesSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetItemsResourcesSingleGameEnum} game 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsResourcesSingle(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', ankamaId: number, game: 'dofus2' | 'dofus2beta', options?: any): AxiosPromise<Resource> {
+        getItemsResourcesSingle(language: GetItemsResourcesSingleLanguageEnum, ankamaId: number, game: GetItemsResourcesSingleGameEnum, options?: any): AxiosPromise<Resource> {
             return localVarFp.getItemsResourcesSingle(language, ankamaId, game, options).then((request) => request(axios, basePath));
         },
     };
@@ -4929,26 +5570,26 @@ export class ResourcesApi extends BaseAPI {
     /**
      * Retrieve all resource items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
      * @summary List All Resources
-     * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-     * @param {'dofus2' | 'dofus2beta'} game 
-     * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+     * @param {GetAllItemsResourcesListLanguageEnum} language a valid language code
+     * @param {GetAllItemsResourcesListGameEnum} game 
+     * @param {GetAllItemsResourcesListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
      * @param {string} [filterTypeName] only results with the translated type name
      * @param {number} [filterMinLevel] only results which level is equal or above this value
      * @param {number} [filterMaxLevel] only results which level is equal or below this value
-     * @param {'gzip'} [acceptEncoding] optional compression for saving bandwidth
+     * @param {GetAllItemsResourcesListAcceptEncodingEnum} [acceptEncoding] optional compression for saving bandwidth
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ResourcesApi
      */
-    public getAllItemsResourcesList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: 'gzip', options?: AxiosRequestConfig) {
+    public getAllItemsResourcesList(language: GetAllItemsResourcesListLanguageEnum, game: GetAllItemsResourcesListGameEnum, sortLevel?: GetAllItemsResourcesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsResourcesListAcceptEncodingEnum, options?: AxiosRequestConfig) {
         return ResourcesApiFp(this.configuration).getAllItemsResourcesList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, acceptEncoding, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * Search in all names and descriptions of resource items with a query.
      * @summary Search Resources
-     * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-     * @param {'dofus2' | 'dofus2beta'} game 
+     * @param {GetItemsResourceSearchLanguageEnum} language a valid language code
+     * @param {GetItemsResourceSearchGameEnum} game 
      * @param {string} query case sensitive search query
      * @param {string} [filterTypeName] only results with the translated type name
      * @param {number} [filterMinLevel] only results which level is equal or above this value
@@ -4958,44 +5599,158 @@ export class ResourcesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ResourcesApi
      */
-    public getItemsResourceSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig) {
+    public getItemsResourceSearch(language: GetItemsResourceSearchLanguageEnum, game: GetItemsResourceSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig) {
         return ResourcesApiFp(this.configuration).getItemsResourceSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * Retrieve a list of resource items.
      * @summary List Resources
-     * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-     * @param {'dofus2' | 'dofus2beta'} game 
-     * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+     * @param {GetItemsResourcesListLanguageEnum} language a valid language code
+     * @param {GetItemsResourcesListGameEnum} game 
+     * @param {GetItemsResourcesListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
      * @param {string} [filterTypeName] only results with the translated type name
      * @param {number} [filterMinLevel] only results which level is equal or above this value
      * @param {number} [filterMaxLevel] only results which level is equal or below this value
      * @param {number} [pageSize] size of the results from the list. -1 disables pagination and gets all in one response.
      * @param {number} [pageNumber] page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
-     * @param {Set<'recipe' | 'description' | 'conditions' | 'effects'>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+     * @param {Set<GetItemsResourcesListFieldsItemEnum>} [fieldsItem] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ResourcesApi
      */
-    public getItemsResourcesList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<'recipe' | 'description' | 'conditions' | 'effects'>, options?: AxiosRequestConfig) {
+    public getItemsResourcesList(language: GetItemsResourcesListLanguageEnum, game: GetItemsResourcesListGameEnum, sortLevel?: GetItemsResourcesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsResourcesListFieldsItemEnum>, options?: AxiosRequestConfig) {
         return ResourcesApiFp(this.configuration).getItemsResourcesList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, pageSize, pageNumber, fieldsItem, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * Retrieve a specific resource item with id.
      * @summary Single Resources
-     * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
+     * @param {GetItemsResourcesSingleLanguageEnum} language a valid language code
      * @param {number} ankamaId identifier
-     * @param {'dofus2' | 'dofus2beta'} game 
+     * @param {GetItemsResourcesSingleGameEnum} game 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ResourcesApi
      */
-    public getItemsResourcesSingle(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', ankamaId: number, game: 'dofus2' | 'dofus2beta', options?: AxiosRequestConfig) {
+    public getItemsResourcesSingle(language: GetItemsResourcesSingleLanguageEnum, ankamaId: number, game: GetItemsResourcesSingleGameEnum, options?: AxiosRequestConfig) {
         return ResourcesApiFp(this.configuration).getItemsResourcesSingle(language, ankamaId, game, options).then((request) => request(this.axios, this.basePath));
     }
 }
+
+/**
+ * @export
+ */
+export const GetAllItemsResourcesListLanguageEnum = {
+    En: 'en',
+    Fr: 'fr',
+    De: 'de',
+    It: 'it',
+    Es: 'es',
+    Pt: 'pt'
+} as const;
+export type GetAllItemsResourcesListLanguageEnum = typeof GetAllItemsResourcesListLanguageEnum[keyof typeof GetAllItemsResourcesListLanguageEnum];
+/**
+ * @export
+ */
+export const GetAllItemsResourcesListGameEnum = {
+    Dofus2: 'dofus2',
+    Dofus2beta: 'dofus2beta'
+} as const;
+export type GetAllItemsResourcesListGameEnum = typeof GetAllItemsResourcesListGameEnum[keyof typeof GetAllItemsResourcesListGameEnum];
+/**
+ * @export
+ */
+export const GetAllItemsResourcesListSortLevelEnum = {
+    Asc: 'asc',
+    Desc: 'desc'
+} as const;
+export type GetAllItemsResourcesListSortLevelEnum = typeof GetAllItemsResourcesListSortLevelEnum[keyof typeof GetAllItemsResourcesListSortLevelEnum];
+/**
+ * @export
+ */
+export const GetAllItemsResourcesListAcceptEncodingEnum = {
+    Gzip: 'gzip'
+} as const;
+export type GetAllItemsResourcesListAcceptEncodingEnum = typeof GetAllItemsResourcesListAcceptEncodingEnum[keyof typeof GetAllItemsResourcesListAcceptEncodingEnum];
+/**
+ * @export
+ */
+export const GetItemsResourceSearchLanguageEnum = {
+    En: 'en',
+    Fr: 'fr',
+    De: 'de',
+    It: 'it',
+    Es: 'es',
+    Pt: 'pt'
+} as const;
+export type GetItemsResourceSearchLanguageEnum = typeof GetItemsResourceSearchLanguageEnum[keyof typeof GetItemsResourceSearchLanguageEnum];
+/**
+ * @export
+ */
+export const GetItemsResourceSearchGameEnum = {
+    Dofus2: 'dofus2',
+    Dofus2beta: 'dofus2beta'
+} as const;
+export type GetItemsResourceSearchGameEnum = typeof GetItemsResourceSearchGameEnum[keyof typeof GetItemsResourceSearchGameEnum];
+/**
+ * @export
+ */
+export const GetItemsResourcesListLanguageEnum = {
+    En: 'en',
+    Fr: 'fr',
+    De: 'de',
+    It: 'it',
+    Es: 'es',
+    Pt: 'pt'
+} as const;
+export type GetItemsResourcesListLanguageEnum = typeof GetItemsResourcesListLanguageEnum[keyof typeof GetItemsResourcesListLanguageEnum];
+/**
+ * @export
+ */
+export const GetItemsResourcesListGameEnum = {
+    Dofus2: 'dofus2',
+    Dofus2beta: 'dofus2beta'
+} as const;
+export type GetItemsResourcesListGameEnum = typeof GetItemsResourcesListGameEnum[keyof typeof GetItemsResourcesListGameEnum];
+/**
+ * @export
+ */
+export const GetItemsResourcesListSortLevelEnum = {
+    Asc: 'asc',
+    Desc: 'desc'
+} as const;
+export type GetItemsResourcesListSortLevelEnum = typeof GetItemsResourcesListSortLevelEnum[keyof typeof GetItemsResourcesListSortLevelEnum];
+/**
+ * @export
+ */
+export const GetItemsResourcesListFieldsItemEnum = {
+    Recipe: 'recipe',
+    Description: 'description',
+    Conditions: 'conditions',
+    Effects: 'effects'
+} as const;
+export type GetItemsResourcesListFieldsItemEnum = typeof GetItemsResourcesListFieldsItemEnum[keyof typeof GetItemsResourcesListFieldsItemEnum];
+/**
+ * @export
+ */
+export const GetItemsResourcesSingleLanguageEnum = {
+    En: 'en',
+    Fr: 'fr',
+    De: 'de',
+    It: 'it',
+    Es: 'es',
+    Pt: 'pt'
+} as const;
+export type GetItemsResourcesSingleLanguageEnum = typeof GetItemsResourcesSingleLanguageEnum[keyof typeof GetItemsResourcesSingleLanguageEnum];
+/**
+ * @export
+ */
+export const GetItemsResourcesSingleGameEnum = {
+    Dofus2: 'dofus2',
+    Dofus2beta: 'dofus2beta'
+} as const;
+export type GetItemsResourcesSingleGameEnum = typeof GetItemsResourcesSingleGameEnum[keyof typeof GetItemsResourcesSingleGameEnum];
 
 
 /**
@@ -5007,16 +5762,16 @@ export const SetsApiAxiosParamCreator = function (configuration?: Configuration)
         /**
          * Retrieve all sets with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Sets
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
-         * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+         * @param {GetAllSetsListLanguageEnum} language a valid language code
+         * @param {GetAllSetsListGameEnum} game 
+         * @param {GetAllSetsListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinHighestEquipmentLevel] only results where the equipment with the highest level is above or equal to this value
          * @param {number} [filterMaxHighestEquipmentLevel] only results where the equipment with the highest level is below or equal to this value
-         * @param {'gzip'} [acceptEncoding] optional compression for saving bandwidth
+         * @param {GetAllSetsListAcceptEncodingEnum} [acceptEncoding] optional compression for saving bandwidth
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAllSetsList: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, acceptEncoding?: 'gzip', options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getAllSetsList: async (language: GetAllSetsListLanguageEnum, game: GetAllSetsListGameEnum, sortLevel?: GetAllSetsListSortLevelEnum, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, acceptEncoding?: GetAllSetsListAcceptEncodingEnum, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getAllSetsList', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -5065,18 +5820,18 @@ export const SetsApiAxiosParamCreator = function (configuration?: Configuration)
         /**
          * Retrieve a list of sets.
          * @summary List Sets
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
-         * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+         * @param {GetSetsListLanguageEnum} language a valid language code
+         * @param {GetSetsListGameEnum} game 
+         * @param {GetSetsListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinHighestEquipmentLevel] only results where the equipment with the highest level is above or equal to this value
          * @param {number} [filterMaxHighestEquipmentLevel] only results where the equipment with the highest level is below or equal to this value
          * @param {number} [pageSize] size of the results from the list. -1 disables pagination and gets all in one response.
          * @param {number} [pageNumber] page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
-         * @param {Set<'effects' | 'equipment_ids'>} [fieldsSet] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+         * @param {Set<GetSetsListFieldsSetEnum>} [fieldsSet] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSetsList: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, pageSize?: number, pageNumber?: number, fieldsSet?: Set<'effects' | 'equipment_ids'>, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getSetsList: async (language: GetSetsListLanguageEnum, game: GetSetsListGameEnum, sortLevel?: GetSetsListSortLevelEnum, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, pageSize?: number, pageNumber?: number, fieldsSet?: Set<GetSetsListFieldsSetEnum>, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getSetsList', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -5133,8 +5888,8 @@ export const SetsApiAxiosParamCreator = function (configuration?: Configuration)
         /**
          * Search in all names and descriptions of sets with a query.
          * @summary Search Sets
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetSetsSearchLanguageEnum} language a valid language code
+         * @param {GetSetsSearchGameEnum} game 
          * @param {string} query case sensitive search query
          * @param {number} [filterMinHighestEquipmentLevel] only results where the equipment with the highest level is above or equal to this value
          * @param {number} [filterMaxHighestEquipmentLevel] only results where the equipment with the highest level is below or equal to this value
@@ -5142,7 +5897,7 @@ export const SetsApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSetsSearch: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, limit?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getSetsSearch: async (language: GetSetsSearchLanguageEnum, game: GetSetsSearchGameEnum, query: string, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, limit?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getSetsSearch', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -5193,13 +5948,13 @@ export const SetsApiAxiosParamCreator = function (configuration?: Configuration)
         /**
          * Retrieve a specific set with id.
          * @summary Single Sets
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
+         * @param {GetSetsSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetSetsSingleGameEnum} game 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSetsSingle: async (language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', ankamaId: number, game: 'dofus2' | 'dofus2beta', options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getSetsSingle: async (language: GetSetsSingleLanguageEnum, ankamaId: number, game: GetSetsSingleGameEnum, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getSetsSingle', 'language', language)
             // verify required parameter 'ankamaId' is not null or undefined
@@ -5245,42 +6000,42 @@ export const SetsApiFp = function(configuration?: Configuration) {
         /**
          * Retrieve all sets with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Sets
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
-         * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+         * @param {GetAllSetsListLanguageEnum} language a valid language code
+         * @param {GetAllSetsListGameEnum} game 
+         * @param {GetAllSetsListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinHighestEquipmentLevel] only results where the equipment with the highest level is above or equal to this value
          * @param {number} [filterMaxHighestEquipmentLevel] only results where the equipment with the highest level is below or equal to this value
-         * @param {'gzip'} [acceptEncoding] optional compression for saving bandwidth
+         * @param {GetAllSetsListAcceptEncodingEnum} [acceptEncoding] optional compression for saving bandwidth
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getAllSetsList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, acceptEncoding?: 'gzip', options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SetsListPaged>> {
+        async getAllSetsList(language: GetAllSetsListLanguageEnum, game: GetAllSetsListGameEnum, sortLevel?: GetAllSetsListSortLevelEnum, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, acceptEncoding?: GetAllSetsListAcceptEncodingEnum, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SetsListPaged>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getAllSetsList(language, game, sortLevel, filterMinHighestEquipmentLevel, filterMaxHighestEquipmentLevel, acceptEncoding, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * Retrieve a list of sets.
          * @summary List Sets
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
-         * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+         * @param {GetSetsListLanguageEnum} language a valid language code
+         * @param {GetSetsListGameEnum} game 
+         * @param {GetSetsListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinHighestEquipmentLevel] only results where the equipment with the highest level is above or equal to this value
          * @param {number} [filterMaxHighestEquipmentLevel] only results where the equipment with the highest level is below or equal to this value
          * @param {number} [pageSize] size of the results from the list. -1 disables pagination and gets all in one response.
          * @param {number} [pageNumber] page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
-         * @param {Set<'effects' | 'equipment_ids'>} [fieldsSet] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+         * @param {Set<GetSetsListFieldsSetEnum>} [fieldsSet] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getSetsList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, pageSize?: number, pageNumber?: number, fieldsSet?: Set<'effects' | 'equipment_ids'>, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SetsListPaged>> {
+        async getSetsList(language: GetSetsListLanguageEnum, game: GetSetsListGameEnum, sortLevel?: GetSetsListSortLevelEnum, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, pageSize?: number, pageNumber?: number, fieldsSet?: Set<GetSetsListFieldsSetEnum>, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SetsListPaged>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getSetsList(language, game, sortLevel, filterMinHighestEquipmentLevel, filterMaxHighestEquipmentLevel, pageSize, pageNumber, fieldsSet, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * Search in all names and descriptions of sets with a query.
          * @summary Search Sets
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetSetsSearchLanguageEnum} language a valid language code
+         * @param {GetSetsSearchGameEnum} game 
          * @param {string} query case sensitive search query
          * @param {number} [filterMinHighestEquipmentLevel] only results where the equipment with the highest level is above or equal to this value
          * @param {number} [filterMaxHighestEquipmentLevel] only results where the equipment with the highest level is below or equal to this value
@@ -5288,20 +6043,20 @@ export const SetsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getSetsSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, limit?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<SetListEntry>>> {
+        async getSetsSearch(language: GetSetsSearchLanguageEnum, game: GetSetsSearchGameEnum, query: string, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, limit?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<SetListEntry>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getSetsSearch(language, game, query, filterMinHighestEquipmentLevel, filterMaxHighestEquipmentLevel, limit, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * Retrieve a specific set with id.
          * @summary Single Sets
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
+         * @param {GetSetsSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetSetsSingleGameEnum} game 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getSetsSingle(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', ankamaId: number, game: 'dofus2' | 'dofus2beta', options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EquipmentSet>> {
+        async getSetsSingle(language: GetSetsSingleLanguageEnum, ankamaId: number, game: GetSetsSingleGameEnum, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EquipmentSet>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getSetsSingle(language, ankamaId, game, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -5318,40 +6073,40 @@ export const SetsApiFactory = function (configuration?: Configuration, basePath?
         /**
          * Retrieve all sets with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Sets
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
-         * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+         * @param {GetAllSetsListLanguageEnum} language a valid language code
+         * @param {GetAllSetsListGameEnum} game 
+         * @param {GetAllSetsListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinHighestEquipmentLevel] only results where the equipment with the highest level is above or equal to this value
          * @param {number} [filterMaxHighestEquipmentLevel] only results where the equipment with the highest level is below or equal to this value
-         * @param {'gzip'} [acceptEncoding] optional compression for saving bandwidth
+         * @param {GetAllSetsListAcceptEncodingEnum} [acceptEncoding] optional compression for saving bandwidth
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAllSetsList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, acceptEncoding?: 'gzip', options?: any): AxiosPromise<SetsListPaged> {
+        getAllSetsList(language: GetAllSetsListLanguageEnum, game: GetAllSetsListGameEnum, sortLevel?: GetAllSetsListSortLevelEnum, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, acceptEncoding?: GetAllSetsListAcceptEncodingEnum, options?: any): AxiosPromise<SetsListPaged> {
             return localVarFp.getAllSetsList(language, game, sortLevel, filterMinHighestEquipmentLevel, filterMaxHighestEquipmentLevel, acceptEncoding, options).then((request) => request(axios, basePath));
         },
         /**
          * Retrieve a list of sets.
          * @summary List Sets
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
-         * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+         * @param {GetSetsListLanguageEnum} language a valid language code
+         * @param {GetSetsListGameEnum} game 
+         * @param {GetSetsListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinHighestEquipmentLevel] only results where the equipment with the highest level is above or equal to this value
          * @param {number} [filterMaxHighestEquipmentLevel] only results where the equipment with the highest level is below or equal to this value
          * @param {number} [pageSize] size of the results from the list. -1 disables pagination and gets all in one response.
          * @param {number} [pageNumber] page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
-         * @param {Set<'effects' | 'equipment_ids'>} [fieldsSet] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+         * @param {Set<GetSetsListFieldsSetEnum>} [fieldsSet] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSetsList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, pageSize?: number, pageNumber?: number, fieldsSet?: Set<'effects' | 'equipment_ids'>, options?: any): AxiosPromise<SetsListPaged> {
+        getSetsList(language: GetSetsListLanguageEnum, game: GetSetsListGameEnum, sortLevel?: GetSetsListSortLevelEnum, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, pageSize?: number, pageNumber?: number, fieldsSet?: Set<GetSetsListFieldsSetEnum>, options?: any): AxiosPromise<SetsListPaged> {
             return localVarFp.getSetsList(language, game, sortLevel, filterMinHighestEquipmentLevel, filterMaxHighestEquipmentLevel, pageSize, pageNumber, fieldsSet, options).then((request) => request(axios, basePath));
         },
         /**
          * Search in all names and descriptions of sets with a query.
          * @summary Search Sets
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetSetsSearchLanguageEnum} language a valid language code
+         * @param {GetSetsSearchGameEnum} game 
          * @param {string} query case sensitive search query
          * @param {number} [filterMinHighestEquipmentLevel] only results where the equipment with the highest level is above or equal to this value
          * @param {number} [filterMaxHighestEquipmentLevel] only results where the equipment with the highest level is below or equal to this value
@@ -5359,19 +6114,19 @@ export const SetsApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSetsSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, limit?: number, options?: any): AxiosPromise<Array<SetListEntry>> {
+        getSetsSearch(language: GetSetsSearchLanguageEnum, game: GetSetsSearchGameEnum, query: string, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, limit?: number, options?: any): AxiosPromise<Array<SetListEntry>> {
             return localVarFp.getSetsSearch(language, game, query, filterMinHighestEquipmentLevel, filterMaxHighestEquipmentLevel, limit, options).then((request) => request(axios, basePath));
         },
         /**
          * Retrieve a specific set with id.
          * @summary Single Sets
-         * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
+         * @param {GetSetsSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {'dofus2' | 'dofus2beta'} game 
+         * @param {GetSetsSingleGameEnum} game 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSetsSingle(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', ankamaId: number, game: 'dofus2' | 'dofus2beta', options?: any): AxiosPromise<EquipmentSet> {
+        getSetsSingle(language: GetSetsSingleLanguageEnum, ankamaId: number, game: GetSetsSingleGameEnum, options?: any): AxiosPromise<EquipmentSet> {
             return localVarFp.getSetsSingle(language, ankamaId, game, options).then((request) => request(axios, basePath));
         },
     };
@@ -5387,44 +6142,44 @@ export class SetsApi extends BaseAPI {
     /**
      * Retrieve all sets with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
      * @summary List All Sets
-     * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-     * @param {'dofus2' | 'dofus2beta'} game 
-     * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+     * @param {GetAllSetsListLanguageEnum} language a valid language code
+     * @param {GetAllSetsListGameEnum} game 
+     * @param {GetAllSetsListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
      * @param {number} [filterMinHighestEquipmentLevel] only results where the equipment with the highest level is above or equal to this value
      * @param {number} [filterMaxHighestEquipmentLevel] only results where the equipment with the highest level is below or equal to this value
-     * @param {'gzip'} [acceptEncoding] optional compression for saving bandwidth
+     * @param {GetAllSetsListAcceptEncodingEnum} [acceptEncoding] optional compression for saving bandwidth
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SetsApi
      */
-    public getAllSetsList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, acceptEncoding?: 'gzip', options?: AxiosRequestConfig) {
+    public getAllSetsList(language: GetAllSetsListLanguageEnum, game: GetAllSetsListGameEnum, sortLevel?: GetAllSetsListSortLevelEnum, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, acceptEncoding?: GetAllSetsListAcceptEncodingEnum, options?: AxiosRequestConfig) {
         return SetsApiFp(this.configuration).getAllSetsList(language, game, sortLevel, filterMinHighestEquipmentLevel, filterMaxHighestEquipmentLevel, acceptEncoding, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * Retrieve a list of sets.
      * @summary List Sets
-     * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-     * @param {'dofus2' | 'dofus2beta'} game 
-     * @param {'asc' | 'desc'} [sortLevel] sort the resulting list by level, default unsorted
+     * @param {GetSetsListLanguageEnum} language a valid language code
+     * @param {GetSetsListGameEnum} game 
+     * @param {GetSetsListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
      * @param {number} [filterMinHighestEquipmentLevel] only results where the equipment with the highest level is above or equal to this value
      * @param {number} [filterMaxHighestEquipmentLevel] only results where the equipment with the highest level is below or equal to this value
      * @param {number} [pageSize] size of the results from the list. -1 disables pagination and gets all in one response.
      * @param {number} [pageNumber] page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
-     * @param {Set<'effects' | 'equipment_ids'>} [fieldsSet] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+     * @param {Set<GetSetsListFieldsSetEnum>} [fieldsSet] adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SetsApi
      */
-    public getSetsList(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', sortLevel?: 'asc' | 'desc', filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, pageSize?: number, pageNumber?: number, fieldsSet?: Set<'effects' | 'equipment_ids'>, options?: AxiosRequestConfig) {
+    public getSetsList(language: GetSetsListLanguageEnum, game: GetSetsListGameEnum, sortLevel?: GetSetsListSortLevelEnum, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, pageSize?: number, pageNumber?: number, fieldsSet?: Set<GetSetsListFieldsSetEnum>, options?: AxiosRequestConfig) {
         return SetsApiFp(this.configuration).getSetsList(language, game, sortLevel, filterMinHighestEquipmentLevel, filterMaxHighestEquipmentLevel, pageSize, pageNumber, fieldsSet, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * Search in all names and descriptions of sets with a query.
      * @summary Search Sets
-     * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
-     * @param {'dofus2' | 'dofus2beta'} game 
+     * @param {GetSetsSearchLanguageEnum} language a valid language code
+     * @param {GetSetsSearchGameEnum} game 
      * @param {string} query case sensitive search query
      * @param {number} [filterMinHighestEquipmentLevel] only results where the equipment with the highest level is above or equal to this value
      * @param {number} [filterMaxHighestEquipmentLevel] only results where the equipment with the highest level is below or equal to this value
@@ -5433,24 +6188,136 @@ export class SetsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof SetsApi
      */
-    public getSetsSearch(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', game: 'dofus2' | 'dofus2beta', query: string, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, limit?: number, options?: AxiosRequestConfig) {
+    public getSetsSearch(language: GetSetsSearchLanguageEnum, game: GetSetsSearchGameEnum, query: string, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, limit?: number, options?: AxiosRequestConfig) {
         return SetsApiFp(this.configuration).getSetsSearch(language, game, query, filterMinHighestEquipmentLevel, filterMaxHighestEquipmentLevel, limit, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * Retrieve a specific set with id.
      * @summary Single Sets
-     * @param {'en' | 'fr' | 'de' | 'it' | 'es' | 'pt'} language a valid language code
+     * @param {GetSetsSingleLanguageEnum} language a valid language code
      * @param {number} ankamaId identifier
-     * @param {'dofus2' | 'dofus2beta'} game 
+     * @param {GetSetsSingleGameEnum} game 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SetsApi
      */
-    public getSetsSingle(language: 'en' | 'fr' | 'de' | 'it' | 'es' | 'pt', ankamaId: number, game: 'dofus2' | 'dofus2beta', options?: AxiosRequestConfig) {
+    public getSetsSingle(language: GetSetsSingleLanguageEnum, ankamaId: number, game: GetSetsSingleGameEnum, options?: AxiosRequestConfig) {
         return SetsApiFp(this.configuration).getSetsSingle(language, ankamaId, game, options).then((request) => request(this.axios, this.basePath));
     }
 }
+
+/**
+ * @export
+ */
+export const GetAllSetsListLanguageEnum = {
+    En: 'en',
+    Fr: 'fr',
+    De: 'de',
+    It: 'it',
+    Es: 'es',
+    Pt: 'pt'
+} as const;
+export type GetAllSetsListLanguageEnum = typeof GetAllSetsListLanguageEnum[keyof typeof GetAllSetsListLanguageEnum];
+/**
+ * @export
+ */
+export const GetAllSetsListGameEnum = {
+    Dofus2: 'dofus2',
+    Dofus2beta: 'dofus2beta'
+} as const;
+export type GetAllSetsListGameEnum = typeof GetAllSetsListGameEnum[keyof typeof GetAllSetsListGameEnum];
+/**
+ * @export
+ */
+export const GetAllSetsListSortLevelEnum = {
+    Asc: 'asc',
+    Desc: 'desc'
+} as const;
+export type GetAllSetsListSortLevelEnum = typeof GetAllSetsListSortLevelEnum[keyof typeof GetAllSetsListSortLevelEnum];
+/**
+ * @export
+ */
+export const GetAllSetsListAcceptEncodingEnum = {
+    Gzip: 'gzip'
+} as const;
+export type GetAllSetsListAcceptEncodingEnum = typeof GetAllSetsListAcceptEncodingEnum[keyof typeof GetAllSetsListAcceptEncodingEnum];
+/**
+ * @export
+ */
+export const GetSetsListLanguageEnum = {
+    En: 'en',
+    Fr: 'fr',
+    De: 'de',
+    It: 'it',
+    Es: 'es',
+    Pt: 'pt'
+} as const;
+export type GetSetsListLanguageEnum = typeof GetSetsListLanguageEnum[keyof typeof GetSetsListLanguageEnum];
+/**
+ * @export
+ */
+export const GetSetsListGameEnum = {
+    Dofus2: 'dofus2',
+    Dofus2beta: 'dofus2beta'
+} as const;
+export type GetSetsListGameEnum = typeof GetSetsListGameEnum[keyof typeof GetSetsListGameEnum];
+/**
+ * @export
+ */
+export const GetSetsListSortLevelEnum = {
+    Asc: 'asc',
+    Desc: 'desc'
+} as const;
+export type GetSetsListSortLevelEnum = typeof GetSetsListSortLevelEnum[keyof typeof GetSetsListSortLevelEnum];
+/**
+ * @export
+ */
+export const GetSetsListFieldsSetEnum = {
+    Effects: 'effects',
+    EquipmentIds: 'equipment_ids'
+} as const;
+export type GetSetsListFieldsSetEnum = typeof GetSetsListFieldsSetEnum[keyof typeof GetSetsListFieldsSetEnum];
+/**
+ * @export
+ */
+export const GetSetsSearchLanguageEnum = {
+    En: 'en',
+    Fr: 'fr',
+    De: 'de',
+    It: 'it',
+    Es: 'es',
+    Pt: 'pt'
+} as const;
+export type GetSetsSearchLanguageEnum = typeof GetSetsSearchLanguageEnum[keyof typeof GetSetsSearchLanguageEnum];
+/**
+ * @export
+ */
+export const GetSetsSearchGameEnum = {
+    Dofus2: 'dofus2',
+    Dofus2beta: 'dofus2beta'
+} as const;
+export type GetSetsSearchGameEnum = typeof GetSetsSearchGameEnum[keyof typeof GetSetsSearchGameEnum];
+/**
+ * @export
+ */
+export const GetSetsSingleLanguageEnum = {
+    En: 'en',
+    Fr: 'fr',
+    De: 'de',
+    It: 'it',
+    Es: 'es',
+    Pt: 'pt'
+} as const;
+export type GetSetsSingleLanguageEnum = typeof GetSetsSingleLanguageEnum[keyof typeof GetSetsSingleLanguageEnum];
+/**
+ * @export
+ */
+export const GetSetsSingleGameEnum = {
+    Dofus2: 'dofus2',
+    Dofus2beta: 'dofus2beta'
+} as const;
+export type GetSetsSingleGameEnum = typeof GetSetsSingleGameEnum[keyof typeof GetSetsSingleGameEnum];
 
 
 /**
@@ -6494,5 +7361,6 @@ export class WebhooksApi extends BaseAPI {
         return WebhooksApiFp(this.configuration).putWebhooksTwitterId(id, putTwitterWebhook, options).then((request) => request(this.axios, this.basePath));
     }
 }
+
 
 
