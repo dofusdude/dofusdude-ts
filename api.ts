@@ -1,10 +1,10 @@
 /* tslint:disable */
 /* eslint-disable */
 /**
- * Dofusdude
- * # A project for you - the developer. The free, always-up-to-date, low-latency, insert-buzzword-here Ankama API for your next cool project!  ## Client SDKs Don\'t write types or functions yourself - I already (kinda) did! 😉 - [Javascript](https://github.com/dofusdude/dofusdude-js) npm i dofusdude-js --save - [Typescript](https://github.com/dofusdude/dofusdude-ts) npm i dofusdude-ts --save - [Go](https://github.com/dofusdude/dodugo) go get -u github.com/dofusdude/dodugo - [Python](https://github.com/dofusdude/dofusdude-py) pip install dofusdude - [PHP](https://github.com/dofusdude/dofusdude-php)  Everything, including this site, is generated out of the [Docs Repo](https://github.com/dofusdude/api-docs). Consider it the Single Source of Truth. If there is a problem with the SDKs, create an issue there.  Your favorite language is missing? Please let me know!  # Main Features - 🥷 **Seamless Auto-Update** load data in the background when a new Dofus version is released and serving it within 2 minutes with atomic data source switching. No downtime and no effects for the user, just always up-to-date.  - ⚡ **Blazingly Fast** all data in-memory, aggressive caching over short time spans, HTTP/2 multiplexing, written in Go, optimized for low latency, hosted on bare metal in 🇩🇪.  - 📨 **Discord Integration** Ankama related Twitter, RSS and Almanax feeds to post to Discord servers with advanced features like filters or mentions. Use the endpoints as a dev or the official [Web Client](https://discord.dofusdude.com) as a user.  - 🩸 **Dofus 2 Beta** from stable to bleeding edge by replacing /dofus2 with /dofus2beta.  - 🗣️ **Multilingual** supporting _en_, _fr_, _es_, _pt_ including the dropped languages from the Dofus website _de_ and _it_.  - 🧠 **Search by Relevance** allowing typos in name and description, handled by language specific text analysis and indexing by the powerful [Meilisearch](https://www.meilisearch.com) written in Rust.  - 🕵️ **Complete** actual data from the game including items invisible to the encyclopedia like quest items.  - 🖼️ **HD Images** rendering vector graphics into PNGs up to 800x800 px in the background.   ## Current state - Weapons ✅ - Equipment ✅ - Sets ✅ - Resources ✅ - Consumables ✅ - Pets ✅ - Mounts ✅ - Cosmetics/Ceremonial Items ✅ - Harnesses ✅ - Quest Items ✅ - Almanax ✅ - Monsters ❌ - Spells ❌  ... and much more on the Roadmap on my Discord.   ## Deploy now. Use forever. Everything you see here on this site, you can use now and forever. Updates could introduce new fields, new paths or parameter but never break backwards compatibility, so no field or parameter will be deleted.  There is one exception! **The API will _always_ choose being up-to-date over everything else**. So if Ankama decides to drop languages from the game like they did with their website, the API will loose support for them, too.  ## Only the beginning... 🤯 I want this project to be useful and not just add plain GET-categories no one needs.  There is a long list of features I want to add (see the Roadmap on my [Discord](https://discord.gg/3EtHskZD8h)). But they are all focussed on you, the developers. So please let me know what you need. I will change the list based on demand.  # Get started! 🥳 Scroll down and try it for yourself!  Or see how these other awesome projects use it: - [KaellyBot](https://github.com/Kaysoro/KaellyBot) by Kaysoro - [Dofus Craftlist](https://dofuscraftlist-dev.netlify.app) by Lystina - [AlmanaxApp](https://almanaxapp.netlify.app) by Lystina - [DofuStuffSimulator](https://dofusstuffsimulator.netlify.app/)  I highly recommend using the SDKs for quick results. I use them myself for parts of the API.  ## Thank you! I highly welcome everyone on my [Discord](https://discord.gg/3EtHskZD8h) to just talk about projects and use cases or give feedback of any kind.  The servers have a fixed monthly cost to provide very fast responses. If you want to help me keeping them running or simply  donate, consider becoming a [GitHub Sponsor](https://github.com/sponsors/dofusdude). 
+ * dofusdude
+ * # A project for you - the developer. The all-in-one toolbelt for your next Ankama related project.  ## Client SDKs - [Javascript](https://github.com/dofusdude/dofusdude-js) npm i dofusdude-js --save - [Typescript](https://github.com/dofusdude/dofusdude-ts) npm i dofusdude-ts --save - [Go](https://github.com/dofusdude/dodugo) go get -u github.com/dofusdude/dodugo - [Python](https://github.com/dofusdude/dofusdude-py) pip install dofusdude - [PHP](https://github.com/dofusdude/dofusdude-php)  Everything, including this site, is generated out of the [Docs Repo](https://github.com/dofusdude/api-docs). Consider it the Single Source of Truth. If there is a problem with the SDKs, create an issue there.  Your favorite language is missing? Please let me know!  # Main Features - 🥷 **Seamless Auto-Update** load data in the background when a new Dofus version is released and serving it within 2 minutes with atomic data source switching. No downtime and no effects for the user, just always up-to-date.  - ⚡ **Blazingly Fast** all data in-memory, aggressive caching over short time spans, HTTP/2 multiplexing, written in Go, optimized for low latency, hosted on bare metal in 🇩🇪.  - 📨 **Discord Integration** Ankama related RSS and Almanax feeds to post to Discord servers with advanced features like filters or mentions. Use the endpoints as a dev or the official [Web Client](https://discord.dofusdude.com) as a user.  - 🩸 **Dofus 2 Beta** from stable to bleeding edge by replacing /dofus2 with /dofus2beta.  - 🗣️ **Multilingual** supporting _en_, _fr_, _es_, _pt_ including the dropped languages from the Dofus website _de_ and _it_.  - 🧠 **Search by Relevance** allowing typos in name and description, handled by language specific text analysis and indexing.  - 🕵️ **Complete** actual data from the game including items invisible to the encyclopedia like quest items.  - 🖼️ **HD Images** rendering game assets to high-res images with up to 800x800 px.  ... and much more on the Roadmap on my Discord.   ## Deploy now. Use forever. Everything you see here on this site, you can use now and forever. Updates could introduce new fields, new paths or parameter but never break backwards compatibility.  There is one exception! **The API will _always_ choose being up-to-date over everything else**. So if Ankama decides to drop languages from the game like they did with their website, the API will loose support for them, too.  ## Thank you! I highly welcome everyone on my [Discord](https://discord.gg/3EtHskZD8h) to just talk about projects and use cases or give feedback of any kind.  The servers have a fixed monthly cost to provide very fast responses. If you want to help me keeping them running or simply donate to that cause, consider becoming a [GitHub Sponsor](https://github.com/sponsors/dofusdude).
  *
- * The version of the OpenAPI document: 0.8.0
+ * The version of the OpenAPI document: 0.8.1
  * Contact: stelzo@steado.de
  *
  * NOTE: This class is auto generated by OpenAPI Generator (https://openapi-generator.tech).
@@ -14,14 +14,14 @@
 
 
 import type { Configuration } from './configuration';
-import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import type { AxiosPromise, AxiosInstance, RawAxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from './common';
 import type { RequestArgs } from './base';
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, BaseAPI, RequiredError } from './base';
+import { BASE_PATH, COLLECTION_FORMATS, BaseAPI, RequiredError, operationServerMap } from './base';
 
 /**
  * 
@@ -176,7 +176,7 @@ export interface AlmanaxWebhook {
      * @type {string}
      * @memberof AlmanaxWebhook
      */
-    'weekly_weekday'?: AlmanaxWebhookWeeklyWeekdayEnum;
+    'weekly_weekday'?: AlmanaxWebhookWeeklyWeekdayEnum | null;
     /**
      * 
      * @type {string}
@@ -255,35 +255,60 @@ export interface ConditionEntry {
     'int_value'?: number;
     /**
      * 
-     * @type {ConditionEntryElement}
+     * @type {ItemsListEntryTypedType}
      * @memberof ConditionEntry
      */
-    'element'?: ConditionEntryElement;
+    'element'?: ItemsListEntryTypedType;
 }
 /**
  * 
  * @export
- * @interface ConditionEntryElement
+ * @interface ConditionTreeLeaf
  */
-export interface ConditionEntryElement {
+export interface ConditionTreeLeaf {
     /**
-     * 
-     * @type {string}
-     * @memberof ConditionEntryElement
-     */
-    'name'?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof ConditionEntryElement
-     */
-    'id'?: number;
-    /**
-     * true if a type is generated from the Api instead of Ankama. In that case, always prefer showing the templated string and omit everything else. The \"name\" field will have an english description of the meta type. An example for such effects are class sets effects.
+     * always \"true\" for the leaf of a tree
      * @type {boolean}
-     * @memberof ConditionEntryElement
+     * @memberof ConditionTreeLeaf
      */
-    'is_meta'?: boolean;
+    'is_operand'?: boolean;
+    /**
+     * 
+     * @type {ConditionEntry}
+     * @memberof ConditionTreeLeaf
+     */
+    'condition'?: ConditionEntry;
+}
+/**
+ * @type ConditionTreeNode
+ * @export
+ */
+export type ConditionTreeNode = ConditionTreeLeaf | ConditionTreeRelation;
+
+/**
+ * 
+ * @export
+ * @interface ConditionTreeRelation
+ */
+export interface ConditionTreeRelation {
+    /**
+     * always \"false\" for relations
+     * @type {boolean}
+     * @memberof ConditionTreeRelation
+     */
+    'is_operand'?: boolean;
+    /**
+     * \"and\", \"or\"
+     * @type {string}
+     * @memberof ConditionTreeRelation
+     */
+    'relation'?: string;
+    /**
+     * 
+     * @type {Array<ConditionTreeNode>}
+     * @memberof ConditionTreeRelation
+     */
+    'children'?: Array<ConditionTreeNode>;
 }
 /**
  * 
@@ -343,8 +368,15 @@ export interface Cosmetic {
      * 
      * @type {Array<ConditionEntry>}
      * @memberof Cosmetic
+     * @deprecated
      */
     'conditions'?: Array<ConditionEntry> | null;
+    /**
+     * 
+     * @type {ConditionTreeNode}
+     * @memberof Cosmetic
+     */
+    'condition_tree'?: ConditionTreeNode;
     /**
      * 
      * @type {Array<RecipeEntry>}
@@ -436,7 +468,7 @@ export interface CreateAlmanaxWebhook {
      * @type {string}
      * @memberof CreateAlmanaxWebhook
      */
-    'weekly_weekday'?: CreateAlmanaxWebhookWeeklyWeekdayEnum;
+    'weekly_weekday'?: CreateAlmanaxWebhookWeeklyWeekdayEnum | null;
 }
 
 export const CreateAlmanaxWebhookFormatEnum = {
@@ -745,8 +777,15 @@ export interface Equipment {
      * 
      * @type {Array<ConditionEntry>}
      * @memberof Equipment
+     * @deprecated
      */
     'conditions'?: Array<ConditionEntry> | null;
+    /**
+     * 
+     * @type {ConditionTreeNode}
+     * @memberof Equipment
+     */
+    'condition_tree'?: ConditionTreeNode;
     /**
      * 
      * @type {Array<RecipeEntry>}
@@ -1193,13 +1232,13 @@ export interface PutAlmanaxWebhook {
      * @type {Set<string>}
      * @memberof PutAlmanaxWebhook
      */
-    'intervals'?: Set<PutAlmanaxWebhookIntervalsEnum>;
+    'intervals'?: Set<PutAlmanaxWebhookIntervalsEnum> | null;
     /**
      * When to post the weekly preview at the specified time.
      * @type {string}
      * @memberof PutAlmanaxWebhook
      */
-    'weekly_weekday'?: PutAlmanaxWebhookWeeklyWeekdayEnum;
+    'weekly_weekday'?: PutAlmanaxWebhookWeeklyWeekdayEnum | null;
 }
 
 export const PutAlmanaxWebhookIntervalsEnum = {
@@ -1366,8 +1405,15 @@ export interface Resource {
      * 
      * @type {Array<ConditionEntry>}
      * @memberof Resource
+     * @deprecated
      */
     'conditions'?: Array<ConditionEntry> | null;
+    /**
+     * 
+     * @type {ConditionTreeNode}
+     * @memberof Resource
+     */
+    'condition_tree'?: ConditionTreeNode;
     /**
      * 
      * @type {Array<RecipeEntry>}
@@ -1625,8 +1671,15 @@ export interface Weapon {
      * 
      * @type {Array<ConditionEntry>}
      * @memberof Weapon
+     * @deprecated
      */
     'conditions'?: Array<ConditionEntry> | null;
+    /**
+     * 
+     * @type {ConditionTreeNode}
+     * @memberof Weapon
+     */
+    'condition_tree'?: ConditionTreeNode;
     /**
      * 
      * @type {number}
@@ -1710,7 +1763,7 @@ export const AlmanaxApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAlmanaxDate: async (language: GetAlmanaxDateLanguageEnum, date: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getAlmanaxDate: async (language: GetAlmanaxDateLanguageEnum, date: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getAlmanaxDate', 'language', language)
             // verify required parameter 'date' is not null or undefined
@@ -1752,7 +1805,7 @@ export const AlmanaxApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAlmanaxRange: async (language: GetAlmanaxRangeLanguageEnum, filterBonusType?: string, rangeFrom?: string, rangeTo?: string, rangeSize?: number, timezone?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getAlmanaxRange: async (language: GetAlmanaxRangeLanguageEnum, filterBonusType?: string, rangeFrom?: string, rangeTo?: string, rangeSize?: number, timezone?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getAlmanaxRange', 'language', language)
             const localVarPath = `/dofus2/{language}/almanax`
@@ -1821,9 +1874,11 @@ export const AlmanaxApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getAlmanaxDate(language: GetAlmanaxDateLanguageEnum, date: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AlmanaxEntry>> {
+        async getAlmanaxDate(language: GetAlmanaxDateLanguageEnum, date: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AlmanaxEntry>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getAlmanaxDate(language, date, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['AlmanaxApi.getAlmanaxDate']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Get a range of dates, defaults to today + 6 following days but can specified by the query parameters.   filter[bonus_type] can be used seperately and does not have an effect on the other parameters.  range[from] changes the start date, everything else defaults to 6 following dates from this start date.  range[to] when used without anything else, it will use today as start date and this parameter as end. All ranges are inclusive.  range[from] + range[to] = inclusive range over the specified dates, should never be farther apart than 35 days.  range[from|to] + range[size] no need to specify the date, just following days with [from] (0 is today) or go backwards in time with only [to] and [size].  Not all combinations are listed but this should give you an idea how to they could work.
@@ -1837,9 +1892,11 @@ export const AlmanaxApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getAlmanaxRange(language: GetAlmanaxRangeLanguageEnum, filterBonusType?: string, rangeFrom?: string, rangeTo?: string, rangeSize?: number, timezone?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<AlmanaxEntry>>> {
+        async getAlmanaxRange(language: GetAlmanaxRangeLanguageEnum, filterBonusType?: string, rangeFrom?: string, rangeTo?: string, rangeSize?: number, timezone?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<AlmanaxEntry>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getAlmanaxRange(language, filterBonusType, rangeFrom, rangeTo, rangeSize, timezone, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['AlmanaxApi.getAlmanaxRange']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
     }
 };
@@ -1896,7 +1953,7 @@ export class AlmanaxApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AlmanaxApi
      */
-    public getAlmanaxDate(language: GetAlmanaxDateLanguageEnum, date: string, options?: AxiosRequestConfig) {
+    public getAlmanaxDate(language: GetAlmanaxDateLanguageEnum, date: string, options?: RawAxiosRequestConfig) {
         return AlmanaxApiFp(this.configuration).getAlmanaxDate(language, date, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -1913,7 +1970,7 @@ export class AlmanaxApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AlmanaxApi
      */
-    public getAlmanaxRange(language: GetAlmanaxRangeLanguageEnum, filterBonusType?: string, rangeFrom?: string, rangeTo?: string, rangeSize?: number, timezone?: string, options?: AxiosRequestConfig) {
+    public getAlmanaxRange(language: GetAlmanaxRangeLanguageEnum, filterBonusType?: string, rangeFrom?: string, rangeTo?: string, rangeSize?: number, timezone?: string, options?: RawAxiosRequestConfig) {
         return AlmanaxApiFp(this.configuration).getAlmanaxRange(language, filterBonusType, rangeFrom, rangeTo, rangeSize, timezone, options).then((request) => request(this.axios, this.basePath));
     }
 }
@@ -1961,7 +2018,7 @@ export const ConsumablesApiAxiosParamCreator = function (configuration?: Configu
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAllItemsConsumablesList: async (language: GetAllItemsConsumablesListLanguageEnum, game: GetAllItemsConsumablesListGameEnum, sortLevel?: GetAllItemsConsumablesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsConsumablesListAcceptEncodingEnum, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getAllItemsConsumablesList: async (language: GetAllItemsConsumablesListLanguageEnum, game: GetAllItemsConsumablesListGameEnum, sortLevel?: GetAllItemsConsumablesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsConsumablesListAcceptEncodingEnum, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getAllItemsConsumablesList', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -2026,7 +2083,7 @@ export const ConsumablesApiAxiosParamCreator = function (configuration?: Configu
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsConsumablesList: async (language: GetItemsConsumablesListLanguageEnum, game: GetItemsConsumablesListGameEnum, sortLevel?: GetItemsConsumablesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsConsumablesListFieldsItemEnum>, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getItemsConsumablesList: async (language: GetItemsConsumablesListLanguageEnum, game: GetItemsConsumablesListGameEnum, sortLevel?: GetItemsConsumablesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsConsumablesListFieldsItemEnum>, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getItemsConsumablesList', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -2097,7 +2154,7 @@ export const ConsumablesApiAxiosParamCreator = function (configuration?: Configu
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsConsumablesSearch: async (language: GetItemsConsumablesSearchLanguageEnum, game: GetItemsConsumablesSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getItemsConsumablesSearch: async (language: GetItemsConsumablesSearchLanguageEnum, game: GetItemsConsumablesSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getItemsConsumablesSearch', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -2158,7 +2215,7 @@ export const ConsumablesApiAxiosParamCreator = function (configuration?: Configu
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsConsumablesSingle: async (language: GetItemsConsumablesSingleLanguageEnum, ankamaId: number, game: GetItemsConsumablesSingleGameEnum, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getItemsConsumablesSingle: async (language: GetItemsConsumablesSingleLanguageEnum, ankamaId: number, game: GetItemsConsumablesSingleGameEnum, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getItemsConsumablesSingle', 'language', language)
             // verify required parameter 'ankamaId' is not null or undefined
@@ -2214,9 +2271,11 @@ export const ConsumablesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getAllItemsConsumablesList(language: GetAllItemsConsumablesListLanguageEnum, game: GetAllItemsConsumablesListGameEnum, sortLevel?: GetAllItemsConsumablesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsConsumablesListAcceptEncodingEnum, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
+        async getAllItemsConsumablesList(language: GetAllItemsConsumablesListLanguageEnum, game: GetAllItemsConsumablesListGameEnum, sortLevel?: GetAllItemsConsumablesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsConsumablesListAcceptEncodingEnum, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getAllItemsConsumablesList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, acceptEncoding, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['ConsumablesApi.getAllItemsConsumablesList']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Retrieve a list of consumable items.
@@ -2233,9 +2292,11 @@ export const ConsumablesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getItemsConsumablesList(language: GetItemsConsumablesListLanguageEnum, game: GetItemsConsumablesListGameEnum, sortLevel?: GetItemsConsumablesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsConsumablesListFieldsItemEnum>, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
+        async getItemsConsumablesList(language: GetItemsConsumablesListLanguageEnum, game: GetItemsConsumablesListGameEnum, sortLevel?: GetItemsConsumablesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsConsumablesListFieldsItemEnum>, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getItemsConsumablesList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, pageSize, pageNumber, fieldsItem, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['ConsumablesApi.getItemsConsumablesList']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Search in all names and descriptions of consumable items with a query.
@@ -2250,9 +2311,11 @@ export const ConsumablesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getItemsConsumablesSearch(language: GetItemsConsumablesSearchLanguageEnum, game: GetItemsConsumablesSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ItemListEntry>>> {
+        async getItemsConsumablesSearch(language: GetItemsConsumablesSearchLanguageEnum, game: GetItemsConsumablesSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ItemListEntry>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getItemsConsumablesSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['ConsumablesApi.getItemsConsumablesSearch']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Retrieve a specific consumable item with id.
@@ -2263,9 +2326,11 @@ export const ConsumablesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getItemsConsumablesSingle(language: GetItemsConsumablesSingleLanguageEnum, ankamaId: number, game: GetItemsConsumablesSingleGameEnum, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Resource>> {
+        async getItemsConsumablesSingle(language: GetItemsConsumablesSingleLanguageEnum, ankamaId: number, game: GetItemsConsumablesSingleGameEnum, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Resource>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getItemsConsumablesSingle(language, ankamaId, game, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['ConsumablesApi.getItemsConsumablesSingle']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
     }
 };
@@ -2363,7 +2428,7 @@ export class ConsumablesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ConsumablesApi
      */
-    public getAllItemsConsumablesList(language: GetAllItemsConsumablesListLanguageEnum, game: GetAllItemsConsumablesListGameEnum, sortLevel?: GetAllItemsConsumablesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsConsumablesListAcceptEncodingEnum, options?: AxiosRequestConfig) {
+    public getAllItemsConsumablesList(language: GetAllItemsConsumablesListLanguageEnum, game: GetAllItemsConsumablesListGameEnum, sortLevel?: GetAllItemsConsumablesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsConsumablesListAcceptEncodingEnum, options?: RawAxiosRequestConfig) {
         return ConsumablesApiFp(this.configuration).getAllItemsConsumablesList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, acceptEncoding, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -2383,7 +2448,7 @@ export class ConsumablesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ConsumablesApi
      */
-    public getItemsConsumablesList(language: GetItemsConsumablesListLanguageEnum, game: GetItemsConsumablesListGameEnum, sortLevel?: GetItemsConsumablesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsConsumablesListFieldsItemEnum>, options?: AxiosRequestConfig) {
+    public getItemsConsumablesList(language: GetItemsConsumablesListLanguageEnum, game: GetItemsConsumablesListGameEnum, sortLevel?: GetItemsConsumablesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsConsumablesListFieldsItemEnum>, options?: RawAxiosRequestConfig) {
         return ConsumablesApiFp(this.configuration).getItemsConsumablesList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, pageSize, pageNumber, fieldsItem, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -2401,7 +2466,7 @@ export class ConsumablesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ConsumablesApi
      */
-    public getItemsConsumablesSearch(language: GetItemsConsumablesSearchLanguageEnum, game: GetItemsConsumablesSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig) {
+    public getItemsConsumablesSearch(language: GetItemsConsumablesSearchLanguageEnum, game: GetItemsConsumablesSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: RawAxiosRequestConfig) {
         return ConsumablesApiFp(this.configuration).getItemsConsumablesSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -2415,7 +2480,7 @@ export class ConsumablesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ConsumablesApi
      */
-    public getItemsConsumablesSingle(language: GetItemsConsumablesSingleLanguageEnum, ankamaId: number, game: GetItemsConsumablesSingleGameEnum, options?: AxiosRequestConfig) {
+    public getItemsConsumablesSingle(language: GetItemsConsumablesSingleLanguageEnum, ankamaId: number, game: GetItemsConsumablesSingleGameEnum, options?: RawAxiosRequestConfig) {
         return ConsumablesApiFp(this.configuration).getItemsConsumablesSingle(language, ankamaId, game, options).then((request) => request(this.axios, this.basePath));
     }
 }
@@ -2554,7 +2619,7 @@ export const CosmeticsApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAllCosmeticsList: async (language: GetAllCosmeticsListLanguageEnum, game: GetAllCosmeticsListGameEnum, sortLevel?: GetAllCosmeticsListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllCosmeticsListAcceptEncodingEnum, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getAllCosmeticsList: async (language: GetAllCosmeticsListLanguageEnum, game: GetAllCosmeticsListGameEnum, sortLevel?: GetAllCosmeticsListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllCosmeticsListAcceptEncodingEnum, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getAllCosmeticsList', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -2619,7 +2684,7 @@ export const CosmeticsApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCosmeticsList: async (language: GetCosmeticsListLanguageEnum, game: GetCosmeticsListGameEnum, sortLevel?: GetCosmeticsListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetCosmeticsListFieldsItemEnum>, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getCosmeticsList: async (language: GetCosmeticsListLanguageEnum, game: GetCosmeticsListGameEnum, sortLevel?: GetCosmeticsListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetCosmeticsListFieldsItemEnum>, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getCosmeticsList', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -2690,7 +2755,7 @@ export const CosmeticsApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCosmeticsSearch: async (language: GetCosmeticsSearchLanguageEnum, game: GetCosmeticsSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getCosmeticsSearch: async (language: GetCosmeticsSearchLanguageEnum, game: GetCosmeticsSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getCosmeticsSearch', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -2751,7 +2816,7 @@ export const CosmeticsApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCosmeticsSingle: async (language: GetCosmeticsSingleLanguageEnum, ankamaId: number, game: GetCosmeticsSingleGameEnum, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getCosmeticsSingle: async (language: GetCosmeticsSingleLanguageEnum, ankamaId: number, game: GetCosmeticsSingleGameEnum, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getCosmeticsSingle', 'language', language)
             // verify required parameter 'ankamaId' is not null or undefined
@@ -2807,9 +2872,11 @@ export const CosmeticsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getAllCosmeticsList(language: GetAllCosmeticsListLanguageEnum, game: GetAllCosmeticsListGameEnum, sortLevel?: GetAllCosmeticsListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllCosmeticsListAcceptEncodingEnum, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
+        async getAllCosmeticsList(language: GetAllCosmeticsListLanguageEnum, game: GetAllCosmeticsListGameEnum, sortLevel?: GetAllCosmeticsListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllCosmeticsListAcceptEncodingEnum, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getAllCosmeticsList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, acceptEncoding, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['CosmeticsApi.getAllCosmeticsList']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Retrieve a list of cosmetic items.
@@ -2826,9 +2893,11 @@ export const CosmeticsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getCosmeticsList(language: GetCosmeticsListLanguageEnum, game: GetCosmeticsListGameEnum, sortLevel?: GetCosmeticsListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetCosmeticsListFieldsItemEnum>, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
+        async getCosmeticsList(language: GetCosmeticsListLanguageEnum, game: GetCosmeticsListGameEnum, sortLevel?: GetCosmeticsListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetCosmeticsListFieldsItemEnum>, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getCosmeticsList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, pageSize, pageNumber, fieldsItem, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['CosmeticsApi.getCosmeticsList']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Search in all names and descriptions of cosmetic items with a query.
@@ -2843,9 +2912,11 @@ export const CosmeticsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getCosmeticsSearch(language: GetCosmeticsSearchLanguageEnum, game: GetCosmeticsSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ItemListEntry>>> {
+        async getCosmeticsSearch(language: GetCosmeticsSearchLanguageEnum, game: GetCosmeticsSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ItemListEntry>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getCosmeticsSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['CosmeticsApi.getCosmeticsSearch']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Retrieve a specific cosmetic item with id.
@@ -2856,9 +2927,11 @@ export const CosmeticsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getCosmeticsSingle(language: GetCosmeticsSingleLanguageEnum, ankamaId: number, game: GetCosmeticsSingleGameEnum, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Cosmetic>> {
+        async getCosmeticsSingle(language: GetCosmeticsSingleLanguageEnum, ankamaId: number, game: GetCosmeticsSingleGameEnum, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Cosmetic>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getCosmeticsSingle(language, ankamaId, game, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['CosmeticsApi.getCosmeticsSingle']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
     }
 };
@@ -2956,7 +3029,7 @@ export class CosmeticsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CosmeticsApi
      */
-    public getAllCosmeticsList(language: GetAllCosmeticsListLanguageEnum, game: GetAllCosmeticsListGameEnum, sortLevel?: GetAllCosmeticsListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllCosmeticsListAcceptEncodingEnum, options?: AxiosRequestConfig) {
+    public getAllCosmeticsList(language: GetAllCosmeticsListLanguageEnum, game: GetAllCosmeticsListGameEnum, sortLevel?: GetAllCosmeticsListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllCosmeticsListAcceptEncodingEnum, options?: RawAxiosRequestConfig) {
         return CosmeticsApiFp(this.configuration).getAllCosmeticsList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, acceptEncoding, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -2976,7 +3049,7 @@ export class CosmeticsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CosmeticsApi
      */
-    public getCosmeticsList(language: GetCosmeticsListLanguageEnum, game: GetCosmeticsListGameEnum, sortLevel?: GetCosmeticsListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetCosmeticsListFieldsItemEnum>, options?: AxiosRequestConfig) {
+    public getCosmeticsList(language: GetCosmeticsListLanguageEnum, game: GetCosmeticsListGameEnum, sortLevel?: GetCosmeticsListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetCosmeticsListFieldsItemEnum>, options?: RawAxiosRequestConfig) {
         return CosmeticsApiFp(this.configuration).getCosmeticsList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, pageSize, pageNumber, fieldsItem, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -2994,7 +3067,7 @@ export class CosmeticsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CosmeticsApi
      */
-    public getCosmeticsSearch(language: GetCosmeticsSearchLanguageEnum, game: GetCosmeticsSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig) {
+    public getCosmeticsSearch(language: GetCosmeticsSearchLanguageEnum, game: GetCosmeticsSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: RawAxiosRequestConfig) {
         return CosmeticsApiFp(this.configuration).getCosmeticsSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -3008,7 +3081,7 @@ export class CosmeticsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CosmeticsApi
      */
-    public getCosmeticsSingle(language: GetCosmeticsSingleLanguageEnum, ankamaId: number, game: GetCosmeticsSingleGameEnum, options?: AxiosRequestConfig) {
+    public getCosmeticsSingle(language: GetCosmeticsSingleLanguageEnum, ankamaId: number, game: GetCosmeticsSingleGameEnum, options?: RawAxiosRequestConfig) {
         return CosmeticsApiFp(this.configuration).getCosmeticsSingle(language, ankamaId, game, options).then((request) => request(this.axios, this.basePath));
     }
 }
@@ -3147,7 +3220,7 @@ export const EquipmentApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAllItemsEquipmentList: async (language: GetAllItemsEquipmentListLanguageEnum, game: GetAllItemsEquipmentListGameEnum, sortLevel?: GetAllItemsEquipmentListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsEquipmentListAcceptEncodingEnum, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getAllItemsEquipmentList: async (language: GetAllItemsEquipmentListLanguageEnum, game: GetAllItemsEquipmentListGameEnum, sortLevel?: GetAllItemsEquipmentListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsEquipmentListAcceptEncodingEnum, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getAllItemsEquipmentList', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -3212,7 +3285,7 @@ export const EquipmentApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsEquipmentList: async (language: GetItemsEquipmentListLanguageEnum, game: GetItemsEquipmentListGameEnum, sortLevel?: GetItemsEquipmentListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsEquipmentListFieldsItemEnum>, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getItemsEquipmentList: async (language: GetItemsEquipmentListLanguageEnum, game: GetItemsEquipmentListGameEnum, sortLevel?: GetItemsEquipmentListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsEquipmentListFieldsItemEnum>, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getItemsEquipmentList', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -3283,7 +3356,7 @@ export const EquipmentApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsEquipmentSearch: async (language: GetItemsEquipmentSearchLanguageEnum, game: GetItemsEquipmentSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getItemsEquipmentSearch: async (language: GetItemsEquipmentSearchLanguageEnum, game: GetItemsEquipmentSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getItemsEquipmentSearch', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -3344,7 +3417,7 @@ export const EquipmentApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsEquipmentSingle: async (language: GetItemsEquipmentSingleLanguageEnum, ankamaId: number, game: GetItemsEquipmentSingleGameEnum, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getItemsEquipmentSingle: async (language: GetItemsEquipmentSingleLanguageEnum, ankamaId: number, game: GetItemsEquipmentSingleGameEnum, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getItemsEquipmentSingle', 'language', language)
             // verify required parameter 'ankamaId' is not null or undefined
@@ -3400,9 +3473,11 @@ export const EquipmentApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getAllItemsEquipmentList(language: GetAllItemsEquipmentListLanguageEnum, game: GetAllItemsEquipmentListGameEnum, sortLevel?: GetAllItemsEquipmentListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsEquipmentListAcceptEncodingEnum, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
+        async getAllItemsEquipmentList(language: GetAllItemsEquipmentListLanguageEnum, game: GetAllItemsEquipmentListGameEnum, sortLevel?: GetAllItemsEquipmentListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsEquipmentListAcceptEncodingEnum, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getAllItemsEquipmentList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, acceptEncoding, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['EquipmentApi.getAllItemsEquipmentList']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Retrieve a list of equipment items.
@@ -3419,9 +3494,11 @@ export const EquipmentApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getItemsEquipmentList(language: GetItemsEquipmentListLanguageEnum, game: GetItemsEquipmentListGameEnum, sortLevel?: GetItemsEquipmentListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsEquipmentListFieldsItemEnum>, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
+        async getItemsEquipmentList(language: GetItemsEquipmentListLanguageEnum, game: GetItemsEquipmentListGameEnum, sortLevel?: GetItemsEquipmentListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsEquipmentListFieldsItemEnum>, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getItemsEquipmentList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, pageSize, pageNumber, fieldsItem, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['EquipmentApi.getItemsEquipmentList']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Search in all names and descriptions of equipment items with a query.
@@ -3436,9 +3513,11 @@ export const EquipmentApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getItemsEquipmentSearch(language: GetItemsEquipmentSearchLanguageEnum, game: GetItemsEquipmentSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ItemListEntry>>> {
+        async getItemsEquipmentSearch(language: GetItemsEquipmentSearchLanguageEnum, game: GetItemsEquipmentSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ItemListEntry>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getItemsEquipmentSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['EquipmentApi.getItemsEquipmentSearch']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Retrieve a specific equipment item with id.
@@ -3449,9 +3528,11 @@ export const EquipmentApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getItemsEquipmentSingle(language: GetItemsEquipmentSingleLanguageEnum, ankamaId: number, game: GetItemsEquipmentSingleGameEnum, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Weapon>> {
+        async getItemsEquipmentSingle(language: GetItemsEquipmentSingleLanguageEnum, ankamaId: number, game: GetItemsEquipmentSingleGameEnum, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Weapon>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getItemsEquipmentSingle(language, ankamaId, game, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['EquipmentApi.getItemsEquipmentSingle']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
     }
 };
@@ -3549,7 +3630,7 @@ export class EquipmentApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof EquipmentApi
      */
-    public getAllItemsEquipmentList(language: GetAllItemsEquipmentListLanguageEnum, game: GetAllItemsEquipmentListGameEnum, sortLevel?: GetAllItemsEquipmentListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsEquipmentListAcceptEncodingEnum, options?: AxiosRequestConfig) {
+    public getAllItemsEquipmentList(language: GetAllItemsEquipmentListLanguageEnum, game: GetAllItemsEquipmentListGameEnum, sortLevel?: GetAllItemsEquipmentListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsEquipmentListAcceptEncodingEnum, options?: RawAxiosRequestConfig) {
         return EquipmentApiFp(this.configuration).getAllItemsEquipmentList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, acceptEncoding, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -3569,7 +3650,7 @@ export class EquipmentApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof EquipmentApi
      */
-    public getItemsEquipmentList(language: GetItemsEquipmentListLanguageEnum, game: GetItemsEquipmentListGameEnum, sortLevel?: GetItemsEquipmentListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsEquipmentListFieldsItemEnum>, options?: AxiosRequestConfig) {
+    public getItemsEquipmentList(language: GetItemsEquipmentListLanguageEnum, game: GetItemsEquipmentListGameEnum, sortLevel?: GetItemsEquipmentListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsEquipmentListFieldsItemEnum>, options?: RawAxiosRequestConfig) {
         return EquipmentApiFp(this.configuration).getItemsEquipmentList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, pageSize, pageNumber, fieldsItem, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -3587,7 +3668,7 @@ export class EquipmentApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof EquipmentApi
      */
-    public getItemsEquipmentSearch(language: GetItemsEquipmentSearchLanguageEnum, game: GetItemsEquipmentSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig) {
+    public getItemsEquipmentSearch(language: GetItemsEquipmentSearchLanguageEnum, game: GetItemsEquipmentSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: RawAxiosRequestConfig) {
         return EquipmentApiFp(this.configuration).getItemsEquipmentSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -3601,7 +3682,7 @@ export class EquipmentApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof EquipmentApi
      */
-    public getItemsEquipmentSingle(language: GetItemsEquipmentSingleLanguageEnum, ankamaId: number, game: GetItemsEquipmentSingleGameEnum, options?: AxiosRequestConfig) {
+    public getItemsEquipmentSingle(language: GetItemsEquipmentSingleLanguageEnum, ankamaId: number, game: GetItemsEquipmentSingleGameEnum, options?: RawAxiosRequestConfig) {
         return EquipmentApiFp(this.configuration).getItemsEquipmentSingle(language, ankamaId, game, options).then((request) => request(this.axios, this.basePath));
     }
 }
@@ -3748,7 +3829,7 @@ export const GameApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getGameSearch: async (language: GetGameSearchLanguageEnum, game: GetGameSearchGameEnum, query: string, filterType?: Set<GetGameSearchFilterTypeEnum>, limit?: number, fieldsItem?: Set<GetGameSearchFieldsItemEnum>, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getGameSearch: async (language: GetGameSearchLanguageEnum, game: GetGameSearchGameEnum, query: string, filterType?: Set<GetGameSearchFilterTypeEnum>, limit?: number, fieldsItem?: Set<GetGameSearchFieldsItemEnum>, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getGameSearch', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -3809,7 +3890,7 @@ export const GameApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsAllSearch: async (language: GetItemsAllSearchLanguageEnum, game: GetItemsAllSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getItemsAllSearch: async (language: GetItemsAllSearchLanguageEnum, game: GetItemsAllSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getItemsAllSearch', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -3883,9 +3964,11 @@ export const GameApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getGameSearch(language: GetGameSearchLanguageEnum, game: GetGameSearchGameEnum, query: string, filterType?: Set<GetGameSearchFilterTypeEnum>, limit?: number, fieldsItem?: Set<GetGameSearchFieldsItemEnum>, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<GetGameSearch200ResponseInner>>> {
+        async getGameSearch(language: GetGameSearchLanguageEnum, game: GetGameSearchGameEnum, query: string, filterType?: Set<GetGameSearchFilterTypeEnum>, limit?: number, fieldsItem?: Set<GetGameSearchFieldsItemEnum>, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<GetGameSearch200ResponseInner>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getGameSearch(language, game, query, filterType, limit, fieldsItem, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['GameApi.getGameSearch']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Search in all names and descriptions of Dofus items (including all subtypes) with a query.
@@ -3900,9 +3983,11 @@ export const GameApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getItemsAllSearch(language: GetItemsAllSearchLanguageEnum, game: GetItemsAllSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ItemsListEntryTyped>>> {
+        async getItemsAllSearch(language: GetItemsAllSearchLanguageEnum, game: GetItemsAllSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ItemsListEntryTyped>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getItemsAllSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['GameApi.getItemsAllSearch']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
     }
 };
@@ -3968,7 +4053,7 @@ export class GameApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof GameApi
      */
-    public getGameSearch(language: GetGameSearchLanguageEnum, game: GetGameSearchGameEnum, query: string, filterType?: Set<GetGameSearchFilterTypeEnum>, limit?: number, fieldsItem?: Set<GetGameSearchFieldsItemEnum>, options?: AxiosRequestConfig) {
+    public getGameSearch(language: GetGameSearchLanguageEnum, game: GetGameSearchGameEnum, query: string, filterType?: Set<GetGameSearchFilterTypeEnum>, limit?: number, fieldsItem?: Set<GetGameSearchFieldsItemEnum>, options?: RawAxiosRequestConfig) {
         return GameApiFp(this.configuration).getGameSearch(language, game, query, filterType, limit, fieldsItem, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -3986,7 +4071,7 @@ export class GameApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof GameApi
      */
-    public getItemsAllSearch(language: GetItemsAllSearchLanguageEnum, game: GetItemsAllSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig) {
+    public getItemsAllSearch(language: GetItemsAllSearchLanguageEnum, game: GetItemsAllSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: RawAxiosRequestConfig) {
         return GameApiFp(this.configuration).getItemsAllSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options).then((request) => request(this.axios, this.basePath));
     }
 }
@@ -4067,7 +4152,7 @@ export const MetaApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getGameSearchTypes: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getGameSearchTypes: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/dofus2/meta/search/types`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -4098,7 +4183,7 @@ export const MetaApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getMetaAlmanaxBonuses: async (language: GetMetaAlmanaxBonusesLanguageEnum, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getMetaAlmanaxBonuses: async (language: GetMetaAlmanaxBonusesLanguageEnum, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getMetaAlmanaxBonuses', 'language', language)
             const localVarPath = `/dofus2/meta/{language}/almanax/bonuses`
@@ -4126,12 +4211,58 @@ export const MetaApiAxiosParamCreator = function (configuration?: Configuration)
             };
         },
         /**
+         * Search all the available bonuses and their id for filtering them in the range endpoint.
+         * @summary Search Available Almanax Bonuses
+         * @param {GetMetaAlmanaxBonusesSearchLanguageEnum} language a valid language code
+         * @param {string} query case sensitive search query
+         * @param {number} [limit] maximum number of returned results
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getMetaAlmanaxBonusesSearch: async (language: GetMetaAlmanaxBonusesSearchLanguageEnum, query: string, limit?: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'language' is not null or undefined
+            assertParamExists('getMetaAlmanaxBonusesSearch', 'language', language)
+            // verify required parameter 'query' is not null or undefined
+            assertParamExists('getMetaAlmanaxBonusesSearch', 'query', query)
+            const localVarPath = `/dofus2/meta/{language}/almanax/bonuses/search`
+                .replace(`{${"language"}}`, encodeURIComponent(String(language)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (query !== undefined) {
+                localVarQueryParameter['query'] = query;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Get the mappings for all specific elements that are linked in the dataset. All names are english. Translations are not needed because of a global unique id which is the index inside the array. Future elements will get a higher id.
          * @summary Effects and Condition Elements
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getMetaElements: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getMetaElements: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/dofus2/meta/elements`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -4171,9 +4302,11 @@ export const MetaApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getGameSearchTypes(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<string>>> {
+        async getGameSearchTypes(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<string>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getGameSearchTypes(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['MetaApi.getGameSearchTypes']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Get all the available bonuses and their id for filtering them in the range endpoint.
@@ -4182,9 +4315,26 @@ export const MetaApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getMetaAlmanaxBonuses(language: GetMetaAlmanaxBonusesLanguageEnum, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<GetMetaAlmanaxBonuses200ResponseInner>>> {
+        async getMetaAlmanaxBonuses(language: GetMetaAlmanaxBonusesLanguageEnum, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<GetMetaAlmanaxBonuses200ResponseInner>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getMetaAlmanaxBonuses(language, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['MetaApi.getMetaAlmanaxBonuses']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+        },
+        /**
+         * Search all the available bonuses and their id for filtering them in the range endpoint.
+         * @summary Search Available Almanax Bonuses
+         * @param {GetMetaAlmanaxBonusesSearchLanguageEnum} language a valid language code
+         * @param {string} query case sensitive search query
+         * @param {number} [limit] maximum number of returned results
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async getMetaAlmanaxBonusesSearch(language: GetMetaAlmanaxBonusesSearchLanguageEnum, query: string, limit?: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<GetMetaAlmanaxBonuses200ResponseInner>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.getMetaAlmanaxBonusesSearch(language, query, limit, options);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['MetaApi.getMetaAlmanaxBonusesSearch']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Get the mappings for all specific elements that are linked in the dataset. All names are english. Translations are not needed because of a global unique id which is the index inside the array. Future elements will get a higher id.
@@ -4192,9 +4342,11 @@ export const MetaApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getMetaElements(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<string>>> {
+        async getMetaElements(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<string>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getMetaElements(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['MetaApi.getMetaElements']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
     }
 };
@@ -4226,6 +4378,18 @@ export const MetaApiFactory = function (configuration?: Configuration, basePath?
             return localVarFp.getMetaAlmanaxBonuses(language, options).then((request) => request(axios, basePath));
         },
         /**
+         * Search all the available bonuses and their id for filtering them in the range endpoint.
+         * @summary Search Available Almanax Bonuses
+         * @param {GetMetaAlmanaxBonusesSearchLanguageEnum} language a valid language code
+         * @param {string} query case sensitive search query
+         * @param {number} [limit] maximum number of returned results
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getMetaAlmanaxBonusesSearch(language: GetMetaAlmanaxBonusesSearchLanguageEnum, query: string, limit?: number, options?: any): AxiosPromise<Array<GetMetaAlmanaxBonuses200ResponseInner>> {
+            return localVarFp.getMetaAlmanaxBonusesSearch(language, query, limit, options).then((request) => request(axios, basePath));
+        },
+        /**
          * Get the mappings for all specific elements that are linked in the dataset. All names are english. Translations are not needed because of a global unique id which is the index inside the array. Future elements will get a higher id.
          * @summary Effects and Condition Elements
          * @param {*} [options] Override http request option.
@@ -4251,7 +4415,7 @@ export class MetaApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof MetaApi
      */
-    public getGameSearchTypes(options?: AxiosRequestConfig) {
+    public getGameSearchTypes(options?: RawAxiosRequestConfig) {
         return MetaApiFp(this.configuration).getGameSearchTypes(options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -4263,8 +4427,22 @@ export class MetaApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof MetaApi
      */
-    public getMetaAlmanaxBonuses(language: GetMetaAlmanaxBonusesLanguageEnum, options?: AxiosRequestConfig) {
+    public getMetaAlmanaxBonuses(language: GetMetaAlmanaxBonusesLanguageEnum, options?: RawAxiosRequestConfig) {
         return MetaApiFp(this.configuration).getMetaAlmanaxBonuses(language, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Search all the available bonuses and their id for filtering them in the range endpoint.
+     * @summary Search Available Almanax Bonuses
+     * @param {GetMetaAlmanaxBonusesSearchLanguageEnum} language a valid language code
+     * @param {string} query case sensitive search query
+     * @param {number} [limit] maximum number of returned results
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof MetaApi
+     */
+    public getMetaAlmanaxBonusesSearch(language: GetMetaAlmanaxBonusesSearchLanguageEnum, query: string, limit?: number, options?: RawAxiosRequestConfig) {
+        return MetaApiFp(this.configuration).getMetaAlmanaxBonusesSearch(language, query, limit, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4274,7 +4452,7 @@ export class MetaApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof MetaApi
      */
-    public getMetaElements(options?: AxiosRequestConfig) {
+    public getMetaElements(options?: RawAxiosRequestConfig) {
         return MetaApiFp(this.configuration).getMetaElements(options).then((request) => request(this.axios, this.basePath));
     }
 }
@@ -4290,6 +4468,17 @@ export const GetMetaAlmanaxBonusesLanguageEnum = {
     Es: 'es'
 } as const;
 export type GetMetaAlmanaxBonusesLanguageEnum = typeof GetMetaAlmanaxBonusesLanguageEnum[keyof typeof GetMetaAlmanaxBonusesLanguageEnum];
+/**
+ * @export
+ */
+export const GetMetaAlmanaxBonusesSearchLanguageEnum = {
+    En: 'en',
+    Fr: 'fr',
+    De: 'de',
+    It: 'it',
+    Es: 'es'
+} as const;
+export type GetMetaAlmanaxBonusesSearchLanguageEnum = typeof GetMetaAlmanaxBonusesSearchLanguageEnum[keyof typeof GetMetaAlmanaxBonusesSearchLanguageEnum];
 
 
 /**
@@ -4308,7 +4497,7 @@ export const MountsApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAllMountsList: async (language: GetAllMountsListLanguageEnum, game: GetAllMountsListGameEnum, filterFamilyName?: string, acceptEncoding?: GetAllMountsListAcceptEncodingEnum, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getAllMountsList: async (language: GetAllMountsListLanguageEnum, game: GetAllMountsListGameEnum, filterFamilyName?: string, acceptEncoding?: GetAllMountsListAcceptEncodingEnum, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getAllMountsList', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -4358,7 +4547,7 @@ export const MountsApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getMountsList: async (language: GetMountsListLanguageEnum, game: GetMountsListGameEnum, filterFamilyName?: string, pageSize?: number, pageNumber?: number, fieldsMount?: Set<GetMountsListFieldsMountEnum>, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getMountsList: async (language: GetMountsListLanguageEnum, game: GetMountsListGameEnum, filterFamilyName?: string, pageSize?: number, pageNumber?: number, fieldsMount?: Set<GetMountsListFieldsMountEnum>, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getMountsList', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -4415,7 +4604,7 @@ export const MountsApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getMountsSearch: async (language: GetMountsSearchLanguageEnum, game: GetMountsSearchGameEnum, query: string, filterFamilyName?: string, limit?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getMountsSearch: async (language: GetMountsSearchLanguageEnum, game: GetMountsSearchGameEnum, query: string, filterFamilyName?: string, limit?: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getMountsSearch', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -4468,7 +4657,7 @@ export const MountsApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getMountsSingle: async (language: GetMountsSingleLanguageEnum, ankamaId: number, game: GetMountsSingleGameEnum, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getMountsSingle: async (language: GetMountsSingleLanguageEnum, ankamaId: number, game: GetMountsSingleGameEnum, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getMountsSingle', 'language', language)
             // verify required parameter 'ankamaId' is not null or undefined
@@ -4521,9 +4710,11 @@ export const MountsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getAllMountsList(language: GetAllMountsListLanguageEnum, game: GetAllMountsListGameEnum, filterFamilyName?: string, acceptEncoding?: GetAllMountsListAcceptEncodingEnum, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MountsListPaged>> {
+        async getAllMountsList(language: GetAllMountsListLanguageEnum, game: GetAllMountsListGameEnum, filterFamilyName?: string, acceptEncoding?: GetAllMountsListAcceptEncodingEnum, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MountsListPaged>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getAllMountsList(language, game, filterFamilyName, acceptEncoding, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['MountsApi.getAllMountsList']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Retrieve a list of mounts.
@@ -4537,9 +4728,11 @@ export const MountsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getMountsList(language: GetMountsListLanguageEnum, game: GetMountsListGameEnum, filterFamilyName?: string, pageSize?: number, pageNumber?: number, fieldsMount?: Set<GetMountsListFieldsMountEnum>, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MountsListPaged>> {
+        async getMountsList(language: GetMountsListLanguageEnum, game: GetMountsListGameEnum, filterFamilyName?: string, pageSize?: number, pageNumber?: number, fieldsMount?: Set<GetMountsListFieldsMountEnum>, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MountsListPaged>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getMountsList(language, game, filterFamilyName, pageSize, pageNumber, fieldsMount, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['MountsApi.getMountsList']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Search in all names and descriptions of mounts with a query.
@@ -4552,9 +4745,11 @@ export const MountsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getMountsSearch(language: GetMountsSearchLanguageEnum, game: GetMountsSearchGameEnum, query: string, filterFamilyName?: string, limit?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<MountListEntry>>> {
+        async getMountsSearch(language: GetMountsSearchLanguageEnum, game: GetMountsSearchGameEnum, query: string, filterFamilyName?: string, limit?: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<MountListEntry>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getMountsSearch(language, game, query, filterFamilyName, limit, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['MountsApi.getMountsSearch']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Retrieve a specific mount with id.
@@ -4565,9 +4760,11 @@ export const MountsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getMountsSingle(language: GetMountsSingleLanguageEnum, ankamaId: number, game: GetMountsSingleGameEnum, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Mount>> {
+        async getMountsSingle(language: GetMountsSingleLanguageEnum, ankamaId: number, game: GetMountsSingleGameEnum, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Mount>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getMountsSingle(language, ankamaId, game, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['MountsApi.getMountsSingle']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
     }
 };
@@ -4654,7 +4851,7 @@ export class MountsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof MountsApi
      */
-    public getAllMountsList(language: GetAllMountsListLanguageEnum, game: GetAllMountsListGameEnum, filterFamilyName?: string, acceptEncoding?: GetAllMountsListAcceptEncodingEnum, options?: AxiosRequestConfig) {
+    public getAllMountsList(language: GetAllMountsListLanguageEnum, game: GetAllMountsListGameEnum, filterFamilyName?: string, acceptEncoding?: GetAllMountsListAcceptEncodingEnum, options?: RawAxiosRequestConfig) {
         return MountsApiFp(this.configuration).getAllMountsList(language, game, filterFamilyName, acceptEncoding, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -4671,7 +4868,7 @@ export class MountsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof MountsApi
      */
-    public getMountsList(language: GetMountsListLanguageEnum, game: GetMountsListGameEnum, filterFamilyName?: string, pageSize?: number, pageNumber?: number, fieldsMount?: Set<GetMountsListFieldsMountEnum>, options?: AxiosRequestConfig) {
+    public getMountsList(language: GetMountsListLanguageEnum, game: GetMountsListGameEnum, filterFamilyName?: string, pageSize?: number, pageNumber?: number, fieldsMount?: Set<GetMountsListFieldsMountEnum>, options?: RawAxiosRequestConfig) {
         return MountsApiFp(this.configuration).getMountsList(language, game, filterFamilyName, pageSize, pageNumber, fieldsMount, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -4687,7 +4884,7 @@ export class MountsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof MountsApi
      */
-    public getMountsSearch(language: GetMountsSearchLanguageEnum, game: GetMountsSearchGameEnum, query: string, filterFamilyName?: string, limit?: number, options?: AxiosRequestConfig) {
+    public getMountsSearch(language: GetMountsSearchLanguageEnum, game: GetMountsSearchGameEnum, query: string, filterFamilyName?: string, limit?: number, options?: RawAxiosRequestConfig) {
         return MountsApiFp(this.configuration).getMountsSearch(language, game, query, filterFamilyName, limit, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -4701,7 +4898,7 @@ export class MountsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof MountsApi
      */
-    public getMountsSingle(language: GetMountsSingleLanguageEnum, ankamaId: number, game: GetMountsSingleGameEnum, options?: AxiosRequestConfig) {
+    public getMountsSingle(language: GetMountsSingleLanguageEnum, ankamaId: number, game: GetMountsSingleGameEnum, options?: RawAxiosRequestConfig) {
         return MountsApiFp(this.configuration).getMountsSingle(language, ankamaId, game, options).then((request) => request(this.axios, this.basePath));
     }
 }
@@ -4821,7 +5018,7 @@ export const QuestItemsApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAllItemsQuestList: async (language: GetAllItemsQuestListLanguageEnum, game: GetAllItemsQuestListGameEnum, sortLevel?: GetAllItemsQuestListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsQuestListAcceptEncodingEnum, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getAllItemsQuestList: async (language: GetAllItemsQuestListLanguageEnum, game: GetAllItemsQuestListGameEnum, sortLevel?: GetAllItemsQuestListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsQuestListAcceptEncodingEnum, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getAllItemsQuestList', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -4880,7 +5077,7 @@ export const QuestItemsApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemQuestSingle: async (language: GetItemQuestSingleLanguageEnum, ankamaId: number, game: GetItemQuestSingleGameEnum, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getItemQuestSingle: async (language: GetItemQuestSingleLanguageEnum, ankamaId: number, game: GetItemQuestSingleGameEnum, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getItemQuestSingle', 'language', language)
             // verify required parameter 'ankamaId' is not null or undefined
@@ -4928,7 +5125,7 @@ export const QuestItemsApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsQuestList: async (language: GetItemsQuestListLanguageEnum, game: GetItemsQuestListGameEnum, sortLevel?: GetItemsQuestListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsQuestListFieldsItemEnum>, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getItemsQuestList: async (language: GetItemsQuestListLanguageEnum, game: GetItemsQuestListGameEnum, sortLevel?: GetItemsQuestListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsQuestListFieldsItemEnum>, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getItemsQuestList', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -4999,7 +5196,7 @@ export const QuestItemsApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsQuestSearch: async (language: GetItemsQuestSearchLanguageEnum, game: GetItemsQuestSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getItemsQuestSearch: async (language: GetItemsQuestSearchLanguageEnum, game: GetItemsQuestSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getItemsQuestSearch', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -5074,9 +5271,11 @@ export const QuestItemsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getAllItemsQuestList(language: GetAllItemsQuestListLanguageEnum, game: GetAllItemsQuestListGameEnum, sortLevel?: GetAllItemsQuestListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsQuestListAcceptEncodingEnum, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
+        async getAllItemsQuestList(language: GetAllItemsQuestListLanguageEnum, game: GetAllItemsQuestListGameEnum, sortLevel?: GetAllItemsQuestListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsQuestListAcceptEncodingEnum, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getAllItemsQuestList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, acceptEncoding, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['QuestItemsApi.getAllItemsQuestList']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Retrieve a specific quest item with id.
@@ -5087,9 +5286,11 @@ export const QuestItemsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getItemQuestSingle(language: GetItemQuestSingleLanguageEnum, ankamaId: number, game: GetItemQuestSingleGameEnum, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Resource>> {
+        async getItemQuestSingle(language: GetItemQuestSingleLanguageEnum, ankamaId: number, game: GetItemQuestSingleGameEnum, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Resource>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getItemQuestSingle(language, ankamaId, game, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['QuestItemsApi.getItemQuestSingle']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Retrieve a list of quest items.
@@ -5106,9 +5307,11 @@ export const QuestItemsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getItemsQuestList(language: GetItemsQuestListLanguageEnum, game: GetItemsQuestListGameEnum, sortLevel?: GetItemsQuestListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsQuestListFieldsItemEnum>, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
+        async getItemsQuestList(language: GetItemsQuestListLanguageEnum, game: GetItemsQuestListGameEnum, sortLevel?: GetItemsQuestListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsQuestListFieldsItemEnum>, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getItemsQuestList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, pageSize, pageNumber, fieldsItem, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['QuestItemsApi.getItemsQuestList']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Search in all names and descriptions of quest items with a query.
@@ -5123,9 +5326,11 @@ export const QuestItemsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getItemsQuestSearch(language: GetItemsQuestSearchLanguageEnum, game: GetItemsQuestSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ItemListEntry>>> {
+        async getItemsQuestSearch(language: GetItemsQuestSearchLanguageEnum, game: GetItemsQuestSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ItemListEntry>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getItemsQuestSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['QuestItemsApi.getItemsQuestSearch']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
     }
 };
@@ -5223,7 +5428,7 @@ export class QuestItemsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof QuestItemsApi
      */
-    public getAllItemsQuestList(language: GetAllItemsQuestListLanguageEnum, game: GetAllItemsQuestListGameEnum, sortLevel?: GetAllItemsQuestListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsQuestListAcceptEncodingEnum, options?: AxiosRequestConfig) {
+    public getAllItemsQuestList(language: GetAllItemsQuestListLanguageEnum, game: GetAllItemsQuestListGameEnum, sortLevel?: GetAllItemsQuestListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsQuestListAcceptEncodingEnum, options?: RawAxiosRequestConfig) {
         return QuestItemsApiFp(this.configuration).getAllItemsQuestList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, acceptEncoding, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -5237,7 +5442,7 @@ export class QuestItemsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof QuestItemsApi
      */
-    public getItemQuestSingle(language: GetItemQuestSingleLanguageEnum, ankamaId: number, game: GetItemQuestSingleGameEnum, options?: AxiosRequestConfig) {
+    public getItemQuestSingle(language: GetItemQuestSingleLanguageEnum, ankamaId: number, game: GetItemQuestSingleGameEnum, options?: RawAxiosRequestConfig) {
         return QuestItemsApiFp(this.configuration).getItemQuestSingle(language, ankamaId, game, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -5257,7 +5462,7 @@ export class QuestItemsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof QuestItemsApi
      */
-    public getItemsQuestList(language: GetItemsQuestListLanguageEnum, game: GetItemsQuestListGameEnum, sortLevel?: GetItemsQuestListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsQuestListFieldsItemEnum>, options?: AxiosRequestConfig) {
+    public getItemsQuestList(language: GetItemsQuestListLanguageEnum, game: GetItemsQuestListGameEnum, sortLevel?: GetItemsQuestListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsQuestListFieldsItemEnum>, options?: RawAxiosRequestConfig) {
         return QuestItemsApiFp(this.configuration).getItemsQuestList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, pageSize, pageNumber, fieldsItem, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -5275,7 +5480,7 @@ export class QuestItemsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof QuestItemsApi
      */
-    public getItemsQuestSearch(language: GetItemsQuestSearchLanguageEnum, game: GetItemsQuestSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig) {
+    public getItemsQuestSearch(language: GetItemsQuestSearchLanguageEnum, game: GetItemsQuestSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: RawAxiosRequestConfig) {
         return QuestItemsApiFp(this.configuration).getItemsQuestSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options).then((request) => request(this.axios, this.basePath));
     }
 }
@@ -5414,7 +5619,7 @@ export const ResourcesApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAllItemsResourcesList: async (language: GetAllItemsResourcesListLanguageEnum, game: GetAllItemsResourcesListGameEnum, sortLevel?: GetAllItemsResourcesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsResourcesListAcceptEncodingEnum, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getAllItemsResourcesList: async (language: GetAllItemsResourcesListLanguageEnum, game: GetAllItemsResourcesListGameEnum, sortLevel?: GetAllItemsResourcesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsResourcesListAcceptEncodingEnum, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getAllItemsResourcesList', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -5477,7 +5682,7 @@ export const ResourcesApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsResourceSearch: async (language: GetItemsResourceSearchLanguageEnum, game: GetItemsResourceSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getItemsResourceSearch: async (language: GetItemsResourceSearchLanguageEnum, game: GetItemsResourceSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getItemsResourceSearch', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -5544,7 +5749,7 @@ export const ResourcesApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsResourcesList: async (language: GetItemsResourcesListLanguageEnum, game: GetItemsResourcesListGameEnum, sortLevel?: GetItemsResourcesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsResourcesListFieldsItemEnum>, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getItemsResourcesList: async (language: GetItemsResourcesListLanguageEnum, game: GetItemsResourcesListGameEnum, sortLevel?: GetItemsResourcesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsResourcesListFieldsItemEnum>, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getItemsResourcesList', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -5611,7 +5816,7 @@ export const ResourcesApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsResourcesSingle: async (language: GetItemsResourcesSingleLanguageEnum, ankamaId: number, game: GetItemsResourcesSingleGameEnum, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getItemsResourcesSingle: async (language: GetItemsResourcesSingleLanguageEnum, ankamaId: number, game: GetItemsResourcesSingleGameEnum, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getItemsResourcesSingle', 'language', language)
             // verify required parameter 'ankamaId' is not null or undefined
@@ -5667,9 +5872,11 @@ export const ResourcesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getAllItemsResourcesList(language: GetAllItemsResourcesListLanguageEnum, game: GetAllItemsResourcesListGameEnum, sortLevel?: GetAllItemsResourcesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsResourcesListAcceptEncodingEnum, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
+        async getAllItemsResourcesList(language: GetAllItemsResourcesListLanguageEnum, game: GetAllItemsResourcesListGameEnum, sortLevel?: GetAllItemsResourcesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsResourcesListAcceptEncodingEnum, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getAllItemsResourcesList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, acceptEncoding, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['ResourcesApi.getAllItemsResourcesList']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Search in all names and descriptions of resource items with a query.
@@ -5684,9 +5891,11 @@ export const ResourcesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getItemsResourceSearch(language: GetItemsResourceSearchLanguageEnum, game: GetItemsResourceSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ItemListEntry>>> {
+        async getItemsResourceSearch(language: GetItemsResourceSearchLanguageEnum, game: GetItemsResourceSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ItemListEntry>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getItemsResourceSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['ResourcesApi.getItemsResourceSearch']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Retrieve a list of resource items.
@@ -5703,9 +5912,11 @@ export const ResourcesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getItemsResourcesList(language: GetItemsResourcesListLanguageEnum, game: GetItemsResourcesListGameEnum, sortLevel?: GetItemsResourcesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsResourcesListFieldsItemEnum>, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
+        async getItemsResourcesList(language: GetItemsResourcesListLanguageEnum, game: GetItemsResourcesListGameEnum, sortLevel?: GetItemsResourcesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsResourcesListFieldsItemEnum>, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ItemsListPaged>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getItemsResourcesList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, pageSize, pageNumber, fieldsItem, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['ResourcesApi.getItemsResourcesList']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Retrieve a specific resource item with id.
@@ -5716,9 +5927,11 @@ export const ResourcesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getItemsResourcesSingle(language: GetItemsResourcesSingleLanguageEnum, ankamaId: number, game: GetItemsResourcesSingleGameEnum, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Resource>> {
+        async getItemsResourcesSingle(language: GetItemsResourcesSingleLanguageEnum, ankamaId: number, game: GetItemsResourcesSingleGameEnum, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Resource>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getItemsResourcesSingle(language, ankamaId, game, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['ResourcesApi.getItemsResourcesSingle']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
     }
 };
@@ -5816,7 +6029,7 @@ export class ResourcesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ResourcesApi
      */
-    public getAllItemsResourcesList(language: GetAllItemsResourcesListLanguageEnum, game: GetAllItemsResourcesListGameEnum, sortLevel?: GetAllItemsResourcesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsResourcesListAcceptEncodingEnum, options?: AxiosRequestConfig) {
+    public getAllItemsResourcesList(language: GetAllItemsResourcesListLanguageEnum, game: GetAllItemsResourcesListGameEnum, sortLevel?: GetAllItemsResourcesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsResourcesListAcceptEncodingEnum, options?: RawAxiosRequestConfig) {
         return ResourcesApiFp(this.configuration).getAllItemsResourcesList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, acceptEncoding, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -5834,7 +6047,7 @@ export class ResourcesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ResourcesApi
      */
-    public getItemsResourceSearch(language: GetItemsResourceSearchLanguageEnum, game: GetItemsResourceSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: AxiosRequestConfig) {
+    public getItemsResourceSearch(language: GetItemsResourceSearchLanguageEnum, game: GetItemsResourceSearchGameEnum, query: string, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, options?: RawAxiosRequestConfig) {
         return ResourcesApiFp(this.configuration).getItemsResourceSearch(language, game, query, filterTypeName, filterMinLevel, filterMaxLevel, limit, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -5854,7 +6067,7 @@ export class ResourcesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ResourcesApi
      */
-    public getItemsResourcesList(language: GetItemsResourcesListLanguageEnum, game: GetItemsResourcesListGameEnum, sortLevel?: GetItemsResourcesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsResourcesListFieldsItemEnum>, options?: AxiosRequestConfig) {
+    public getItemsResourcesList(language: GetItemsResourcesListLanguageEnum, game: GetItemsResourcesListGameEnum, sortLevel?: GetItemsResourcesListSortLevelEnum, filterTypeName?: string, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsResourcesListFieldsItemEnum>, options?: RawAxiosRequestConfig) {
         return ResourcesApiFp(this.configuration).getItemsResourcesList(language, game, sortLevel, filterTypeName, filterMinLevel, filterMaxLevel, pageSize, pageNumber, fieldsItem, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -5868,7 +6081,7 @@ export class ResourcesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ResourcesApi
      */
-    public getItemsResourcesSingle(language: GetItemsResourcesSingleLanguageEnum, ankamaId: number, game: GetItemsResourcesSingleGameEnum, options?: AxiosRequestConfig) {
+    public getItemsResourcesSingle(language: GetItemsResourcesSingleLanguageEnum, ankamaId: number, game: GetItemsResourcesSingleGameEnum, options?: RawAxiosRequestConfig) {
         return ResourcesApiFp(this.configuration).getItemsResourcesSingle(language, ankamaId, game, options).then((request) => request(this.axios, this.basePath));
     }
 }
@@ -6006,7 +6219,7 @@ export const SetsApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAllSetsList: async (language: GetAllSetsListLanguageEnum, game: GetAllSetsListGameEnum, sortLevel?: GetAllSetsListSortLevelEnum, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, acceptEncoding?: GetAllSetsListAcceptEncodingEnum, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getAllSetsList: async (language: GetAllSetsListLanguageEnum, game: GetAllSetsListGameEnum, sortLevel?: GetAllSetsListSortLevelEnum, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, acceptEncoding?: GetAllSetsListAcceptEncodingEnum, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getAllSetsList', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -6066,7 +6279,7 @@ export const SetsApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSetsList: async (language: GetSetsListLanguageEnum, game: GetSetsListGameEnum, sortLevel?: GetSetsListSortLevelEnum, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, pageSize?: number, pageNumber?: number, fieldsSet?: Set<GetSetsListFieldsSetEnum>, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getSetsList: async (language: GetSetsListLanguageEnum, game: GetSetsListGameEnum, sortLevel?: GetSetsListSortLevelEnum, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, pageSize?: number, pageNumber?: number, fieldsSet?: Set<GetSetsListFieldsSetEnum>, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getSetsList', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -6132,7 +6345,7 @@ export const SetsApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSetsSearch: async (language: GetSetsSearchLanguageEnum, game: GetSetsSearchGameEnum, query: string, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, limit?: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getSetsSearch: async (language: GetSetsSearchLanguageEnum, game: GetSetsSearchGameEnum, query: string, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, limit?: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getSetsSearch', 'language', language)
             // verify required parameter 'game' is not null or undefined
@@ -6189,7 +6402,7 @@ export const SetsApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSetsSingle: async (language: GetSetsSingleLanguageEnum, ankamaId: number, game: GetSetsSingleGameEnum, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getSetsSingle: async (language: GetSetsSingleLanguageEnum, ankamaId: number, game: GetSetsSingleGameEnum, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getSetsSingle', 'language', language)
             // verify required parameter 'ankamaId' is not null or undefined
@@ -6244,9 +6457,11 @@ export const SetsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getAllSetsList(language: GetAllSetsListLanguageEnum, game: GetAllSetsListGameEnum, sortLevel?: GetAllSetsListSortLevelEnum, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, acceptEncoding?: GetAllSetsListAcceptEncodingEnum, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SetsListPaged>> {
+        async getAllSetsList(language: GetAllSetsListLanguageEnum, game: GetAllSetsListGameEnum, sortLevel?: GetAllSetsListSortLevelEnum, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, acceptEncoding?: GetAllSetsListAcceptEncodingEnum, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SetsListPaged>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getAllSetsList(language, game, sortLevel, filterMinHighestEquipmentLevel, filterMaxHighestEquipmentLevel, acceptEncoding, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['SetsApi.getAllSetsList']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Retrieve a list of sets.
@@ -6262,9 +6477,11 @@ export const SetsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getSetsList(language: GetSetsListLanguageEnum, game: GetSetsListGameEnum, sortLevel?: GetSetsListSortLevelEnum, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, pageSize?: number, pageNumber?: number, fieldsSet?: Set<GetSetsListFieldsSetEnum>, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SetsListPaged>> {
+        async getSetsList(language: GetSetsListLanguageEnum, game: GetSetsListGameEnum, sortLevel?: GetSetsListSortLevelEnum, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, pageSize?: number, pageNumber?: number, fieldsSet?: Set<GetSetsListFieldsSetEnum>, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SetsListPaged>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getSetsList(language, game, sortLevel, filterMinHighestEquipmentLevel, filterMaxHighestEquipmentLevel, pageSize, pageNumber, fieldsSet, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['SetsApi.getSetsList']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Search in all names and descriptions of sets with a query.
@@ -6278,9 +6495,11 @@ export const SetsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getSetsSearch(language: GetSetsSearchLanguageEnum, game: GetSetsSearchGameEnum, query: string, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, limit?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<SetListEntry>>> {
+        async getSetsSearch(language: GetSetsSearchLanguageEnum, game: GetSetsSearchGameEnum, query: string, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, limit?: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<SetListEntry>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getSetsSearch(language, game, query, filterMinHighestEquipmentLevel, filterMaxHighestEquipmentLevel, limit, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['SetsApi.getSetsSearch']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Retrieve a specific set with id.
@@ -6291,9 +6510,11 @@ export const SetsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getSetsSingle(language: GetSetsSingleLanguageEnum, ankamaId: number, game: GetSetsSingleGameEnum, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EquipmentSet>> {
+        async getSetsSingle(language: GetSetsSingleLanguageEnum, ankamaId: number, game: GetSetsSingleGameEnum, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<EquipmentSet>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getSetsSingle(language, ankamaId, game, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['SetsApi.getSetsSingle']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
     }
 };
@@ -6387,7 +6608,7 @@ export class SetsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof SetsApi
      */
-    public getAllSetsList(language: GetAllSetsListLanguageEnum, game: GetAllSetsListGameEnum, sortLevel?: GetAllSetsListSortLevelEnum, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, acceptEncoding?: GetAllSetsListAcceptEncodingEnum, options?: AxiosRequestConfig) {
+    public getAllSetsList(language: GetAllSetsListLanguageEnum, game: GetAllSetsListGameEnum, sortLevel?: GetAllSetsListSortLevelEnum, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, acceptEncoding?: GetAllSetsListAcceptEncodingEnum, options?: RawAxiosRequestConfig) {
         return SetsApiFp(this.configuration).getAllSetsList(language, game, sortLevel, filterMinHighestEquipmentLevel, filterMaxHighestEquipmentLevel, acceptEncoding, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -6406,7 +6627,7 @@ export class SetsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof SetsApi
      */
-    public getSetsList(language: GetSetsListLanguageEnum, game: GetSetsListGameEnum, sortLevel?: GetSetsListSortLevelEnum, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, pageSize?: number, pageNumber?: number, fieldsSet?: Set<GetSetsListFieldsSetEnum>, options?: AxiosRequestConfig) {
+    public getSetsList(language: GetSetsListLanguageEnum, game: GetSetsListGameEnum, sortLevel?: GetSetsListSortLevelEnum, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, pageSize?: number, pageNumber?: number, fieldsSet?: Set<GetSetsListFieldsSetEnum>, options?: RawAxiosRequestConfig) {
         return SetsApiFp(this.configuration).getSetsList(language, game, sortLevel, filterMinHighestEquipmentLevel, filterMaxHighestEquipmentLevel, pageSize, pageNumber, fieldsSet, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -6423,7 +6644,7 @@ export class SetsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof SetsApi
      */
-    public getSetsSearch(language: GetSetsSearchLanguageEnum, game: GetSetsSearchGameEnum, query: string, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, limit?: number, options?: AxiosRequestConfig) {
+    public getSetsSearch(language: GetSetsSearchLanguageEnum, game: GetSetsSearchGameEnum, query: string, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, limit?: number, options?: RawAxiosRequestConfig) {
         return SetsApiFp(this.configuration).getSetsSearch(language, game, query, filterMinHighestEquipmentLevel, filterMaxHighestEquipmentLevel, limit, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -6437,7 +6658,7 @@ export class SetsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof SetsApi
      */
-    public getSetsSingle(language: GetSetsSingleLanguageEnum, ankamaId: number, game: GetSetsSingleGameEnum, options?: AxiosRequestConfig) {
+    public getSetsSingle(language: GetSetsSingleLanguageEnum, ankamaId: number, game: GetSetsSingleGameEnum, options?: RawAxiosRequestConfig) {
         return SetsApiFp(this.configuration).getSetsSingle(language, ankamaId, game, options).then((request) => request(this.axios, this.basePath));
     }
 }
@@ -6568,7 +6789,7 @@ export const WebhooksApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deleteWebhooksAlmanaxId: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        deleteWebhooksAlmanaxId: async (id: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('deleteWebhooksAlmanaxId', 'id', id)
             const localVarPath = `/webhooks/almanax/{id}`
@@ -6602,7 +6823,7 @@ export const WebhooksApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deleteWebhooksRssId: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        deleteWebhooksRssId: async (id: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('deleteWebhooksRssId', 'id', id)
             const localVarPath = `/webhooks/rss/{id}`
@@ -6636,7 +6857,7 @@ export const WebhooksApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deleteWebhooksTwitterId: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        deleteWebhooksTwitterId: async (id: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('deleteWebhooksTwitterId', 'id', id)
             const localVarPath = `/webhooks/twitter/{id}`
@@ -6669,7 +6890,7 @@ export const WebhooksApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getMetaWebhooksAlmanax: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getMetaWebhooksAlmanax: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/meta/webhooks/almanax`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -6699,7 +6920,7 @@ export const WebhooksApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getMetaWebhooksRss: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getMetaWebhooksRss: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/meta/webhooks/rss`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -6729,7 +6950,7 @@ export const WebhooksApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getMetaWebhooksTwitter: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getMetaWebhooksTwitter: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/meta/webhooks/twitter`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -6760,7 +6981,7 @@ export const WebhooksApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getWebhooksAlmanaxId: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getWebhooksAlmanaxId: async (id: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('getWebhooksAlmanaxId', 'id', id)
             const localVarPath = `/webhooks/almanax/{id}`
@@ -6794,7 +7015,7 @@ export const WebhooksApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getWebhooksRssId: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getWebhooksRssId: async (id: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('getWebhooksRssId', 'id', id)
             const localVarPath = `/webhooks/rss/{id}`
@@ -6828,7 +7049,7 @@ export const WebhooksApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getWebhooksTwitterId: async (id: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getWebhooksTwitterId: async (id: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('getWebhooksTwitterId', 'id', id)
             const localVarPath = `/webhooks/twitter/{id}`
@@ -6862,7 +7083,7 @@ export const WebhooksApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        postWebhooksAlmanax: async (createAlmanaxWebhook?: CreateAlmanaxWebhook, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        postWebhooksAlmanax: async (createAlmanaxWebhook?: CreateAlmanaxWebhook, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/webhooks/almanax`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -6896,7 +7117,7 @@ export const WebhooksApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        postWebhooksRss: async (createRSSWebhook?: CreateRSSWebhook, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        postWebhooksRss: async (createRSSWebhook?: CreateRSSWebhook, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/webhooks/rss`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -6930,7 +7151,7 @@ export const WebhooksApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        postWebhooksTwitter: async (createTwitterWebhook?: CreateTwitterWebhook, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        postWebhooksTwitter: async (createTwitterWebhook?: CreateTwitterWebhook, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/webhooks/twitter`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -6965,7 +7186,7 @@ export const WebhooksApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        putWebhooksAlmanaxId: async (id: string, putAlmanaxWebhook?: PutAlmanaxWebhook, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        putWebhooksAlmanaxId: async (id: string, putAlmanaxWebhook?: PutAlmanaxWebhook, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('putWebhooksAlmanaxId', 'id', id)
             const localVarPath = `/webhooks/almanax/{id}`
@@ -7003,7 +7224,7 @@ export const WebhooksApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        putWebhooksRssId: async (id: string, putRSSWebhook?: PutRSSWebhook, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        putWebhooksRssId: async (id: string, putRSSWebhook?: PutRSSWebhook, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('putWebhooksRssId', 'id', id)
             const localVarPath = `/webhooks/rss/{id}`
@@ -7041,7 +7262,7 @@ export const WebhooksApiAxiosParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        putWebhooksTwitterId: async (id: string, putTwitterWebhook?: PutTwitterWebhook, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        putWebhooksTwitterId: async (id: string, putTwitterWebhook?: PutTwitterWebhook, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('putWebhooksTwitterId', 'id', id)
             const localVarPath = `/webhooks/twitter/{id}`
@@ -7088,9 +7309,11 @@ export const WebhooksApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async deleteWebhooksAlmanaxId(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+        async deleteWebhooksAlmanaxId(id: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.deleteWebhooksAlmanaxId(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['WebhooksApi.deleteWebhooksAlmanaxId']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Delete a Webhook from the service.
@@ -7099,9 +7322,11 @@ export const WebhooksApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async deleteWebhooksRssId(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+        async deleteWebhooksRssId(id: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.deleteWebhooksRssId(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['WebhooksApi.deleteWebhooksRssId']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Delete a Webhook from the service.
@@ -7110,9 +7335,11 @@ export const WebhooksApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async deleteWebhooksTwitterId(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+        async deleteWebhooksTwitterId(id: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.deleteWebhooksTwitterId(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['WebhooksApi.deleteWebhooksTwitterId']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Get a list of all available subscriptions. 
@@ -7120,9 +7347,11 @@ export const WebhooksApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getMetaWebhooksAlmanax(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GetMetaWebhooksTwitter200Response>> {
+        async getMetaWebhooksAlmanax(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GetMetaWebhooksTwitter200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getMetaWebhooksAlmanax(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['WebhooksApi.getMetaWebhooksAlmanax']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Get a list of all available subscriptions. 
@@ -7130,9 +7359,11 @@ export const WebhooksApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getMetaWebhooksRss(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GetMetaWebhooksTwitter200Response>> {
+        async getMetaWebhooksRss(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GetMetaWebhooksTwitter200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getMetaWebhooksRss(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['WebhooksApi.getMetaWebhooksRss']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Get a list of all available subscriptions. 
@@ -7140,9 +7371,11 @@ export const WebhooksApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getMetaWebhooksTwitter(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GetMetaWebhooksTwitter200Response>> {
+        async getMetaWebhooksTwitter(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GetMetaWebhooksTwitter200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getMetaWebhooksTwitter(options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['WebhooksApi.getMetaWebhooksTwitter']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Retrieve details about an existing Almanax Webhook with a given uuid.
@@ -7151,9 +7384,11 @@ export const WebhooksApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getWebhooksAlmanaxId(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AlmanaxWebhook>> {
+        async getWebhooksAlmanaxId(id: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AlmanaxWebhook>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getWebhooksAlmanaxId(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['WebhooksApi.getWebhooksAlmanaxId']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Retrieve details about an existing RSS Webhook with a given uuid.
@@ -7162,9 +7397,11 @@ export const WebhooksApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getWebhooksRssId(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RssWebhook>> {
+        async getWebhooksRssId(id: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RssWebhook>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getWebhooksRssId(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['WebhooksApi.getWebhooksRssId']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Retrieve details about an existing Twitter Webhook with a given uuid.
@@ -7173,9 +7410,11 @@ export const WebhooksApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getWebhooksTwitterId(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TwitterWebhook>> {
+        async getWebhooksTwitterId(id: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TwitterWebhook>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getWebhooksTwitterId(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['WebhooksApi.getWebhooksTwitterId']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Register a new Webhook to post Almanax updates.
@@ -7184,9 +7423,11 @@ export const WebhooksApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async postWebhooksAlmanax(createAlmanaxWebhook?: CreateAlmanaxWebhook, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+        async postWebhooksAlmanax(createAlmanaxWebhook?: CreateAlmanaxWebhook, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.postWebhooksAlmanax(createAlmanaxWebhook, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['WebhooksApi.postWebhooksAlmanax']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Register a new Webhook to post RSS news as soon as they are posted.
@@ -7195,9 +7436,11 @@ export const WebhooksApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async postWebhooksRss(createRSSWebhook?: CreateRSSWebhook, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+        async postWebhooksRss(createRSSWebhook?: CreateRSSWebhook, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.postWebhooksRss(createRSSWebhook, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['WebhooksApi.postWebhooksRss']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Register a new Webhook to post Twitter updates as soon as they are posted.
@@ -7206,9 +7449,11 @@ export const WebhooksApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async postWebhooksTwitter(createTwitterWebhook?: CreateTwitterWebhook, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+        async postWebhooksTwitter(createTwitterWebhook?: CreateTwitterWebhook, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.postWebhooksTwitter(createTwitterWebhook, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['WebhooksApi.postWebhooksTwitter']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Update the details of an Almanax Webhook. All fields are optional and arrays will be overwritten, so always put all selected items of an array.
@@ -7218,9 +7463,11 @@ export const WebhooksApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async putWebhooksAlmanaxId(id: string, putAlmanaxWebhook?: PutAlmanaxWebhook, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AlmanaxWebhook>> {
+        async putWebhooksAlmanaxId(id: string, putAlmanaxWebhook?: PutAlmanaxWebhook, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AlmanaxWebhook>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.putWebhooksAlmanaxId(id, putAlmanaxWebhook, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['WebhooksApi.putWebhooksAlmanaxId']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Update the details of a RSS Webhook. All fields are optional and arrays will be overwritten, so always put all selected items of an array.
@@ -7230,9 +7477,11 @@ export const WebhooksApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async putWebhooksRssId(id: string, putRSSWebhook?: PutRSSWebhook, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RssWebhook>> {
+        async putWebhooksRssId(id: string, putRSSWebhook?: PutRSSWebhook, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RssWebhook>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.putWebhooksRssId(id, putRSSWebhook, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['WebhooksApi.putWebhooksRssId']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
          * Update the details of a Twitter Webhook. All fields are optional and arrays will be overwritten, so always put all selected items of an array.
@@ -7242,9 +7491,11 @@ export const WebhooksApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async putWebhooksTwitterId(id: string, putTwitterWebhook?: PutTwitterWebhook, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TwitterWebhook>> {
+        async putWebhooksTwitterId(id: string, putTwitterWebhook?: PutTwitterWebhook, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<TwitterWebhook>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.putWebhooksTwitterId(id, putTwitterWebhook, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['WebhooksApi.putWebhooksTwitterId']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
     }
 };
@@ -7424,7 +7675,7 @@ export class WebhooksApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WebhooksApi
      */
-    public deleteWebhooksAlmanaxId(id: string, options?: AxiosRequestConfig) {
+    public deleteWebhooksAlmanaxId(id: string, options?: RawAxiosRequestConfig) {
         return WebhooksApiFp(this.configuration).deleteWebhooksAlmanaxId(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -7436,7 +7687,7 @@ export class WebhooksApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WebhooksApi
      */
-    public deleteWebhooksRssId(id: string, options?: AxiosRequestConfig) {
+    public deleteWebhooksRssId(id: string, options?: RawAxiosRequestConfig) {
         return WebhooksApiFp(this.configuration).deleteWebhooksRssId(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -7448,7 +7699,7 @@ export class WebhooksApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WebhooksApi
      */
-    public deleteWebhooksTwitterId(id: string, options?: AxiosRequestConfig) {
+    public deleteWebhooksTwitterId(id: string, options?: RawAxiosRequestConfig) {
         return WebhooksApiFp(this.configuration).deleteWebhooksTwitterId(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -7459,7 +7710,7 @@ export class WebhooksApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WebhooksApi
      */
-    public getMetaWebhooksAlmanax(options?: AxiosRequestConfig) {
+    public getMetaWebhooksAlmanax(options?: RawAxiosRequestConfig) {
         return WebhooksApiFp(this.configuration).getMetaWebhooksAlmanax(options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -7470,7 +7721,7 @@ export class WebhooksApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WebhooksApi
      */
-    public getMetaWebhooksRss(options?: AxiosRequestConfig) {
+    public getMetaWebhooksRss(options?: RawAxiosRequestConfig) {
         return WebhooksApiFp(this.configuration).getMetaWebhooksRss(options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -7481,7 +7732,7 @@ export class WebhooksApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WebhooksApi
      */
-    public getMetaWebhooksTwitter(options?: AxiosRequestConfig) {
+    public getMetaWebhooksTwitter(options?: RawAxiosRequestConfig) {
         return WebhooksApiFp(this.configuration).getMetaWebhooksTwitter(options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -7493,7 +7744,7 @@ export class WebhooksApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WebhooksApi
      */
-    public getWebhooksAlmanaxId(id: string, options?: AxiosRequestConfig) {
+    public getWebhooksAlmanaxId(id: string, options?: RawAxiosRequestConfig) {
         return WebhooksApiFp(this.configuration).getWebhooksAlmanaxId(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -7505,7 +7756,7 @@ export class WebhooksApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WebhooksApi
      */
-    public getWebhooksRssId(id: string, options?: AxiosRequestConfig) {
+    public getWebhooksRssId(id: string, options?: RawAxiosRequestConfig) {
         return WebhooksApiFp(this.configuration).getWebhooksRssId(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -7517,7 +7768,7 @@ export class WebhooksApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WebhooksApi
      */
-    public getWebhooksTwitterId(id: string, options?: AxiosRequestConfig) {
+    public getWebhooksTwitterId(id: string, options?: RawAxiosRequestConfig) {
         return WebhooksApiFp(this.configuration).getWebhooksTwitterId(id, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -7529,7 +7780,7 @@ export class WebhooksApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WebhooksApi
      */
-    public postWebhooksAlmanax(createAlmanaxWebhook?: CreateAlmanaxWebhook, options?: AxiosRequestConfig) {
+    public postWebhooksAlmanax(createAlmanaxWebhook?: CreateAlmanaxWebhook, options?: RawAxiosRequestConfig) {
         return WebhooksApiFp(this.configuration).postWebhooksAlmanax(createAlmanaxWebhook, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -7541,7 +7792,7 @@ export class WebhooksApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WebhooksApi
      */
-    public postWebhooksRss(createRSSWebhook?: CreateRSSWebhook, options?: AxiosRequestConfig) {
+    public postWebhooksRss(createRSSWebhook?: CreateRSSWebhook, options?: RawAxiosRequestConfig) {
         return WebhooksApiFp(this.configuration).postWebhooksRss(createRSSWebhook, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -7553,7 +7804,7 @@ export class WebhooksApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WebhooksApi
      */
-    public postWebhooksTwitter(createTwitterWebhook?: CreateTwitterWebhook, options?: AxiosRequestConfig) {
+    public postWebhooksTwitter(createTwitterWebhook?: CreateTwitterWebhook, options?: RawAxiosRequestConfig) {
         return WebhooksApiFp(this.configuration).postWebhooksTwitter(createTwitterWebhook, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -7566,7 +7817,7 @@ export class WebhooksApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WebhooksApi
      */
-    public putWebhooksAlmanaxId(id: string, putAlmanaxWebhook?: PutAlmanaxWebhook, options?: AxiosRequestConfig) {
+    public putWebhooksAlmanaxId(id: string, putAlmanaxWebhook?: PutAlmanaxWebhook, options?: RawAxiosRequestConfig) {
         return WebhooksApiFp(this.configuration).putWebhooksAlmanaxId(id, putAlmanaxWebhook, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -7579,7 +7830,7 @@ export class WebhooksApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WebhooksApi
      */
-    public putWebhooksRssId(id: string, putRSSWebhook?: PutRSSWebhook, options?: AxiosRequestConfig) {
+    public putWebhooksRssId(id: string, putRSSWebhook?: PutRSSWebhook, options?: RawAxiosRequestConfig) {
         return WebhooksApiFp(this.configuration).putWebhooksRssId(id, putRSSWebhook, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -7592,7 +7843,7 @@ export class WebhooksApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof WebhooksApi
      */
-    public putWebhooksTwitterId(id: string, putTwitterWebhook?: PutTwitterWebhook, options?: AxiosRequestConfig) {
+    public putWebhooksTwitterId(id: string, putTwitterWebhook?: PutTwitterWebhook, options?: RawAxiosRequestConfig) {
         return WebhooksApiFp(this.configuration).putWebhooksTwitterId(id, putTwitterWebhook, options).then((request) => request(this.axios, this.basePath));
     }
 }
