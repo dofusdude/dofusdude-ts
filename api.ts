@@ -2079,7 +2079,7 @@ export const ConsumablesApiAxiosParamCreator = function (configuration?: Configu
          * Retrieve all consumable items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Consumables
          * @param {GetAllItemsConsumablesListLanguageEnum} language a valid language code
-         * @param {GetAllItemsConsumablesListGameEnum} game dofus3 | dofus3beta
+         * @param {GetAllItemsConsumablesListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {GetAllItemsConsumablesListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -2141,7 +2141,7 @@ export const ConsumablesApiAxiosParamCreator = function (configuration?: Configu
          * Retrieve a list of consumable items.
          * @summary List Consumables
          * @param {GetItemsConsumablesListLanguageEnum} language a valid language code
-         * @param {GetItemsConsumablesListGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemsConsumablesListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {GetItemsConsumablesListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -2214,7 +2214,7 @@ export const ConsumablesApiAxiosParamCreator = function (configuration?: Configu
          * Search in all names and descriptions of consumable items with a query.
          * @summary Search Consumables
          * @param {GetItemsConsumablesSearchLanguageEnum} language a valid language code
-         * @param {GetItemsConsumablesSearchGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemsConsumablesSearchGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {string} query case sensitive search query
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -2280,7 +2280,7 @@ export const ConsumablesApiAxiosParamCreator = function (configuration?: Configu
          * @summary Single Consumables
          * @param {GetItemsConsumablesSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {GetItemsConsumablesSingleGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemsConsumablesSingleGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2331,7 +2331,7 @@ export const ConsumablesApiFp = function(configuration?: Configuration) {
          * Retrieve all consumable items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Consumables
          * @param {GetAllItemsConsumablesListLanguageEnum} language a valid language code
-         * @param {GetAllItemsConsumablesListGameEnum} game dofus3 | dofus3beta
+         * @param {GetAllItemsConsumablesListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {GetAllItemsConsumablesListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -2350,7 +2350,7 @@ export const ConsumablesApiFp = function(configuration?: Configuration) {
          * Retrieve a list of consumable items.
          * @summary List Consumables
          * @param {GetItemsConsumablesListLanguageEnum} language a valid language code
-         * @param {GetItemsConsumablesListGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemsConsumablesListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {GetItemsConsumablesListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -2371,7 +2371,7 @@ export const ConsumablesApiFp = function(configuration?: Configuration) {
          * Search in all names and descriptions of consumable items with a query.
          * @summary Search Consumables
          * @param {GetItemsConsumablesSearchLanguageEnum} language a valid language code
-         * @param {GetItemsConsumablesSearchGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemsConsumablesSearchGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {string} query case sensitive search query
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -2391,7 +2391,7 @@ export const ConsumablesApiFp = function(configuration?: Configuration) {
          * @summary Single Consumables
          * @param {GetItemsConsumablesSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {GetItemsConsumablesSingleGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemsConsumablesSingleGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2415,7 +2415,7 @@ export const ConsumablesApiFactory = function (configuration?: Configuration, ba
          * Retrieve all consumable items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Consumables
          * @param {GetAllItemsConsumablesListLanguageEnum} language a valid language code
-         * @param {GetAllItemsConsumablesListGameEnum} game dofus3 | dofus3beta
+         * @param {GetAllItemsConsumablesListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {GetAllItemsConsumablesListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -2431,7 +2431,7 @@ export const ConsumablesApiFactory = function (configuration?: Configuration, ba
          * Retrieve a list of consumable items.
          * @summary List Consumables
          * @param {GetItemsConsumablesListLanguageEnum} language a valid language code
-         * @param {GetItemsConsumablesListGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemsConsumablesListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {GetItemsConsumablesListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -2449,7 +2449,7 @@ export const ConsumablesApiFactory = function (configuration?: Configuration, ba
          * Search in all names and descriptions of consumable items with a query.
          * @summary Search Consumables
          * @param {GetItemsConsumablesSearchLanguageEnum} language a valid language code
-         * @param {GetItemsConsumablesSearchGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemsConsumablesSearchGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {string} query case sensitive search query
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -2466,7 +2466,7 @@ export const ConsumablesApiFactory = function (configuration?: Configuration, ba
          * @summary Single Consumables
          * @param {GetItemsConsumablesSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {GetItemsConsumablesSingleGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemsConsumablesSingleGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2487,7 +2487,7 @@ export class ConsumablesApi extends BaseAPI {
      * Retrieve all consumable items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
      * @summary List All Consumables
      * @param {GetAllItemsConsumablesListLanguageEnum} language a valid language code
-     * @param {GetAllItemsConsumablesListGameEnum} game dofus3 | dofus3beta
+     * @param {GetAllItemsConsumablesListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {GetAllItemsConsumablesListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
      * @param {number} [filterMinLevel] only results which level is equal or above this value
      * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -2505,7 +2505,7 @@ export class ConsumablesApi extends BaseAPI {
      * Retrieve a list of consumable items.
      * @summary List Consumables
      * @param {GetItemsConsumablesListLanguageEnum} language a valid language code
-     * @param {GetItemsConsumablesListGameEnum} game dofus3 | dofus3beta
+     * @param {GetItemsConsumablesListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {GetItemsConsumablesListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
      * @param {number} [filterMinLevel] only results which level is equal or above this value
      * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -2525,7 +2525,7 @@ export class ConsumablesApi extends BaseAPI {
      * Search in all names and descriptions of consumable items with a query.
      * @summary Search Consumables
      * @param {GetItemsConsumablesSearchLanguageEnum} language a valid language code
-     * @param {GetItemsConsumablesSearchGameEnum} game dofus3 | dofus3beta
+     * @param {GetItemsConsumablesSearchGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {string} query case sensitive search query
      * @param {number} [filterMinLevel] only results which level is equal or above this value
      * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -2544,7 +2544,7 @@ export class ConsumablesApi extends BaseAPI {
      * @summary Single Consumables
      * @param {GetItemsConsumablesSingleLanguageEnum} language a valid language code
      * @param {number} ankamaId identifier
-     * @param {GetItemsConsumablesSingleGameEnum} game dofus3 | dofus3beta
+     * @param {GetItemsConsumablesSingleGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ConsumablesApi
@@ -2679,7 +2679,7 @@ export const CosmeticsApiAxiosParamCreator = function (configuration?: Configura
          * Retrieve all cosmetic items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Cosmetics
          * @param {GetAllCosmeticsListLanguageEnum} language a valid language code
-         * @param {GetAllCosmeticsListGameEnum} game dofus3 | dofus3beta
+         * @param {GetAllCosmeticsListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {GetAllCosmeticsListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -2741,7 +2741,7 @@ export const CosmeticsApiAxiosParamCreator = function (configuration?: Configura
          * Retrieve a list of cosmetic items.
          * @summary List Cosmetics
          * @param {GetCosmeticsListLanguageEnum} language a valid language code
-         * @param {GetCosmeticsListGameEnum} game dofus3 | dofus3beta
+         * @param {GetCosmeticsListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {GetCosmeticsListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -2814,7 +2814,7 @@ export const CosmeticsApiAxiosParamCreator = function (configuration?: Configura
          * Search in all names and descriptions of cosmetic items with a query.
          * @summary Search Cosmetics
          * @param {GetCosmeticsSearchLanguageEnum} language a valid language code
-         * @param {GetCosmeticsSearchGameEnum} game dofus3 | dofus3beta
+         * @param {GetCosmeticsSearchGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {string} query case sensitive search query
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -2880,7 +2880,7 @@ export const CosmeticsApiAxiosParamCreator = function (configuration?: Configura
          * @summary Single Cosmetics
          * @param {GetCosmeticsSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {GetCosmeticsSingleGameEnum} game dofus3 | dofus3beta
+         * @param {GetCosmeticsSingleGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2931,7 +2931,7 @@ export const CosmeticsApiFp = function(configuration?: Configuration) {
          * Retrieve all cosmetic items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Cosmetics
          * @param {GetAllCosmeticsListLanguageEnum} language a valid language code
-         * @param {GetAllCosmeticsListGameEnum} game dofus3 | dofus3beta
+         * @param {GetAllCosmeticsListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {GetAllCosmeticsListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -2950,7 +2950,7 @@ export const CosmeticsApiFp = function(configuration?: Configuration) {
          * Retrieve a list of cosmetic items.
          * @summary List Cosmetics
          * @param {GetCosmeticsListLanguageEnum} language a valid language code
-         * @param {GetCosmeticsListGameEnum} game dofus3 | dofus3beta
+         * @param {GetCosmeticsListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {GetCosmeticsListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -2971,7 +2971,7 @@ export const CosmeticsApiFp = function(configuration?: Configuration) {
          * Search in all names and descriptions of cosmetic items with a query.
          * @summary Search Cosmetics
          * @param {GetCosmeticsSearchLanguageEnum} language a valid language code
-         * @param {GetCosmeticsSearchGameEnum} game dofus3 | dofus3beta
+         * @param {GetCosmeticsSearchGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {string} query case sensitive search query
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -2991,7 +2991,7 @@ export const CosmeticsApiFp = function(configuration?: Configuration) {
          * @summary Single Cosmetics
          * @param {GetCosmeticsSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {GetCosmeticsSingleGameEnum} game dofus3 | dofus3beta
+         * @param {GetCosmeticsSingleGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3015,7 +3015,7 @@ export const CosmeticsApiFactory = function (configuration?: Configuration, base
          * Retrieve all cosmetic items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Cosmetics
          * @param {GetAllCosmeticsListLanguageEnum} language a valid language code
-         * @param {GetAllCosmeticsListGameEnum} game dofus3 | dofus3beta
+         * @param {GetAllCosmeticsListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {GetAllCosmeticsListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -3031,7 +3031,7 @@ export const CosmeticsApiFactory = function (configuration?: Configuration, base
          * Retrieve a list of cosmetic items.
          * @summary List Cosmetics
          * @param {GetCosmeticsListLanguageEnum} language a valid language code
-         * @param {GetCosmeticsListGameEnum} game dofus3 | dofus3beta
+         * @param {GetCosmeticsListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {GetCosmeticsListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -3049,7 +3049,7 @@ export const CosmeticsApiFactory = function (configuration?: Configuration, base
          * Search in all names and descriptions of cosmetic items with a query.
          * @summary Search Cosmetics
          * @param {GetCosmeticsSearchLanguageEnum} language a valid language code
-         * @param {GetCosmeticsSearchGameEnum} game dofus3 | dofus3beta
+         * @param {GetCosmeticsSearchGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {string} query case sensitive search query
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -3066,7 +3066,7 @@ export const CosmeticsApiFactory = function (configuration?: Configuration, base
          * @summary Single Cosmetics
          * @param {GetCosmeticsSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {GetCosmeticsSingleGameEnum} game dofus3 | dofus3beta
+         * @param {GetCosmeticsSingleGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3087,7 +3087,7 @@ export class CosmeticsApi extends BaseAPI {
      * Retrieve all cosmetic items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
      * @summary List All Cosmetics
      * @param {GetAllCosmeticsListLanguageEnum} language a valid language code
-     * @param {GetAllCosmeticsListGameEnum} game dofus3 | dofus3beta
+     * @param {GetAllCosmeticsListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {GetAllCosmeticsListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
      * @param {number} [filterMinLevel] only results which level is equal or above this value
      * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -3105,7 +3105,7 @@ export class CosmeticsApi extends BaseAPI {
      * Retrieve a list of cosmetic items.
      * @summary List Cosmetics
      * @param {GetCosmeticsListLanguageEnum} language a valid language code
-     * @param {GetCosmeticsListGameEnum} game dofus3 | dofus3beta
+     * @param {GetCosmeticsListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {GetCosmeticsListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
      * @param {number} [filterMinLevel] only results which level is equal or above this value
      * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -3125,7 +3125,7 @@ export class CosmeticsApi extends BaseAPI {
      * Search in all names and descriptions of cosmetic items with a query.
      * @summary Search Cosmetics
      * @param {GetCosmeticsSearchLanguageEnum} language a valid language code
-     * @param {GetCosmeticsSearchGameEnum} game dofus3 | dofus3beta
+     * @param {GetCosmeticsSearchGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {string} query case sensitive search query
      * @param {number} [filterMinLevel] only results which level is equal or above this value
      * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -3144,7 +3144,7 @@ export class CosmeticsApi extends BaseAPI {
      * @summary Single Cosmetics
      * @param {GetCosmeticsSingleLanguageEnum} language a valid language code
      * @param {number} ankamaId identifier
-     * @param {GetCosmeticsSingleGameEnum} game dofus3 | dofus3beta
+     * @param {GetCosmeticsSingleGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof CosmeticsApi
@@ -3287,7 +3287,7 @@ export const EquipmentApiAxiosParamCreator = function (configuration?: Configura
          * Retrieve all equipment items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Equipment
          * @param {GetAllItemsEquipmentListLanguageEnum} language a valid language code
-         * @param {GetAllItemsEquipmentListGameEnum} game dofus3 | dofus3beta
+         * @param {GetAllItemsEquipmentListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {GetAllItemsEquipmentListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -3349,7 +3349,7 @@ export const EquipmentApiAxiosParamCreator = function (configuration?: Configura
          * Retrieve a list of equipment items.
          * @summary List Equipment
          * @param {GetItemsEquipmentListLanguageEnum} language a valid language code
-         * @param {GetItemsEquipmentListGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemsEquipmentListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {GetItemsEquipmentListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -3422,7 +3422,7 @@ export const EquipmentApiAxiosParamCreator = function (configuration?: Configura
          * Search in all names and descriptions of equipment items with a query.
          * @summary Search Equipment
          * @param {GetItemsEquipmentSearchLanguageEnum} language a valid language code
-         * @param {GetItemsEquipmentSearchGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemsEquipmentSearchGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {string} query case sensitive search query
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -3488,7 +3488,7 @@ export const EquipmentApiAxiosParamCreator = function (configuration?: Configura
          * @summary Single Equipment
          * @param {GetItemsEquipmentSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {GetItemsEquipmentSingleGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemsEquipmentSingleGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3539,7 +3539,7 @@ export const EquipmentApiFp = function(configuration?: Configuration) {
          * Retrieve all equipment items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Equipment
          * @param {GetAllItemsEquipmentListLanguageEnum} language a valid language code
-         * @param {GetAllItemsEquipmentListGameEnum} game dofus3 | dofus3beta
+         * @param {GetAllItemsEquipmentListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {GetAllItemsEquipmentListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -3558,7 +3558,7 @@ export const EquipmentApiFp = function(configuration?: Configuration) {
          * Retrieve a list of equipment items.
          * @summary List Equipment
          * @param {GetItemsEquipmentListLanguageEnum} language a valid language code
-         * @param {GetItemsEquipmentListGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemsEquipmentListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {GetItemsEquipmentListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -3579,7 +3579,7 @@ export const EquipmentApiFp = function(configuration?: Configuration) {
          * Search in all names and descriptions of equipment items with a query.
          * @summary Search Equipment
          * @param {GetItemsEquipmentSearchLanguageEnum} language a valid language code
-         * @param {GetItemsEquipmentSearchGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemsEquipmentSearchGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {string} query case sensitive search query
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -3599,7 +3599,7 @@ export const EquipmentApiFp = function(configuration?: Configuration) {
          * @summary Single Equipment
          * @param {GetItemsEquipmentSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {GetItemsEquipmentSingleGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemsEquipmentSingleGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3623,7 +3623,7 @@ export const EquipmentApiFactory = function (configuration?: Configuration, base
          * Retrieve all equipment items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Equipment
          * @param {GetAllItemsEquipmentListLanguageEnum} language a valid language code
-         * @param {GetAllItemsEquipmentListGameEnum} game dofus3 | dofus3beta
+         * @param {GetAllItemsEquipmentListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {GetAllItemsEquipmentListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -3639,7 +3639,7 @@ export const EquipmentApiFactory = function (configuration?: Configuration, base
          * Retrieve a list of equipment items.
          * @summary List Equipment
          * @param {GetItemsEquipmentListLanguageEnum} language a valid language code
-         * @param {GetItemsEquipmentListGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemsEquipmentListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {GetItemsEquipmentListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -3657,7 +3657,7 @@ export const EquipmentApiFactory = function (configuration?: Configuration, base
          * Search in all names and descriptions of equipment items with a query.
          * @summary Search Equipment
          * @param {GetItemsEquipmentSearchLanguageEnum} language a valid language code
-         * @param {GetItemsEquipmentSearchGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemsEquipmentSearchGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {string} query case sensitive search query
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -3674,7 +3674,7 @@ export const EquipmentApiFactory = function (configuration?: Configuration, base
          * @summary Single Equipment
          * @param {GetItemsEquipmentSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {GetItemsEquipmentSingleGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemsEquipmentSingleGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3695,7 +3695,7 @@ export class EquipmentApi extends BaseAPI {
      * Retrieve all equipment items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
      * @summary List All Equipment
      * @param {GetAllItemsEquipmentListLanguageEnum} language a valid language code
-     * @param {GetAllItemsEquipmentListGameEnum} game dofus3 | dofus3beta
+     * @param {GetAllItemsEquipmentListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {GetAllItemsEquipmentListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
      * @param {number} [filterMinLevel] only results which level is equal or above this value
      * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -3713,7 +3713,7 @@ export class EquipmentApi extends BaseAPI {
      * Retrieve a list of equipment items.
      * @summary List Equipment
      * @param {GetItemsEquipmentListLanguageEnum} language a valid language code
-     * @param {GetItemsEquipmentListGameEnum} game dofus3 | dofus3beta
+     * @param {GetItemsEquipmentListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {GetItemsEquipmentListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
      * @param {number} [filterMinLevel] only results which level is equal or above this value
      * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -3733,7 +3733,7 @@ export class EquipmentApi extends BaseAPI {
      * Search in all names and descriptions of equipment items with a query.
      * @summary Search Equipment
      * @param {GetItemsEquipmentSearchLanguageEnum} language a valid language code
-     * @param {GetItemsEquipmentSearchGameEnum} game dofus3 | dofus3beta
+     * @param {GetItemsEquipmentSearchGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {string} query case sensitive search query
      * @param {number} [filterMinLevel] only results which level is equal or above this value
      * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -3752,7 +3752,7 @@ export class EquipmentApi extends BaseAPI {
      * @summary Single Equipment
      * @param {GetItemsEquipmentSingleLanguageEnum} language a valid language code
      * @param {number} ankamaId identifier
-     * @param {GetItemsEquipmentSingleGameEnum} game dofus3 | dofus3beta
+     * @param {GetItemsEquipmentSingleGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof EquipmentApi
@@ -3895,7 +3895,7 @@ export const GameApiAxiosParamCreator = function (configuration?: Configuration)
          * Search in all names and descriptions of all supported types in the game. For the list of supported types see the endpoint /dofus3/meta/search/types.
          * @summary Game Search
          * @param {GetGameSearchLanguageEnum} language a valid language code
-         * @param {GetGameSearchGameEnum} game dofus3 | dofus3beta
+         * @param {GetGameSearchGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {string} query search query
          * @param {Set<GetGameSearchFilterSearchIndexEnum>} [filterSearchIndex] only results with all specific type
          * @param {number} [limit] maximum number of returned results
@@ -3960,7 +3960,7 @@ export const GameApiAxiosParamCreator = function (configuration?: Configuration)
          * Search in all names and descriptions of Dofus items (including all subtypes) with a query.
          * @summary Search All Items
          * @param {GetItemsAllSearchLanguageEnum} language a valid language code
-         * @param {GetItemsAllSearchGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemsAllSearchGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {string} query case sensitive search query
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -4035,7 +4035,7 @@ export const GameApiFp = function(configuration?: Configuration) {
          * Search in all names and descriptions of all supported types in the game. For the list of supported types see the endpoint /dofus3/meta/search/types.
          * @summary Game Search
          * @param {GetGameSearchLanguageEnum} language a valid language code
-         * @param {GetGameSearchGameEnum} game dofus3 | dofus3beta
+         * @param {GetGameSearchGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {string} query search query
          * @param {Set<GetGameSearchFilterSearchIndexEnum>} [filterSearchIndex] only results with all specific type
          * @param {number} [limit] maximum number of returned results
@@ -4054,7 +4054,7 @@ export const GameApiFp = function(configuration?: Configuration) {
          * Search in all names and descriptions of Dofus items (including all subtypes) with a query.
          * @summary Search All Items
          * @param {GetItemsAllSearchLanguageEnum} language a valid language code
-         * @param {GetItemsAllSearchGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemsAllSearchGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {string} query case sensitive search query
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -4083,7 +4083,7 @@ export const GameApiFactory = function (configuration?: Configuration, basePath?
          * Search in all names and descriptions of all supported types in the game. For the list of supported types see the endpoint /dofus3/meta/search/types.
          * @summary Game Search
          * @param {GetGameSearchLanguageEnum} language a valid language code
-         * @param {GetGameSearchGameEnum} game dofus3 | dofus3beta
+         * @param {GetGameSearchGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {string} query search query
          * @param {Set<GetGameSearchFilterSearchIndexEnum>} [filterSearchIndex] only results with all specific type
          * @param {number} [limit] maximum number of returned results
@@ -4099,7 +4099,7 @@ export const GameApiFactory = function (configuration?: Configuration, basePath?
          * Search in all names and descriptions of Dofus items (including all subtypes) with a query.
          * @summary Search All Items
          * @param {GetItemsAllSearchLanguageEnum} language a valid language code
-         * @param {GetItemsAllSearchGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemsAllSearchGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {string} query case sensitive search query
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -4125,7 +4125,7 @@ export class GameApi extends BaseAPI {
      * Search in all names and descriptions of all supported types in the game. For the list of supported types see the endpoint /dofus3/meta/search/types.
      * @summary Game Search
      * @param {GetGameSearchLanguageEnum} language a valid language code
-     * @param {GetGameSearchGameEnum} game dofus3 | dofus3beta
+     * @param {GetGameSearchGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {string} query search query
      * @param {Set<GetGameSearchFilterSearchIndexEnum>} [filterSearchIndex] only results with all specific type
      * @param {number} [limit] maximum number of returned results
@@ -4143,7 +4143,7 @@ export class GameApi extends BaseAPI {
      * Search in all names and descriptions of Dofus items (including all subtypes) with a query.
      * @summary Search All Items
      * @param {GetItemsAllSearchLanguageEnum} language a valid language code
-     * @param {GetItemsAllSearchGameEnum} game dofus3 | dofus3beta
+     * @param {GetItemsAllSearchGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {string} query case sensitive search query
      * @param {number} [filterMinLevel] only results which level is equal or above this value
      * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -4697,7 +4697,7 @@ export const MountsApiAxiosParamCreator = function (configuration?: Configuratio
          * Retrieve all mounts with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Mounts
          * @param {GetAllMountsListLanguageEnum} language a valid language code
-         * @param {GetAllMountsListGameEnum} game dofus3 | dofus3beta
+         * @param {GetAllMountsListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {string} [filterFamilyName] only results with the translated family name
          * @param {GetAllMountsListAcceptEncodingEnum} [acceptEncoding] optional compression for saving bandwidth
          * @param {number} [filterFamilyId] only results with the unique family id
@@ -4749,7 +4749,7 @@ export const MountsApiAxiosParamCreator = function (configuration?: Configuratio
          * Retrieve a list of mounts.
          * @summary List Mounts
          * @param {GetMountsListLanguageEnum} language a valid language code
-         * @param {GetMountsListGameEnum} game dofus3 | dofus3beta
+         * @param {GetMountsListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {string} [filterFamilyName] only results with the translated family name
          * @param {number} [pageSize] size of the results from the list. -1 disables pagination and gets all in one response.
          * @param {number} [pageNumber] page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
@@ -4812,7 +4812,7 @@ export const MountsApiAxiosParamCreator = function (configuration?: Configuratio
          * Search in all names and descriptions of mounts with a query.
          * @summary Search Mounts
          * @param {GetMountsSearchLanguageEnum} language a valid language code
-         * @param {GetMountsSearchGameEnum} game dofus3 | dofus3beta
+         * @param {GetMountsSearchGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {string} query case sensitive search query
          * @param {string} [filterFamilyName] only results with the translated family name
          * @param {number} [limit] maximum number of returned results
@@ -4868,7 +4868,7 @@ export const MountsApiAxiosParamCreator = function (configuration?: Configuratio
          * @summary Single Mounts
          * @param {GetMountsSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {GetMountsSingleGameEnum} game dofus3 | dofus3beta
+         * @param {GetMountsSingleGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4919,7 +4919,7 @@ export const MountsApiFp = function(configuration?: Configuration) {
          * Retrieve all mounts with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Mounts
          * @param {GetAllMountsListLanguageEnum} language a valid language code
-         * @param {GetAllMountsListGameEnum} game dofus3 | dofus3beta
+         * @param {GetAllMountsListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {string} [filterFamilyName] only results with the translated family name
          * @param {GetAllMountsListAcceptEncodingEnum} [acceptEncoding] optional compression for saving bandwidth
          * @param {number} [filterFamilyId] only results with the unique family id
@@ -4936,7 +4936,7 @@ export const MountsApiFp = function(configuration?: Configuration) {
          * Retrieve a list of mounts.
          * @summary List Mounts
          * @param {GetMountsListLanguageEnum} language a valid language code
-         * @param {GetMountsListGameEnum} game dofus3 | dofus3beta
+         * @param {GetMountsListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {string} [filterFamilyName] only results with the translated family name
          * @param {number} [pageSize] size of the results from the list. -1 disables pagination and gets all in one response.
          * @param {number} [pageNumber] page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
@@ -4955,7 +4955,7 @@ export const MountsApiFp = function(configuration?: Configuration) {
          * Search in all names and descriptions of mounts with a query.
          * @summary Search Mounts
          * @param {GetMountsSearchLanguageEnum} language a valid language code
-         * @param {GetMountsSearchGameEnum} game dofus3 | dofus3beta
+         * @param {GetMountsSearchGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {string} query case sensitive search query
          * @param {string} [filterFamilyName] only results with the translated family name
          * @param {number} [limit] maximum number of returned results
@@ -4973,7 +4973,7 @@ export const MountsApiFp = function(configuration?: Configuration) {
          * @summary Single Mounts
          * @param {GetMountsSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {GetMountsSingleGameEnum} game dofus3 | dofus3beta
+         * @param {GetMountsSingleGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4997,7 +4997,7 @@ export const MountsApiFactory = function (configuration?: Configuration, basePat
          * Retrieve all mounts with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Mounts
          * @param {GetAllMountsListLanguageEnum} language a valid language code
-         * @param {GetAllMountsListGameEnum} game dofus3 | dofus3beta
+         * @param {GetAllMountsListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {string} [filterFamilyName] only results with the translated family name
          * @param {GetAllMountsListAcceptEncodingEnum} [acceptEncoding] optional compression for saving bandwidth
          * @param {number} [filterFamilyId] only results with the unique family id
@@ -5011,7 +5011,7 @@ export const MountsApiFactory = function (configuration?: Configuration, basePat
          * Retrieve a list of mounts.
          * @summary List Mounts
          * @param {GetMountsListLanguageEnum} language a valid language code
-         * @param {GetMountsListGameEnum} game dofus3 | dofus3beta
+         * @param {GetMountsListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {string} [filterFamilyName] only results with the translated family name
          * @param {number} [pageSize] size of the results from the list. -1 disables pagination and gets all in one response.
          * @param {number} [pageNumber] page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
@@ -5027,7 +5027,7 @@ export const MountsApiFactory = function (configuration?: Configuration, basePat
          * Search in all names and descriptions of mounts with a query.
          * @summary Search Mounts
          * @param {GetMountsSearchLanguageEnum} language a valid language code
-         * @param {GetMountsSearchGameEnum} game dofus3 | dofus3beta
+         * @param {GetMountsSearchGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {string} query case sensitive search query
          * @param {string} [filterFamilyName] only results with the translated family name
          * @param {number} [limit] maximum number of returned results
@@ -5042,7 +5042,7 @@ export const MountsApiFactory = function (configuration?: Configuration, basePat
          * @summary Single Mounts
          * @param {GetMountsSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {GetMountsSingleGameEnum} game dofus3 | dofus3beta
+         * @param {GetMountsSingleGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5063,7 +5063,7 @@ export class MountsApi extends BaseAPI {
      * Retrieve all mounts with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
      * @summary List All Mounts
      * @param {GetAllMountsListLanguageEnum} language a valid language code
-     * @param {GetAllMountsListGameEnum} game dofus3 | dofus3beta
+     * @param {GetAllMountsListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {string} [filterFamilyName] only results with the translated family name
      * @param {GetAllMountsListAcceptEncodingEnum} [acceptEncoding] optional compression for saving bandwidth
      * @param {number} [filterFamilyId] only results with the unique family id
@@ -5079,7 +5079,7 @@ export class MountsApi extends BaseAPI {
      * Retrieve a list of mounts.
      * @summary List Mounts
      * @param {GetMountsListLanguageEnum} language a valid language code
-     * @param {GetMountsListGameEnum} game dofus3 | dofus3beta
+     * @param {GetMountsListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {string} [filterFamilyName] only results with the translated family name
      * @param {number} [pageSize] size of the results from the list. -1 disables pagination and gets all in one response.
      * @param {number} [pageNumber] page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
@@ -5097,7 +5097,7 @@ export class MountsApi extends BaseAPI {
      * Search in all names and descriptions of mounts with a query.
      * @summary Search Mounts
      * @param {GetMountsSearchLanguageEnum} language a valid language code
-     * @param {GetMountsSearchGameEnum} game dofus3 | dofus3beta
+     * @param {GetMountsSearchGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {string} query case sensitive search query
      * @param {string} [filterFamilyName] only results with the translated family name
      * @param {number} [limit] maximum number of returned results
@@ -5114,7 +5114,7 @@ export class MountsApi extends BaseAPI {
      * @summary Single Mounts
      * @param {GetMountsSingleLanguageEnum} language a valid language code
      * @param {number} ankamaId identifier
-     * @param {GetMountsSingleGameEnum} game dofus3 | dofus3beta
+     * @param {GetMountsSingleGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MountsApi
@@ -5230,7 +5230,7 @@ export const QuestItemsApiAxiosParamCreator = function (configuration?: Configur
          * Retrieve all quest items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Quest Items
          * @param {GetAllItemsQuestListLanguageEnum} language a valid language code
-         * @param {GetAllItemsQuestListGameEnum} game dofus3 | dofus3beta
+         * @param {GetAllItemsQuestListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {GetAllItemsQuestListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -5293,7 +5293,7 @@ export const QuestItemsApiAxiosParamCreator = function (configuration?: Configur
          * @summary Single Quest Items
          * @param {GetItemQuestSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {GetItemQuestSingleGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemQuestSingleGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5334,7 +5334,7 @@ export const QuestItemsApiAxiosParamCreator = function (configuration?: Configur
          * Retrieve a list of quest items.
          * @summary List Quest Items
          * @param {GetItemsQuestListLanguageEnum} language a valid language code
-         * @param {GetItemsQuestListGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemsQuestListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {GetItemsQuestListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -5407,7 +5407,7 @@ export const QuestItemsApiAxiosParamCreator = function (configuration?: Configur
          * Search in all names and descriptions of quest items with a query.
          * @summary Search Quest Items
          * @param {GetItemsQuestSearchLanguageEnum} language a valid language code
-         * @param {GetItemsQuestSearchGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemsQuestSearchGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {string} query case sensitive search query
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
@@ -5487,7 +5487,7 @@ export const QuestItemsApiFp = function(configuration?: Configuration) {
          * Retrieve all quest items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Quest Items
          * @param {GetAllItemsQuestListLanguageEnum} language a valid language code
-         * @param {GetAllItemsQuestListGameEnum} game dofus3 | dofus3beta
+         * @param {GetAllItemsQuestListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {GetAllItemsQuestListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -5507,7 +5507,7 @@ export const QuestItemsApiFp = function(configuration?: Configuration) {
          * @summary Single Quest Items
          * @param {GetItemQuestSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {GetItemQuestSingleGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemQuestSingleGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5521,7 +5521,7 @@ export const QuestItemsApiFp = function(configuration?: Configuration) {
          * Retrieve a list of quest items.
          * @summary List Quest Items
          * @param {GetItemsQuestListLanguageEnum} language a valid language code
-         * @param {GetItemsQuestListGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemsQuestListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {GetItemsQuestListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -5542,7 +5542,7 @@ export const QuestItemsApiFp = function(configuration?: Configuration) {
          * Search in all names and descriptions of quest items with a query.
          * @summary Search Quest Items
          * @param {GetItemsQuestSearchLanguageEnum} language a valid language code
-         * @param {GetItemsQuestSearchGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemsQuestSearchGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {string} query case sensitive search query
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
@@ -5572,7 +5572,7 @@ export const QuestItemsApiFactory = function (configuration?: Configuration, bas
          * Retrieve all quest items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Quest Items
          * @param {GetAllItemsQuestListLanguageEnum} language a valid language code
-         * @param {GetAllItemsQuestListGameEnum} game dofus3 | dofus3beta
+         * @param {GetAllItemsQuestListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {GetAllItemsQuestListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -5589,7 +5589,7 @@ export const QuestItemsApiFactory = function (configuration?: Configuration, bas
          * @summary Single Quest Items
          * @param {GetItemQuestSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {GetItemQuestSingleGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemQuestSingleGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5600,7 +5600,7 @@ export const QuestItemsApiFactory = function (configuration?: Configuration, bas
          * Retrieve a list of quest items.
          * @summary List Quest Items
          * @param {GetItemsQuestListLanguageEnum} language a valid language code
-         * @param {GetItemsQuestListGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemsQuestListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {GetItemsQuestListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -5618,7 +5618,7 @@ export const QuestItemsApiFactory = function (configuration?: Configuration, bas
          * Search in all names and descriptions of quest items with a query.
          * @summary Search Quest Items
          * @param {GetItemsQuestSearchLanguageEnum} language a valid language code
-         * @param {GetItemsQuestSearchGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemsQuestSearchGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {string} query case sensitive search query
          * @param {string} [filterTypeName] only results with the translated type name
          * @param {number} [filterMinLevel] only results which level is equal or above this value
@@ -5645,7 +5645,7 @@ export class QuestItemsApi extends BaseAPI {
      * Retrieve all quest items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
      * @summary List All Quest Items
      * @param {GetAllItemsQuestListLanguageEnum} language a valid language code
-     * @param {GetAllItemsQuestListGameEnum} game dofus3 | dofus3beta
+     * @param {GetAllItemsQuestListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {GetAllItemsQuestListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
      * @param {number} [filterMinLevel] only results which level is equal or above this value
      * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -5664,7 +5664,7 @@ export class QuestItemsApi extends BaseAPI {
      * @summary Single Quest Items
      * @param {GetItemQuestSingleLanguageEnum} language a valid language code
      * @param {number} ankamaId identifier
-     * @param {GetItemQuestSingleGameEnum} game dofus3 | dofus3beta
+     * @param {GetItemQuestSingleGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof QuestItemsApi
@@ -5677,7 +5677,7 @@ export class QuestItemsApi extends BaseAPI {
      * Retrieve a list of quest items.
      * @summary List Quest Items
      * @param {GetItemsQuestListLanguageEnum} language a valid language code
-     * @param {GetItemsQuestListGameEnum} game dofus3 | dofus3beta
+     * @param {GetItemsQuestListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {GetItemsQuestListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
      * @param {number} [filterMinLevel] only results which level is equal or above this value
      * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -5697,7 +5697,7 @@ export class QuestItemsApi extends BaseAPI {
      * Search in all names and descriptions of quest items with a query.
      * @summary Search Quest Items
      * @param {GetItemsQuestSearchLanguageEnum} language a valid language code
-     * @param {GetItemsQuestSearchGameEnum} game dofus3 | dofus3beta
+     * @param {GetItemsQuestSearchGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {string} query case sensitive search query
      * @param {string} [filterTypeName] only results with the translated type name
      * @param {number} [filterMinLevel] only results which level is equal or above this value
@@ -5838,7 +5838,7 @@ export const ResourcesApiAxiosParamCreator = function (configuration?: Configura
          * Retrieve all resource items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Resources
          * @param {GetAllItemsResourcesListLanguageEnum} language a valid language code
-         * @param {GetAllItemsResourcesListGameEnum} game dofus3 | dofus3beta
+         * @param {GetAllItemsResourcesListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {GetAllItemsResourcesListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -5900,7 +5900,7 @@ export const ResourcesApiAxiosParamCreator = function (configuration?: Configura
          * Search in all names and descriptions of resource items with a query.
          * @summary Search Resources
          * @param {GetItemsResourceSearchLanguageEnum} language a valid language code
-         * @param {GetItemsResourceSearchGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemsResourceSearchGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {string} query case sensitive search query
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -5965,7 +5965,7 @@ export const ResourcesApiAxiosParamCreator = function (configuration?: Configura
          * Retrieve a list of resource items.
          * @summary List Resources
          * @param {GetItemsResourcesListLanguageEnum} language a valid language code
-         * @param {GetItemsResourcesListGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemsResourcesListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {GetItemsResourcesListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -6039,7 +6039,7 @@ export const ResourcesApiAxiosParamCreator = function (configuration?: Configura
          * @summary Single Resources
          * @param {GetItemsResourcesSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {GetItemsResourcesSingleGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemsResourcesSingleGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -6090,7 +6090,7 @@ export const ResourcesApiFp = function(configuration?: Configuration) {
          * Retrieve all resource items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Resources
          * @param {GetAllItemsResourcesListLanguageEnum} language a valid language code
-         * @param {GetAllItemsResourcesListGameEnum} game dofus3 | dofus3beta
+         * @param {GetAllItemsResourcesListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {GetAllItemsResourcesListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -6109,7 +6109,7 @@ export const ResourcesApiFp = function(configuration?: Configuration) {
          * Search in all names and descriptions of resource items with a query.
          * @summary Search Resources
          * @param {GetItemsResourceSearchLanguageEnum} language a valid language code
-         * @param {GetItemsResourceSearchGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemsResourceSearchGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {string} query case sensitive search query
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -6128,7 +6128,7 @@ export const ResourcesApiFp = function(configuration?: Configuration) {
          * Retrieve a list of resource items.
          * @summary List Resources
          * @param {GetItemsResourcesListLanguageEnum} language a valid language code
-         * @param {GetItemsResourcesListGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemsResourcesListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {GetItemsResourcesListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -6150,7 +6150,7 @@ export const ResourcesApiFp = function(configuration?: Configuration) {
          * @summary Single Resources
          * @param {GetItemsResourcesSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {GetItemsResourcesSingleGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemsResourcesSingleGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -6174,7 +6174,7 @@ export const ResourcesApiFactory = function (configuration?: Configuration, base
          * Retrieve all resource items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Resources
          * @param {GetAllItemsResourcesListLanguageEnum} language a valid language code
-         * @param {GetAllItemsResourcesListGameEnum} game dofus3 | dofus3beta
+         * @param {GetAllItemsResourcesListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {GetAllItemsResourcesListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -6190,7 +6190,7 @@ export const ResourcesApiFactory = function (configuration?: Configuration, base
          * Search in all names and descriptions of resource items with a query.
          * @summary Search Resources
          * @param {GetItemsResourceSearchLanguageEnum} language a valid language code
-         * @param {GetItemsResourceSearchGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemsResourceSearchGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {string} query case sensitive search query
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -6206,7 +6206,7 @@ export const ResourcesApiFactory = function (configuration?: Configuration, base
          * Retrieve a list of resource items.
          * @summary List Resources
          * @param {GetItemsResourcesListLanguageEnum} language a valid language code
-         * @param {GetItemsResourcesListGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemsResourcesListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {GetItemsResourcesListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinLevel] only results which level is equal or above this value
          * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -6225,7 +6225,7 @@ export const ResourcesApiFactory = function (configuration?: Configuration, base
          * @summary Single Resources
          * @param {GetItemsResourcesSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {GetItemsResourcesSingleGameEnum} game dofus3 | dofus3beta
+         * @param {GetItemsResourcesSingleGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -6246,7 +6246,7 @@ export class ResourcesApi extends BaseAPI {
      * Retrieve all resource items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
      * @summary List All Resources
      * @param {GetAllItemsResourcesListLanguageEnum} language a valid language code
-     * @param {GetAllItemsResourcesListGameEnum} game dofus3 | dofus3beta
+     * @param {GetAllItemsResourcesListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {GetAllItemsResourcesListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
      * @param {number} [filterMinLevel] only results which level is equal or above this value
      * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -6264,7 +6264,7 @@ export class ResourcesApi extends BaseAPI {
      * Search in all names and descriptions of resource items with a query.
      * @summary Search Resources
      * @param {GetItemsResourceSearchLanguageEnum} language a valid language code
-     * @param {GetItemsResourceSearchGameEnum} game dofus3 | dofus3beta
+     * @param {GetItemsResourceSearchGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {string} query case sensitive search query
      * @param {number} [filterMinLevel] only results which level is equal or above this value
      * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -6282,7 +6282,7 @@ export class ResourcesApi extends BaseAPI {
      * Retrieve a list of resource items.
      * @summary List Resources
      * @param {GetItemsResourcesListLanguageEnum} language a valid language code
-     * @param {GetItemsResourcesListGameEnum} game dofus3 | dofus3beta
+     * @param {GetItemsResourcesListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {GetItemsResourcesListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
      * @param {number} [filterMinLevel] only results which level is equal or above this value
      * @param {number} [filterMaxLevel] only results which level is equal or below this value
@@ -6303,7 +6303,7 @@ export class ResourcesApi extends BaseAPI {
      * @summary Single Resources
      * @param {GetItemsResourcesSingleLanguageEnum} language a valid language code
      * @param {number} ankamaId identifier
-     * @param {GetItemsResourcesSingleGameEnum} game dofus3 | dofus3beta
+     * @param {GetItemsResourcesSingleGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ResourcesApi
@@ -6438,7 +6438,7 @@ export const SetsApiAxiosParamCreator = function (configuration?: Configuration)
          * Retrieve all sets with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Sets
          * @param {GetAllSetsListLanguageEnum} language a valid language code
-         * @param {GetAllSetsListGameEnum} game dofus3 | dofus3beta
+         * @param {GetAllSetsListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {GetAllSetsListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinHighestEquipmentLevel] only results where the equipment with the highest level is above or equal to this value
          * @param {number} [filterMaxHighestEquipmentLevel] only results where the equipment with the highest level is below or equal to this value
@@ -6505,7 +6505,7 @@ export const SetsApiAxiosParamCreator = function (configuration?: Configuration)
          * Retrieve a list of sets.
          * @summary List Sets
          * @param {GetSetsListLanguageEnum} language a valid language code
-         * @param {GetSetsListGameEnum} game dofus3 | dofus3beta
+         * @param {GetSetsListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {GetSetsListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinHighestEquipmentLevel] only results where the equipment with the highest level is above or equal to this value
          * @param {number} [filterMaxHighestEquipmentLevel] only results where the equipment with the highest level is below or equal to this value
@@ -6583,7 +6583,7 @@ export const SetsApiAxiosParamCreator = function (configuration?: Configuration)
          * Search in all names and descriptions of sets with a query.
          * @summary Search Sets
          * @param {GetSetsSearchLanguageEnum} language a valid language code
-         * @param {GetSetsSearchGameEnum} game dofus3 | dofus3beta
+         * @param {GetSetsSearchGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {string} query case sensitive search query
          * @param {number} [filterMinHighestEquipmentLevel] only results where the equipment with the highest level is above or equal to this value
          * @param {number} [filterMaxHighestEquipmentLevel] only results where the equipment with the highest level is below or equal to this value
@@ -6649,7 +6649,7 @@ export const SetsApiAxiosParamCreator = function (configuration?: Configuration)
          * @summary Single Sets
          * @param {GetSetsSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {GetSetsSingleGameEnum} game dofus3 | dofus3beta
+         * @param {GetSetsSingleGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -6700,7 +6700,7 @@ export const SetsApiFp = function(configuration?: Configuration) {
          * Retrieve all sets with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Sets
          * @param {GetAllSetsListLanguageEnum} language a valid language code
-         * @param {GetAllSetsListGameEnum} game dofus3 | dofus3beta
+         * @param {GetAllSetsListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {GetAllSetsListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinHighestEquipmentLevel] only results where the equipment with the highest level is above or equal to this value
          * @param {number} [filterMaxHighestEquipmentLevel] only results where the equipment with the highest level is below or equal to this value
@@ -6720,7 +6720,7 @@ export const SetsApiFp = function(configuration?: Configuration) {
          * Retrieve a list of sets.
          * @summary List Sets
          * @param {GetSetsListLanguageEnum} language a valid language code
-         * @param {GetSetsListGameEnum} game dofus3 | dofus3beta
+         * @param {GetSetsListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {GetSetsListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinHighestEquipmentLevel] only results where the equipment with the highest level is above or equal to this value
          * @param {number} [filterMaxHighestEquipmentLevel] only results where the equipment with the highest level is below or equal to this value
@@ -6742,7 +6742,7 @@ export const SetsApiFp = function(configuration?: Configuration) {
          * Search in all names and descriptions of sets with a query.
          * @summary Search Sets
          * @param {GetSetsSearchLanguageEnum} language a valid language code
-         * @param {GetSetsSearchGameEnum} game dofus3 | dofus3beta
+         * @param {GetSetsSearchGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {string} query case sensitive search query
          * @param {number} [filterMinHighestEquipmentLevel] only results where the equipment with the highest level is above or equal to this value
          * @param {number} [filterMaxHighestEquipmentLevel] only results where the equipment with the highest level is below or equal to this value
@@ -6762,7 +6762,7 @@ export const SetsApiFp = function(configuration?: Configuration) {
          * @summary Single Sets
          * @param {GetSetsSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {GetSetsSingleGameEnum} game dofus3 | dofus3beta
+         * @param {GetSetsSingleGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -6786,7 +6786,7 @@ export const SetsApiFactory = function (configuration?: Configuration, basePath?
          * Retrieve all sets with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
          * @summary List All Sets
          * @param {GetAllSetsListLanguageEnum} language a valid language code
-         * @param {GetAllSetsListGameEnum} game dofus3 | dofus3beta
+         * @param {GetAllSetsListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {GetAllSetsListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinHighestEquipmentLevel] only results where the equipment with the highest level is above or equal to this value
          * @param {number} [filterMaxHighestEquipmentLevel] only results where the equipment with the highest level is below or equal to this value
@@ -6803,7 +6803,7 @@ export const SetsApiFactory = function (configuration?: Configuration, basePath?
          * Retrieve a list of sets.
          * @summary List Sets
          * @param {GetSetsListLanguageEnum} language a valid language code
-         * @param {GetSetsListGameEnum} game dofus3 | dofus3beta
+         * @param {GetSetsListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {GetSetsListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
          * @param {number} [filterMinHighestEquipmentLevel] only results where the equipment with the highest level is above or equal to this value
          * @param {number} [filterMaxHighestEquipmentLevel] only results where the equipment with the highest level is below or equal to this value
@@ -6822,7 +6822,7 @@ export const SetsApiFactory = function (configuration?: Configuration, basePath?
          * Search in all names and descriptions of sets with a query.
          * @summary Search Sets
          * @param {GetSetsSearchLanguageEnum} language a valid language code
-         * @param {GetSetsSearchGameEnum} game dofus3 | dofus3beta
+         * @param {GetSetsSearchGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {string} query case sensitive search query
          * @param {number} [filterMinHighestEquipmentLevel] only results where the equipment with the highest level is above or equal to this value
          * @param {number} [filterMaxHighestEquipmentLevel] only results where the equipment with the highest level is below or equal to this value
@@ -6839,7 +6839,7 @@ export const SetsApiFactory = function (configuration?: Configuration, basePath?
          * @summary Single Sets
          * @param {GetSetsSingleLanguageEnum} language a valid language code
          * @param {number} ankamaId identifier
-         * @param {GetSetsSingleGameEnum} game dofus3 | dofus3beta
+         * @param {GetSetsSingleGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -6860,7 +6860,7 @@ export class SetsApi extends BaseAPI {
      * Retrieve all sets with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header \'Accept-Encoding: gzip\' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH \'Accept-Encoding: gzip\' <api-endpoint> | gunzip - ```
      * @summary List All Sets
      * @param {GetAllSetsListLanguageEnum} language a valid language code
-     * @param {GetAllSetsListGameEnum} game dofus3 | dofus3beta
+     * @param {GetAllSetsListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {GetAllSetsListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
      * @param {number} [filterMinHighestEquipmentLevel] only results where the equipment with the highest level is above or equal to this value
      * @param {number} [filterMaxHighestEquipmentLevel] only results where the equipment with the highest level is below or equal to this value
@@ -6879,7 +6879,7 @@ export class SetsApi extends BaseAPI {
      * Retrieve a list of sets.
      * @summary List Sets
      * @param {GetSetsListLanguageEnum} language a valid language code
-     * @param {GetSetsListGameEnum} game dofus3 | dofus3beta
+     * @param {GetSetsListGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {GetSetsListSortLevelEnum} [sortLevel] sort the resulting list by level, default unsorted
      * @param {number} [filterMinHighestEquipmentLevel] only results where the equipment with the highest level is above or equal to this value
      * @param {number} [filterMaxHighestEquipmentLevel] only results where the equipment with the highest level is below or equal to this value
@@ -6900,7 +6900,7 @@ export class SetsApi extends BaseAPI {
      * Search in all names and descriptions of sets with a query.
      * @summary Search Sets
      * @param {GetSetsSearchLanguageEnum} language a valid language code
-     * @param {GetSetsSearchGameEnum} game dofus3 | dofus3beta
+     * @param {GetSetsSearchGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {string} query case sensitive search query
      * @param {number} [filterMinHighestEquipmentLevel] only results where the equipment with the highest level is above or equal to this value
      * @param {number} [filterMaxHighestEquipmentLevel] only results where the equipment with the highest level is below or equal to this value
@@ -6919,7 +6919,7 @@ export class SetsApi extends BaseAPI {
      * @summary Single Sets
      * @param {GetSetsSingleLanguageEnum} language a valid language code
      * @param {number} ankamaId identifier
-     * @param {GetSetsSingleGameEnum} game dofus3 | dofus3beta
+     * @param {GetSetsSingleGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SetsApi
