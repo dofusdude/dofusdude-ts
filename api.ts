@@ -1838,7 +1838,7 @@ export const AlmanaxApiAxiosParamCreator = function (configuration?: Configurati
             assertParamExists('getAlmanaxDate', 'language', language)
             // verify required parameter 'date' is not null or undefined
             assertParamExists('getAlmanaxDate', 'date', date)
-            const localVarPath = `/dofus3/{language}/almanax/{date}`
+            const localVarPath = `/dofus2/{language}/almanax/{date}`
                 .replace(`{${"language"}}`, encodeURIComponent(String(language)))
                 .replace(`{${"date"}}`, encodeURIComponent(String(date)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -1878,7 +1878,7 @@ export const AlmanaxApiAxiosParamCreator = function (configuration?: Configurati
         getAlmanaxRange: async (language: GetAlmanaxRangeLanguageEnum, filterBonusType?: string, rangeFrom?: string, rangeTo?: string, rangeSize?: number, timezone?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getAlmanaxRange', 'language', language)
-            const localVarPath = `/dofus3/{language}/almanax`
+            const localVarPath = `/dofus2/{language}/almanax`
                 .replace(`{${"language"}}`, encodeURIComponent(String(language)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -4235,7 +4235,7 @@ export const MetaApiAxiosParamCreator = function (configuration?: Configuration)
          * @throws {RequiredError}
          */
         getGameSearchTypes: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/dofus3/meta/search/types`;
+            const localVarPath = `/dofus3beta/v1/meta/search/types`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -4265,7 +4265,7 @@ export const MetaApiAxiosParamCreator = function (configuration?: Configuration)
          * @throws {RequiredError}
          */
         getItemTypes: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/dofus3/meta/items/types`;
+            const localVarPath = `/dofus3beta/v1/meta/items/types`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -4298,7 +4298,7 @@ export const MetaApiAxiosParamCreator = function (configuration?: Configuration)
         getMetaAlmanaxBonuses: async (language: GetMetaAlmanaxBonusesLanguageEnum, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'language' is not null or undefined
             assertParamExists('getMetaAlmanaxBonuses', 'language', language)
-            const localVarPath = `/dofus3/meta/{language}/almanax/bonuses`
+            const localVarPath = `/dofus2/meta/{language}/almanax/bonuses`
                 .replace(`{${"language"}}`, encodeURIComponent(String(language)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -4336,7 +4336,7 @@ export const MetaApiAxiosParamCreator = function (configuration?: Configuration)
             assertParamExists('getMetaAlmanaxBonusesSearch', 'language', language)
             // verify required parameter 'query' is not null or undefined
             assertParamExists('getMetaAlmanaxBonusesSearch', 'query', query)
-            const localVarPath = `/dofus3/meta/{language}/almanax/bonuses/search`
+            const localVarPath = `/dofus2/meta/{language}/almanax/bonuses/search`
                 .replace(`{${"language"}}`, encodeURIComponent(String(language)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -4375,7 +4375,7 @@ export const MetaApiAxiosParamCreator = function (configuration?: Configuration)
          * @throws {RequiredError}
          */
         getMetaElements: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/dofus3/meta/elements`;
+            const localVarPath = `/dofus3beta/v1/meta/elements`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -4405,7 +4405,7 @@ export const MetaApiAxiosParamCreator = function (configuration?: Configuration)
          * @throws {RequiredError}
          */
         getMetaVersion: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/dofus3/meta/version`;
+            const localVarPath = `/dofus3beta/v1/meta/version`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
