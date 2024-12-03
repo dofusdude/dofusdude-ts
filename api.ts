@@ -1882,7 +1882,7 @@ export const AlmanaxApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} [filterBonusType] ids from meta/{language}/almanax/bonuses
          * @param {string} [rangeFrom] yyyy-mm-dd
          * @param {string} [rangeTo] yyyy-mm-dd
-         * @param {number} [rangeSize] size of the returned range
+         * @param {number} [rangeSize] Size of the returned range. Disable to fully use the range by setting size to -1.
          * @param {string} [timezone] determine what the current time is. If you live in Brazil, \&quot;today\&quot; will be hours apart from Paris. Use your timezone to get results relative to your location.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1969,7 +1969,7 @@ export const AlmanaxApiFp = function(configuration?: Configuration) {
          * @param {string} [filterBonusType] ids from meta/{language}/almanax/bonuses
          * @param {string} [rangeFrom] yyyy-mm-dd
          * @param {string} [rangeTo] yyyy-mm-dd
-         * @param {number} [rangeSize] size of the returned range
+         * @param {number} [rangeSize] Size of the returned range. Disable to fully use the range by setting size to -1.
          * @param {string} [timezone] determine what the current time is. If you live in Brazil, \&quot;today\&quot; will be hours apart from Paris. Use your timezone to get results relative to your location.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2008,7 +2008,7 @@ export const AlmanaxApiFactory = function (configuration?: Configuration, basePa
          * @param {string} [filterBonusType] ids from meta/{language}/almanax/bonuses
          * @param {string} [rangeFrom] yyyy-mm-dd
          * @param {string} [rangeTo] yyyy-mm-dd
-         * @param {number} [rangeSize] size of the returned range
+         * @param {number} [rangeSize] Size of the returned range. Disable to fully use the range by setting size to -1.
          * @param {string} [timezone] determine what the current time is. If you live in Brazil, \&quot;today\&quot; will be hours apart from Paris. Use your timezone to get results relative to your location.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2046,7 +2046,7 @@ export class AlmanaxApi extends BaseAPI {
      * @param {string} [filterBonusType] ids from meta/{language}/almanax/bonuses
      * @param {string} [rangeFrom] yyyy-mm-dd
      * @param {string} [rangeTo] yyyy-mm-dd
-     * @param {number} [rangeSize] size of the returned range
+     * @param {number} [rangeSize] Size of the returned range. Disable to fully use the range by setting size to -1.
      * @param {string} [timezone] determine what the current time is. If you live in Brazil, \&quot;today\&quot; will be hours apart from Paris. Use your timezone to get results relative to your location.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
