@@ -4229,11 +4229,11 @@ export const MetaApiAxiosParamCreator = function (configuration?: Configuration)
         /**
          * Get all types for /{game}/v1/{lang}/search available for filtering. All names are english for comparing them inside applications. Order is fixed so you can compare indices instead of strings.
          * @summary Available Game Search Types
-         * @param {string} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
+         * @param {GetGameSearchTypesGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getGameSearchTypes: async (game: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getGameSearchTypes: async (game: GetGameSearchTypesGameEnum, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'game' is not null or undefined
             assertParamExists('getGameSearchTypes', 'game', game)
             const localVarPath = `/{game}/v1/meta/search/types`
@@ -4263,11 +4263,11 @@ export const MetaApiAxiosParamCreator = function (configuration?: Configuration)
         /**
          * Get all types of all items. Primarily used for filtering more detailed types in listings or search endpoints. All names are english for comparing them inside applications. Ordering is not guaranteed to persist with game updates.
          * @summary Available Item Types
-         * @param {string} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
+         * @param {GetItemTypesGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemTypes: async (game: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getItemTypes: async (game: GetItemTypesGameEnum, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'game' is not null or undefined
             assertParamExists('getItemTypes', 'game', game)
             const localVarPath = `/{game}/v1/meta/items/types`
@@ -4377,11 +4377,11 @@ export const MetaApiAxiosParamCreator = function (configuration?: Configuration)
         /**
          * Get the mappings for all specific elements that are linked in the dataset. All names are english. Translations are not needed because of a global unique id which is the index inside the array. Future elements will get a higher id.
          * @summary Effects and Condition Elements
-         * @param {string} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
+         * @param {GetMetaElementsGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getMetaElements: async (game: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getMetaElements: async (game: GetMetaElementsGameEnum, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'game' is not null or undefined
             assertParamExists('getMetaElements', 'game', game)
             const localVarPath = `/{game}/v1/meta/elements`
@@ -4455,11 +4455,11 @@ export const MetaApiFp = function(configuration?: Configuration) {
         /**
          * Get all types for /{game}/v1/{lang}/search available for filtering. All names are english for comparing them inside applications. Order is fixed so you can compare indices instead of strings.
          * @summary Available Game Search Types
-         * @param {string} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
+         * @param {GetGameSearchTypesGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getGameSearchTypes(game: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<string>>> {
+        async getGameSearchTypes(game: GetGameSearchTypesGameEnum, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<string>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getGameSearchTypes(game, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['MetaApi.getGameSearchTypes']?.[localVarOperationServerIndex]?.url;
@@ -4468,11 +4468,11 @@ export const MetaApiFp = function(configuration?: Configuration) {
         /**
          * Get all types of all items. Primarily used for filtering more detailed types in listings or search endpoints. All names are english for comparing them inside applications. Ordering is not guaranteed to persist with game updates.
          * @summary Available Item Types
-         * @param {string} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
+         * @param {GetItemTypesGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getItemTypes(game: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<string>>> {
+        async getItemTypes(game: GetItemTypesGameEnum, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<string>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getItemTypes(game, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['MetaApi.getItemTypes']?.[localVarOperationServerIndex]?.url;
@@ -4509,11 +4509,11 @@ export const MetaApiFp = function(configuration?: Configuration) {
         /**
          * Get the mappings for all specific elements that are linked in the dataset. All names are english. Translations are not needed because of a global unique id which is the index inside the array. Future elements will get a higher id.
          * @summary Effects and Condition Elements
-         * @param {string} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
+         * @param {GetMetaElementsGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getMetaElements(game: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<string>>> {
+        async getMetaElements(game: GetMetaElementsGameEnum, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<string>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getMetaElements(game, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['MetaApi.getMetaElements']?.[localVarOperationServerIndex]?.url;
@@ -4545,21 +4545,21 @@ export const MetaApiFactory = function (configuration?: Configuration, basePath?
         /**
          * Get all types for /{game}/v1/{lang}/search available for filtering. All names are english for comparing them inside applications. Order is fixed so you can compare indices instead of strings.
          * @summary Available Game Search Types
-         * @param {string} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
+         * @param {GetGameSearchTypesGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getGameSearchTypes(game: string, options?: RawAxiosRequestConfig): AxiosPromise<Array<string>> {
+        getGameSearchTypes(game: GetGameSearchTypesGameEnum, options?: RawAxiosRequestConfig): AxiosPromise<Array<string>> {
             return localVarFp.getGameSearchTypes(game, options).then((request) => request(axios, basePath));
         },
         /**
          * Get all types of all items. Primarily used for filtering more detailed types in listings or search endpoints. All names are english for comparing them inside applications. Ordering is not guaranteed to persist with game updates.
          * @summary Available Item Types
-         * @param {string} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
+         * @param {GetItemTypesGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemTypes(game: string, options?: RawAxiosRequestConfig): AxiosPromise<Array<string>> {
+        getItemTypes(game: GetItemTypesGameEnum, options?: RawAxiosRequestConfig): AxiosPromise<Array<string>> {
             return localVarFp.getItemTypes(game, options).then((request) => request(axios, basePath));
         },
         /**
@@ -4587,11 +4587,11 @@ export const MetaApiFactory = function (configuration?: Configuration, basePath?
         /**
          * Get the mappings for all specific elements that are linked in the dataset. All names are english. Translations are not needed because of a global unique id which is the index inside the array. Future elements will get a higher id.
          * @summary Effects and Condition Elements
-         * @param {string} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
+         * @param {GetMetaElementsGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getMetaElements(game: string, options?: RawAxiosRequestConfig): AxiosPromise<Array<string>> {
+        getMetaElements(game: GetMetaElementsGameEnum, options?: RawAxiosRequestConfig): AxiosPromise<Array<string>> {
             return localVarFp.getMetaElements(game, options).then((request) => request(axios, basePath));
         },
         /**
@@ -4617,24 +4617,24 @@ export class MetaApi extends BaseAPI {
     /**
      * Get all types for /{game}/v1/{lang}/search available for filtering. All names are english for comparing them inside applications. Order is fixed so you can compare indices instead of strings.
      * @summary Available Game Search Types
-     * @param {string} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
+     * @param {GetGameSearchTypesGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MetaApi
      */
-    public getGameSearchTypes(game: string, options?: RawAxiosRequestConfig) {
+    public getGameSearchTypes(game: GetGameSearchTypesGameEnum, options?: RawAxiosRequestConfig) {
         return MetaApiFp(this.configuration).getGameSearchTypes(game, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * Get all types of all items. Primarily used for filtering more detailed types in listings or search endpoints. All names are english for comparing them inside applications. Ordering is not guaranteed to persist with game updates.
      * @summary Available Item Types
-     * @param {string} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
+     * @param {GetItemTypesGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MetaApi
      */
-    public getItemTypes(game: string, options?: RawAxiosRequestConfig) {
+    public getItemTypes(game: GetItemTypesGameEnum, options?: RawAxiosRequestConfig) {
         return MetaApiFp(this.configuration).getItemTypes(game, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -4667,12 +4667,12 @@ export class MetaApi extends BaseAPI {
     /**
      * Get the mappings for all specific elements that are linked in the dataset. All names are english. Translations are not needed because of a global unique id which is the index inside the array. Future elements will get a higher id.
      * @summary Effects and Condition Elements
-     * @param {string} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
+     * @param {GetMetaElementsGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MetaApi
      */
-    public getMetaElements(game: string, options?: RawAxiosRequestConfig) {
+    public getMetaElements(game: GetMetaElementsGameEnum, options?: RawAxiosRequestConfig) {
         return MetaApiFp(this.configuration).getMetaElements(game, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -4689,6 +4689,22 @@ export class MetaApi extends BaseAPI {
     }
 }
 
+/**
+ * @export
+ */
+export const GetGameSearchTypesGameEnum = {
+    Dofus3: 'dofus3',
+    Dofus3beta: 'dofus3beta'
+} as const;
+export type GetGameSearchTypesGameEnum = typeof GetGameSearchTypesGameEnum[keyof typeof GetGameSearchTypesGameEnum];
+/**
+ * @export
+ */
+export const GetItemTypesGameEnum = {
+    Dofus3: 'dofus3',
+    Dofus3beta: 'dofus3beta'
+} as const;
+export type GetItemTypesGameEnum = typeof GetItemTypesGameEnum[keyof typeof GetItemTypesGameEnum];
 /**
  * @export
  */
@@ -4711,6 +4727,14 @@ export const GetMetaAlmanaxBonusesSearchLanguageEnum = {
     Es: 'es'
 } as const;
 export type GetMetaAlmanaxBonusesSearchLanguageEnum = typeof GetMetaAlmanaxBonusesSearchLanguageEnum[keyof typeof GetMetaAlmanaxBonusesSearchLanguageEnum];
+/**
+ * @export
+ */
+export const GetMetaElementsGameEnum = {
+    Dofus3: 'dofus3',
+    Dofus3beta: 'dofus3beta'
+} as const;
+export type GetMetaElementsGameEnum = typeof GetMetaElementsGameEnum[keyof typeof GetMetaElementsGameEnum];
 /**
  * @export
  */
