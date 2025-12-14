@@ -1,5 +1,4 @@
 /* tslint:disable */
-/* eslint-disable */
 /**
  * dofusdude
  * # Open Ankama Developer Community The all-in-one toolbelt for your next Ankama related project.  ## Versions - [Dofus 2](https://docs.dofusdu.de/dofus2/) - [Dofus 3](https://docs.dofusdu.de/dofus3/)   - v1 [latest] (you are here)   ## Client SDKs - [Javascript](https://github.com/dofusdude/dofusdude-js) `npm i dofusdude-js --save` - [Typescript](https://github.com/dofusdude/dofusdude-ts) `npm i dofusdude-ts --save` - [Go](https://github.com/dofusdude/dodugo) `go get -u github.com/dofusdude/dodugo` - [Python](https://github.com/dofusdude/dofusdude-py) `pip install dofusdude` - [Java](https://github.com/dofusdude/dofusdude-java) Maven with GitHub packages setup  Everything, including this site, is generated out of the [Docs Repo](https://github.com/dofusdude/api-docs). Consider it the Single Source of Truth. If there is a problem with the SDKs, create an issue there.  Your favorite language is missing? Please let me know!  # Main Features - 🥷 **Seamless Auto-Update** load data in the background when a new Dofus version is released and serving it within 10 minutes with atomic data source switching. No downtime and no effects for the user, just always up-to-date.  - ⚡ **Blazingly Fast** all data in-memory, aggressive caching over short time spans, HTTP/2 multiplexing, written in Go, optimized for low latency, hosted on bare metal in 🇩🇪.  - 📨 **Almanax Discord Integration** Use the endpoints as a dev or the official [Web Client](https://discord.dofusdude.com) as a user.  - 🩸 **Dofus 3 Beta** from stable to bleeding edge by replacing /dofus3 with /dofus3beta.  - 🗣️ **Multilingual** supporting _en_, _fr_, _es_, _pt_, _de_.  - 🧠 **Search by Relevance** allowing typos in name and description, handled by language specific text analysis and indexing.  - 🕵️ **Official Sources** generated from actual data from the game.  ... and much more on the Roadmap on my [Discord](https://discord.gg/3EtHskZD8h). 
@@ -12,12 +11,24 @@
  * Do not edit the class manually.
  */
 
+interface AWSv4Configuration {
+  options?: {
+    region?: string
+    service?: string
+  }
+  credentials?: {
+    accessKeyId?: string
+    secretAccessKey?: string,
+    sessionToken?: string
+  }
+}
 
 export interface ConfigurationParameters {
     apiKey?: string | Promise<string> | ((name: string) => string) | ((name: string) => Promise<string>);
     username?: string;
     password?: string;
     accessToken?: string | Promise<string> | ((name?: string, scopes?: string[]) => string) | ((name?: string, scopes?: string[]) => Promise<string>);
+    awsv4?: AWSv4Configuration;
     basePath?: string;
     serverIndex?: number;
     baseOptions?: any;
@@ -28,49 +39,43 @@ export class Configuration {
     /**
      * parameter for apiKey security
      * @param name security name
-     * @memberof Configuration
      */
     apiKey?: string | Promise<string> | ((name: string) => string) | ((name: string) => Promise<string>);
     /**
      * parameter for basic security
-     *
-     * @type {string}
-     * @memberof Configuration
      */
     username?: string;
     /**
      * parameter for basic security
-     *
-     * @type {string}
-     * @memberof Configuration
      */
     password?: string;
     /**
      * parameter for oauth2 security
      * @param name security name
      * @param scopes oauth2 scope
-     * @memberof Configuration
      */
     accessToken?: string | Promise<string> | ((name?: string, scopes?: string[]) => string) | ((name?: string, scopes?: string[]) => Promise<string>);
     /**
-     * override base path
-     *
-     * @type {string}
+     * parameter for aws4 signature security
+     * @param {Object} AWS4Signature - AWS4 Signature security
+     * @param {string} options.region - aws region
+     * @param {string} options.service - name of the service.
+     * @param {string} credentials.accessKeyId - aws access key id
+     * @param {string} credentials.secretAccessKey - aws access key
+     * @param {string} credentials.sessionToken - aws session token
      * @memberof Configuration
+     */
+    awsv4?: AWSv4Configuration;
+    /**
+     * override base path
      */
     basePath?: string;
     /**
      * override server index
-     *
-     * @type {number}
-     * @memberof Configuration
      */
     serverIndex?: number;
     /**
      * base options for axios calls
-     *
-     * @type {any}
-     * @memberof Configuration
      */
     baseOptions?: any;
     /**
@@ -87,6 +92,7 @@ export class Configuration {
         this.username = param.username;
         this.password = param.password;
         this.accessToken = param.accessToken;
+        this.awsv4 = param.awsv4;
         this.basePath = param.basePath;
         this.serverIndex = param.serverIndex;
         this.baseOptions = {

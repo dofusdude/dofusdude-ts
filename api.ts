@@ -23,189 +23,69 @@ import type { RequestArgs } from './base';
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, BaseAPI, RequiredError, operationServerMap } from './base';
 
-/**
- * 
- * @export
- * @interface Almanax
- */
 export interface Almanax {
-    /**
-     * 
-     * @type {AlmanaxBonus}
-     * @memberof Almanax
-     */
     'bonus'?: AlmanaxBonus;
-    /**
-     * 
-     * @type {string}
-     * @memberof Almanax
-     */
     'date'?: string;
-    /**
-     * 
-     * @type {AlmanaxTribute}
-     * @memberof Almanax
-     */
     'tribute'?: AlmanaxTribute;
     /**
      * Amount of Kamas you get as reward for finishing this Almanax quest.
-     * @type {number}
-     * @memberof Almanax
      */
     'reward_kamas'?: number | null;
     /**
      * Optional field that shows when a level is given in the request. Shows the experience points you get this day for finishing this Almanax quest.
-     * @type {number}
-     * @memberof Almanax
      */
     'reward_xp'?: number | null;
 }
-/**
- * 
- * @export
- * @interface AlmanaxBonus
- */
 export interface AlmanaxBonus {
-    /**
-     * 
-     * @type {string}
-     * @memberof AlmanaxBonus
-     */
     'description'?: string;
-    /**
-     * 
-     * @type {GetMetaAlmanaxBonuses200ResponseInner}
-     * @memberof AlmanaxBonus
-     */
     'type'?: GetMetaAlmanaxBonuses200ResponseInner;
 }
-/**
- * 
- * @export
- * @interface AlmanaxTribute
- */
 export interface AlmanaxTribute {
-    /**
-     * 
-     * @type {AlmanaxTributeItem}
-     * @memberof AlmanaxTribute
-     */
     'item'?: AlmanaxTributeItem;
-    /**
-     * 
-     * @type {number}
-     * @memberof AlmanaxTribute
-     */
     'quantity'?: number;
 }
-/**
- * 
- * @export
- * @interface AlmanaxTributeItem
- */
 export interface AlmanaxTributeItem {
-    /**
-     * 
-     * @type {number}
-     * @memberof AlmanaxTributeItem
-     */
     'ankama_id'?: number;
-    /**
-     * 
-     * @type {Images}
-     * @memberof AlmanaxTributeItem
-     */
     'image_urls'?: Images;
-    /**
-     * 
-     * @type {string}
-     * @memberof AlmanaxTributeItem
-     */
     'name'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof AlmanaxTributeItem
-     */
     'subtype'?: string;
 }
 /**
  * 
- * @export
- * @interface AlmanaxWebhook
  */
 export interface AlmanaxWebhook {
-    /**
-     * 
-     * @type {string}
-     * @memberof AlmanaxWebhook
-     */
     'id'?: string;
-    /**
-     * 
-     * @type {AlmanaxWebhookDailySettings}
-     * @memberof AlmanaxWebhook
-     */
     'daily_settings'?: AlmanaxWebhookDailySettings;
     /**
      * Only post when these bonuses come up. From all available bonuses (ids) from /dofus3/meta/{language}/almanax/bonuses.
-     * @type {Array<string>}
-     * @memberof AlmanaxWebhook
      */
     'bonus_whitelist'?: Array<string> | null;
     /**
      * Skip the day when these bonuses come up. From all available bonuses (ids) from /dofus3/meta/{language}/almanax/bonuses
-     * @type {Array<string>}
-     * @memberof AlmanaxWebhook
      */
     'bonus_blacklist'?: Array<string> | null;
     /**
      * Get the available subscriptions with /meta/webhooks/almanax
-     * @type {Array<string>}
-     * @memberof AlmanaxWebhook
      */
     'subscriptions'?: Array<string>;
     /**
      * If false, it will use common local time formats and weekday translations. If true, the format is YYYY-MM-DD.
-     * @type {boolean}
-     * @memberof AlmanaxWebhook
      */
     'iso_date'?: boolean;
     /**
      * Almanax bonus ids mapped to array of mentions.
-     * @type {{ [key: string]: Array<CreateAlmanaxWebhookMentionsValueInner>; }}
-     * @memberof AlmanaxWebhook
      */
     'mentions'?: { [key: string]: Array<CreateAlmanaxWebhookMentionsValueInner>; } | null;
     /**
      * - Daily posts each day, filtering with Black/Whitelist and mentions are applied daily. - Weekly posts the next 7 days (excluding the posting day) once per week at the specified time. With only weekly selected, of all mentions, only prior notices will come through daily. The 7 day preview gets filtered by the Black/Whitelist. - Monthly posts a preview of the next month from first to last date. The post will be on the last day of a month (ignoring day of the week) at the specified time. Mentions and filtering works like weekly. The biggest difference between daily and the other two is that daily always posts the current day while monthly and weekly only show future days. You can always combine the intervals by selecting multiple intervals for one hook or create multiple hooks for the same channel with different settings to get every highly specific combination you want.
-     * @type {Set<string>}
-     * @memberof AlmanaxWebhook
      */
     'intervals'?: Set<AlmanaxWebhookIntervalsEnum>;
     /**
      * When to post the weekly preview at the specified time.
-     * @type {string}
-     * @memberof AlmanaxWebhook
      */
     'weekly_weekday'?: AlmanaxWebhookWeeklyWeekdayEnum | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof AlmanaxWebhook
-     */
     'created_at'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof AlmanaxWebhook
-     */
     'last_fired_at'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof AlmanaxWebhook
-     */
     'updated_at'?: string;
 }
 
@@ -228,164 +108,80 @@ export const AlmanaxWebhookWeeklyWeekdayEnum = {
 
 export type AlmanaxWebhookWeeklyWeekdayEnum = typeof AlmanaxWebhookWeeklyWeekdayEnum[keyof typeof AlmanaxWebhookWeeklyWeekdayEnum];
 
-/**
- * 
- * @export
- * @interface AlmanaxWebhookDailySettings
- */
 export interface AlmanaxWebhookDailySettings {
     /**
      * Timezone of your community to determine midnight.
-     * @type {string}
-     * @memberof AlmanaxWebhookDailySettings
      */
     'timezone'?: string;
     /**
      * Hours added to midnight at the selected timezone. 8 = 8:00 in the morning.
-     * @type {number}
-     * @memberof AlmanaxWebhookDailySettings
      */
     'midnight_offset'?: number;
 }
-/**
- * 
- * @export
- * @interface Condition
- */
 export interface Condition {
-    /**
-     * 
-     * @type {string}
-     * @memberof Condition
-     */
     'operator'?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof Condition
-     */
     'int_value'?: number;
-    /**
-     * 
-     * @type {TranslatedId}
-     * @memberof Condition
-     */
     'element'?: TranslatedId;
 }
-/**
- * 
- * @export
- * @interface ConditionLeaf
- */
 export interface ConditionLeaf {
     /**
      * always \"true\" for the leaf of a tree
-     * @type {boolean}
-     * @memberof ConditionLeaf
      */
     'is_operand'?: boolean;
-    /**
-     * 
-     * @type {Condition}
-     * @memberof ConditionLeaf
-     */
     'condition'?: Condition;
 }
 /**
  * @type ConditionNode
- * @export
  */
 export type ConditionNode = ConditionLeaf | ConditionRelation;
 
 /**
  * 
- * @export
- * @interface ConditionRelation
  */
 export interface ConditionRelation {
     /**
      * always \"false\" for relations
-     * @type {boolean}
-     * @memberof ConditionRelation
      */
     'is_operand'?: boolean;
     /**
      * \"and\", \"or\"
-     * @type {string}
-     * @memberof ConditionRelation
      */
     'relation'?: string;
-    /**
-     * 
-     * @type {Array<ConditionNode | null>}
-     * @memberof ConditionRelation
-     */
     'children'?: Array<ConditionNode | null>;
 }
-/**
- * 
- * @export
- * @interface CreateAlmanaxWebhook
- */
 export interface CreateAlmanaxWebhook {
     /**
      * from all available bonuses (ids) from /dofus3/meta/{language}/almanax/bonuses
-     * @type {Array<string>}
-     * @memberof CreateAlmanaxWebhook
      */
     'bonus_whitelist'?: Array<string> | null;
     /**
      * from all available bonuses (ids) from /dofus3/meta/{language}/almanax/bonuses
-     * @type {Array<string>}
-     * @memberof CreateAlmanaxWebhook
      */
     'bonus_blacklist'?: Array<string> | null;
     /**
      * Get the available subscriptions with /meta/webhooks/almanax
-     * @type {Array<string>}
-     * @memberof CreateAlmanaxWebhook
      */
     'subscriptions': Array<string>;
-    /**
-     * 
-     * @type {string}
-     * @memberof CreateAlmanaxWebhook
-     */
     'format': CreateAlmanaxWebhookFormatEnum;
     /**
      * Discord Webhook URL
-     * @type {string}
-     * @memberof CreateAlmanaxWebhook
      */
     'callback': string;
-    /**
-     * 
-     * @type {CreateAlmanaxWebhookDailySettings}
-     * @memberof CreateAlmanaxWebhook
-     */
     'daily_settings'?: CreateAlmanaxWebhookDailySettings | null;
     /**
      * If false, it will use common local time formats and weekday translations. If true, the format is YYYY-MM-DD.
-     * @type {boolean}
-     * @memberof CreateAlmanaxWebhook
      */
     'iso_date'?: boolean | null;
     /**
      * Almanax bonus ids mapped to array of mentions.
-     * @type {{ [key: string]: Array<CreateAlmanaxWebhookMentionsValueInner>; }}
-     * @memberof CreateAlmanaxWebhook
      */
     'mentions'?: { [key: string]: Array<CreateAlmanaxWebhookMentionsValueInner>; } | null;
     /**
      * - Daily posts each day, filtering with Black/Whitelist and mentions are applied daily. - Weekly posts the next 7 days (excluding the posting day) once per week at the specified time. With only weekly selected, of all mentions, only prior notices will come through daily. The 7 day preview gets filtered by the Black/Whitelist. - Monthly posts a preview of the next month from first to last date. The post will be on the last day of a month (ignoring day of the week) at the specified time. Mentions and filtering works like weekly. The biggest difference between daily and the other two is that daily always posts the current day while monthly and weekly only show future days. You can always combine the intervals by selecting multiple intervals for one hook or create multiple hooks for the same channel with different settings to get every highly specific combination you want.
-     * @type {Set<string>}
-     * @memberof CreateAlmanaxWebhook
      */
     'intervals': Set<CreateAlmanaxWebhookIntervalsEnum>;
     /**
      * When to post the weekly preview at the specified time.
-     * @type {string}
-     * @memberof CreateAlmanaxWebhook
      */
     'weekly_weekday'?: CreateAlmanaxWebhookWeeklyWeekdayEnum | null;
 }
@@ -414,90 +210,47 @@ export const CreateAlmanaxWebhookWeeklyWeekdayEnum = {
 
 export type CreateAlmanaxWebhookWeeklyWeekdayEnum = typeof CreateAlmanaxWebhookWeeklyWeekdayEnum[keyof typeof CreateAlmanaxWebhookWeeklyWeekdayEnum];
 
-/**
- * 
- * @export
- * @interface CreateAlmanaxWebhookDailySettings
- */
 export interface CreateAlmanaxWebhookDailySettings {
     /**
      * Timezone of your community to determine midnight.
-     * @type {string}
-     * @memberof CreateAlmanaxWebhookDailySettings
      */
     'timezone'?: string | null;
     /**
      * Hours added to midnight at the selected timezone. 8 = 8:00 in the morning.
-     * @type {number}
-     * @memberof CreateAlmanaxWebhookDailySettings
      */
     'midnight_offset'?: number | null;
 }
 /**
  * Mention
- * @export
- * @interface CreateAlmanaxWebhookMentionsValueInner
  */
 export interface CreateAlmanaxWebhookMentionsValueInner {
     /**
      * User or role ID directly from Discord. Activate developer mode and right click a user or role to get them.
-     * @type {number}
-     * @memberof CreateAlmanaxWebhookMentionsValueInner
      */
     'discord_id'?: number;
     /**
      * Whether an ID describes a role (true) or user (false). This is needed for formatting the mention command so Discord understands it.
-     * @type {boolean}
-     * @memberof CreateAlmanaxWebhookMentionsValueInner
      */
     'is_role'?: boolean;
     /**
      * Get a mention days before the bonus comes up. It will post on the specified time. Also works when the interval is not daily.
-     * @type {number}
-     * @memberof CreateAlmanaxWebhookMentionsValueInner
      */
     'ping_days_before'?: number | null;
 }
 /**
  * 
- * @export
- * @interface CreateRSSWebhook
  */
 export interface CreateRSSWebhook {
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof CreateRSSWebhook
-     */
     'whitelist'?: Array<string> | null;
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof CreateRSSWebhook
-     */
     'blacklist'?: Array<string> | null;
     /**
      * Get the available subscriptions with /meta/webhooks/rss
-     * @type {Set<string>}
-     * @memberof CreateRSSWebhook
      */
     'subscriptions': Set<string>;
-    /**
-     * 
-     * @type {string}
-     * @memberof CreateRSSWebhook
-     */
     'format': CreateRSSWebhookFormatEnum;
-    /**
-     * 
-     * @type {number}
-     * @memberof CreateRSSWebhook
-     */
     'preview_length'?: number | null;
     /**
      * Discord Webhook URL
-     * @type {string}
-     * @memberof CreateRSSWebhook
      */
     'callback': string;
 }
@@ -510,44 +263,18 @@ export type CreateRSSWebhookFormatEnum = typeof CreateRSSWebhookFormatEnum[keyof
 
 /**
  * 
- * @export
- * @interface CreateTwitterWebhook
  */
 export interface CreateTwitterWebhook {
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof CreateTwitterWebhook
-     */
     'whitelist'?: Array<string> | null;
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof CreateTwitterWebhook
-     */
     'blacklist'?: Array<string> | null;
     /**
      * Get the available subscriptions with /meta/webhooks/twitter
-     * @type {Set<string>}
-     * @memberof CreateTwitterWebhook
      */
     'subscriptions': Set<string>;
-    /**
-     * 
-     * @type {string}
-     * @memberof CreateTwitterWebhook
-     */
     'format': CreateTwitterWebhookFormatEnum;
-    /**
-     * 
-     * @type {number}
-     * @memberof CreateTwitterWebhook
-     */
     'preview_length'?: number | null;
     /**
      * Discord Webhook URL
-     * @type {string}
-     * @memberof CreateTwitterWebhook
      */
     'callback': string;
 }
@@ -558,799 +285,232 @@ export const CreateTwitterWebhookFormatEnum = {
 
 export type CreateTwitterWebhookFormatEnum = typeof CreateTwitterWebhookFormatEnum[keyof typeof CreateTwitterWebhookFormatEnum];
 
-/**
- * 
- * @export
- * @interface Effect
- */
 export interface Effect {
     /**
      * minimum int value, can be a single if ignore_int_max and no ignore_int_min
-     * @type {number}
-     * @memberof Effect
      */
     'int_minimum'?: number;
     /**
      * maximum int value, if not ignore_int_max and not ignore_int_min, the effect has a range value
-     * @type {number}
-     * @memberof Effect
      */
     'int_maximum'?: number;
-    /**
-     * 
-     * @type {EffectType}
-     * @memberof Effect
-     */
     'type'?: EffectType;
     /**
      * ignore the int min field because the actual value is a string. For readability the templated field is the only important field in this case. 
-     * @type {boolean}
-     * @memberof Effect
      */
     'ignore_int_min'?: boolean;
     /**
      * ignore the int max field, if ignore_int_min is true, int min is a single value
-     * @type {boolean}
-     * @memberof Effect
      */
     'ignore_int_max'?: boolean;
     /**
      * all fields from above encoded in a single string
-     * @type {string}
-     * @memberof Effect
      */
     'formatted'?: string;
 }
-/**
- * 
- * @export
- * @interface EffectType
- */
 export interface EffectType {
-    /**
-     * 
-     * @type {number}
-     * @memberof EffectType
-     */
     'id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof EffectType
-     */
     'name'?: string;
     /**
      * Affects target or source actively.
-     * @type {boolean}
-     * @memberof EffectType
      */
     'is_active'?: boolean;
     /**
      * true if a type is generated from the Api instead of Ankama. In that case, always prefer showing the templated string and omit everything else. The \"name\" field will have an english description of the meta type. An example for such effects are class sets effects.
-     * @type {boolean}
-     * @memberof EffectType
      */
     'is_meta'?: boolean;
 }
-/**
- * 
- * @export
- * @interface Equipment
- */
 export interface Equipment {
-    /**
-     * 
-     * @type {number}
-     * @memberof Equipment
-     */
     'ankama_id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof Equipment
-     */
     'name'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Equipment
-     */
     'description'?: string;
-    /**
-     * 
-     * @type {TranslatedId}
-     * @memberof Equipment
-     */
     'type'?: TranslatedId;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof Equipment
-     */
     'is_weapon'?: boolean;
-    /**
-     * 
-     * @type {number}
-     * @memberof Equipment
-     */
     'level'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof Equipment
-     */
     'pods'?: number;
-    /**
-     * 
-     * @type {Images}
-     * @memberof Equipment
-     */
     'image_urls'?: Images;
-    /**
-     * 
-     * @type {Array<Effect>}
-     * @memberof Equipment
-     */
     'effects'?: Array<Effect> | null;
-    /**
-     * 
-     * @type {ConditionNode}
-     * @memberof Equipment
-     */
     'conditions'?: ConditionNode | null;
-    /**
-     * 
-     * @type {Array<Recipe>}
-     * @memberof Equipment
-     */
     'recipe'?: Array<Recipe> | null;
-    /**
-     * 
-     * @type {TranslatedId}
-     * @memberof Equipment
-     */
     'parent_set'?: TranslatedId | null;
 }
-/**
- * 
- * @export
- * @interface EquipmentSet
- */
 export interface EquipmentSet {
-    /**
-     * 
-     * @type {number}
-     * @memberof EquipmentSet
-     */
     'ankama_id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof EquipmentSet
-     */
     'name'?: string;
-    /**
-     * 
-     * @type {Array<number>}
-     * @memberof EquipmentSet
-     */
     'equipment_ids'?: Array<number>;
-    /**
-     * 
-     * @type {{ [key: string]: Array<Effect>; }}
-     * @memberof EquipmentSet
-     */
     'effects'?: { [key: string]: Array<Effect>; };
-    /**
-     * 
-     * @type {number}
-     * @memberof EquipmentSet
-     */
     'highest_equipment_level'?: number;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof EquipmentSet
-     */
     'contains_cosmetics'?: boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof EquipmentSet
-     */
     'contains_cosmetics_only'?: boolean;
 }
-/**
- * 
- * @export
- * @interface GameSearch
- */
 export interface GameSearch {
-    /**
-     * 
-     * @type {number}
-     * @memberof GameSearch
-     */
     'ankama_id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof GameSearch
-     */
     'name'?: string;
-    /**
-     * 
-     * @type {GameSearchType}
-     * @memberof GameSearch
-     */
     'type'?: GameSearchType;
-    /**
-     * 
-     * @type {GameSearchItem}
-     * @memberof GameSearch
-     */
     'item_fields'?: GameSearchItem;
 }
-/**
- * 
- * @export
- * @interface GameSearchItem
- */
 export interface GameSearchItem {
-    /**
-     * 
-     * @type {GameSearchType}
-     * @memberof GameSearchItem
-     */
     'type'?: GameSearchType;
-    /**
-     * 
-     * @type {number}
-     * @memberof GameSearchItem
-     */
     'level'?: number | null;
-    /**
-     * 
-     * @type {Images}
-     * @memberof GameSearchItem
-     */
     'image_urls'?: Images;
 }
-/**
- * 
- * @export
- * @interface GameSearchType
- */
 export interface GameSearchType {
-    /**
-     * 
-     * @type {string}
-     * @memberof GameSearchType
-     */
     'name_id'?: string;
 }
-/**
- * 
- * @export
- * @interface GetMetaAlmanaxBonuses200ResponseInner
- */
 export interface GetMetaAlmanaxBonuses200ResponseInner {
-    /**
-     * 
-     * @type {string}
-     * @memberof GetMetaAlmanaxBonuses200ResponseInner
-     */
     'id'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof GetMetaAlmanaxBonuses200ResponseInner
-     */
     'name'?: string;
 }
-/**
- * 
- * @export
- * @interface GetMetaWebhooksTwitter200Response
- */
 export interface GetMetaWebhooksTwitter200Response {
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof GetMetaWebhooksTwitter200Response
-     */
     'subscriptions'?: Array<string>;
 }
 /**
  * All images except icon are rendered in the background which can take some time (up to hours if all data is completely generated from scratch). Because of this, they can be null if they are not yet rendered.
- * @export
- * @interface Images
  */
 export interface Images {
     /**
      * 64x64 px, always available
-     * @type {string}
-     * @memberof Images
      */
     'icon'?: string;
     /**
      * around 2x the resolution of icon
-     * @type {string}
-     * @memberof Images
      */
     'sd'?: string | null;
     /**
      * around 2x the resolution of sd
-     * @type {string}
-     * @memberof Images
      */
     'hq'?: string | null;
     /**
      * around 2x the resolution of hd
-     * @type {string}
-     * @memberof Images
      */
     'hd'?: string | null;
 }
-/**
- * 
- * @export
- * @interface ItemSubtype
- */
 export interface ItemSubtype {
-    /**
-     * 
-     * @type {number}
-     * @memberof ItemSubtype
-     */
     'ankama_id'?: number;
     /**
      * unique
-     * @type {string}
-     * @memberof ItemSubtype
      */
     'name_id'?: string;
 }
-/**
- * 
- * @export
- * @interface ListEquipmentSet
- */
 export interface ListEquipmentSet {
-    /**
-     * 
-     * @type {number}
-     * @memberof ListEquipmentSet
-     */
     'ankama_id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof ListEquipmentSet
-     */
     'name'?: string;
     /**
      * amount
-     * @type {number}
-     * @memberof ListEquipmentSet
      */
     'items'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof ListEquipmentSet
-     */
     'level'?: number;
-    /**
-     * 
-     * @type {{ [key: string]: Array<Effect>; }}
-     * @memberof ListEquipmentSet
-     */
     'effects'?: { [key: string]: Array<Effect>; };
-    /**
-     * 
-     * @type {Array<number>}
-     * @memberof ListEquipmentSet
-     */
     'equipment_ids'?: Array<number> | null;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ListEquipmentSet
-     */
     'contains_cosmetics'?: boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ListEquipmentSet
-     */
     'contains_cosmetics_only'?: boolean;
 }
-/**
- * 
- * @export
- * @interface ListEquipmentSets
- */
 export interface ListEquipmentSets {
-    /**
-     * 
-     * @type {PagedLinks}
-     * @memberof ListEquipmentSets
-     */
     '_links'?: PagedLinks;
-    /**
-     * 
-     * @type {Array<ListEquipmentSet>}
-     * @memberof ListEquipmentSets
-     */
     'sets'?: Array<ListEquipmentSet>;
 }
-/**
- * 
- * @export
- * @interface ListItem
- */
 export interface ListItem {
-    /**
-     * 
-     * @type {number}
-     * @memberof ListItem
-     */
     'ankama_id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof ListItem
-     */
     'name'?: string;
-    /**
-     * 
-     * @type {TranslatedId}
-     * @memberof ListItem
-     */
     'type'?: TranslatedId;
-    /**
-     * 
-     * @type {number}
-     * @memberof ListItem
-     */
     'level'?: number;
-    /**
-     * 
-     * @type {Images}
-     * @memberof ListItem
-     */
     'image_urls'?: Images;
-    /**
-     * 
-     * @type {Array<Recipe>}
-     * @memberof ListItem
-     */
     'recipe'?: Array<Recipe> | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof ListItem
-     */
     'description'?: string | null;
-    /**
-     * 
-     * @type {ConditionNode}
-     * @memberof ListItem
-     */
     'conditions'?: ConditionNode | null;
-    /**
-     * 
-     * @type {Array<Effect>}
-     * @memberof ListItem
-     */
     'effects'?: Array<Effect> | null;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ListItem
-     */
     'is_weapon'?: boolean | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof ListItem
-     */
     'pods'?: number | null;
-    /**
-     * 
-     * @type {TranslatedId}
-     * @memberof ListItem
-     */
     'parent_set'?: TranslatedId | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof ListItem
-     */
     'critical_hit_probability'?: number | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof ListItem
-     */
     'critical_hit_bonus'?: number | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof ListItem
-     */
     'max_cast_per_turn'?: number | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof ListItem
-     */
     'ap_cost'?: number | null;
-    /**
-     * 
-     * @type {Range}
-     * @memberof ListItem
-     */
     'range'?: Range;
 }
-/**
- * 
- * @export
- * @interface ListItemGeneral
- */
 export interface ListItemGeneral {
-    /**
-     * 
-     * @type {number}
-     * @memberof ListItemGeneral
-     */
     'ankama_id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof ListItemGeneral
-     */
     'name'?: string;
-    /**
-     * 
-     * @type {TranslatedId}
-     * @memberof ListItemGeneral
-     */
     'type'?: TranslatedId;
-    /**
-     * 
-     * @type {ItemSubtype}
-     * @memberof ListItemGeneral
-     */
     'item_subtype'?: ItemSubtype;
-    /**
-     * 
-     * @type {number}
-     * @memberof ListItemGeneral
-     */
     'level'?: number;
-    /**
-     * 
-     * @type {Images}
-     * @memberof ListItemGeneral
-     */
     'image_urls'?: Images;
 }
-/**
- * 
- * @export
- * @interface ListItems
- */
 export interface ListItems {
-    /**
-     * 
-     * @type {PagedLinks}
-     * @memberof ListItems
-     */
     '_links'?: PagedLinks;
-    /**
-     * 
-     * @type {Array<ListItem>}
-     * @memberof ListItems
-     */
     'items'?: Array<ListItem>;
 }
-/**
- * 
- * @export
- * @interface ListMounts
- */
 export interface ListMounts {
-    /**
-     * 
-     * @type {PagedLinks}
-     * @memberof ListMounts
-     */
     '_links'?: PagedLinks;
-    /**
-     * 
-     * @type {Array<Mount>}
-     * @memberof ListMounts
-     */
     'items'?: Array<Mount>;
 }
-/**
- * 
- * @export
- * @interface ModelError
- */
 export interface ModelError {
     /**
      * HTTP status code
-     * @type {number}
-     * @memberof ModelError
      */
     'status'?: number;
     /**
      * HTTP status as text
-     * @type {string}
-     * @memberof ModelError
      */
     'error'?: string;
     /**
      * API specific error identifier for switch-case handling
-     * @type {string}
-     * @memberof ModelError
      */
     'code'?: string;
     /**
      * General, human-friendly error description
-     * @type {string}
-     * @memberof ModelError
      */
     'message'?: string;
     /**
      * Detailed, human-friendly problem description adopting specific inputs of the request
-     * @type {string}
-     * @memberof ModelError
      */
     'details'?: string;
 }
-/**
- * 
- * @export
- * @interface Mount
- */
 export interface Mount {
-    /**
-     * 
-     * @type {number}
-     * @memberof Mount
-     */
     'ankama_id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof Mount
-     */
     'name'?: string;
-    /**
-     * 
-     * @type {MountFamily}
-     * @memberof Mount
-     */
     'family'?: MountFamily;
-    /**
-     * 
-     * @type {Images}
-     * @memberof Mount
-     */
     'image_urls'?: Images;
-    /**
-     * 
-     * @type {Array<Effect>}
-     * @memberof Mount
-     */
     'effects'?: Array<Effect> | null;
 }
-/**
- * 
- * @export
- * @interface MountFamily
- */
 export interface MountFamily {
-    /**
-     * 
-     * @type {number}
-     * @memberof MountFamily
-     */
     'ankama_id'?: number;
     /**
      * localized name
-     * @type {string}
-     * @memberof MountFamily
      */
     'name'?: string;
 }
-/**
- * 
- * @export
- * @interface PagedLinks
- */
 export interface PagedLinks {
-    /**
-     * 
-     * @type {string}
-     * @memberof PagedLinks
-     */
     'first'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PagedLinks
-     */
     'prev'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PagedLinks
-     */
     'next'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PagedLinks
-     */
     'last'?: string | null;
 }
-/**
- * 
- * @export
- * @interface PutAlmanaxWebhook
- */
 export interface PutAlmanaxWebhook {
     /**
      * from all available bonuses (ids) from /dofus3/meta/{language}/almanax/bonuses. Delete old entries with empty array []. Just null changes nothing.
-     * @type {Array<string>}
-     * @memberof PutAlmanaxWebhook
      */
     'bonus_whitelist'?: Array<string> | null;
     /**
      * from all available bonuses (ids) from /dofus3/meta/{language}/almanax/bonuses. Delete old entries with empty array []. Just null changes nothing.
-     * @type {Array<string>}
-     * @memberof PutAlmanaxWebhook
      */
     'bonus_blacklist'?: Array<string> | null;
     /**
      * Get the available subscriptions with /meta/webhooks/almanax
-     * @type {Array<string>}
-     * @memberof PutAlmanaxWebhook
      */
     'subscriptions'?: Array<string> | null;
-    /**
-     * 
-     * @type {CreateAlmanaxWebhookDailySettings}
-     * @memberof PutAlmanaxWebhook
-     */
     'daily_settings'?: CreateAlmanaxWebhookDailySettings | null;
     /**
      * If false, it will use common local time formats and weekday translations. If true, the format is YYYY-MM-DD.
-     * @type {boolean}
-     * @memberof PutAlmanaxWebhook
      */
     'iso_date'?: boolean | null;
     /**
      * Almanax bonus ids mapped to array of mentions.
-     * @type {{ [key: string]: Array<CreateAlmanaxWebhookMentionsValueInner>; }}
-     * @memberof PutAlmanaxWebhook
      */
     'mentions'?: { [key: string]: Array<CreateAlmanaxWebhookMentionsValueInner>; };
-    /**
-     * 
-     * @type {Set<string>}
-     * @memberof PutAlmanaxWebhook
-     */
     'intervals'?: Set<PutAlmanaxWebhookIntervalsEnum> | null;
     /**
      * When to post the weekly preview at the specified time.
-     * @type {string}
-     * @memberof PutAlmanaxWebhook
      */
     'weekly_weekday'?: PutAlmanaxWebhookWeeklyWeekdayEnum | null;
 }
@@ -1376,236 +536,58 @@ export type PutAlmanaxWebhookWeeklyWeekdayEnum = typeof PutAlmanaxWebhookWeeklyW
 
 /**
  * 
- * @export
- * @interface PutRSSWebhook
  */
 export interface PutRSSWebhook {
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof PutRSSWebhook
-     */
     'whitelist'?: Array<string> | null;
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof PutRSSWebhook
-     */
     'blacklist'?: Array<string> | null;
     /**
      * Get the available subscriptions with /meta/webhooks/rss
-     * @type {Set<string>}
-     * @memberof PutRSSWebhook
      */
     'subscriptions'?: Set<string> | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof PutRSSWebhook
-     */
     'preview_length'?: number | null;
 }
 /**
  * 
- * @export
- * @interface PutTwitterWebhook
  */
 export interface PutTwitterWebhook {
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof PutTwitterWebhook
-     */
     'whitelist'?: Array<string> | null;
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof PutTwitterWebhook
-     */
     'blacklist'?: Array<string> | null;
     /**
      * Get the available subscriptions with /meta/webhooks/twitter
-     * @type {Set<string>}
-     * @memberof PutTwitterWebhook
      */
     'subscriptions'?: Set<string> | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof PutTwitterWebhook
-     */
     'preview_length'?: number | null;
 }
-/**
- * 
- * @export
- * @interface Range
- */
 export interface Range {
-    /**
-     * 
-     * @type {number}
-     * @memberof Range
-     */
     'min'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof Range
-     */
     'max'?: number;
 }
-/**
- * 
- * @export
- * @interface Recipe
- */
 export interface Recipe {
-    /**
-     * 
-     * @type {number}
-     * @memberof Recipe
-     */
     'item_ankama_id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof Recipe
-     */
     'item_subtype'?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof Recipe
-     */
     'quantity'?: number;
 }
-/**
- * 
- * @export
- * @interface Resource
- */
 export interface Resource {
-    /**
-     * 
-     * @type {number}
-     * @memberof Resource
-     */
     'ankama_id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof Resource
-     */
     'name'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Resource
-     */
     'description'?: string;
-    /**
-     * 
-     * @type {TranslatedId}
-     * @memberof Resource
-     */
     'type'?: TranslatedId;
-    /**
-     * 
-     * @type {number}
-     * @memberof Resource
-     */
     'level'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof Resource
-     */
     'pods'?: number;
-    /**
-     * 
-     * @type {Images}
-     * @memberof Resource
-     */
     'image_urls'?: Images;
-    /**
-     * 
-     * @type {Array<Effect>}
-     * @memberof Resource
-     */
     'effects'?: Array<Effect> | null;
-    /**
-     * 
-     * @type {ConditionNode}
-     * @memberof Resource
-     */
     'conditions'?: ConditionNode | null;
-    /**
-     * 
-     * @type {Array<Recipe>}
-     * @memberof Resource
-     */
     'recipe'?: Array<Recipe> | null;
 }
-/**
- * 
- * @export
- * @interface RssWebhook
- */
 export interface RssWebhook {
-    /**
-     * 
-     * @type {string}
-     * @memberof RssWebhook
-     */
     'id'?: string;
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof RssWebhook
-     */
     'whitelist'?: Array<string> | null;
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof RssWebhook
-     */
     'blacklist'?: Array<string> | null;
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof RssWebhook
-     */
     'subscriptions'?: Array<string>;
-    /**
-     * 
-     * @type {string}
-     * @memberof RssWebhook
-     */
     'format'?: RssWebhookFormatEnum;
-    /**
-     * 
-     * @type {number}
-     * @memberof RssWebhook
-     */
     'preview_length'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof RssWebhook
-     */
     'created_at'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof RssWebhook
-     */
     'last_fired_at'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof RssWebhook
-     */
     'updated_at'?: string;
 }
 
@@ -1615,84 +597,25 @@ export const RssWebhookFormatEnum = {
 
 export type RssWebhookFormatEnum = typeof RssWebhookFormatEnum[keyof typeof RssWebhookFormatEnum];
 
-/**
- * 
- * @export
- * @interface TranslatedId
- */
 export interface TranslatedId {
     /**
      * unique
-     * @type {number}
-     * @memberof TranslatedId
      */
     'id'?: number;
     /**
      * localized name
-     * @type {string}
-     * @memberof TranslatedId
      */
     'name'?: string;
 }
-/**
- * 
- * @export
- * @interface TwitterWebhook
- */
 export interface TwitterWebhook {
-    /**
-     * 
-     * @type {string}
-     * @memberof TwitterWebhook
-     */
     'id'?: string;
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof TwitterWebhook
-     */
     'whitelist'?: Array<string> | null;
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof TwitterWebhook
-     */
     'blacklist'?: Array<string> | null;
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof TwitterWebhook
-     */
     'subscriptions'?: Array<string>;
-    /**
-     * 
-     * @type {string}
-     * @memberof TwitterWebhook
-     */
     'format'?: TwitterWebhookFormatEnum;
-    /**
-     * 
-     * @type {number}
-     * @memberof TwitterWebhook
-     */
     'preview_length'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof TwitterWebhook
-     */
     'created_at'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof TwitterWebhook
-     */
     'last_fired_at'?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof TwitterWebhook
-     */
     'updated_at'?: string;
 }
 
@@ -1702,144 +625,36 @@ export const TwitterWebhookFormatEnum = {
 
 export type TwitterWebhookFormatEnum = typeof TwitterWebhookFormatEnum[keyof typeof TwitterWebhookFormatEnum];
 
-/**
- * 
- * @export
- * @interface Version
- */
 export interface Version {
-    /**
-     * 
-     * @type {string}
-     * @memberof Version
-     */
     'version'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Version
-     */
     'release'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Version
-     */
     'update_stamp'?: string;
 }
-/**
- * 
- * @export
- * @interface Weapon
- */
 export interface Weapon {
-    /**
-     * 
-     * @type {number}
-     * @memberof Weapon
-     */
     'ankama_id'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof Weapon
-     */
     'name'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Weapon
-     */
     'description'?: string;
-    /**
-     * 
-     * @type {TranslatedId}
-     * @memberof Weapon
-     */
     'type'?: TranslatedId;
     /**
      * always true when the item is a weapon. Many fields are now available. Always check for this flag first when getting single equipment items.
-     * @type {boolean}
-     * @memberof Weapon
      */
     'is_weapon'?: boolean;
-    /**
-     * 
-     * @type {number}
-     * @memberof Weapon
-     */
     'level'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof Weapon
-     */
     'pods'?: number;
-    /**
-     * 
-     * @type {Images}
-     * @memberof Weapon
-     */
     'image_urls'?: Images;
-    /**
-     * 
-     * @type {Array<Effect>}
-     * @memberof Weapon
-     */
     'effects'?: Array<Effect> | null;
-    /**
-     * 
-     * @type {ConditionNode}
-     * @memberof Weapon
-     */
     'conditions'?: ConditionNode | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof Weapon
-     */
     'critical_hit_probability'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof Weapon
-     */
     'critical_hit_bonus'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof Weapon
-     */
     'max_cast_per_turn'?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof Weapon
-     */
     'ap_cost'?: number;
-    /**
-     * 
-     * @type {Range}
-     * @memberof Weapon
-     */
     'range'?: Range;
-    /**
-     * 
-     * @type {Array<Recipe>}
-     * @memberof Weapon
-     */
     'recipe'?: Array<Recipe> | null;
-    /**
-     * 
-     * @type {TranslatedId}
-     * @memberof Weapon
-     */
     'parent_set'?: TranslatedId | null;
 }
 
 /**
  * AlmanaxApi - axios parameter creator
- * @export
  */
 export const AlmanaxApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -1875,8 +690,8 @@ export const AlmanaxApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['level'] = level;
             }
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -1943,8 +758,8 @@ export const AlmanaxApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['level'] = level;
             }
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -1959,7 +774,6 @@ export const AlmanaxApiAxiosParamCreator = function (configuration?: Configurati
 
 /**
  * AlmanaxApi - functional programming interface
- * @export
  */
 export const AlmanaxApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = AlmanaxApiAxiosParamCreator(configuration)
@@ -2003,7 +817,6 @@ export const AlmanaxApiFp = function(configuration?: Configuration) {
 
 /**
  * AlmanaxApi - factory interface
- * @export
  */
 export const AlmanaxApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = AlmanaxApiFp(configuration)
@@ -2041,9 +854,6 @@ export const AlmanaxApiFactory = function (configuration?: Configuration, basePa
 
 /**
  * AlmanaxApi - object-oriented interface
- * @export
- * @class AlmanaxApi
- * @extends {BaseAPI}
  */
 export class AlmanaxApi extends BaseAPI {
     /**
@@ -2054,7 +864,6 @@ export class AlmanaxApi extends BaseAPI {
      * @param {number} [level] character level for the reward_xp field
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof AlmanaxApi
      */
     public getAlmanaxDate(language: GetAlmanaxDateLanguageEnum, date: string, level?: number, options?: RawAxiosRequestConfig) {
         return AlmanaxApiFp(this.configuration).getAlmanaxDate(language, date, level, options).then((request) => request(this.axios, this.basePath));
@@ -2072,16 +881,12 @@ export class AlmanaxApi extends BaseAPI {
      * @param {number} [level] character level for the reward_xp field
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof AlmanaxApi
      */
     public getAlmanaxRange(language: GetAlmanaxRangeLanguageEnum, filterBonusType?: string, rangeFrom?: string, rangeTo?: string, rangeSize?: number, timezone?: string, level?: number, options?: RawAxiosRequestConfig) {
         return AlmanaxApiFp(this.configuration).getAlmanaxRange(language, filterBonusType, rangeFrom, rangeTo, rangeSize, timezone, level, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
-/**
- * @export
- */
 export const GetAlmanaxDateLanguageEnum = {
     En: 'en',
     Fr: 'fr',
@@ -2090,9 +895,6 @@ export const GetAlmanaxDateLanguageEnum = {
     Pt: 'pt'
 } as const;
 export type GetAlmanaxDateLanguageEnum = typeof GetAlmanaxDateLanguageEnum[keyof typeof GetAlmanaxDateLanguageEnum];
-/**
- * @export
- */
 export const GetAlmanaxRangeLanguageEnum = {
     En: 'en',
     Fr: 'fr',
@@ -2105,7 +907,6 @@ export type GetAlmanaxRangeLanguageEnum = typeof GetAlmanaxRangeLanguageEnum[key
 
 /**
  * ConsumablesApi - axios parameter creator
- * @export
  */
 export const ConsumablesApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -2157,8 +958,8 @@ export const ConsumablesApiAxiosParamCreator = function (configuration?: Configu
                 localVarQueryParameter['filter[type.name_id]'] = Array.from(filterTypeNameId).join(COLLECTION_FORMATS.csv);
             }
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             if (acceptEncoding != null) {
                 localVarHeaderParameter['Accept-Encoding'] = String(acceptEncoding);
             }
@@ -2233,8 +1034,8 @@ export const ConsumablesApiAxiosParamCreator = function (configuration?: Configu
                 localVarQueryParameter['filter[type.name_id]'] = Array.from(filterTypeNameId).join(COLLECTION_FORMATS.csv);
             }
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -2298,8 +1099,8 @@ export const ConsumablesApiAxiosParamCreator = function (configuration?: Configu
                 localVarQueryParameter['filter[type.name_id]'] = Array.from(filterTypeNameId).join(COLLECTION_FORMATS.csv);
             }
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -2340,8 +1141,8 @@ export const ConsumablesApiAxiosParamCreator = function (configuration?: Configu
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -2356,7 +1157,6 @@ export const ConsumablesApiAxiosParamCreator = function (configuration?: Configu
 
 /**
  * ConsumablesApi - functional programming interface
- * @export
  */
 export const ConsumablesApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = ConsumablesApiAxiosParamCreator(configuration)
@@ -2440,7 +1240,6 @@ export const ConsumablesApiFp = function(configuration?: Configuration) {
 
 /**
  * ConsumablesApi - factory interface
- * @export
  */
 export const ConsumablesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = ConsumablesApiFp(configuration)
@@ -2512,9 +1311,6 @@ export const ConsumablesApiFactory = function (configuration?: Configuration, ba
 
 /**
  * ConsumablesApi - object-oriented interface
- * @export
- * @class ConsumablesApi
- * @extends {BaseAPI}
  */
 export class ConsumablesApi extends BaseAPI {
     /**
@@ -2529,7 +1325,6 @@ export class ConsumablesApi extends BaseAPI {
      * @param {Set<string>} [filterTypeNameId] multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ConsumablesApi
      */
     public getAllItemsConsumablesList(language: GetAllItemsConsumablesListLanguageEnum, game: GetAllItemsConsumablesListGameEnum, sortLevel?: GetAllItemsConsumablesListSortLevelEnum, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsConsumablesListAcceptEncodingEnum, filterTypeNameId?: Set<string>, options?: RawAxiosRequestConfig) {
         return ConsumablesApiFp(this.configuration).getAllItemsConsumablesList(language, game, sortLevel, filterMinLevel, filterMaxLevel, acceptEncoding, filterTypeNameId, options).then((request) => request(this.axios, this.basePath));
@@ -2549,7 +1344,6 @@ export class ConsumablesApi extends BaseAPI {
      * @param {Set<string>} [filterTypeNameId] multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ConsumablesApi
      */
     public getItemsConsumablesList(language: GetItemsConsumablesListLanguageEnum, game: GetItemsConsumablesListGameEnum, sortLevel?: GetItemsConsumablesListSortLevelEnum, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsConsumablesListFieldsItemEnum>, filterTypeNameId?: Set<string>, options?: RawAxiosRequestConfig) {
         return ConsumablesApiFp(this.configuration).getItemsConsumablesList(language, game, sortLevel, filterMinLevel, filterMaxLevel, pageSize, pageNumber, fieldsItem, filterTypeNameId, options).then((request) => request(this.axios, this.basePath));
@@ -2567,7 +1361,6 @@ export class ConsumablesApi extends BaseAPI {
      * @param {Set<string>} [filterTypeNameId] multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ConsumablesApi
      */
     public getItemsConsumablesSearch(language: GetItemsConsumablesSearchLanguageEnum, game: GetItemsConsumablesSearchGameEnum, query: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, filterTypeNameId?: Set<string>, options?: RawAxiosRequestConfig) {
         return ConsumablesApiFp(this.configuration).getItemsConsumablesSearch(language, game, query, filterMinLevel, filterMaxLevel, limit, filterTypeNameId, options).then((request) => request(this.axios, this.basePath));
@@ -2581,16 +1374,12 @@ export class ConsumablesApi extends BaseAPI {
      * @param {GetItemsConsumablesSingleGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ConsumablesApi
      */
     public getItemsConsumablesSingle(language: GetItemsConsumablesSingleLanguageEnum, ankamaId: number, game: GetItemsConsumablesSingleGameEnum, options?: RawAxiosRequestConfig) {
         return ConsumablesApiFp(this.configuration).getItemsConsumablesSingle(language, ankamaId, game, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
-/**
- * @export
- */
 export const GetAllItemsConsumablesListLanguageEnum = {
     En: 'en',
     Fr: 'fr',
@@ -2599,32 +1388,20 @@ export const GetAllItemsConsumablesListLanguageEnum = {
     Pt: 'pt'
 } as const;
 export type GetAllItemsConsumablesListLanguageEnum = typeof GetAllItemsConsumablesListLanguageEnum[keyof typeof GetAllItemsConsumablesListLanguageEnum];
-/**
- * @export
- */
 export const GetAllItemsConsumablesListGameEnum = {
     Dofus3: 'dofus3',
     Dofus3beta: 'dofus3beta'
 } as const;
 export type GetAllItemsConsumablesListGameEnum = typeof GetAllItemsConsumablesListGameEnum[keyof typeof GetAllItemsConsumablesListGameEnum];
-/**
- * @export
- */
 export const GetAllItemsConsumablesListSortLevelEnum = {
     Asc: 'asc',
     Desc: 'desc'
 } as const;
 export type GetAllItemsConsumablesListSortLevelEnum = typeof GetAllItemsConsumablesListSortLevelEnum[keyof typeof GetAllItemsConsumablesListSortLevelEnum];
-/**
- * @export
- */
 export const GetAllItemsConsumablesListAcceptEncodingEnum = {
     Gzip: 'gzip'
 } as const;
 export type GetAllItemsConsumablesListAcceptEncodingEnum = typeof GetAllItemsConsumablesListAcceptEncodingEnum[keyof typeof GetAllItemsConsumablesListAcceptEncodingEnum];
-/**
- * @export
- */
 export const GetItemsConsumablesListLanguageEnum = {
     En: 'en',
     Fr: 'fr',
@@ -2633,25 +1410,16 @@ export const GetItemsConsumablesListLanguageEnum = {
     Pt: 'pt'
 } as const;
 export type GetItemsConsumablesListLanguageEnum = typeof GetItemsConsumablesListLanguageEnum[keyof typeof GetItemsConsumablesListLanguageEnum];
-/**
- * @export
- */
 export const GetItemsConsumablesListGameEnum = {
     Dofus3: 'dofus3',
     Dofus3beta: 'dofus3beta'
 } as const;
 export type GetItemsConsumablesListGameEnum = typeof GetItemsConsumablesListGameEnum[keyof typeof GetItemsConsumablesListGameEnum];
-/**
- * @export
- */
 export const GetItemsConsumablesListSortLevelEnum = {
     Asc: 'asc',
     Desc: 'desc'
 } as const;
 export type GetItemsConsumablesListSortLevelEnum = typeof GetItemsConsumablesListSortLevelEnum[keyof typeof GetItemsConsumablesListSortLevelEnum];
-/**
- * @export
- */
 export const GetItemsConsumablesListFieldsItemEnum = {
     Recipe: 'recipe',
     Description: 'description',
@@ -2659,9 +1427,6 @@ export const GetItemsConsumablesListFieldsItemEnum = {
     Effects: 'effects'
 } as const;
 export type GetItemsConsumablesListFieldsItemEnum = typeof GetItemsConsumablesListFieldsItemEnum[keyof typeof GetItemsConsumablesListFieldsItemEnum];
-/**
- * @export
- */
 export const GetItemsConsumablesSearchLanguageEnum = {
     En: 'en',
     Fr: 'fr',
@@ -2670,17 +1435,11 @@ export const GetItemsConsumablesSearchLanguageEnum = {
     Pt: 'pt'
 } as const;
 export type GetItemsConsumablesSearchLanguageEnum = typeof GetItemsConsumablesSearchLanguageEnum[keyof typeof GetItemsConsumablesSearchLanguageEnum];
-/**
- * @export
- */
 export const GetItemsConsumablesSearchGameEnum = {
     Dofus3: 'dofus3',
     Dofus3beta: 'dofus3beta'
 } as const;
 export type GetItemsConsumablesSearchGameEnum = typeof GetItemsConsumablesSearchGameEnum[keyof typeof GetItemsConsumablesSearchGameEnum];
-/**
- * @export
- */
 export const GetItemsConsumablesSingleLanguageEnum = {
     En: 'en',
     Fr: 'fr',
@@ -2689,9 +1448,6 @@ export const GetItemsConsumablesSingleLanguageEnum = {
     Pt: 'pt'
 } as const;
 export type GetItemsConsumablesSingleLanguageEnum = typeof GetItemsConsumablesSingleLanguageEnum[keyof typeof GetItemsConsumablesSingleLanguageEnum];
-/**
- * @export
- */
 export const GetItemsConsumablesSingleGameEnum = {
     Dofus3: 'dofus3',
     Dofus3beta: 'dofus3beta'
@@ -2701,7 +1457,6 @@ export type GetItemsConsumablesSingleGameEnum = typeof GetItemsConsumablesSingle
 
 /**
  * CosmeticsApi - axios parameter creator
- * @export
  */
 export const CosmeticsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -2753,8 +1508,8 @@ export const CosmeticsApiAxiosParamCreator = function (configuration?: Configura
                 localVarQueryParameter['filter[type.name_id]'] = Array.from(filterTypeNameId).join(COLLECTION_FORMATS.csv);
             }
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             if (acceptEncoding != null) {
                 localVarHeaderParameter['Accept-Encoding'] = String(acceptEncoding);
             }
@@ -2829,8 +1584,8 @@ export const CosmeticsApiAxiosParamCreator = function (configuration?: Configura
                 localVarQueryParameter['filter[type.name_id]'] = Array.from(filterTypeNameId).join(COLLECTION_FORMATS.csv);
             }
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -2894,8 +1649,8 @@ export const CosmeticsApiAxiosParamCreator = function (configuration?: Configura
                 localVarQueryParameter['filter[type.name_id]'] = Array.from(filterTypeNameId).join(COLLECTION_FORMATS.csv);
             }
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -2936,8 +1691,8 @@ export const CosmeticsApiAxiosParamCreator = function (configuration?: Configura
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -2952,7 +1707,6 @@ export const CosmeticsApiAxiosParamCreator = function (configuration?: Configura
 
 /**
  * CosmeticsApi - functional programming interface
- * @export
  */
 export const CosmeticsApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = CosmeticsApiAxiosParamCreator(configuration)
@@ -3036,7 +1790,6 @@ export const CosmeticsApiFp = function(configuration?: Configuration) {
 
 /**
  * CosmeticsApi - factory interface
- * @export
  */
 export const CosmeticsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = CosmeticsApiFp(configuration)
@@ -3108,9 +1861,6 @@ export const CosmeticsApiFactory = function (configuration?: Configuration, base
 
 /**
  * CosmeticsApi - object-oriented interface
- * @export
- * @class CosmeticsApi
- * @extends {BaseAPI}
  */
 export class CosmeticsApi extends BaseAPI {
     /**
@@ -3125,7 +1875,6 @@ export class CosmeticsApi extends BaseAPI {
      * @param {Set<string>} [filterTypeNameId] multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof CosmeticsApi
      */
     public getAllCosmeticsList(language: GetAllCosmeticsListLanguageEnum, game: GetAllCosmeticsListGameEnum, sortLevel?: GetAllCosmeticsListSortLevelEnum, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllCosmeticsListAcceptEncodingEnum, filterTypeNameId?: Set<string>, options?: RawAxiosRequestConfig) {
         return CosmeticsApiFp(this.configuration).getAllCosmeticsList(language, game, sortLevel, filterMinLevel, filterMaxLevel, acceptEncoding, filterTypeNameId, options).then((request) => request(this.axios, this.basePath));
@@ -3145,7 +1894,6 @@ export class CosmeticsApi extends BaseAPI {
      * @param {Set<string>} [filterTypeNameId] multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof CosmeticsApi
      */
     public getCosmeticsList(language: GetCosmeticsListLanguageEnum, game: GetCosmeticsListGameEnum, sortLevel?: GetCosmeticsListSortLevelEnum, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetCosmeticsListFieldsItemEnum>, filterTypeNameId?: Set<string>, options?: RawAxiosRequestConfig) {
         return CosmeticsApiFp(this.configuration).getCosmeticsList(language, game, sortLevel, filterMinLevel, filterMaxLevel, pageSize, pageNumber, fieldsItem, filterTypeNameId, options).then((request) => request(this.axios, this.basePath));
@@ -3163,7 +1911,6 @@ export class CosmeticsApi extends BaseAPI {
      * @param {Set<string>} [filterTypeNameId] multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof CosmeticsApi
      */
     public getCosmeticsSearch(language: GetCosmeticsSearchLanguageEnum, game: GetCosmeticsSearchGameEnum, query: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, filterTypeNameId?: Set<string>, options?: RawAxiosRequestConfig) {
         return CosmeticsApiFp(this.configuration).getCosmeticsSearch(language, game, query, filterMinLevel, filterMaxLevel, limit, filterTypeNameId, options).then((request) => request(this.axios, this.basePath));
@@ -3177,16 +1924,12 @@ export class CosmeticsApi extends BaseAPI {
      * @param {GetCosmeticsSingleGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof CosmeticsApi
      */
     public getCosmeticsSingle(language: GetCosmeticsSingleLanguageEnum, ankamaId: number, game: GetCosmeticsSingleGameEnum, options?: RawAxiosRequestConfig) {
         return CosmeticsApiFp(this.configuration).getCosmeticsSingle(language, ankamaId, game, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
-/**
- * @export
- */
 export const GetAllCosmeticsListLanguageEnum = {
     En: 'en',
     Fr: 'fr',
@@ -3195,32 +1938,20 @@ export const GetAllCosmeticsListLanguageEnum = {
     Pt: 'pt'
 } as const;
 export type GetAllCosmeticsListLanguageEnum = typeof GetAllCosmeticsListLanguageEnum[keyof typeof GetAllCosmeticsListLanguageEnum];
-/**
- * @export
- */
 export const GetAllCosmeticsListGameEnum = {
     Dofus3: 'dofus3',
     Dofus3beta: 'dofus3beta'
 } as const;
 export type GetAllCosmeticsListGameEnum = typeof GetAllCosmeticsListGameEnum[keyof typeof GetAllCosmeticsListGameEnum];
-/**
- * @export
- */
 export const GetAllCosmeticsListSortLevelEnum = {
     Asc: 'asc',
     Desc: 'desc'
 } as const;
 export type GetAllCosmeticsListSortLevelEnum = typeof GetAllCosmeticsListSortLevelEnum[keyof typeof GetAllCosmeticsListSortLevelEnum];
-/**
- * @export
- */
 export const GetAllCosmeticsListAcceptEncodingEnum = {
     Gzip: 'gzip'
 } as const;
 export type GetAllCosmeticsListAcceptEncodingEnum = typeof GetAllCosmeticsListAcceptEncodingEnum[keyof typeof GetAllCosmeticsListAcceptEncodingEnum];
-/**
- * @export
- */
 export const GetCosmeticsListLanguageEnum = {
     En: 'en',
     Fr: 'fr',
@@ -3229,25 +1960,16 @@ export const GetCosmeticsListLanguageEnum = {
     Pt: 'pt'
 } as const;
 export type GetCosmeticsListLanguageEnum = typeof GetCosmeticsListLanguageEnum[keyof typeof GetCosmeticsListLanguageEnum];
-/**
- * @export
- */
 export const GetCosmeticsListGameEnum = {
     Dofus3: 'dofus3',
     Dofus3beta: 'dofus3beta'
 } as const;
 export type GetCosmeticsListGameEnum = typeof GetCosmeticsListGameEnum[keyof typeof GetCosmeticsListGameEnum];
-/**
- * @export
- */
 export const GetCosmeticsListSortLevelEnum = {
     Asc: 'asc',
     Desc: 'desc'
 } as const;
 export type GetCosmeticsListSortLevelEnum = typeof GetCosmeticsListSortLevelEnum[keyof typeof GetCosmeticsListSortLevelEnum];
-/**
- * @export
- */
 export const GetCosmeticsListFieldsItemEnum = {
     Recipe: 'recipe',
     Description: 'description',
@@ -3263,9 +1985,6 @@ export const GetCosmeticsListFieldsItemEnum = {
     Range: 'range'
 } as const;
 export type GetCosmeticsListFieldsItemEnum = typeof GetCosmeticsListFieldsItemEnum[keyof typeof GetCosmeticsListFieldsItemEnum];
-/**
- * @export
- */
 export const GetCosmeticsSearchLanguageEnum = {
     En: 'en',
     Fr: 'fr',
@@ -3274,17 +1993,11 @@ export const GetCosmeticsSearchLanguageEnum = {
     Pt: 'pt'
 } as const;
 export type GetCosmeticsSearchLanguageEnum = typeof GetCosmeticsSearchLanguageEnum[keyof typeof GetCosmeticsSearchLanguageEnum];
-/**
- * @export
- */
 export const GetCosmeticsSearchGameEnum = {
     Dofus3: 'dofus3',
     Dofus3beta: 'dofus3beta'
 } as const;
 export type GetCosmeticsSearchGameEnum = typeof GetCosmeticsSearchGameEnum[keyof typeof GetCosmeticsSearchGameEnum];
-/**
- * @export
- */
 export const GetCosmeticsSingleLanguageEnum = {
     En: 'en',
     Fr: 'fr',
@@ -3293,9 +2006,6 @@ export const GetCosmeticsSingleLanguageEnum = {
     Pt: 'pt'
 } as const;
 export type GetCosmeticsSingleLanguageEnum = typeof GetCosmeticsSingleLanguageEnum[keyof typeof GetCosmeticsSingleLanguageEnum];
-/**
- * @export
- */
 export const GetCosmeticsSingleGameEnum = {
     Dofus3: 'dofus3',
     Dofus3beta: 'dofus3beta'
@@ -3305,7 +2015,6 @@ export type GetCosmeticsSingleGameEnum = typeof GetCosmeticsSingleGameEnum[keyof
 
 /**
  * EquipmentApi - axios parameter creator
- * @export
  */
 export const EquipmentApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -3357,8 +2066,8 @@ export const EquipmentApiAxiosParamCreator = function (configuration?: Configura
                 localVarQueryParameter['filter[type.name_id]'] = Array.from(filterTypeNameId).join(COLLECTION_FORMATS.csv);
             }
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             if (acceptEncoding != null) {
                 localVarHeaderParameter['Accept-Encoding'] = String(acceptEncoding);
             }
@@ -3433,8 +2142,8 @@ export const EquipmentApiAxiosParamCreator = function (configuration?: Configura
                 localVarQueryParameter['filter[type.name_id]'] = Array.from(filterTypeNameId).join(COLLECTION_FORMATS.csv);
             }
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -3498,8 +2207,8 @@ export const EquipmentApiAxiosParamCreator = function (configuration?: Configura
                 localVarQueryParameter['filter[type.name_id]'] = Array.from(filterTypeNameId).join(COLLECTION_FORMATS.csv);
             }
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -3540,8 +2249,8 @@ export const EquipmentApiAxiosParamCreator = function (configuration?: Configura
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -3556,7 +2265,6 @@ export const EquipmentApiAxiosParamCreator = function (configuration?: Configura
 
 /**
  * EquipmentApi - functional programming interface
- * @export
  */
 export const EquipmentApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = EquipmentApiAxiosParamCreator(configuration)
@@ -3640,7 +2348,6 @@ export const EquipmentApiFp = function(configuration?: Configuration) {
 
 /**
  * EquipmentApi - factory interface
- * @export
  */
 export const EquipmentApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = EquipmentApiFp(configuration)
@@ -3712,9 +2419,6 @@ export const EquipmentApiFactory = function (configuration?: Configuration, base
 
 /**
  * EquipmentApi - object-oriented interface
- * @export
- * @class EquipmentApi
- * @extends {BaseAPI}
  */
 export class EquipmentApi extends BaseAPI {
     /**
@@ -3729,7 +2433,6 @@ export class EquipmentApi extends BaseAPI {
      * @param {Set<string>} [filterTypeNameId] multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof EquipmentApi
      */
     public getAllItemsEquipmentList(language: GetAllItemsEquipmentListLanguageEnum, game: GetAllItemsEquipmentListGameEnum, sortLevel?: GetAllItemsEquipmentListSortLevelEnum, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsEquipmentListAcceptEncodingEnum, filterTypeNameId?: Set<string>, options?: RawAxiosRequestConfig) {
         return EquipmentApiFp(this.configuration).getAllItemsEquipmentList(language, game, sortLevel, filterMinLevel, filterMaxLevel, acceptEncoding, filterTypeNameId, options).then((request) => request(this.axios, this.basePath));
@@ -3749,7 +2452,6 @@ export class EquipmentApi extends BaseAPI {
      * @param {Set<string>} [filterTypeNameId] multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof EquipmentApi
      */
     public getItemsEquipmentList(language: GetItemsEquipmentListLanguageEnum, game: GetItemsEquipmentListGameEnum, sortLevel?: GetItemsEquipmentListSortLevelEnum, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsEquipmentListFieldsItemEnum>, filterTypeNameId?: Set<string>, options?: RawAxiosRequestConfig) {
         return EquipmentApiFp(this.configuration).getItemsEquipmentList(language, game, sortLevel, filterMinLevel, filterMaxLevel, pageSize, pageNumber, fieldsItem, filterTypeNameId, options).then((request) => request(this.axios, this.basePath));
@@ -3767,7 +2469,6 @@ export class EquipmentApi extends BaseAPI {
      * @param {Set<string>} [filterTypeNameId] multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof EquipmentApi
      */
     public getItemsEquipmentSearch(language: GetItemsEquipmentSearchLanguageEnum, game: GetItemsEquipmentSearchGameEnum, query: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, filterTypeNameId?: Set<string>, options?: RawAxiosRequestConfig) {
         return EquipmentApiFp(this.configuration).getItemsEquipmentSearch(language, game, query, filterMinLevel, filterMaxLevel, limit, filterTypeNameId, options).then((request) => request(this.axios, this.basePath));
@@ -3781,16 +2482,12 @@ export class EquipmentApi extends BaseAPI {
      * @param {GetItemsEquipmentSingleGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof EquipmentApi
      */
     public getItemsEquipmentSingle(language: GetItemsEquipmentSingleLanguageEnum, ankamaId: number, game: GetItemsEquipmentSingleGameEnum, options?: RawAxiosRequestConfig) {
         return EquipmentApiFp(this.configuration).getItemsEquipmentSingle(language, ankamaId, game, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
-/**
- * @export
- */
 export const GetAllItemsEquipmentListLanguageEnum = {
     En: 'en',
     Fr: 'fr',
@@ -3799,32 +2496,20 @@ export const GetAllItemsEquipmentListLanguageEnum = {
     Pt: 'pt'
 } as const;
 export type GetAllItemsEquipmentListLanguageEnum = typeof GetAllItemsEquipmentListLanguageEnum[keyof typeof GetAllItemsEquipmentListLanguageEnum];
-/**
- * @export
- */
 export const GetAllItemsEquipmentListGameEnum = {
     Dofus3: 'dofus3',
     Dofus3beta: 'dofus3beta'
 } as const;
 export type GetAllItemsEquipmentListGameEnum = typeof GetAllItemsEquipmentListGameEnum[keyof typeof GetAllItemsEquipmentListGameEnum];
-/**
- * @export
- */
 export const GetAllItemsEquipmentListSortLevelEnum = {
     Asc: 'asc',
     Desc: 'desc'
 } as const;
 export type GetAllItemsEquipmentListSortLevelEnum = typeof GetAllItemsEquipmentListSortLevelEnum[keyof typeof GetAllItemsEquipmentListSortLevelEnum];
-/**
- * @export
- */
 export const GetAllItemsEquipmentListAcceptEncodingEnum = {
     Gzip: 'gzip'
 } as const;
 export type GetAllItemsEquipmentListAcceptEncodingEnum = typeof GetAllItemsEquipmentListAcceptEncodingEnum[keyof typeof GetAllItemsEquipmentListAcceptEncodingEnum];
-/**
- * @export
- */
 export const GetItemsEquipmentListLanguageEnum = {
     En: 'en',
     Fr: 'fr',
@@ -3833,25 +2518,16 @@ export const GetItemsEquipmentListLanguageEnum = {
     Pt: 'pt'
 } as const;
 export type GetItemsEquipmentListLanguageEnum = typeof GetItemsEquipmentListLanguageEnum[keyof typeof GetItemsEquipmentListLanguageEnum];
-/**
- * @export
- */
 export const GetItemsEquipmentListGameEnum = {
     Dofus3: 'dofus3',
     Dofus3beta: 'dofus3beta'
 } as const;
 export type GetItemsEquipmentListGameEnum = typeof GetItemsEquipmentListGameEnum[keyof typeof GetItemsEquipmentListGameEnum];
-/**
- * @export
- */
 export const GetItemsEquipmentListSortLevelEnum = {
     Asc: 'asc',
     Desc: 'desc'
 } as const;
 export type GetItemsEquipmentListSortLevelEnum = typeof GetItemsEquipmentListSortLevelEnum[keyof typeof GetItemsEquipmentListSortLevelEnum];
-/**
- * @export
- */
 export const GetItemsEquipmentListFieldsItemEnum = {
     Recipe: 'recipe',
     Description: 'description',
@@ -3867,9 +2543,6 @@ export const GetItemsEquipmentListFieldsItemEnum = {
     Range: 'range'
 } as const;
 export type GetItemsEquipmentListFieldsItemEnum = typeof GetItemsEquipmentListFieldsItemEnum[keyof typeof GetItemsEquipmentListFieldsItemEnum];
-/**
- * @export
- */
 export const GetItemsEquipmentSearchLanguageEnum = {
     En: 'en',
     Fr: 'fr',
@@ -3878,17 +2551,11 @@ export const GetItemsEquipmentSearchLanguageEnum = {
     Pt: 'pt'
 } as const;
 export type GetItemsEquipmentSearchLanguageEnum = typeof GetItemsEquipmentSearchLanguageEnum[keyof typeof GetItemsEquipmentSearchLanguageEnum];
-/**
- * @export
- */
 export const GetItemsEquipmentSearchGameEnum = {
     Dofus3: 'dofus3',
     Dofus3beta: 'dofus3beta'
 } as const;
 export type GetItemsEquipmentSearchGameEnum = typeof GetItemsEquipmentSearchGameEnum[keyof typeof GetItemsEquipmentSearchGameEnum];
-/**
- * @export
- */
 export const GetItemsEquipmentSingleLanguageEnum = {
     En: 'en',
     Fr: 'fr',
@@ -3897,9 +2564,6 @@ export const GetItemsEquipmentSingleLanguageEnum = {
     Pt: 'pt'
 } as const;
 export type GetItemsEquipmentSingleLanguageEnum = typeof GetItemsEquipmentSingleLanguageEnum[keyof typeof GetItemsEquipmentSingleLanguageEnum];
-/**
- * @export
- */
 export const GetItemsEquipmentSingleGameEnum = {
     Dofus3: 'dofus3',
     Dofus3beta: 'dofus3beta'
@@ -3909,7 +2573,6 @@ export type GetItemsEquipmentSingleGameEnum = typeof GetItemsEquipmentSingleGame
 
 /**
  * GameApi - axios parameter creator
- * @export
  */
 export const GameApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -3967,8 +2630,8 @@ export const GameApiAxiosParamCreator = function (configuration?: Configuration)
                 localVarQueryParameter['filter[type.name_id]'] = Array.from(filterTypeNameId).join(COLLECTION_FORMATS.csv);
             }
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -4032,8 +2695,8 @@ export const GameApiAxiosParamCreator = function (configuration?: Configuration)
                 localVarQueryParameter['filter[type.name_id]'] = Array.from(filterTypeNameId).join(COLLECTION_FORMATS.csv);
             }
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -4048,7 +2711,6 @@ export const GameApiAxiosParamCreator = function (configuration?: Configuration)
 
 /**
  * GameApi - functional programming interface
- * @export
  */
 export const GameApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = GameApiAxiosParamCreator(configuration)
@@ -4096,7 +2758,6 @@ export const GameApiFp = function(configuration?: Configuration) {
 
 /**
  * GameApi - factory interface
- * @export
  */
 export const GameApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = GameApiFp(configuration)
@@ -4138,9 +2799,6 @@ export const GameApiFactory = function (configuration?: Configuration, basePath?
 
 /**
  * GameApi - object-oriented interface
- * @export
- * @class GameApi
- * @extends {BaseAPI}
  */
 export class GameApi extends BaseAPI {
     /**
@@ -4155,7 +2813,6 @@ export class GameApi extends BaseAPI {
      * @param {Set<string>} [filterTypeNameId] multi-filter results with the english item type name, including \&quot;mount\&quot; and \&quot;set\&quot; from filter[search_index]. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof GameApi
      */
     public getGameSearch(language: GetGameSearchLanguageEnum, game: GetGameSearchGameEnum, query: string, filterSearchIndex?: Set<GetGameSearchFilterSearchIndexEnum>, limit?: number, fieldsItem?: Set<GetGameSearchFieldsItemEnum>, filterTypeNameId?: Set<string>, options?: RawAxiosRequestConfig) {
         return GameApiFp(this.configuration).getGameSearch(language, game, query, filterSearchIndex, limit, fieldsItem, filterTypeNameId, options).then((request) => request(this.axios, this.basePath));
@@ -4173,16 +2830,12 @@ export class GameApi extends BaseAPI {
      * @param {Set<string>} [filterTypeNameId] multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof GameApi
      */
     public getItemsAllSearch(language: GetItemsAllSearchLanguageEnum, game: GetItemsAllSearchGameEnum, query: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, filterTypeNameId?: Set<string>, options?: RawAxiosRequestConfig) {
         return GameApiFp(this.configuration).getItemsAllSearch(language, game, query, filterMinLevel, filterMaxLevel, limit, filterTypeNameId, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
-/**
- * @export
- */
 export const GetGameSearchLanguageEnum = {
     En: 'en',
     Fr: 'fr',
@@ -4191,17 +2844,11 @@ export const GetGameSearchLanguageEnum = {
     Pt: 'pt'
 } as const;
 export type GetGameSearchLanguageEnum = typeof GetGameSearchLanguageEnum[keyof typeof GetGameSearchLanguageEnum];
-/**
- * @export
- */
 export const GetGameSearchGameEnum = {
     Dofus3: 'dofus3',
     Dofus3beta: 'dofus3beta'
 } as const;
 export type GetGameSearchGameEnum = typeof GetGameSearchGameEnum[keyof typeof GetGameSearchGameEnum];
-/**
- * @export
- */
 export const GetGameSearchFilterSearchIndexEnum = {
     ItemsConsumables: 'items-consumables',
     ItemsCosmetics: 'items-cosmetics',
@@ -4212,18 +2859,12 @@ export const GetGameSearchFilterSearchIndexEnum = {
     Sets: 'sets'
 } as const;
 export type GetGameSearchFilterSearchIndexEnum = typeof GetGameSearchFilterSearchIndexEnum[keyof typeof GetGameSearchFilterSearchIndexEnum];
-/**
- * @export
- */
 export const GetGameSearchFieldsItemEnum = {
     Level: 'level',
     ImageUrls: 'image_urls',
     Type: 'type'
 } as const;
 export type GetGameSearchFieldsItemEnum = typeof GetGameSearchFieldsItemEnum[keyof typeof GetGameSearchFieldsItemEnum];
-/**
- * @export
- */
 export const GetItemsAllSearchLanguageEnum = {
     En: 'en',
     Fr: 'fr',
@@ -4232,9 +2873,6 @@ export const GetItemsAllSearchLanguageEnum = {
     Pt: 'pt'
 } as const;
 export type GetItemsAllSearchLanguageEnum = typeof GetItemsAllSearchLanguageEnum[keyof typeof GetItemsAllSearchLanguageEnum];
-/**
- * @export
- */
 export const GetItemsAllSearchGameEnum = {
     Dofus3: 'dofus3',
     Dofus3beta: 'dofus3beta'
@@ -4244,7 +2882,6 @@ export type GetItemsAllSearchGameEnum = typeof GetItemsAllSearchGameEnum[keyof t
 
 /**
  * MetaApi - axios parameter creator
- * @export
  */
 export const MetaApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -4271,8 +2908,8 @@ export const MetaApiAxiosParamCreator = function (configuration?: Configuration)
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -4305,8 +2942,8 @@ export const MetaApiAxiosParamCreator = function (configuration?: Configuration)
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -4339,8 +2976,8 @@ export const MetaApiAxiosParamCreator = function (configuration?: Configuration)
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -4385,8 +3022,8 @@ export const MetaApiAxiosParamCreator = function (configuration?: Configuration)
                 localVarQueryParameter['limit'] = limit;
             }
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -4419,8 +3056,8 @@ export const MetaApiAxiosParamCreator = function (configuration?: Configuration)
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -4453,8 +3090,8 @@ export const MetaApiAxiosParamCreator = function (configuration?: Configuration)
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -4469,7 +3106,6 @@ export const MetaApiAxiosParamCreator = function (configuration?: Configuration)
 
 /**
  * MetaApi - functional programming interface
- * @export
  */
 export const MetaApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = MetaApiAxiosParamCreator(configuration)
@@ -4559,7 +3195,6 @@ export const MetaApiFp = function(configuration?: Configuration) {
 
 /**
  * MetaApi - factory interface
- * @export
  */
 export const MetaApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = MetaApiFp(configuration)
@@ -4631,9 +3266,6 @@ export const MetaApiFactory = function (configuration?: Configuration, basePath?
 
 /**
  * MetaApi - object-oriented interface
- * @export
- * @class MetaApi
- * @extends {BaseAPI}
  */
 export class MetaApi extends BaseAPI {
     /**
@@ -4642,7 +3274,6 @@ export class MetaApi extends BaseAPI {
      * @param {GetGameSearchTypesGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof MetaApi
      */
     public getGameSearchTypes(game: GetGameSearchTypesGameEnum, options?: RawAxiosRequestConfig) {
         return MetaApiFp(this.configuration).getGameSearchTypes(game, options).then((request) => request(this.axios, this.basePath));
@@ -4654,7 +3285,6 @@ export class MetaApi extends BaseAPI {
      * @param {GetItemTypesGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof MetaApi
      */
     public getItemTypes(game: GetItemTypesGameEnum, options?: RawAxiosRequestConfig) {
         return MetaApiFp(this.configuration).getItemTypes(game, options).then((request) => request(this.axios, this.basePath));
@@ -4666,7 +3296,6 @@ export class MetaApi extends BaseAPI {
      * @param {GetMetaAlmanaxBonusesLanguageEnum} language a valid language code
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof MetaApi
      */
     public getMetaAlmanaxBonuses(language: GetMetaAlmanaxBonusesLanguageEnum, options?: RawAxiosRequestConfig) {
         return MetaApiFp(this.configuration).getMetaAlmanaxBonuses(language, options).then((request) => request(this.axios, this.basePath));
@@ -4680,7 +3309,6 @@ export class MetaApi extends BaseAPI {
      * @param {number} [limit] maximum number of returned results
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof MetaApi
      */
     public getMetaAlmanaxBonusesSearch(language: GetMetaAlmanaxBonusesSearchLanguageEnum, query: string, limit?: number, options?: RawAxiosRequestConfig) {
         return MetaApiFp(this.configuration).getMetaAlmanaxBonusesSearch(language, query, limit, options).then((request) => request(this.axios, this.basePath));
@@ -4692,7 +3320,6 @@ export class MetaApi extends BaseAPI {
      * @param {GetMetaElementsGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof MetaApi
      */
     public getMetaElements(game: GetMetaElementsGameEnum, options?: RawAxiosRequestConfig) {
         return MetaApiFp(this.configuration).getMetaElements(game, options).then((request) => request(this.axios, this.basePath));
@@ -4704,32 +3331,22 @@ export class MetaApi extends BaseAPI {
      * @param {GetMetaVersionGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof MetaApi
      */
     public getMetaVersion(game: GetMetaVersionGameEnum, options?: RawAxiosRequestConfig) {
         return MetaApiFp(this.configuration).getMetaVersion(game, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
-/**
- * @export
- */
 export const GetGameSearchTypesGameEnum = {
     Dofus3: 'dofus3',
     Dofus3beta: 'dofus3beta'
 } as const;
 export type GetGameSearchTypesGameEnum = typeof GetGameSearchTypesGameEnum[keyof typeof GetGameSearchTypesGameEnum];
-/**
- * @export
- */
 export const GetItemTypesGameEnum = {
     Dofus3: 'dofus3',
     Dofus3beta: 'dofus3beta'
 } as const;
 export type GetItemTypesGameEnum = typeof GetItemTypesGameEnum[keyof typeof GetItemTypesGameEnum];
-/**
- * @export
- */
 export const GetMetaAlmanaxBonusesLanguageEnum = {
     En: 'en',
     Fr: 'fr',
@@ -4738,9 +3355,6 @@ export const GetMetaAlmanaxBonusesLanguageEnum = {
     Pt: 'pt'
 } as const;
 export type GetMetaAlmanaxBonusesLanguageEnum = typeof GetMetaAlmanaxBonusesLanguageEnum[keyof typeof GetMetaAlmanaxBonusesLanguageEnum];
-/**
- * @export
- */
 export const GetMetaAlmanaxBonusesSearchLanguageEnum = {
     En: 'en',
     Fr: 'fr',
@@ -4749,17 +3363,11 @@ export const GetMetaAlmanaxBonusesSearchLanguageEnum = {
     Pt: 'pt'
 } as const;
 export type GetMetaAlmanaxBonusesSearchLanguageEnum = typeof GetMetaAlmanaxBonusesSearchLanguageEnum[keyof typeof GetMetaAlmanaxBonusesSearchLanguageEnum];
-/**
- * @export
- */
 export const GetMetaElementsGameEnum = {
     Dofus3: 'dofus3',
     Dofus3beta: 'dofus3beta'
 } as const;
 export type GetMetaElementsGameEnum = typeof GetMetaElementsGameEnum[keyof typeof GetMetaElementsGameEnum];
-/**
- * @export
- */
 export const GetMetaVersionGameEnum = {
     Dofus3: 'dofus3',
     Dofus3beta: 'dofus3beta'
@@ -4769,7 +3377,6 @@ export type GetMetaVersionGameEnum = typeof GetMetaVersionGameEnum[keyof typeof 
 
 /**
  * MountsApi - axios parameter creator
- * @export
  */
 export const MountsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -4811,8 +3418,8 @@ export const MountsApiAxiosParamCreator = function (configuration?: Configuratio
                 localVarQueryParameter['filter[family.id]'] = filterFamilyId;
             }
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             if (acceptEncoding != null) {
                 localVarHeaderParameter['Accept-Encoding'] = String(acceptEncoding);
             }
@@ -4877,8 +3484,8 @@ export const MountsApiAxiosParamCreator = function (configuration?: Configuratio
                 localVarQueryParameter['filter[family.id]'] = filterFamilyId;
             }
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -4937,8 +3544,8 @@ export const MountsApiAxiosParamCreator = function (configuration?: Configuratio
                 localVarQueryParameter['filter[family.id]'] = filterFamilyId;
             }
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -4979,8 +3586,8 @@ export const MountsApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -4995,7 +3602,6 @@ export const MountsApiAxiosParamCreator = function (configuration?: Configuratio
 
 /**
  * MountsApi - functional programming interface
- * @export
  */
 export const MountsApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = MountsApiAxiosParamCreator(configuration)
@@ -5074,7 +3680,6 @@ export const MountsApiFp = function(configuration?: Configuration) {
 
 /**
  * MountsApi - factory interface
- * @export
  */
 export const MountsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = MountsApiFp(configuration)
@@ -5141,9 +3746,6 @@ export const MountsApiFactory = function (configuration?: Configuration, basePat
 
 /**
  * MountsApi - object-oriented interface
- * @export
- * @class MountsApi
- * @extends {BaseAPI}
  */
 export class MountsApi extends BaseAPI {
     /**
@@ -5156,7 +3758,6 @@ export class MountsApi extends BaseAPI {
      * @param {number} [filterFamilyId] only results with the unique family id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof MountsApi
      */
     public getAllMountsList(language: GetAllMountsListLanguageEnum, game: GetAllMountsListGameEnum, filterFamilyName?: string, acceptEncoding?: GetAllMountsListAcceptEncodingEnum, filterFamilyId?: number, options?: RawAxiosRequestConfig) {
         return MountsApiFp(this.configuration).getAllMountsList(language, game, filterFamilyName, acceptEncoding, filterFamilyId, options).then((request) => request(this.axios, this.basePath));
@@ -5174,7 +3775,6 @@ export class MountsApi extends BaseAPI {
      * @param {number} [filterFamilyId] only results with the unique family id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof MountsApi
      */
     public getMountsList(language: GetMountsListLanguageEnum, game: GetMountsListGameEnum, filterFamilyName?: string, pageSize?: number, pageNumber?: number, fieldsMount?: Set<GetMountsListFieldsMountEnum>, filterFamilyId?: number, options?: RawAxiosRequestConfig) {
         return MountsApiFp(this.configuration).getMountsList(language, game, filterFamilyName, pageSize, pageNumber, fieldsMount, filterFamilyId, options).then((request) => request(this.axios, this.basePath));
@@ -5191,7 +3791,6 @@ export class MountsApi extends BaseAPI {
      * @param {number} [filterFamilyId] only results with the unique family id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof MountsApi
      */
     public getMountsSearch(language: GetMountsSearchLanguageEnum, game: GetMountsSearchGameEnum, query: string, filterFamilyName?: string, limit?: number, filterFamilyId?: number, options?: RawAxiosRequestConfig) {
         return MountsApiFp(this.configuration).getMountsSearch(language, game, query, filterFamilyName, limit, filterFamilyId, options).then((request) => request(this.axios, this.basePath));
@@ -5205,16 +3804,12 @@ export class MountsApi extends BaseAPI {
      * @param {GetMountsSingleGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof MountsApi
      */
     public getMountsSingle(language: GetMountsSingleLanguageEnum, ankamaId: number, game: GetMountsSingleGameEnum, options?: RawAxiosRequestConfig) {
         return MountsApiFp(this.configuration).getMountsSingle(language, ankamaId, game, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
-/**
- * @export
- */
 export const GetAllMountsListLanguageEnum = {
     En: 'en',
     Fr: 'fr',
@@ -5223,24 +3818,15 @@ export const GetAllMountsListLanguageEnum = {
     Pt: 'pt'
 } as const;
 export type GetAllMountsListLanguageEnum = typeof GetAllMountsListLanguageEnum[keyof typeof GetAllMountsListLanguageEnum];
-/**
- * @export
- */
 export const GetAllMountsListGameEnum = {
     Dofus3: 'dofus3',
     Dofus3beta: 'dofus3beta'
 } as const;
 export type GetAllMountsListGameEnum = typeof GetAllMountsListGameEnum[keyof typeof GetAllMountsListGameEnum];
-/**
- * @export
- */
 export const GetAllMountsListAcceptEncodingEnum = {
     Gzip: 'gzip'
 } as const;
 export type GetAllMountsListAcceptEncodingEnum = typeof GetAllMountsListAcceptEncodingEnum[keyof typeof GetAllMountsListAcceptEncodingEnum];
-/**
- * @export
- */
 export const GetMountsListLanguageEnum = {
     En: 'en',
     Fr: 'fr',
@@ -5249,24 +3835,15 @@ export const GetMountsListLanguageEnum = {
     Pt: 'pt'
 } as const;
 export type GetMountsListLanguageEnum = typeof GetMountsListLanguageEnum[keyof typeof GetMountsListLanguageEnum];
-/**
- * @export
- */
 export const GetMountsListGameEnum = {
     Dofus3: 'dofus3',
     Dofus3beta: 'dofus3beta'
 } as const;
 export type GetMountsListGameEnum = typeof GetMountsListGameEnum[keyof typeof GetMountsListGameEnum];
-/**
- * @export
- */
 export const GetMountsListFieldsMountEnum = {
     Effects: 'effects'
 } as const;
 export type GetMountsListFieldsMountEnum = typeof GetMountsListFieldsMountEnum[keyof typeof GetMountsListFieldsMountEnum];
-/**
- * @export
- */
 export const GetMountsSearchLanguageEnum = {
     En: 'en',
     Fr: 'fr',
@@ -5275,17 +3852,11 @@ export const GetMountsSearchLanguageEnum = {
     Pt: 'pt'
 } as const;
 export type GetMountsSearchLanguageEnum = typeof GetMountsSearchLanguageEnum[keyof typeof GetMountsSearchLanguageEnum];
-/**
- * @export
- */
 export const GetMountsSearchGameEnum = {
     Dofus3: 'dofus3',
     Dofus3beta: 'dofus3beta'
 } as const;
 export type GetMountsSearchGameEnum = typeof GetMountsSearchGameEnum[keyof typeof GetMountsSearchGameEnum];
-/**
- * @export
- */
 export const GetMountsSingleLanguageEnum = {
     En: 'en',
     Fr: 'fr',
@@ -5294,9 +3865,6 @@ export const GetMountsSingleLanguageEnum = {
     Pt: 'pt'
 } as const;
 export type GetMountsSingleLanguageEnum = typeof GetMountsSingleLanguageEnum[keyof typeof GetMountsSingleLanguageEnum];
-/**
- * @export
- */
 export const GetMountsSingleGameEnum = {
     Dofus3: 'dofus3',
     Dofus3beta: 'dofus3beta'
@@ -5306,7 +3874,6 @@ export type GetMountsSingleGameEnum = typeof GetMountsSingleGameEnum[keyof typeo
 
 /**
  * QuestItemsApi - axios parameter creator
- * @export
  */
 export const QuestItemsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -5358,8 +3925,8 @@ export const QuestItemsApiAxiosParamCreator = function (configuration?: Configur
                 localVarQueryParameter['filter[type.name_id]'] = Array.from(filterTypeNameId).join(COLLECTION_FORMATS.csv);
             }
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             if (acceptEncoding != null) {
                 localVarHeaderParameter['Accept-Encoding'] = String(acceptEncoding);
             }
@@ -5403,8 +3970,8 @@ export const QuestItemsApiAxiosParamCreator = function (configuration?: Configur
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -5476,8 +4043,8 @@ export const QuestItemsApiAxiosParamCreator = function (configuration?: Configur
                 localVarQueryParameter['filter[type.name_id]'] = Array.from(filterTypeNameId).join(COLLECTION_FORMATS.csv);
             }
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -5541,8 +4108,8 @@ export const QuestItemsApiAxiosParamCreator = function (configuration?: Configur
                 localVarQueryParameter['filter[type.name_id]'] = Array.from(filterTypeNameId).join(COLLECTION_FORMATS.csv);
             }
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -5557,7 +4124,6 @@ export const QuestItemsApiAxiosParamCreator = function (configuration?: Configur
 
 /**
  * QuestItemsApi - functional programming interface
- * @export
  */
 export const QuestItemsApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = QuestItemsApiAxiosParamCreator(configuration)
@@ -5641,7 +4207,6 @@ export const QuestItemsApiFp = function(configuration?: Configuration) {
 
 /**
  * QuestItemsApi - factory interface
- * @export
  */
 export const QuestItemsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = QuestItemsApiFp(configuration)
@@ -5713,9 +4278,6 @@ export const QuestItemsApiFactory = function (configuration?: Configuration, bas
 
 /**
  * QuestItemsApi - object-oriented interface
- * @export
- * @class QuestItemsApi
- * @extends {BaseAPI}
  */
 export class QuestItemsApi extends BaseAPI {
     /**
@@ -5730,7 +4292,6 @@ export class QuestItemsApi extends BaseAPI {
      * @param {Set<string>} [filterTypeNameId] multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof QuestItemsApi
      */
     public getAllItemsQuestList(language: GetAllItemsQuestListLanguageEnum, game: GetAllItemsQuestListGameEnum, sortLevel?: GetAllItemsQuestListSortLevelEnum, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsQuestListAcceptEncodingEnum, filterTypeNameId?: Set<string>, options?: RawAxiosRequestConfig) {
         return QuestItemsApiFp(this.configuration).getAllItemsQuestList(language, game, sortLevel, filterMinLevel, filterMaxLevel, acceptEncoding, filterTypeNameId, options).then((request) => request(this.axios, this.basePath));
@@ -5744,7 +4305,6 @@ export class QuestItemsApi extends BaseAPI {
      * @param {GetItemQuestSingleGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof QuestItemsApi
      */
     public getItemQuestSingle(language: GetItemQuestSingleLanguageEnum, ankamaId: number, game: GetItemQuestSingleGameEnum, options?: RawAxiosRequestConfig) {
         return QuestItemsApiFp(this.configuration).getItemQuestSingle(language, ankamaId, game, options).then((request) => request(this.axios, this.basePath));
@@ -5764,7 +4324,6 @@ export class QuestItemsApi extends BaseAPI {
      * @param {Set<string>} [filterTypeNameId] multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof QuestItemsApi
      */
     public getItemsQuestList(language: GetItemsQuestListLanguageEnum, game: GetItemsQuestListGameEnum, sortLevel?: GetItemsQuestListSortLevelEnum, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsQuestListFieldsItemEnum>, filterTypeNameId?: Set<string>, options?: RawAxiosRequestConfig) {
         return QuestItemsApiFp(this.configuration).getItemsQuestList(language, game, sortLevel, filterMinLevel, filterMaxLevel, pageSize, pageNumber, fieldsItem, filterTypeNameId, options).then((request) => request(this.axios, this.basePath));
@@ -5782,16 +4341,12 @@ export class QuestItemsApi extends BaseAPI {
      * @param {Set<string>} [filterTypeNameId] multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof QuestItemsApi
      */
     public getItemsQuestSearch(language: GetItemsQuestSearchLanguageEnum, game: GetItemsQuestSearchGameEnum, query: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, filterTypeNameId?: Set<string>, options?: RawAxiosRequestConfig) {
         return QuestItemsApiFp(this.configuration).getItemsQuestSearch(language, game, query, filterMinLevel, filterMaxLevel, limit, filterTypeNameId, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
-/**
- * @export
- */
 export const GetAllItemsQuestListLanguageEnum = {
     En: 'en',
     Fr: 'fr',
@@ -5800,32 +4355,20 @@ export const GetAllItemsQuestListLanguageEnum = {
     Pt: 'pt'
 } as const;
 export type GetAllItemsQuestListLanguageEnum = typeof GetAllItemsQuestListLanguageEnum[keyof typeof GetAllItemsQuestListLanguageEnum];
-/**
- * @export
- */
 export const GetAllItemsQuestListGameEnum = {
     Dofus3: 'dofus3',
     Dofus3beta: 'dofus3beta'
 } as const;
 export type GetAllItemsQuestListGameEnum = typeof GetAllItemsQuestListGameEnum[keyof typeof GetAllItemsQuestListGameEnum];
-/**
- * @export
- */
 export const GetAllItemsQuestListSortLevelEnum = {
     Asc: 'asc',
     Desc: 'desc'
 } as const;
 export type GetAllItemsQuestListSortLevelEnum = typeof GetAllItemsQuestListSortLevelEnum[keyof typeof GetAllItemsQuestListSortLevelEnum];
-/**
- * @export
- */
 export const GetAllItemsQuestListAcceptEncodingEnum = {
     Gzip: 'gzip'
 } as const;
 export type GetAllItemsQuestListAcceptEncodingEnum = typeof GetAllItemsQuestListAcceptEncodingEnum[keyof typeof GetAllItemsQuestListAcceptEncodingEnum];
-/**
- * @export
- */
 export const GetItemQuestSingleLanguageEnum = {
     En: 'en',
     Fr: 'fr',
@@ -5834,17 +4377,11 @@ export const GetItemQuestSingleLanguageEnum = {
     Pt: 'pt'
 } as const;
 export type GetItemQuestSingleLanguageEnum = typeof GetItemQuestSingleLanguageEnum[keyof typeof GetItemQuestSingleLanguageEnum];
-/**
- * @export
- */
 export const GetItemQuestSingleGameEnum = {
     Dofus3: 'dofus3',
     Dofus3beta: 'dofus3beta'
 } as const;
 export type GetItemQuestSingleGameEnum = typeof GetItemQuestSingleGameEnum[keyof typeof GetItemQuestSingleGameEnum];
-/**
- * @export
- */
 export const GetItemsQuestListLanguageEnum = {
     En: 'en',
     Fr: 'fr',
@@ -5853,25 +4390,16 @@ export const GetItemsQuestListLanguageEnum = {
     Pt: 'pt'
 } as const;
 export type GetItemsQuestListLanguageEnum = typeof GetItemsQuestListLanguageEnum[keyof typeof GetItemsQuestListLanguageEnum];
-/**
- * @export
- */
 export const GetItemsQuestListGameEnum = {
     Dofus3: 'dofus3',
     Dofus3beta: 'dofus3beta'
 } as const;
 export type GetItemsQuestListGameEnum = typeof GetItemsQuestListGameEnum[keyof typeof GetItemsQuestListGameEnum];
-/**
- * @export
- */
 export const GetItemsQuestListSortLevelEnum = {
     Asc: 'asc',
     Desc: 'desc'
 } as const;
 export type GetItemsQuestListSortLevelEnum = typeof GetItemsQuestListSortLevelEnum[keyof typeof GetItemsQuestListSortLevelEnum];
-/**
- * @export
- */
 export const GetItemsQuestListFieldsItemEnum = {
     Recipe: 'recipe',
     Description: 'description',
@@ -5879,9 +4407,6 @@ export const GetItemsQuestListFieldsItemEnum = {
     Effects: 'effects'
 } as const;
 export type GetItemsQuestListFieldsItemEnum = typeof GetItemsQuestListFieldsItemEnum[keyof typeof GetItemsQuestListFieldsItemEnum];
-/**
- * @export
- */
 export const GetItemsQuestSearchLanguageEnum = {
     En: 'en',
     Fr: 'fr',
@@ -5890,9 +4415,6 @@ export const GetItemsQuestSearchLanguageEnum = {
     Pt: 'pt'
 } as const;
 export type GetItemsQuestSearchLanguageEnum = typeof GetItemsQuestSearchLanguageEnum[keyof typeof GetItemsQuestSearchLanguageEnum];
-/**
- * @export
- */
 export const GetItemsQuestSearchGameEnum = {
     Dofus3: 'dofus3',
     Dofus3beta: 'dofus3beta'
@@ -5902,7 +4424,6 @@ export type GetItemsQuestSearchGameEnum = typeof GetItemsQuestSearchGameEnum[key
 
 /**
  * ResourcesApi - axios parameter creator
- * @export
  */
 export const ResourcesApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -5954,8 +4475,8 @@ export const ResourcesApiAxiosParamCreator = function (configuration?: Configura
                 localVarQueryParameter['filter[type.name_id]'] = Array.from(filterTypeNameId).join(COLLECTION_FORMATS.csv);
             }
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             if (acceptEncoding != null) {
                 localVarHeaderParameter['Accept-Encoding'] = String(acceptEncoding);
             }
@@ -6022,8 +4543,8 @@ export const ResourcesApiAxiosParamCreator = function (configuration?: Configura
                 localVarQueryParameter['filter[type.name_id]'] = Array.from(filterTypeNameId).join(COLLECTION_FORMATS.csv);
             }
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -6095,8 +4616,8 @@ export const ResourcesApiAxiosParamCreator = function (configuration?: Configura
                 localVarQueryParameter['filter[type.name_id]'] = Array.from(filterTypeNameId).join(COLLECTION_FORMATS.csv);
             }
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -6137,8 +4658,8 @@ export const ResourcesApiAxiosParamCreator = function (configuration?: Configura
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -6153,7 +4674,6 @@ export const ResourcesApiAxiosParamCreator = function (configuration?: Configura
 
 /**
  * ResourcesApi - functional programming interface
- * @export
  */
 export const ResourcesApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = ResourcesApiAxiosParamCreator(configuration)
@@ -6237,7 +4757,6 @@ export const ResourcesApiFp = function(configuration?: Configuration) {
 
 /**
  * ResourcesApi - factory interface
- * @export
  */
 export const ResourcesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = ResourcesApiFp(configuration)
@@ -6309,9 +4828,6 @@ export const ResourcesApiFactory = function (configuration?: Configuration, base
 
 /**
  * ResourcesApi - object-oriented interface
- * @export
- * @class ResourcesApi
- * @extends {BaseAPI}
  */
 export class ResourcesApi extends BaseAPI {
     /**
@@ -6326,7 +4842,6 @@ export class ResourcesApi extends BaseAPI {
      * @param {Set<string>} [filterTypeNameId] multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ResourcesApi
      */
     public getAllItemsResourcesList(language: GetAllItemsResourcesListLanguageEnum, game: GetAllItemsResourcesListGameEnum, sortLevel?: GetAllItemsResourcesListSortLevelEnum, filterMinLevel?: number, filterMaxLevel?: number, acceptEncoding?: GetAllItemsResourcesListAcceptEncodingEnum, filterTypeNameId?: Set<string>, options?: RawAxiosRequestConfig) {
         return ResourcesApiFp(this.configuration).getAllItemsResourcesList(language, game, sortLevel, filterMinLevel, filterMaxLevel, acceptEncoding, filterTypeNameId, options).then((request) => request(this.axios, this.basePath));
@@ -6344,7 +4859,6 @@ export class ResourcesApi extends BaseAPI {
      * @param {Set<string>} [filterTypeNameId] multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ResourcesApi
      */
     public getItemsResourceSearch(language: GetItemsResourceSearchLanguageEnum, game: GetItemsResourceSearchGameEnum, query: string, filterMinLevel?: number, filterMaxLevel?: number, limit?: number, filterTypeNameId?: Set<string>, options?: RawAxiosRequestConfig) {
         return ResourcesApiFp(this.configuration).getItemsResourceSearch(language, game, query, filterMinLevel, filterMaxLevel, limit, filterTypeNameId, options).then((request) => request(this.axios, this.basePath));
@@ -6364,7 +4878,6 @@ export class ResourcesApi extends BaseAPI {
      * @param {Set<string>} [filterTypeNameId] multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ResourcesApi
      */
     public getItemsResourcesList(language: GetItemsResourcesListLanguageEnum, game: GetItemsResourcesListGameEnum, sortLevel?: GetItemsResourcesListSortLevelEnum, filterMinLevel?: number, filterMaxLevel?: number, pageSize?: number, pageNumber?: number, fieldsItem?: Set<GetItemsResourcesListFieldsItemEnum>, filterTypeNameId?: Set<string>, options?: RawAxiosRequestConfig) {
         return ResourcesApiFp(this.configuration).getItemsResourcesList(language, game, sortLevel, filterMinLevel, filterMaxLevel, pageSize, pageNumber, fieldsItem, filterTypeNameId, options).then((request) => request(this.axios, this.basePath));
@@ -6378,16 +4891,12 @@ export class ResourcesApi extends BaseAPI {
      * @param {GetItemsResourcesSingleGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ResourcesApi
      */
     public getItemsResourcesSingle(language: GetItemsResourcesSingleLanguageEnum, ankamaId: number, game: GetItemsResourcesSingleGameEnum, options?: RawAxiosRequestConfig) {
         return ResourcesApiFp(this.configuration).getItemsResourcesSingle(language, ankamaId, game, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
-/**
- * @export
- */
 export const GetAllItemsResourcesListLanguageEnum = {
     En: 'en',
     Fr: 'fr',
@@ -6396,32 +4905,20 @@ export const GetAllItemsResourcesListLanguageEnum = {
     Pt: 'pt'
 } as const;
 export type GetAllItemsResourcesListLanguageEnum = typeof GetAllItemsResourcesListLanguageEnum[keyof typeof GetAllItemsResourcesListLanguageEnum];
-/**
- * @export
- */
 export const GetAllItemsResourcesListGameEnum = {
     Dofus3: 'dofus3',
     Dofus3beta: 'dofus3beta'
 } as const;
 export type GetAllItemsResourcesListGameEnum = typeof GetAllItemsResourcesListGameEnum[keyof typeof GetAllItemsResourcesListGameEnum];
-/**
- * @export
- */
 export const GetAllItemsResourcesListSortLevelEnum = {
     Asc: 'asc',
     Desc: 'desc'
 } as const;
 export type GetAllItemsResourcesListSortLevelEnum = typeof GetAllItemsResourcesListSortLevelEnum[keyof typeof GetAllItemsResourcesListSortLevelEnum];
-/**
- * @export
- */
 export const GetAllItemsResourcesListAcceptEncodingEnum = {
     Gzip: 'gzip'
 } as const;
 export type GetAllItemsResourcesListAcceptEncodingEnum = typeof GetAllItemsResourcesListAcceptEncodingEnum[keyof typeof GetAllItemsResourcesListAcceptEncodingEnum];
-/**
- * @export
- */
 export const GetItemsResourceSearchLanguageEnum = {
     En: 'en',
     Fr: 'fr',
@@ -6430,17 +4927,11 @@ export const GetItemsResourceSearchLanguageEnum = {
     Pt: 'pt'
 } as const;
 export type GetItemsResourceSearchLanguageEnum = typeof GetItemsResourceSearchLanguageEnum[keyof typeof GetItemsResourceSearchLanguageEnum];
-/**
- * @export
- */
 export const GetItemsResourceSearchGameEnum = {
     Dofus3: 'dofus3',
     Dofus3beta: 'dofus3beta'
 } as const;
 export type GetItemsResourceSearchGameEnum = typeof GetItemsResourceSearchGameEnum[keyof typeof GetItemsResourceSearchGameEnum];
-/**
- * @export
- */
 export const GetItemsResourcesListLanguageEnum = {
     En: 'en',
     Fr: 'fr',
@@ -6449,25 +4940,16 @@ export const GetItemsResourcesListLanguageEnum = {
     Pt: 'pt'
 } as const;
 export type GetItemsResourcesListLanguageEnum = typeof GetItemsResourcesListLanguageEnum[keyof typeof GetItemsResourcesListLanguageEnum];
-/**
- * @export
- */
 export const GetItemsResourcesListGameEnum = {
     Dofus3: 'dofus3',
     Dofus3beta: 'dofus3beta'
 } as const;
 export type GetItemsResourcesListGameEnum = typeof GetItemsResourcesListGameEnum[keyof typeof GetItemsResourcesListGameEnum];
-/**
- * @export
- */
 export const GetItemsResourcesListSortLevelEnum = {
     Asc: 'asc',
     Desc: 'desc'
 } as const;
 export type GetItemsResourcesListSortLevelEnum = typeof GetItemsResourcesListSortLevelEnum[keyof typeof GetItemsResourcesListSortLevelEnum];
-/**
- * @export
- */
 export const GetItemsResourcesListFieldsItemEnum = {
     Recipe: 'recipe',
     Description: 'description',
@@ -6475,9 +4957,6 @@ export const GetItemsResourcesListFieldsItemEnum = {
     Effects: 'effects'
 } as const;
 export type GetItemsResourcesListFieldsItemEnum = typeof GetItemsResourcesListFieldsItemEnum[keyof typeof GetItemsResourcesListFieldsItemEnum];
-/**
- * @export
- */
 export const GetItemsResourcesSingleLanguageEnum = {
     En: 'en',
     Fr: 'fr',
@@ -6486,9 +4965,6 @@ export const GetItemsResourcesSingleLanguageEnum = {
     Pt: 'pt'
 } as const;
 export type GetItemsResourcesSingleLanguageEnum = typeof GetItemsResourcesSingleLanguageEnum[keyof typeof GetItemsResourcesSingleLanguageEnum];
-/**
- * @export
- */
 export const GetItemsResourcesSingleGameEnum = {
     Dofus3: 'dofus3',
     Dofus3beta: 'dofus3beta'
@@ -6498,7 +4974,6 @@ export type GetItemsResourcesSingleGameEnum = typeof GetItemsResourcesSingleGame
 
 /**
  * SetsApi - axios parameter creator
- * @export
  */
 export const SetsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -6555,8 +5030,8 @@ export const SetsApiAxiosParamCreator = function (configuration?: Configuration)
                 localVarQueryParameter['filter[contains_cosmetics]'] = filterContainsCosmetics;
             }
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             if (acceptEncoding != null) {
                 localVarHeaderParameter['Accept-Encoding'] = String(acceptEncoding);
             }
@@ -6636,8 +5111,8 @@ export const SetsApiAxiosParamCreator = function (configuration?: Configuration)
                 localVarQueryParameter['filter[contains_cosmetics]'] = filterContainsCosmetics;
             }
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -6706,8 +5181,8 @@ export const SetsApiAxiosParamCreator = function (configuration?: Configuration)
                 localVarQueryParameter['filter[contains_cosmetics]'] = filterContainsCosmetics;
             }
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -6748,8 +5223,8 @@ export const SetsApiAxiosParamCreator = function (configuration?: Configuration)
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -6764,7 +5239,6 @@ export const SetsApiAxiosParamCreator = function (configuration?: Configuration)
 
 /**
  * SetsApi - functional programming interface
- * @export
  */
 export const SetsApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = SetsApiAxiosParamCreator(configuration)
@@ -6851,7 +5325,6 @@ export const SetsApiFp = function(configuration?: Configuration) {
 
 /**
  * SetsApi - factory interface
- * @export
  */
 export const SetsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = SetsApiFp(configuration)
@@ -6926,9 +5399,6 @@ export const SetsApiFactory = function (configuration?: Configuration, basePath?
 
 /**
  * SetsApi - object-oriented interface
- * @export
- * @class SetsApi
- * @extends {BaseAPI}
  */
 export class SetsApi extends BaseAPI {
     /**
@@ -6944,7 +5414,6 @@ export class SetsApi extends BaseAPI {
      * @param {boolean} [filterContainsCosmetics] filter sets based on if they got cosmetic items in it.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof SetsApi
      */
     public getAllSetsList(language: GetAllSetsListLanguageEnum, game: GetAllSetsListGameEnum, sortLevel?: GetAllSetsListSortLevelEnum, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, acceptEncoding?: GetAllSetsListAcceptEncodingEnum, filterContainsCosmeticsOnly?: boolean, filterContainsCosmetics?: boolean, options?: RawAxiosRequestConfig) {
         return SetsApiFp(this.configuration).getAllSetsList(language, game, sortLevel, filterMinHighestEquipmentLevel, filterMaxHighestEquipmentLevel, acceptEncoding, filterContainsCosmeticsOnly, filterContainsCosmetics, options).then((request) => request(this.axios, this.basePath));
@@ -6965,7 +5434,6 @@ export class SetsApi extends BaseAPI {
      * @param {boolean} [filterContainsCosmetics] filter sets based on if they got cosmetic items in it.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof SetsApi
      */
     public getSetsList(language: GetSetsListLanguageEnum, game: GetSetsListGameEnum, sortLevel?: GetSetsListSortLevelEnum, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, pageSize?: number, pageNumber?: number, fieldsSet?: Set<GetSetsListFieldsSetEnum>, filterContainsCosmeticsOnly?: boolean, filterContainsCosmetics?: boolean, options?: RawAxiosRequestConfig) {
         return SetsApiFp(this.configuration).getSetsList(language, game, sortLevel, filterMinHighestEquipmentLevel, filterMaxHighestEquipmentLevel, pageSize, pageNumber, fieldsSet, filterContainsCosmeticsOnly, filterContainsCosmetics, options).then((request) => request(this.axios, this.basePath));
@@ -6984,7 +5452,6 @@ export class SetsApi extends BaseAPI {
      * @param {boolean} [filterContainsCosmetics] filter sets based on if they got any cosmetic items in it
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof SetsApi
      */
     public getSetsSearch(language: GetSetsSearchLanguageEnum, game: GetSetsSearchGameEnum, query: string, filterMinHighestEquipmentLevel?: number, filterMaxHighestEquipmentLevel?: number, limit?: number, filterContainsCosmeticsOnly?: boolean, filterContainsCosmetics?: boolean, options?: RawAxiosRequestConfig) {
         return SetsApiFp(this.configuration).getSetsSearch(language, game, query, filterMinHighestEquipmentLevel, filterMaxHighestEquipmentLevel, limit, filterContainsCosmeticsOnly, filterContainsCosmetics, options).then((request) => request(this.axios, this.basePath));
@@ -6998,16 +5465,12 @@ export class SetsApi extends BaseAPI {
      * @param {GetSetsSingleGameEnum} game game main \&#39;dofus3\&#39; or beta channel \&#39;dofus3beta\&#39;
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof SetsApi
      */
     public getSetsSingle(language: GetSetsSingleLanguageEnum, ankamaId: number, game: GetSetsSingleGameEnum, options?: RawAxiosRequestConfig) {
         return SetsApiFp(this.configuration).getSetsSingle(language, ankamaId, game, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
-/**
- * @export
- */
 export const GetAllSetsListLanguageEnum = {
     En: 'en',
     Fr: 'fr',
@@ -7016,32 +5479,20 @@ export const GetAllSetsListLanguageEnum = {
     Pt: 'pt'
 } as const;
 export type GetAllSetsListLanguageEnum = typeof GetAllSetsListLanguageEnum[keyof typeof GetAllSetsListLanguageEnum];
-/**
- * @export
- */
 export const GetAllSetsListGameEnum = {
     Dofus3: 'dofus3',
     Dofus3beta: 'dofus3beta'
 } as const;
 export type GetAllSetsListGameEnum = typeof GetAllSetsListGameEnum[keyof typeof GetAllSetsListGameEnum];
-/**
- * @export
- */
 export const GetAllSetsListSortLevelEnum = {
     Asc: 'asc',
     Desc: 'desc'
 } as const;
 export type GetAllSetsListSortLevelEnum = typeof GetAllSetsListSortLevelEnum[keyof typeof GetAllSetsListSortLevelEnum];
-/**
- * @export
- */
 export const GetAllSetsListAcceptEncodingEnum = {
     Gzip: 'gzip'
 } as const;
 export type GetAllSetsListAcceptEncodingEnum = typeof GetAllSetsListAcceptEncodingEnum[keyof typeof GetAllSetsListAcceptEncodingEnum];
-/**
- * @export
- */
 export const GetSetsListLanguageEnum = {
     En: 'en',
     Fr: 'fr',
@@ -7050,33 +5501,21 @@ export const GetSetsListLanguageEnum = {
     Pt: 'pt'
 } as const;
 export type GetSetsListLanguageEnum = typeof GetSetsListLanguageEnum[keyof typeof GetSetsListLanguageEnum];
-/**
- * @export
- */
 export const GetSetsListGameEnum = {
     Dofus3: 'dofus3',
     Dofus3beta: 'dofus3beta'
 } as const;
 export type GetSetsListGameEnum = typeof GetSetsListGameEnum[keyof typeof GetSetsListGameEnum];
-/**
- * @export
- */
 export const GetSetsListSortLevelEnum = {
     Asc: 'asc',
     Desc: 'desc'
 } as const;
 export type GetSetsListSortLevelEnum = typeof GetSetsListSortLevelEnum[keyof typeof GetSetsListSortLevelEnum];
-/**
- * @export
- */
 export const GetSetsListFieldsSetEnum = {
     Effects: 'effects',
     EquipmentIds: 'equipment_ids'
 } as const;
 export type GetSetsListFieldsSetEnum = typeof GetSetsListFieldsSetEnum[keyof typeof GetSetsListFieldsSetEnum];
-/**
- * @export
- */
 export const GetSetsSearchLanguageEnum = {
     En: 'en',
     Fr: 'fr',
@@ -7085,17 +5524,11 @@ export const GetSetsSearchLanguageEnum = {
     Pt: 'pt'
 } as const;
 export type GetSetsSearchLanguageEnum = typeof GetSetsSearchLanguageEnum[keyof typeof GetSetsSearchLanguageEnum];
-/**
- * @export
- */
 export const GetSetsSearchGameEnum = {
     Dofus3: 'dofus3',
     Dofus3beta: 'dofus3beta'
 } as const;
 export type GetSetsSearchGameEnum = typeof GetSetsSearchGameEnum[keyof typeof GetSetsSearchGameEnum];
-/**
- * @export
- */
 export const GetSetsSingleLanguageEnum = {
     En: 'en',
     Fr: 'fr',
@@ -7104,9 +5537,6 @@ export const GetSetsSingleLanguageEnum = {
     Pt: 'pt'
 } as const;
 export type GetSetsSingleLanguageEnum = typeof GetSetsSingleLanguageEnum[keyof typeof GetSetsSingleLanguageEnum];
-/**
- * @export
- */
 export const GetSetsSingleGameEnum = {
     Dofus3: 'dofus3',
     Dofus3beta: 'dofus3beta'
@@ -7116,7 +5546,6 @@ export type GetSetsSingleGameEnum = typeof GetSetsSingleGameEnum[keyof typeof Ge
 
 /**
  * WebhooksApi - axios parameter creator
- * @export
  */
 export const WebhooksApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
@@ -7144,7 +5573,6 @@ export const WebhooksApiAxiosParamCreator = function (configuration?: Configurat
             const localVarQueryParameter = {} as any;
 
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -7178,7 +5606,6 @@ export const WebhooksApiAxiosParamCreator = function (configuration?: Configurat
             const localVarQueryParameter = {} as any;
 
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -7212,7 +5639,6 @@ export const WebhooksApiAxiosParamCreator = function (configuration?: Configurat
             const localVarQueryParameter = {} as any;
 
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -7241,8 +5667,8 @@ export const WebhooksApiAxiosParamCreator = function (configuration?: Configurat
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -7271,8 +5697,8 @@ export const WebhooksApiAxiosParamCreator = function (configuration?: Configurat
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -7301,8 +5727,8 @@ export const WebhooksApiAxiosParamCreator = function (configuration?: Configurat
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -7335,8 +5761,8 @@ export const WebhooksApiAxiosParamCreator = function (configuration?: Configurat
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -7369,8 +5795,8 @@ export const WebhooksApiAxiosParamCreator = function (configuration?: Configurat
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -7403,8 +5829,8 @@ export const WebhooksApiAxiosParamCreator = function (configuration?: Configurat
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            localVarHeaderParameter['Accept'] = 'application/json';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -7434,8 +5860,6 @@ export const WebhooksApiAxiosParamCreator = function (configuration?: Configurat
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
@@ -7468,8 +5892,6 @@ export const WebhooksApiAxiosParamCreator = function (configuration?: Configurat
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
@@ -7502,8 +5924,6 @@ export const WebhooksApiAxiosParamCreator = function (configuration?: Configurat
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
@@ -7540,9 +5960,8 @@ export const WebhooksApiAxiosParamCreator = function (configuration?: Configurat
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -7578,9 +5997,8 @@ export const WebhooksApiAxiosParamCreator = function (configuration?: Configurat
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -7616,9 +6034,8 @@ export const WebhooksApiAxiosParamCreator = function (configuration?: Configurat
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-
-    
             localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarHeaderParameter['Accept'] = 'application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -7635,7 +6052,6 @@ export const WebhooksApiAxiosParamCreator = function (configuration?: Configurat
 
 /**
  * WebhooksApi - functional programming interface
- * @export
  */
 export const WebhooksApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = WebhooksApiAxiosParamCreator(configuration)
@@ -7840,7 +6256,6 @@ export const WebhooksApiFp = function(configuration?: Configuration) {
 
 /**
  * WebhooksApi - factory interface
- * @export
  */
 export const WebhooksApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     const localVarFp = WebhooksApiFp(configuration)
@@ -8000,9 +6415,6 @@ export const WebhooksApiFactory = function (configuration?: Configuration, baseP
 
 /**
  * WebhooksApi - object-oriented interface
- * @export
- * @class WebhooksApi
- * @extends {BaseAPI}
  */
 export class WebhooksApi extends BaseAPI {
     /**
@@ -8011,7 +6423,6 @@ export class WebhooksApi extends BaseAPI {
      * @param {string} id the ID returned from the API when creating the webhook
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof WebhooksApi
      */
     public deleteWebhooksAlmanaxId(id: string, options?: RawAxiosRequestConfig) {
         return WebhooksApiFp(this.configuration).deleteWebhooksAlmanaxId(id, options).then((request) => request(this.axios, this.basePath));
@@ -8023,7 +6434,6 @@ export class WebhooksApi extends BaseAPI {
      * @param {string} id the ID returned from the API when creating the webhook
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof WebhooksApi
      */
     public deleteWebhooksRssId(id: string, options?: RawAxiosRequestConfig) {
         return WebhooksApiFp(this.configuration).deleteWebhooksRssId(id, options).then((request) => request(this.axios, this.basePath));
@@ -8035,7 +6445,6 @@ export class WebhooksApi extends BaseAPI {
      * @param {string} id the ID returned from the API when creating the webhook
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof WebhooksApi
      */
     public deleteWebhooksTwitterId(id: string, options?: RawAxiosRequestConfig) {
         return WebhooksApiFp(this.configuration).deleteWebhooksTwitterId(id, options).then((request) => request(this.axios, this.basePath));
@@ -8046,7 +6455,6 @@ export class WebhooksApi extends BaseAPI {
      * @summary Get Almanax Hook Metainfo
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof WebhooksApi
      */
     public getMetaWebhooksAlmanax(options?: RawAxiosRequestConfig) {
         return WebhooksApiFp(this.configuration).getMetaWebhooksAlmanax(options).then((request) => request(this.axios, this.basePath));
@@ -8057,7 +6465,6 @@ export class WebhooksApi extends BaseAPI {
      * @summary Get RSS Hook Metainfo
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof WebhooksApi
      */
     public getMetaWebhooksRss(options?: RawAxiosRequestConfig) {
         return WebhooksApiFp(this.configuration).getMetaWebhooksRss(options).then((request) => request(this.axios, this.basePath));
@@ -8068,7 +6475,6 @@ export class WebhooksApi extends BaseAPI {
      * @summary Get Twitter Hook Metainfo
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof WebhooksApi
      */
     public getMetaWebhooksTwitter(options?: RawAxiosRequestConfig) {
         return WebhooksApiFp(this.configuration).getMetaWebhooksTwitter(options).then((request) => request(this.axios, this.basePath));
@@ -8080,7 +6486,6 @@ export class WebhooksApi extends BaseAPI {
      * @param {string} id the ID returned from the API when creating the webhook
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof WebhooksApi
      */
     public getWebhooksAlmanaxId(id: string, options?: RawAxiosRequestConfig) {
         return WebhooksApiFp(this.configuration).getWebhooksAlmanaxId(id, options).then((request) => request(this.axios, this.basePath));
@@ -8092,7 +6497,6 @@ export class WebhooksApi extends BaseAPI {
      * @param {string} id the ID returned from the API when creating the webhook
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof WebhooksApi
      */
     public getWebhooksRssId(id: string, options?: RawAxiosRequestConfig) {
         return WebhooksApiFp(this.configuration).getWebhooksRssId(id, options).then((request) => request(this.axios, this.basePath));
@@ -8104,7 +6508,6 @@ export class WebhooksApi extends BaseAPI {
      * @param {string} id the ID returned from the API when creating the webhook
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof WebhooksApi
      */
     public getWebhooksTwitterId(id: string, options?: RawAxiosRequestConfig) {
         return WebhooksApiFp(this.configuration).getWebhooksTwitterId(id, options).then((request) => request(this.axios, this.basePath));
@@ -8116,7 +6519,6 @@ export class WebhooksApi extends BaseAPI {
      * @param {CreateAlmanaxWebhook} [createAlmanaxWebhook] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof WebhooksApi
      */
     public postWebhooksAlmanax(createAlmanaxWebhook?: CreateAlmanaxWebhook, options?: RawAxiosRequestConfig) {
         return WebhooksApiFp(this.configuration).postWebhooksAlmanax(createAlmanaxWebhook, options).then((request) => request(this.axios, this.basePath));
@@ -8128,7 +6530,6 @@ export class WebhooksApi extends BaseAPI {
      * @param {CreateRSSWebhook} [createRSSWebhook] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof WebhooksApi
      */
     public postWebhooksRss(createRSSWebhook?: CreateRSSWebhook, options?: RawAxiosRequestConfig) {
         return WebhooksApiFp(this.configuration).postWebhooksRss(createRSSWebhook, options).then((request) => request(this.axios, this.basePath));
@@ -8140,7 +6541,6 @@ export class WebhooksApi extends BaseAPI {
      * @param {CreateTwitterWebhook} [createTwitterWebhook] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof WebhooksApi
      */
     public postWebhooksTwitter(createTwitterWebhook?: CreateTwitterWebhook, options?: RawAxiosRequestConfig) {
         return WebhooksApiFp(this.configuration).postWebhooksTwitter(createTwitterWebhook, options).then((request) => request(this.axios, this.basePath));
@@ -8153,7 +6553,6 @@ export class WebhooksApi extends BaseAPI {
      * @param {PutAlmanaxWebhook} [putAlmanaxWebhook] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof WebhooksApi
      */
     public putWebhooksAlmanaxId(id: string, putAlmanaxWebhook?: PutAlmanaxWebhook, options?: RawAxiosRequestConfig) {
         return WebhooksApiFp(this.configuration).putWebhooksAlmanaxId(id, putAlmanaxWebhook, options).then((request) => request(this.axios, this.basePath));
@@ -8166,7 +6565,6 @@ export class WebhooksApi extends BaseAPI {
      * @param {PutRSSWebhook} [putRSSWebhook] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof WebhooksApi
      */
     public putWebhooksRssId(id: string, putRSSWebhook?: PutRSSWebhook, options?: RawAxiosRequestConfig) {
         return WebhooksApiFp(this.configuration).putWebhooksRssId(id, putRSSWebhook, options).then((request) => request(this.axios, this.basePath));
@@ -8179,7 +6577,6 @@ export class WebhooksApi extends BaseAPI {
      * @param {PutTwitterWebhook} [putTwitterWebhook] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof WebhooksApi
      */
     public putWebhooksTwitterId(id: string, putTwitterWebhook?: PutTwitterWebhook, options?: RawAxiosRequestConfig) {
         return WebhooksApiFp(this.configuration).putWebhooksTwitterId(id, putTwitterWebhook, options).then((request) => request(this.axios, this.basePath));
