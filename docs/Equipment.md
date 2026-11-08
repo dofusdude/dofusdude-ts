@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **conditions** | [**ConditionNode**](ConditionNode.md) |  | [optional] [default to undefined]
 **recipe** | [**Array&lt;Recipe&gt;**](Recipe.md) |  | [optional] [default to undefined]
 **parent_set** | [**TranslatedId**](TranslatedId.md) |  | [optional] [default to undefined]
+**combat** | [**WeaponCombat**](WeaponCombat.md) |  | [optional] [default to undefined]
 
 ## Example
 
@@ -36,6 +37,7 @@ const instance: Equipment = {
     conditions,
     recipe,
     parent_set,
+    combat,
 };
 ```
 

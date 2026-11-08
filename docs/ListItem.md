@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **max_cast_per_turn** | **number** |  | [optional] [default to undefined]
 **ap_cost** | **number** |  | [optional] [default to undefined]
 **range** | [**Range**](Range.md) |  | [optional] [default to undefined]
+**combat** | [**WeaponCombat**](WeaponCombat.md) |  | [optional] [default to undefined]
 
 ## Example
 
@@ -46,6 +47,7 @@ const instance: ListItem = {
     max_cast_per_turn,
     ap_cost,
     range,
+    combat,
 };
 ```
 

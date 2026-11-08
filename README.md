@@ -1,4 +1,6 @@
-## dofusdude-ts@1.0.0
+> Beta SDK 1.1.0-beta.1. This SDK provides GET operations only. HTTP QUERY is available in the API and full OpenAPI 3.2 documentation, but is not included in this generated SDK.
+
+## dofusdude-ts@1.1.0-beta.1
 
 This generator creates TypeScript/JavaScript client that utilizes [axios](https://github.com/axios/axios). The generated Node module can be used in the following environments:
 
@@ -36,7 +38,7 @@ navigate to the folder of your consuming project and run one of the following co
 _published:_
 
 ```
-npm install dofusdude-ts@1.0.0 --save
+npm install dofusdude-ts@1.1.0-beta.1 --save
 ```
 
 _unPublished (not recommended):_
@@ -67,6 +69,30 @@ Class | Method | HTTP request | Description
 *EquipmentApi* | [**getItemsEquipmentSingle**](docs/EquipmentApi.md#getitemsequipmentsingle) | **GET** /{game}/v1/{language}/items/equipment/{ankama_id} | Single Equipment
 *GameApi* | [**getGameSearch**](docs/GameApi.md#getgamesearch) | **GET** /{game}/v1/{language}/search | Game Search
 *GameApi* | [**getItemsAllSearch**](docs/GameApi.md#getitemsallsearch) | **GET** /{game}/v1/{language}/items/search | Search All Items
+*GameDataApi* | [**getAllAreas**](docs/GameDataApi.md#getallareas) | **GET** /{game}/v1/{language}/areas/all | Get all areas
+*GameDataApi* | [**getAllClasses**](docs/GameDataApi.md#getallclasses) | **GET** /{game}/v1/{language}/classes/all | Get all classes
+*GameDataApi* | [**getAllMonsters**](docs/GameDataApi.md#getallmonsters) | **GET** /{game}/v1/{language}/monsters/all | Get all monsters
+*GameDataApi* | [**getAllSpells**](docs/GameDataApi.md#getallspells) | **GET** /{game}/v1/{language}/spells/all | Get all spells
+*GameDataApi* | [**getAllSubareas**](docs/GameDataApi.md#getallsubareas) | **GET** /{game}/v1/{language}/subareas/all | Get all subareas
+*GameDataApi* | [**getAllSuperAreas**](docs/GameDataApi.md#getallsuperareas) | **GET** /{game}/v1/{language}/super-areas/all | Get all super-areas
+*GameDataApi* | [**getAreaById**](docs/GameDataApi.md#getareabyid) | **GET** /{game}/v1/{language}/areas/{ankama_id} | Get one area
+*GameDataApi* | [**getAreas**](docs/GameDataApi.md#getareas) | **GET** /{game}/v1/{language}/areas | List areas
+*GameDataApi* | [**getClassById**](docs/GameDataApi.md#getclassbyid) | **GET** /{game}/v1/{language}/classes/{ankama_id} | Get one class
+*GameDataApi* | [**getClasses**](docs/GameDataApi.md#getclasses) | **GET** /{game}/v1/{language}/classes | List classes
+*GameDataApi* | [**getMonsterById**](docs/GameDataApi.md#getmonsterbyid) | **GET** /{game}/v1/{language}/monsters/{ankama_id} | Get one monster
+*GameDataApi* | [**getMonsters**](docs/GameDataApi.md#getmonsters) | **GET** /{game}/v1/{language}/monsters | List monsters
+*GameDataApi* | [**getSpellById**](docs/GameDataApi.md#getspellbyid) | **GET** /{game}/v1/{language}/spells/{ankama_id} | Get one spell
+*GameDataApi* | [**getSpells**](docs/GameDataApi.md#getspells) | **GET** /{game}/v1/{language}/spells | List spells
+*GameDataApi* | [**getSubareaById**](docs/GameDataApi.md#getsubareabyid) | **GET** /{game}/v1/{language}/subareas/{ankama_id} | Get one subarea
+*GameDataApi* | [**getSubareas**](docs/GameDataApi.md#getsubareas) | **GET** /{game}/v1/{language}/subareas | List subareas
+*GameDataApi* | [**getSuperAreaById**](docs/GameDataApi.md#getsuperareabyid) | **GET** /{game}/v1/{language}/super-areas/{ankama_id} | Get one super-area
+*GameDataApi* | [**getSuperAreas**](docs/GameDataApi.md#getsuperareas) | **GET** /{game}/v1/{language}/super-areas | List super-areas
+*GameDataApi* | [**searchAreas**](docs/GameDataApi.md#searchareas) | **GET** /{game}/v1/{language}/areas/search | Search areas
+*GameDataApi* | [**searchClasses**](docs/GameDataApi.md#searchclasses) | **GET** /{game}/v1/{language}/classes/search | Search classes
+*GameDataApi* | [**searchMonsters**](docs/GameDataApi.md#searchmonsters) | **GET** /{game}/v1/{language}/monsters/search | Search monsters
+*GameDataApi* | [**searchSpells**](docs/GameDataApi.md#searchspells) | **GET** /{game}/v1/{language}/spells/search | Search spells
+*GameDataApi* | [**searchSubareas**](docs/GameDataApi.md#searchsubareas) | **GET** /{game}/v1/{language}/subareas/search | Search subareas
+*GameDataApi* | [**searchSuperAreas**](docs/GameDataApi.md#searchsuperareas) | **GET** /{game}/v1/{language}/super-areas/search | Search super-areas
 *MetaApi* | [**getGameSearchTypes**](docs/MetaApi.md#getgamesearchtypes) | **GET** /{game}/v1/meta/search/types | Available Game Search Types
 *MetaApi* | [**getItemTypes**](docs/MetaApi.md#getitemtypes) | **GET** /{game}/v1/meta/items/types | Available Item Types
 *MetaApi* | [**getMetaAlmanaxBonuses**](docs/MetaApi.md#getmetaalmanaxbonuses) | **GET** /dofus3/v1/meta/{language}/almanax/bonuses | Available Almanax Bonuses
@@ -114,6 +140,13 @@ Class | Method | HTTP request | Description
  - [AlmanaxTributeItem](docs/AlmanaxTributeItem.md)
  - [AlmanaxWebhook](docs/AlmanaxWebhook.md)
  - [AlmanaxWebhookDailySettings](docs/AlmanaxWebhookDailySettings.md)
+ - [Class](docs/Class.md)
+ - [ClassAppearance](docs/ClassAppearance.md)
+ - [ClassAppearanceScalePercent](docs/ClassAppearanceScalePercent.md)
+ - [ClassCharacteristicCostsValueInner](docs/ClassCharacteristicCostsValueInner.md)
+ - [ClassLooks](docs/ClassLooks.md)
+ - [CombatCondition](docs/CombatCondition.md)
+ - [CombatReference](docs/CombatReference.md)
  - [Condition](docs/Condition.md)
  - [ConditionLeaf](docs/ConditionLeaf.md)
  - [ConditionNode](docs/ConditionNode.md)
@@ -125,6 +158,10 @@ Class | Method | HTTP request | Description
  - [CreateTwitterWebhook](docs/CreateTwitterWebhook.md)
  - [Effect](docs/Effect.md)
  - [EffectType](docs/EffectType.md)
+ - [EffectZone](docs/EffectZone.md)
+ - [EligibilityNode](docs/EligibilityNode.md)
+ - [EligibilityNodeCondition](docs/EligibilityNodeCondition.md)
+ - [EligibilityNodeConditionElement](docs/EligibilityNodeConditionElement.md)
  - [Equipment](docs/Equipment.md)
  - [EquipmentSet](docs/EquipmentSet.md)
  - [GameSearch](docs/GameSearch.md)
@@ -140,7 +177,23 @@ Class | Method | HTTP request | Description
  - [ListItemGeneral](docs/ListItemGeneral.md)
  - [ListItems](docs/ListItems.md)
  - [ListMounts](docs/ListMounts.md)
+ - [MappedEntityCollection](docs/MappedEntityCollection.md)
+ - [MappedEntityCollectionClassesInner](docs/MappedEntityCollectionClassesInner.md)
+ - [MappedEntityCollectionMonstersInner](docs/MappedEntityCollectionMonstersInner.md)
+ - [MappedEntityCollectionSpellsInner](docs/MappedEntityCollectionSpellsInner.md)
+ - [MappedEntityCollectionSuperAreasInner](docs/MappedEntityCollectionSuperAreasInner.md)
+ - [MappedEntityListEntry](docs/MappedEntityListEntry.md)
  - [ModelError](docs/ModelError.md)
+ - [Monster](docs/Monster.md)
+ - [MonsterDrop](docs/MonsterDrop.md)
+ - [MonsterDropRatesPercentInner](docs/MonsterDropRatesPercentInner.md)
+ - [MonsterGlobalDrop](docs/MonsterGlobalDrop.md)
+ - [MonsterGrade](docs/MonsterGrade.md)
+ - [MonsterGradeSpellsInner](docs/MonsterGradeSpellsInner.md)
+ - [MonsterRace](docs/MonsterRace.md)
+ - [MonsterSpawnLocation](docs/MonsterSpawnLocation.md)
+ - [MonsterSpawnLocationSubareaMapsInner](docs/MonsterSpawnLocationSubareaMapsInner.md)
+ - [MonsterSpellRelationship](docs/MonsterSpellRelationship.md)
  - [Mount](docs/Mount.md)
  - [MountFamily](docs/MountFamily.md)
  - [PagedLinks](docs/PagedLinks.md)
@@ -151,10 +204,21 @@ Class | Method | HTTP request | Description
  - [Recipe](docs/Recipe.md)
  - [Resource](docs/Resource.md)
  - [RssWebhook](docs/RssWebhook.md)
+ - [Spell](docs/Spell.md)
+ - [SpellEffect](docs/SpellEffect.md)
+ - [SpellLevel](docs/SpellLevel.md)
+ - [SpellScriptUsage](docs/SpellScriptUsage.md)
+ - [SpellTrigger](docs/SpellTrigger.md)
+ - [SpellTriggers](docs/SpellTriggers.md)
+ - [TargetMask](docs/TargetMask.md)
+ - [TargetSelector](docs/TargetSelector.md)
  - [TranslatedId](docs/TranslatedId.md)
  - [TwitterWebhook](docs/TwitterWebhook.md)
  - [Version](docs/Version.md)
  - [Weapon](docs/Weapon.md)
+ - [WeaponCombat](docs/WeaponCombat.md)
+ - [WorldArea](docs/WorldArea.md)
+ - [ZoneShape](docs/ZoneShape.md)
 
 
 <a id="documentation-for-authorization"></a>
