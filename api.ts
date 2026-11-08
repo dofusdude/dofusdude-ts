@@ -118,6 +118,9 @@ export interface AlmanaxWebhookDailySettings {
      */
     'midnight_offset'?: number;
 }
+/**
+ * A playable class with its characteristics, appearance and class spell assignments.
+ */
 export interface Class {
     [key: string]: any;
 
@@ -385,7 +388,7 @@ export interface EffectZone {
     'raw'?: string;
     'shape': ZoneShape;
     /**
-     * Effective outer size of the area. A point has size 0; whole-map and custom-cell shapes omit it.
+     * Effective outer size of the area. A point has size 0. Whole-map and custom-cell shapes omit it.
      */
     'size'?: number | null;
     /**
@@ -624,6 +627,9 @@ export interface ModelError {
      */
     'details'?: string;
 }
+/**
+ * A monster with its grades, family, spawn locations and drops. Spell expansion is optional.
+ */
 export interface Monster {
     [key: string]: any;
 
@@ -741,7 +747,7 @@ export interface MonsterSpellRelationship {
      */
     'grade': number;
     /**
-     * Grade-specific spell URL; already includes the `grade` query parameter.
+     * URL for the assigned spell grade. Includes the `grade` query parameter.
      */
     'url': string;
     'image_urls'?: Images;
@@ -877,6 +883,9 @@ export const RssWebhookFormatEnum = {
 
 export type RssWebhookFormatEnum = typeof RssWebhookFormatEnum[keyof typeof RssWebhookFormatEnum];
 
+/**
+ * A spell with its available grades, effects and casting rules.
+ */
 export interface Spell {
     [key: string]: any;
 
@@ -3396,7 +3405,7 @@ export const GameDataApiAxiosParamCreator = function (configuration?: Configurat
          * @summary Get all monsters
          * @param {GetAllMonstersGameEnum} game 
          * @param {GetAllMonstersLanguageEnum} language 
-         * @param {GetAllMonstersIncludeEnum} [include] Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. &#x60;spells.grade&#x60; inlines that grade only; &#x60;spells&#x60; inlines the complete spell with every available grade.
+         * @param {GetAllMonstersIncludeEnum} [include] Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use &#x60;spells.grade&#x60; to embed the assigned spell grade. Use &#x60;spells&#x60; to embed every available grade of each assigned spell.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3744,7 +3753,7 @@ export const GameDataApiAxiosParamCreator = function (configuration?: Configurat
          * @param {GetMonsterByIdGameEnum} game 
          * @param {GetMonsterByIdLanguageEnum} language 
          * @param {number} ankamaId 
-         * @param {GetMonsterByIdIncludeEnum} [include] Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. &#x60;spells.grade&#x60; inlines that grade only; &#x60;spells&#x60; inlines the complete spell with every available grade.
+         * @param {GetMonsterByIdIncludeEnum} [include] Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use &#x60;spells.grade&#x60; to embed the assigned spell grade. Use &#x60;spells&#x60; to embed every available grade of each assigned spell.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -3793,7 +3802,7 @@ export const GameDataApiAxiosParamCreator = function (configuration?: Configurat
          * @param {number} [pageNumber] 
          * @param {number} [pageSize] 
          * @param {GetMonstersFieldsMonstersEnum} [fieldsMonsters] 
-         * @param {GetMonstersIncludeEnum} [include] Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. &#x60;spells.grade&#x60; inlines that grade only; &#x60;spells&#x60; inlines the complete spell with every available grade.
+         * @param {GetMonstersIncludeEnum} [include] Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use &#x60;spells.grade&#x60; to embed the assigned spell grade. Use &#x60;spells&#x60; to embed every available grade of each assigned spell.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4475,7 +4484,7 @@ export const GameDataApiFp = function(configuration?: Configuration) {
          * @summary Get all monsters
          * @param {GetAllMonstersGameEnum} game 
          * @param {GetAllMonstersLanguageEnum} language 
-         * @param {GetAllMonstersIncludeEnum} [include] Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. &#x60;spells.grade&#x60; inlines that grade only; &#x60;spells&#x60; inlines the complete spell with every available grade.
+         * @param {GetAllMonstersIncludeEnum} [include] Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use &#x60;spells.grade&#x60; to embed the assigned spell grade. Use &#x60;spells&#x60; to embed every available grade of each assigned spell.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4597,7 +4606,7 @@ export const GameDataApiFp = function(configuration?: Configuration) {
          * @param {GetMonsterByIdGameEnum} game 
          * @param {GetMonsterByIdLanguageEnum} language 
          * @param {number} ankamaId 
-         * @param {GetMonsterByIdIncludeEnum} [include] Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. &#x60;spells.grade&#x60; inlines that grade only; &#x60;spells&#x60; inlines the complete spell with every available grade.
+         * @param {GetMonsterByIdIncludeEnum} [include] Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use &#x60;spells.grade&#x60; to embed the assigned spell grade. Use &#x60;spells&#x60; to embed every available grade of each assigned spell.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4615,7 +4624,7 @@ export const GameDataApiFp = function(configuration?: Configuration) {
          * @param {number} [pageNumber] 
          * @param {number} [pageSize] 
          * @param {GetMonstersFieldsMonstersEnum} [fieldsMonsters] 
-         * @param {GetMonstersIncludeEnum} [include] Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. &#x60;spells.grade&#x60; inlines that grade only; &#x60;spells&#x60; inlines the complete spell with every available grade.
+         * @param {GetMonstersIncludeEnum} [include] Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use &#x60;spells.grade&#x60; to embed the assigned spell grade. Use &#x60;spells&#x60; to embed every available grade of each assigned spell.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4854,7 +4863,7 @@ export const GameDataApiFactory = function (configuration?: Configuration, baseP
          * @summary Get all monsters
          * @param {GetAllMonstersGameEnum} game 
          * @param {GetAllMonstersLanguageEnum} language 
-         * @param {GetAllMonstersIncludeEnum} [include] Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. &#x60;spells.grade&#x60; inlines that grade only; &#x60;spells&#x60; inlines the complete spell with every available grade.
+         * @param {GetAllMonstersIncludeEnum} [include] Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use &#x60;spells.grade&#x60; to embed the assigned spell grade. Use &#x60;spells&#x60; to embed every available grade of each assigned spell.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4952,7 +4961,7 @@ export const GameDataApiFactory = function (configuration?: Configuration, baseP
          * @param {GetMonsterByIdGameEnum} game 
          * @param {GetMonsterByIdLanguageEnum} language 
          * @param {number} ankamaId 
-         * @param {GetMonsterByIdIncludeEnum} [include] Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. &#x60;spells.grade&#x60; inlines that grade only; &#x60;spells&#x60; inlines the complete spell with every available grade.
+         * @param {GetMonsterByIdIncludeEnum} [include] Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use &#x60;spells.grade&#x60; to embed the assigned spell grade. Use &#x60;spells&#x60; to embed every available grade of each assigned spell.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4967,7 +4976,7 @@ export const GameDataApiFactory = function (configuration?: Configuration, baseP
          * @param {number} [pageNumber] 
          * @param {number} [pageSize] 
          * @param {GetMonstersFieldsMonstersEnum} [fieldsMonsters] 
-         * @param {GetMonstersIncludeEnum} [include] Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. &#x60;spells.grade&#x60; inlines that grade only; &#x60;spells&#x60; inlines the complete spell with every available grade.
+         * @param {GetMonstersIncludeEnum} [include] Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use &#x60;spells.grade&#x60; to embed the assigned spell grade. Use &#x60;spells&#x60; to embed every available grade of each assigned spell.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5167,7 +5176,7 @@ export class GameDataApi extends BaseAPI {
      * @summary Get all monsters
      * @param {GetAllMonstersGameEnum} game 
      * @param {GetAllMonstersLanguageEnum} language 
-     * @param {GetAllMonstersIncludeEnum} [include] Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. &#x60;spells.grade&#x60; inlines that grade only; &#x60;spells&#x60; inlines the complete spell with every available grade.
+     * @param {GetAllMonstersIncludeEnum} [include] Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use &#x60;spells.grade&#x60; to embed the assigned spell grade. Use &#x60;spells&#x60; to embed every available grade of each assigned spell.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
@@ -5273,7 +5282,7 @@ export class GameDataApi extends BaseAPI {
      * @param {GetMonsterByIdGameEnum} game 
      * @param {GetMonsterByIdLanguageEnum} language 
      * @param {number} ankamaId 
-     * @param {GetMonsterByIdIncludeEnum} [include] Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. &#x60;spells.grade&#x60; inlines that grade only; &#x60;spells&#x60; inlines the complete spell with every available grade.
+     * @param {GetMonsterByIdIncludeEnum} [include] Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use &#x60;spells.grade&#x60; to embed the assigned spell grade. Use &#x60;spells&#x60; to embed every available grade of each assigned spell.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
@@ -5289,7 +5298,7 @@ export class GameDataApi extends BaseAPI {
      * @param {number} [pageNumber] 
      * @param {number} [pageSize] 
      * @param {GetMonstersFieldsMonstersEnum} [fieldsMonsters] 
-     * @param {GetMonstersIncludeEnum} [include] Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. &#x60;spells.grade&#x60; inlines that grade only; &#x60;spells&#x60; inlines the complete spell with every available grade.
+     * @param {GetMonstersIncludeEnum} [include] Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use &#x60;spells.grade&#x60; to embed the assigned spell grade. Use &#x60;spells&#x60; to embed every available grade of each assigned spell.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */

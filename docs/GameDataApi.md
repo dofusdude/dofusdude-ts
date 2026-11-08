@@ -152,7 +152,7 @@ const apiInstance = new GameDataApi(configuration);
 
 let game: 'dofus3' | 'dofus3beta'; // (default to undefined)
 let language: 'en' | 'fr' | 'de' | 'es' | 'pt'; // (default to undefined)
-let include: 'spells.grade' | 'spells'; //Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. `spells.grade` inlines that grade only; `spells` inlines the complete spell with every available grade. (optional) (default to undefined)
+let include: 'spells.grade' | 'spells'; //Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use `spells.grade` to embed the assigned spell grade. Use `spells` to embed every available grade of each assigned spell. (optional) (default to undefined)
 
 const { status, data } = await apiInstance.getAllMonsters(
     game,
@@ -167,7 +167,7 @@ const { status, data } = await apiInstance.getAllMonsters(
 |------------- | ------------- | ------------- | -------------|
 | **game** | [**&#39;dofus3&#39; | &#39;dofus3beta&#39;**]**Array<&#39;dofus3&#39; &#124; &#39;dofus3beta&#39;>** |  | defaults to undefined|
 | **language** | [**&#39;en&#39; | &#39;fr&#39; | &#39;de&#39; | &#39;es&#39; | &#39;pt&#39;**]**Array<&#39;en&#39; &#124; &#39;fr&#39; &#124; &#39;de&#39; &#124; &#39;es&#39; &#124; &#39;pt&#39;>** |  | defaults to undefined|
-| **include** | [**&#39;spells.grade&#39; | &#39;spells&#39;**]**Array<&#39;spells.grade&#39; &#124; &#39;spells&#39;>** | Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. &#x60;spells.grade&#x60; inlines that grade only; &#x60;spells&#x60; inlines the complete spell with every available grade. | (optional) defaults to undefined|
+| **include** | [**&#39;spells.grade&#39; | &#39;spells&#39;**]**Array<&#39;spells.grade&#39; &#124; &#39;spells&#39;>** | Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use &#x60;spells.grade&#x60; to embed the assigned spell grade. Use &#x60;spells&#x60; to embed every available grade of each assigned spell. | (optional) defaults to undefined|
 
 
 ### Return type
@@ -608,7 +608,7 @@ const apiInstance = new GameDataApi(configuration);
 let game: 'dofus3' | 'dofus3beta'; // (default to undefined)
 let language: 'en' | 'fr' | 'de' | 'es' | 'pt'; // (default to undefined)
 let ankamaId: number; // (default to undefined)
-let include: 'spells.grade' | 'spells'; //Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. `spells.grade` inlines that grade only; `spells` inlines the complete spell with every available grade. (optional) (default to undefined)
+let include: 'spells.grade' | 'spells'; //Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use `spells.grade` to embed the assigned spell grade. Use `spells` to embed every available grade of each assigned spell. (optional) (default to undefined)
 
 const { status, data } = await apiInstance.getMonsterById(
     game,
@@ -625,7 +625,7 @@ const { status, data } = await apiInstance.getMonsterById(
 | **game** | [**&#39;dofus3&#39; | &#39;dofus3beta&#39;**]**Array<&#39;dofus3&#39; &#124; &#39;dofus3beta&#39;>** |  | defaults to undefined|
 | **language** | [**&#39;en&#39; | &#39;fr&#39; | &#39;de&#39; | &#39;es&#39; | &#39;pt&#39;**]**Array<&#39;en&#39; &#124; &#39;fr&#39; &#124; &#39;de&#39; &#124; &#39;es&#39; &#124; &#39;pt&#39;>** |  | defaults to undefined|
 | **ankamaId** | [**number**] |  | defaults to undefined|
-| **include** | [**&#39;spells.grade&#39; | &#39;spells&#39;**]**Array<&#39;spells.grade&#39; &#124; &#39;spells&#39;>** | Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. &#x60;spells.grade&#x60; inlines that grade only; &#x60;spells&#x60; inlines the complete spell with every available grade. | (optional) defaults to undefined|
+| **include** | [**&#39;spells.grade&#39; | &#39;spells&#39;**]**Array<&#39;spells.grade&#39; &#124; &#39;spells&#39;>** | Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use &#x60;spells.grade&#x60; to embed the assigned spell grade. Use &#x60;spells&#x60; to embed every available grade of each assigned spell. | (optional) defaults to undefined|
 
 
 ### Return type
@@ -670,7 +670,7 @@ let language: 'en' | 'fr' | 'de' | 'es' | 'pt'; // (default to undefined)
 let pageNumber: number; // (optional) (default to 1)
 let pageSize: number; // (optional) (default to 20)
 let fieldsMonsters: 'all'; // (optional) (default to undefined)
-let include: 'spells.grade' | 'spells'; //Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. `spells.grade` inlines that grade only; `spells` inlines the complete spell with every available grade. (optional) (default to undefined)
+let include: 'spells.grade' | 'spells'; //Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use `spells.grade` to embed the assigned spell grade. Use `spells` to embed every available grade of each assigned spell. (optional) (default to undefined)
 
 const { status, data } = await apiInstance.getMonsters(
     game,
@@ -691,7 +691,7 @@ const { status, data } = await apiInstance.getMonsters(
 | **pageNumber** | [**number**] |  | (optional) defaults to 1|
 | **pageSize** | [**number**] |  | (optional) defaults to 20|
 | **fieldsMonsters** | [**&#39;all&#39;**]**Array<&#39;all&#39;>** |  | (optional) defaults to undefined|
-| **include** | [**&#39;spells.grade&#39; | &#39;spells&#39;**]**Array<&#39;spells.grade&#39; &#124; &#39;spells&#39;>** | Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. &#x60;spells.grade&#x60; inlines that grade only; &#x60;spells&#x60; inlines the complete spell with every available grade. | (optional) defaults to undefined|
+| **include** | [**&#39;spells.grade&#39; | &#39;spells&#39;**]**Array<&#39;spells.grade&#39; &#124; &#39;spells&#39;>** | Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use &#x60;spells.grade&#x60; to embed the assigned spell grade. Use &#x60;spells&#x60; to embed every available grade of each assigned spell. | (optional) defaults to undefined|
 
 
 ### Return type
