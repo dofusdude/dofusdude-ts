@@ -1,5 +1,6 @@
 # MonsterSpawnLocation
 
+Known spawn subarea with its parent area, super-area and map membership. Does not assert a spawn on each listed map and does not include spawn probabilities.
 
 ## Properties
 
@@ -8,8 +9,8 @@ Name | Type | Description | Notes
 **subarea** | [**CombatReference**](CombatReference.md) |  | [default to undefined]
 **area** | [**CombatReference**](CombatReference.md) |  | [default to undefined]
 **super_area** | [**CombatReference**](CombatReference.md) |  | [default to undefined]
-**subarea_maps** | [**Array&lt;MonsterSpawnLocationSubareaMapsInner&gt;**](MonsterSpawnLocationSubareaMapsInner.md) |  | [default to undefined]
-**preferred** | **boolean** | Whether the game marks this as the monster\&#39;s preferred subarea. | [default to undefined]
+**subarea_maps** | [**Array&lt;MonsterSpawnLocationSubareaMapsInner&gt;**](MonsterSpawnLocationSubareaMapsInner.md) | Maps belonging to the referenced subarea. Map membership alone is not proof that the monster spawns on a particular map. | [default to undefined]
+**preferred** | **boolean** | Whether the source marks this as a preferred subarea. A preference flag, not a spawn percentage or guarantee of presence. | [default to undefined]
 
 ## Example
 

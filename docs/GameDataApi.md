@@ -734,7 +734,7 @@ const apiInstance = new GameDataApi(configuration);
 let game: 'dofus3' | 'dofus3beta'; // (default to undefined)
 let language: 'en' | 'fr' | 'de' | 'es' | 'pt'; // (default to undefined)
 let ankamaId: number; // (default to undefined)
-let grade: number; //Return only the requested mapped spell grade in `levels`. (optional) (default to undefined)
+let grade: number; //Select the spell variant identified by its explicit grade number, not its spell-level record ID or a player level. Returns the spell object with only that grade in levels. An unavailable grade returns 404. (optional) (default to undefined)
 
 const { status, data } = await apiInstance.getSpellById(
     game,
@@ -751,7 +751,7 @@ const { status, data } = await apiInstance.getSpellById(
 | **game** | [**&#39;dofus3&#39; | &#39;dofus3beta&#39;**]**Array<&#39;dofus3&#39; &#124; &#39;dofus3beta&#39;>** |  | defaults to undefined|
 | **language** | [**&#39;en&#39; | &#39;fr&#39; | &#39;de&#39; | &#39;es&#39; | &#39;pt&#39;**]**Array<&#39;en&#39; &#124; &#39;fr&#39; &#124; &#39;de&#39; &#124; &#39;es&#39; &#124; &#39;pt&#39;>** |  | defaults to undefined|
 | **ankamaId** | [**number**] |  | defaults to undefined|
-| **grade** | [**number**] | Return only the requested mapped spell grade in &#x60;levels&#x60;. | (optional) defaults to undefined|
+| **grade** | [**number**] | Select the spell variant identified by its explicit grade number, not its spell-level record ID or a player level. Returns the spell object with only that grade in levels. An unavailable grade returns 404. | (optional) defaults to undefined|
 
 
 ### Return type

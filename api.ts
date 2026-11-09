@@ -139,10 +139,13 @@ export interface Class {
     'image_urls'?: Images;
     'looks': ClassLooks;
     /**
-     * Fully mapped class spells, including levels, effects, targeting, and zones.
+     * Full spell definitions assigned to this playable class, including their own grades, effects and targeting. A class has no monster-grade dimension. The same spells are independently available from the spells endpoint.
      */
     'spells': Array<Spell>;
 }
+/**
+ * Structured client appearance data for an asset renderer. Bone and skin IDs are not image URLs. Use the parent record\'s image_urls for ready-to-display artwork.
+ */
 export interface ClassAppearance {
     'bones_id': number;
     'skin_ids': Array<number>;
@@ -170,7 +173,7 @@ export interface CombatCondition {
     'reference'?: CombatReference;
 }
 /**
- * A resolved game reference used by selectors, conditions, and triggers.
+ * A compact resolved reference, not a complete resource. Interpret the ID in the context of the containing field. IDs in different resource types can have the same numeric value without referring to the same entity.
  */
 export interface CombatReference {
     [key: string]: any;
@@ -180,9 +183,25 @@ export interface CombatReference {
     'kind'?: string;
 }
 export interface Condition {
+    /**
+     * Comparison to apply to the interpreted requirement value.
+     */
     'operator'?: string;
     'int_value'?: number;
     'element'?: TranslatedId;
+    /**
+     * Interpreted requirement category, such as profession_level or item_received_age. Use this with the operator, values and references rather than decoding original condition tokens.
+     */
+    'kind'?: string;
+    /**
+     * Unit associated with the requirement value when the interpreted condition supplies one.
+     */
+    'unit'?: string;
+    'quantity'?: number;
+    'string_value'?: string;
+    'value_label'?: string;
+    'reference'?: CombatReference;
+    'secondary_reference'?: CombatReference;
 }
 export interface ConditionLeaf {
     /**
@@ -193,6 +212,7 @@ export interface ConditionLeaf {
 }
 /**
  * @type ConditionNode
+ * Client-side requirement tree. Leaf nodes contain one condition and relation nodes combine children with and or or. Preserves grouping. Not an authoritative server eligibility decision.
  */
 export type ConditionNode = ConditionLeaf | ConditionRelation;
 
@@ -381,6 +401,9 @@ export interface EffectType {
      */
     'is_meta'?: boolean;
 }
+/**
+ * Combat-cell area for this effect or activation context, not a geographic world area. Shape, size and inner size describe geometry. Actual affected cells can depend on position, direction and fight state. Each spell effect can have a different zone.
+ */
 export interface EffectZone {
     /**
      * Original compact zone encoding when the source provides one.
@@ -395,6 +418,9 @@ export interface EffectZone {
      * Effective inner size for hollow or minimum-size shapes. Omitted when the shape has no inner boundary.
      */
     'min_size'?: number | null;
+    /**
+     * Explicit cells for a custom-cell shape. An empty array is normal for geometric shapes such as circles and does not mean the zone affects no cells.
+     */
     'cell_ids': Array<number>;
     'damage_decrease_step_percent'?: number;
     'max_damage_decrease_apply_count'?: number;
@@ -600,6 +626,9 @@ export type MappedEntityCollectionSpellsInner = MappedEntityListEntry | Spell;
  */
 export type MappedEntityCollectionSuperAreasInner = MappedEntityListEntry | WorldArea;
 
+/**
+ * Compact collection summary. A missing detail field here does not mean the resource lacks that data. Request the single-record endpoint or the collection\'s full fields to obtain details.
+ */
 export interface MappedEntityListEntry {
     'ankama_id': number;
     'name': string;
@@ -638,11 +667,11 @@ export interface Monster {
     'image_urls'?: Images;
     'race': MonsterRace;
     /**
-     * Monster statistics and spells grouped by the monster grade that uses them.
+     * Variants of this monster. Each has its own combat level, statistics and assigned spells. The monster grade number is not a spell grade number or combat level.
      */
     'grades': Array<MonsterGrade>;
     /**
-     * Spawn subareas taken from the monster\'s authoritative subarea list.
+     * Known spawn subareas and their geographic parents. This is not live population data or a per-map spawn probability. Maps listed within a subarea are not guaranteed individual spawn points.
      */
     'spawn_locations': Array<MonsterSpawnLocation>;
     'drops': Array<MonsterDrop>;
@@ -657,12 +686,18 @@ export interface Monster {
     'souls'?: Array<{ [key: string]: any; }>;
     'characteristic_ratios'?: Array<Array<number>>;
 }
+/**
+ * A possible item drop with base rates indexed by monster grade. Final player-specific chances also depend on conditions and game modifiers.
+ */
 export interface MonsterDrop {
     'item': CombatReference;
     /**
-     * Base drop percentage for each monster grade.
+     * Base drop percentages indexed by MonsterGrade.grade, not spell grade or array position. A value of 5 means 5 percent, not 0.05 percent. These are not spawn percentages.
      */
     'rates_percent': Array<MonsterDropRatesPercentInner>;
+    /**
+     * The source reports restrictions. Can be true without a complete client-side condition tree because server-only predicates are not exposed.
+     */
     'has_conditions': boolean;
     'drop_id'?: number;
     'count'?: number;
@@ -675,6 +710,9 @@ export interface MonsterDropRatesPercentInner {
     'grade': number;
     'percent': number;
 }
+/**
+ * A separate global-drop entry with a base percentage range. It is not the per-monster-grade rates table and does not by itself define a final player-specific drop chance.
+ */
 export interface MonsterGlobalDrop {
     'has_conditions'?: boolean;
     'item': CombatReference;
@@ -684,10 +722,19 @@ export interface MonsterGlobalDrop {
     'alteration_id'?: number;
     'disable_drop_modifier'?: boolean;
 }
+/**
+ * One variant of this monster, combining combat level, statistics and spell assignments. Match grade-specific drop rates using its grade value. Do not use it to infer a spell grade.
+ */
 export interface MonsterGrade {
     [key: string]: any;
 
+    /**
+     * Number identifying this variant within the monster. Not the combat level, array position or grade of an assigned spell.
+     */
     'grade': number;
+    /**
+     * Combat level of this monster variant. Distinct from its grade number.
+     */
     'level': number;
     'life_points'?: number;
     'action_points'?: number;
@@ -718,18 +765,27 @@ export interface MonsterGrade {
  */
 export type MonsterGradeSpellsInner = MonsterSpellRelationship | Spell;
 
+/**
+ * Monster taxonomy. Race is the monster\'s family and super_race is the broader grouping. Neither is a playable class or a monster grade.
+ */
 export interface MonsterRace {
     'ankama_id': number;
     'name': string;
     'super_race': CombatReference;
 }
+/**
+ * Known spawn subarea with its parent area, super-area and map membership. Does not assert a spawn on each listed map and does not include spawn probabilities.
+ */
 export interface MonsterSpawnLocation {
     'subarea': CombatReference;
     'area': CombatReference;
     'super_area': CombatReference;
+    /**
+     * Maps belonging to the referenced subarea. Map membership alone is not proof that the monster spawns on a particular map.
+     */
     'subarea_maps': Array<MonsterSpawnLocationSubareaMapsInner>;
     /**
-     * Whether the game marks this as the monster\'s preferred subarea.
+     * Whether the source marks this as a preferred subarea. A preference flag, not a spawn percentage or guarantee of presence.
      */
     'preferred': boolean;
 }
@@ -737,13 +793,19 @@ export interface MonsterSpawnLocationSubareaMapsInner {
     'ankama_id': number;
     'position_x': number;
     'position_y': number;
+    /**
+     * World-map context for these coordinates. Coordinates alone are not a globally unique map identifier.
+     */
     'world_map_id': number;
 }
+/**
+ * Compact spell assignment inside one monster grade. The assignment\'s grade identifies the spell variant, not the enclosing monster variant. Follow url unchanged to retrieve it or use an include option to embed it.
+ */
 export interface MonsterSpellRelationship {
     'ankama_id': number;
     'name': string;
     /**
-     * The spell grade assigned to this monster grade.
+     * Grade of the assigned spell. It does not need to equal the enclosing MonsterGrade.grade.
      */
     'grade': number;
     /**
@@ -896,21 +958,46 @@ export interface Spell {
     'admin_name'?: string;
     'order'?: number;
     'image_urls'?: Images;
-    'type'?: CombatReference;
+    'type'?: SpellType;
+    'base_preview_zone'?: EffectZone;
+    /**
+     * Reverse references to playable classes associated with this spell. These are compact references, not complete class documents.
+     */
     'classes'?: Array<CombatReference>;
+    /**
+     * Reverse references to monsters associated with this spell. Use a monster\'s grade-specific assignments to determine which spell grade it uses.
+     */
     'monsters'?: Array<CombatReference>;
+    /**
+     * Available spell grades. Despite the field name, entries are not player levels. A grade-filtered detail response contains only the requested entry while retaining the parent spell object.
+     */
     'levels': Array<SpellLevel>;
     'scripts'?: Array<SpellScriptUsage>;
     'critical_scripts'?: Array<SpellScriptUsage>;
 }
+/**
+ * One normal or critical effect of a particular spell grade. Its zone defines where it applies, target_mask defines eligible targets and triggers defines activation events. Templated text is for display, not a formula to parse.
+ */
 export interface SpellEffect {
     [key: string]: any;
 
-    'type'?: CombatReference;
+    /**
+     * Localized effect category, such as Air damage. This is not a spell ID or a structured game reference.
+     */
+    'type'?: string;
     'min'?: number;
     'max'?: number;
+    /**
+     * Effect duration in fight turns as represented by the source. Not a real-time duration in seconds.
+     */
     'duration'?: number;
+    /**
+     * Delay before the effect in fight turns as represented by the source.
+     */
     'delay'?: number;
+    /**
+     * Source random-selection value. Do not interpret it as a percentage without the effect\'s selection rules.
+     */
     'random'?: number;
     'group'?: number;
     'dispellable'?: number;
@@ -925,27 +1012,90 @@ export interface SpellEffect {
     'zone'?: EffectZone;
     'target_mask'?: TargetMask;
     'triggers'?: SpellTriggers;
-    'templated'?: { [key: string]: any; };
+    /**
+     * Localized effect text suitable for display. Numeric effect properties remain available separately.
+     */
+    'templated'?: string;
 }
+/**
+ * One grade of a spell. The levels array contains these spell variants, not player levels. Grade numbers are local to the containing spell and are independent of monster grades.
+ */
 export interface SpellLevel {
     [key: string]: any;
 
+    /**
+     * ID of the spell-level definition. Different from the parent spell ID and from the grade number. Used by explicit spell-level references such as script spell_level_ids.
+     */
     'ankama_id'?: number;
+    /**
+     * Number identifying this variant within its spell. Select by this value, not by the array position. Used by the spell detail endpoint\'s grade parameter.
+     */
     'grade'?: number;
+    /**
+     * Action points required to cast this spell grade.
+     */
     'ap_cost'?: number;
+    /**
+     * Base critical-hit percentage recorded for this spell grade, before fighter-specific modifiers.
+     */
+    'critical_hit_probability'?: number;
+    /**
+     * Player-level requirement recorded for this spell grade. This is not its grade number or a monster combat level.
+     */
+    'min_player_level'?: number;
+    /**
+     * Minimum casting range in combat cells.
+     */
     'min_range'?: number;
+    /**
+     * Maximum casting range in combat cells as defined by this grade.
+     */
     'max_range'?: number;
+    /**
+     * Per-caster cast limit within a turn as recorded by the source.
+     */
     'max_cast_per_turn'?: number;
     'max_cast_per_target'?: number;
     'max_global_cast_per_turn'?: number;
     'max_global_cast_per_target'?: number;
+    /**
+     * Minimum interval between casts, measured in fight turns.
+     */
     'min_cast_interval'?: number;
+    /**
+     * Initial wait before casting, measured in fight turns.
+     */
     'initial_cooldown'?: number;
     'global_cooldown'?: number;
     'ignore_prison_glyph'?: boolean;
     'spell_breed'?: number;
+    /**
+     * Available client-side state requirements for this spell grade. Null does not assert that the server imposes no restriction.
+     */
+    'states_criterion'?: EligibilityNode | null;
+    /**
+     * Client preview and activation geometry for this grade. Use each effect\'s zone for its actual effect-area definition.
+     */
+    'preview_zones'?: Array<SpellPreviewZone>;
+    /**
+     * Normal-cast effects for this grade. Each entry has independent targeting and area geometry.
+     */
     'effects'?: Array<SpellEffect>;
+    /**
+     * Critical-cast effects for this grade. Keep separate from normal effects rather than applying both arrays to every cast.
+     */
     'critical_effects'?: Array<SpellEffect>;
+}
+/**
+ * Client preview binding. Activation criteria and display geometry serve a different purpose from an effect\'s zone.
+ */
+export interface SpellPreviewZone {
+    'ankama_id'?: number;
+    'activation_mask'?: TargetMask;
+    'caster_mask'?: TargetMask;
+    'hidden'?: boolean;
+    'activation_zone'?: EffectZone;
+    'display_zone'?: EffectZone;
 }
 /**
  * Resolved client-side spell script binding, including target selection and areas.
@@ -965,6 +1115,9 @@ export interface SpellScriptUsage {
     'condition'?: { [key: string]: any; } | null;
     'targets_affected_concurrently'?: boolean;
     'target_treated_as_caster'?: boolean;
+    /**
+     * Spell-level definition IDs to which this script binding applies. Match SpellLevel.ankama_id, not Spell.ankama_id or SpellLevel.grade.
+     */
     'spell_level_ids'?: Array<number>;
 }
 export interface SpellTrigger {
@@ -980,6 +1133,9 @@ export interface SpellTrigger {
     'subject'?: string;
     'reference'?: CombatReference;
 }
+/**
+ * Determines when an effect activates. Events are not additional effects to apply unconditionally. Use logic with the resolved event names and descriptions instead of parsing raw tokens.
+ */
 export interface SpellTriggers {
     /**
      * Original trigger tokens retained for lossless debugging.
@@ -988,6 +1144,17 @@ export interface SpellTriggers {
     'logic'?: string;
     'events': Array<SpellTrigger>;
 }
+/**
+ * Classification of a spell, with localized short and long labels. Not a playable class, spell grade or monster family.
+ */
+export interface SpellType {
+    'ankama_id'?: number;
+    'short_name'?: string;
+    'long_name'?: string;
+}
+/**
+ * Determines who an effect may affect. Combine the resolved selectors and conditions using logic. This is distinct from the zone geometry and from the event that triggers the effect.
+ */
 export interface TargetMask {
     /**
      * Original game mask retained for lossless debugging.
@@ -1068,21 +1235,56 @@ export interface Weapon {
     'parent_set'?: TranslatedId | null;
     'combat'?: WeaponCombat;
 }
+/**
+ * Weapon attack targeting and area geometry. Available for weapon equipment. This is separate from spell effect zones.
+ */
 export interface WeaponCombat {
     'zone': EffectZone;
     'cast_in_line': boolean;
     'cast_in_diagonal': boolean;
     'requires_line_of_sight': boolean;
 }
+/**
+ * Geographic data from a super-area, area or subarea endpoint. The hierarchy is super-area to area to subarea to map. Field availability depends on the selected geographic resource. Unrelated to combat-cell effect zones.
+ */
 export interface WorldArea {
     [key: string]: any;
 
     'ankama_id': number;
     'name': string;
+    /**
+     * World-map context supplied on super-area records.
+     */
+    'world_map_id'?: number;
+    /**
+     * Child area references supplied on super-area records.
+     */
+    'areas'?: Array<CombatReference>;
+    /**
+     * Suggested geographic difficulty level supplied on subarea records. Not a monster grade or the level of every monster there.
+     */
+    'level'?: number;
+    /**
+     * Dungeon association when supplied by the subarea data.
+     */
+    'dungeon_id'?: number;
+    /**
+     * Map membership supplied on subarea records. Does not imply a spawn on every map.
+     */
+    'maps'?: Array<WorldMapReference>;
     'super_area'?: CombatReference;
     'area'?: CombatReference;
     'subareas'?: Array<CombatReference>;
     'monsters'?: Array<CombatReference>;
+}
+/**
+ * A map ID and its position within a world-map context. Maps can share coordinates in different contexts.
+ */
+export interface WorldMapReference {
+    'ankama_id'?: number;
+    'position_x'?: number;
+    'position_y'?: number;
+    'world_map_id'?: number;
 }
 export interface ZoneShape {
     'code': string;
@@ -1144,7 +1346,7 @@ export const AlmanaxApiAxiosParamCreator = function (configuration?: Configurati
          * Get a range of dates, defaults to today + 6 following days but can specified by the query parameters.   filter[bonus_type] can be used seperately and does not have an effect on the other parameters.  range[from] changes the start date, everything else defaults to 6 following dates from this start date.  range[to] when used without anything else, it will use today as start date and this parameter as end. All ranges are inclusive.  range[from] + range[to] = inclusive range over the specified dates, should never be farther apart than 35 days.  range[from|to] + range[size] no need to specify the date, just following days with [from] (0 is today) or go backwards in time with only [to] and [size].  Not all combinations are listed but this should give you an idea how to they could work.
          * @summary Almanax Range
          * @param {GetAlmanaxRangeLanguageEnum} language code
-         * @param {string} [filterBonusType] ids from meta/{language}/almanax/bonuses
+         * @param {string} [filterBonusType] Optional bonus ID from meta/{language}/almanax/bonuses. Restricts the selected date range and can produce no results when that bonus does not occur in the range.
          * @param {string} [rangeFrom] yyyy-mm-dd
          * @param {string} [rangeTo] yyyy-mm-dd
          * @param {number} [rangeSize] Size of the returned range. Disable to fully use the range by setting size to -1.
@@ -1236,7 +1438,7 @@ export const AlmanaxApiFp = function(configuration?: Configuration) {
          * Get a range of dates, defaults to today + 6 following days but can specified by the query parameters.   filter[bonus_type] can be used seperately and does not have an effect on the other parameters.  range[from] changes the start date, everything else defaults to 6 following dates from this start date.  range[to] when used without anything else, it will use today as start date and this parameter as end. All ranges are inclusive.  range[from] + range[to] = inclusive range over the specified dates, should never be farther apart than 35 days.  range[from|to] + range[size] no need to specify the date, just following days with [from] (0 is today) or go backwards in time with only [to] and [size].  Not all combinations are listed but this should give you an idea how to they could work.
          * @summary Almanax Range
          * @param {GetAlmanaxRangeLanguageEnum} language code
-         * @param {string} [filterBonusType] ids from meta/{language}/almanax/bonuses
+         * @param {string} [filterBonusType] Optional bonus ID from meta/{language}/almanax/bonuses. Restricts the selected date range and can produce no results when that bonus does not occur in the range.
          * @param {string} [rangeFrom] yyyy-mm-dd
          * @param {string} [rangeTo] yyyy-mm-dd
          * @param {number} [rangeSize] Size of the returned range. Disable to fully use the range by setting size to -1.
@@ -1276,7 +1478,7 @@ export const AlmanaxApiFactory = function (configuration?: Configuration, basePa
          * Get a range of dates, defaults to today + 6 following days but can specified by the query parameters.   filter[bonus_type] can be used seperately and does not have an effect on the other parameters.  range[from] changes the start date, everything else defaults to 6 following dates from this start date.  range[to] when used without anything else, it will use today as start date and this parameter as end. All ranges are inclusive.  range[from] + range[to] = inclusive range over the specified dates, should never be farther apart than 35 days.  range[from|to] + range[size] no need to specify the date, just following days with [from] (0 is today) or go backwards in time with only [to] and [size].  Not all combinations are listed but this should give you an idea how to they could work.
          * @summary Almanax Range
          * @param {GetAlmanaxRangeLanguageEnum} language code
-         * @param {string} [filterBonusType] ids from meta/{language}/almanax/bonuses
+         * @param {string} [filterBonusType] Optional bonus ID from meta/{language}/almanax/bonuses. Restricts the selected date range and can produce no results when that bonus does not occur in the range.
          * @param {string} [rangeFrom] yyyy-mm-dd
          * @param {string} [rangeTo] yyyy-mm-dd
          * @param {number} [rangeSize] Size of the returned range. Disable to fully use the range by setting size to -1.
@@ -1312,7 +1514,7 @@ export class AlmanaxApi extends BaseAPI {
      * Get a range of dates, defaults to today + 6 following days but can specified by the query parameters.   filter[bonus_type] can be used seperately and does not have an effect on the other parameters.  range[from] changes the start date, everything else defaults to 6 following dates from this start date.  range[to] when used without anything else, it will use today as start date and this parameter as end. All ranges are inclusive.  range[from] + range[to] = inclusive range over the specified dates, should never be farther apart than 35 days.  range[from|to] + range[size] no need to specify the date, just following days with [from] (0 is today) or go backwards in time with only [to] and [size].  Not all combinations are listed but this should give you an idea how to they could work.
      * @summary Almanax Range
      * @param {GetAlmanaxRangeLanguageEnum} language code
-     * @param {string} [filterBonusType] ids from meta/{language}/almanax/bonuses
+     * @param {string} [filterBonusType] Optional bonus ID from meta/{language}/almanax/bonuses. Restricts the selected date range and can produce no results when that bonus does not occur in the range.
      * @param {string} [rangeFrom] yyyy-mm-dd
      * @param {string} [rangeTo] yyyy-mm-dd
      * @param {number} [rangeSize] Size of the returned range. Disable to fully use the range by setting size to -1.
@@ -3858,7 +4060,7 @@ export const GameDataApiAxiosParamCreator = function (configuration?: Configurat
          * @param {GetSpellByIdGameEnum} game 
          * @param {GetSpellByIdLanguageEnum} language 
          * @param {number} ankamaId 
-         * @param {number} [grade] Return only the requested mapped spell grade in &#x60;levels&#x60;.
+         * @param {number} [grade] Select the spell variant identified by its explicit grade number, not its spell-level record ID or a player level. Returns the spell object with only that grade in levels. An unavailable grade returns 404.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4640,7 +4842,7 @@ export const GameDataApiFp = function(configuration?: Configuration) {
          * @param {GetSpellByIdGameEnum} game 
          * @param {GetSpellByIdLanguageEnum} language 
          * @param {number} ankamaId 
-         * @param {number} [grade] Return only the requested mapped spell grade in &#x60;levels&#x60;.
+         * @param {number} [grade] Select the spell variant identified by its explicit grade number, not its spell-level record ID or a player level. Returns the spell object with only that grade in levels. An unavailable grade returns 404.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -4989,7 +5191,7 @@ export const GameDataApiFactory = function (configuration?: Configuration, baseP
          * @param {GetSpellByIdGameEnum} game 
          * @param {GetSpellByIdLanguageEnum} language 
          * @param {number} ankamaId 
-         * @param {number} [grade] Return only the requested mapped spell grade in &#x60;levels&#x60;.
+         * @param {number} [grade] Select the spell variant identified by its explicit grade number, not its spell-level record ID or a player level. Returns the spell object with only that grade in levels. An unavailable grade returns 404.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -5312,7 +5514,7 @@ export class GameDataApi extends BaseAPI {
      * @param {GetSpellByIdGameEnum} game 
      * @param {GetSpellByIdLanguageEnum} language 
      * @param {number} ankamaId 
-     * @param {number} [grade] Return only the requested mapped spell grade in &#x60;levels&#x60;.
+     * @param {number} [grade] Select the spell variant identified by its explicit grade number, not its spell-level record ID or a player level. Returns the spell object with only that grade in levels. An unavailable grade returns 404.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */

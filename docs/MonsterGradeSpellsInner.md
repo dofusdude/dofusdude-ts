@@ -7,17 +7,18 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ankama_id** | **number** |  | [default to undefined]
 **name** | **string** |  | [default to undefined]
-**grade** | **number** | The spell grade assigned to this monster grade. | [default to undefined]
+**grade** | **number** | Grade of the assigned spell. It does not need to equal the enclosing MonsterGrade.grade. | [default to undefined]
 **url** | **string** | URL for the assigned spell grade. Includes the &#x60;grade&#x60; query parameter. | [default to undefined]
 **image_urls** | [**Images**](Images.md) |  | [optional] [default to undefined]
 **description** | **string** |  | [optional] [default to undefined]
 **icon_id** | **number** |  | [optional] [default to undefined]
 **admin_name** | **string** |  | [optional] [default to undefined]
 **order** | **number** |  | [optional] [default to undefined]
-**type** | [**CombatReference**](CombatReference.md) |  | [optional] [default to undefined]
-**classes** | [**Array&lt;CombatReference&gt;**](CombatReference.md) |  | [optional] [default to undefined]
-**monsters** | [**Array&lt;CombatReference&gt;**](CombatReference.md) |  | [optional] [default to undefined]
-**levels** | [**Array&lt;SpellLevel&gt;**](SpellLevel.md) |  | [default to undefined]
+**type** | [**SpellType**](SpellType.md) |  | [optional] [default to undefined]
+**base_preview_zone** | [**EffectZone**](EffectZone.md) |  | [optional] [default to undefined]
+**classes** | [**Array&lt;CombatReference&gt;**](CombatReference.md) | Reverse references to playable classes associated with this spell. These are compact references, not complete class documents. | [optional] [default to undefined]
+**monsters** | [**Array&lt;CombatReference&gt;**](CombatReference.md) | Reverse references to monsters associated with this spell. Use a monster\&#39;s grade-specific assignments to determine which spell grade it uses. | [optional] [default to undefined]
+**levels** | [**Array&lt;SpellLevel&gt;**](SpellLevel.md) | Available spell grades. Despite the field name, entries are not player levels. A grade-filtered detail response contains only the requested entry while retaining the parent spell object. | [default to undefined]
 **scripts** | [**Array&lt;SpellScriptUsage&gt;**](SpellScriptUsage.md) |  | [optional] [default to undefined]
 **critical_scripts** | [**Array&lt;SpellScriptUsage&gt;**](SpellScriptUsage.md) |  | [optional] [default to undefined]
 
@@ -37,6 +38,7 @@ const instance: MonsterGradeSpellsInner = {
     admin_name,
     order,
     type,
+    base_preview_zone,
     classes,
     monsters,
     levels,

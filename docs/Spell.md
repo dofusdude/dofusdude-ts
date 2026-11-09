@@ -13,10 +13,11 @@ Name | Type | Description | Notes
 **admin_name** | **string** |  | [optional] [default to undefined]
 **order** | **number** |  | [optional] [default to undefined]
 **image_urls** | [**Images**](Images.md) |  | [optional] [default to undefined]
-**type** | [**CombatReference**](CombatReference.md) |  | [optional] [default to undefined]
-**classes** | [**Array&lt;CombatReference&gt;**](CombatReference.md) |  | [optional] [default to undefined]
-**monsters** | [**Array&lt;CombatReference&gt;**](CombatReference.md) |  | [optional] [default to undefined]
-**levels** | [**Array&lt;SpellLevel&gt;**](SpellLevel.md) |  | [default to undefined]
+**type** | [**SpellType**](SpellType.md) |  | [optional] [default to undefined]
+**base_preview_zone** | [**EffectZone**](EffectZone.md) |  | [optional] [default to undefined]
+**classes** | [**Array&lt;CombatReference&gt;**](CombatReference.md) | Reverse references to playable classes associated with this spell. These are compact references, not complete class documents. | [optional] [default to undefined]
+**monsters** | [**Array&lt;CombatReference&gt;**](CombatReference.md) | Reverse references to monsters associated with this spell. Use a monster\&#39;s grade-specific assignments to determine which spell grade it uses. | [optional] [default to undefined]
+**levels** | [**Array&lt;SpellLevel&gt;**](SpellLevel.md) | Available spell grades. Despite the field name, entries are not player levels. A grade-filtered detail response contains only the requested entry while retaining the parent spell object. | [default to undefined]
 **scripts** | [**Array&lt;SpellScriptUsage&gt;**](SpellScriptUsage.md) |  | [optional] [default to undefined]
 **critical_scripts** | [**Array&lt;SpellScriptUsage&gt;**](SpellScriptUsage.md) |  | [optional] [default to undefined]
 
@@ -34,6 +35,7 @@ const instance: Spell = {
     order,
     image_urls,
     type,
+    base_preview_zone,
     classes,
     monsters,
     levels,

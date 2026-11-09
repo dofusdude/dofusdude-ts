@@ -81,7 +81,7 @@ const configuration = new Configuration();
 const apiInstance = new AlmanaxApi(configuration);
 
 let language: 'en' | 'fr' | 'de' | 'es' | 'pt'; //code (default to undefined)
-let filterBonusType: string; //ids from meta/{language}/almanax/bonuses (optional) (default to undefined)
+let filterBonusType: string; //Optional bonus ID from meta/{language}/almanax/bonuses. Restricts the selected date range and can produce no results when that bonus does not occur in the range. (optional) (default to undefined)
 let rangeFrom: string; //yyyy-mm-dd (optional) (default to undefined)
 let rangeTo: string; //yyyy-mm-dd (optional) (default to undefined)
 let rangeSize: number; //Size of the returned range. Disable to fully use the range by setting size to -1. (optional) (default to undefined)
@@ -104,7 +104,7 @@ const { status, data } = await apiInstance.getAlmanaxRange(
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 | **language** | [**&#39;en&#39; | &#39;fr&#39; | &#39;de&#39; | &#39;es&#39; | &#39;pt&#39;**]**Array<&#39;en&#39; &#124; &#39;fr&#39; &#124; &#39;de&#39; &#124; &#39;es&#39; &#124; &#39;pt&#39;>** | code | defaults to undefined|
-| **filterBonusType** | [**string**] | ids from meta/{language}/almanax/bonuses | (optional) defaults to undefined|
+| **filterBonusType** | [**string**] | Optional bonus ID from meta/{language}/almanax/bonuses. Restricts the selected date range and can produce no results when that bonus does not occur in the range. | (optional) defaults to undefined|
 | **rangeFrom** | [**string**] | yyyy-mm-dd | (optional) defaults to undefined|
 | **rangeTo** | [**string**] | yyyy-mm-dd | (optional) defaults to undefined|
 | **rangeSize** | [**number**] | Size of the returned range. Disable to fully use the range by setting size to -1. | (optional) defaults to undefined|

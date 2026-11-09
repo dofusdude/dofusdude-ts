@@ -90,9 +90,11 @@ docs/SetsApi.md
 docs/Spell.md
 docs/SpellEffect.md
 docs/SpellLevel.md
+docs/SpellPreviewZone.md
 docs/SpellScriptUsage.md
 docs/SpellTrigger.md
 docs/SpellTriggers.md
+docs/SpellType.md
 docs/TargetMask.md
 docs/TargetSelector.md
 docs/TranslatedId.md
@@ -102,6 +104,7 @@ docs/Weapon.md
 docs/WeaponCombat.md
 docs/WebhooksApi.md
 docs/WorldArea.md
+docs/WorldMapReference.md
 docs/ZoneShape.md
 git_push.sh
 index.ts

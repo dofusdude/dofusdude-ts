@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **condition** | **{ [key: string]: any; }** |  | [optional] [default to undefined]
 **targets_affected_concurrently** | **boolean** |  | [optional] [default to undefined]
 **target_treated_as_caster** | **boolean** |  | [optional] [default to undefined]
-**spell_level_ids** | **Array&lt;number&gt;** |  | [optional] [default to undefined]
+**spell_level_ids** | **Array&lt;number&gt;** | Spell-level definition IDs to which this script binding applies. Match SpellLevel.ankama_id, not Spell.ankama_id or SpellLevel.grade. | [optional] [default to undefined]
 
 ## Example
 

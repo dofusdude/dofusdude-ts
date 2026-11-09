@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **ankama_id** | **number** |  | [default to undefined]
 **position_x** | **number** |  | [default to undefined]
 **position_y** | **number** |  | [default to undefined]
-**world_map_id** | **number** |  | [default to undefined]
+**world_map_id** | **number** | World-map context for these coordinates. Coordinates alone are not a globally unique map identifier. | [default to undefined]
 
 ## Example
 
