@@ -32,6 +32,7 @@ All URIs are relative to *https://beta.api.dofusdu.de*
 # **getAllAreas**
 > MappedEntityCollection getAllAreas()
 
+Returns every complete geographic area record, including its super-area reference and child subareas, without pagination. These relationships describe geography rather than combat effect zones.
 
 ### Example
 
@@ -85,6 +86,7 @@ No authorization required
 # **getAllClasses**
 > MappedEntityCollection getAllClasses()
 
+Returns full playable-class definitions without pagination, including their assigned spells and each spell\'s available grades. Classes do not have monster grades. For smaller responses use the paginated classes endpoint or request one class by ID.
 
 ### Example
 
@@ -138,6 +140,7 @@ No authorization required
 # **getAllMonsters**
 > MappedEntityCollection getAllMonsters()
 
+Returns complete monster definitions without pagination. Grades group each variant\'s statistics and spell assignments. Drop percentages are indexed by monster grade. Known spawn subareas are not live population or per-map spawn probabilities. Spell expansion is optional. This bulk response can be large, so prefer pagination when possible.
 
 ### Example
 
@@ -194,6 +197,7 @@ No authorization required
 # **getAllSpells**
 > MappedEntityCollection getAllSpells()
 
+Returns complete spell definitions and all available grades without pagination. Each grade has its own costs, casting rules, normal effects and critical effects. Bulk responses can be large. Prefer pagination for interactive or incremental use.
 
 ### Example
 
@@ -247,6 +251,7 @@ No authorization required
 # **getAllSubareas**
 > MappedEntityCollection getAllSubareas()
 
+Returns complete subareas, map membership and monster references without pagination. Maps belong to the subarea but are not guaranteed spawn locations for every associated monster. Prefer pagination for smaller responses.
 
 ### Example
 
@@ -300,6 +305,7 @@ No authorization required
 # **getAllSuperAreas**
 > MappedEntityCollection getAllSuperAreas()
 
+Returns every complete super-area record and its child area references without pagination. A super-area groups geographic areas and supplies a world-map context. It is not a spell effect zone.
 
 ### Example
 
@@ -353,6 +359,7 @@ No authorization required
 # **getAreaById**
 > WorldArea getAreaById()
 
+Returns an area\'s parent super-area and child subarea references. References contain an ID and localized name, not a complete nested record. Use the corresponding resource endpoint to load details. Matching numeric IDs in different resource types do not establish a relationship.
 
 ### Example
 
@@ -410,6 +417,7 @@ No authorization required
 # **getAreas**
 > MappedEntityCollection getAreas()
 
+Lists geographic area summaries. An area belongs to a super-area and groups subareas. Request fields[areas]=all or an area detail record for those relationships. Use QUERY rather than GET for structured JSON filtering and sorting.
 
 ### Example
 
@@ -473,6 +481,7 @@ No authorization required
 # **getClassById**
 > Class getClassById()
 
+Returns a playable class, also called a breed in the client data. Its spells array contains full spell definitions. Each spell has its own levels array of spell grades. The class itself does not have grades, and a spell grade is not a character level.  Characteristic cost tiers describe point costs. Appearance bone and skin IDs are asset-renderer inputs, not image URLs. Use image_urls for ready-to-display artwork. IDs identify records independently of their translated names. Assigned spells can also be requested from the spells endpoint without loading the class again.
 
 ### Example
 
@@ -530,6 +539,7 @@ No authorization required
 # **getClasses**
 > MappedEntityCollection getClasses()
 
+Lists playable classes, also called breeds in the client data. Results are compact summaries by default. Request fields[classes]=all for class characteristics, appearance and full assigned spell definitions. Spell grades belong to each spell, not to the class. Use the detail endpoint for one full class. Existing GET pagination and field parameters remain unchanged. Use QUERY for structured JSON filtering.
 
 ### Example
 
@@ -593,6 +603,7 @@ No authorization required
 # **getMonsterById**
 > Monster getMonsterById()
 
+Returns a monster definition. race is its family and race.super_race is the broader monster grouping. Neither is a playable class. Each entry in grades is one monster variant with a grade number, a separate combat level, statistics and assigned spells. Select by explicit grade values, not array positions or a fixed assumed grade count.  Spell assignments belong to the enclosing monster grade. Their grade values identify spell variants and need not equal the monster grade. Default assignments contain URLs that already select the assigned spell grade. Follow them unchanged. include=spells.grade embeds just the assigned variant in each spell\'s levels array. include=spells embeds every available spell grade instead. These are optional expansions of an independently addressable resource.  Match drops[].rates_percent[].grade to the monster grade, not the spell grade. Percentages are base drop rates before player-specific modifiers. global_drops provides ranges instead of that grade-rate table. Client condition trees preserve and/or grouping but exclude server-only predicates. A missing tree does not guarantee eligibility, even when has_conditions is true.  spawn_locations identifies known spawn subareas and their geographic parents. subarea_maps lists subarea membership, not guaranteed spawn maps. preferred is a source preference flag, not a probability. The endpoint does not report live presence or per-map spawn percentages.
 
 ### Example
 
@@ -653,6 +664,7 @@ No authorization required
 # **getMonsters**
 > MappedEntityCollection getMonsters()
 
+Lists monster summaries. Request fields[monsters]=all or the monster detail endpoint for variants, statistics, drop rates and known spawn subareas. A monster grade is a variant with its own combat level, not that level itself. Optional include values expand spell assignments. GET retains its existing pagination, field and include parameters. Use QUERY for structured filtering and sorting.
 
 ### Example
 
@@ -719,6 +731,7 @@ No authorization required
 # **getSpellById**
 > Spell getSpellById()
 
+Returns a spell and its available grades in levels. A grade is a variant with its own action-point cost, range, casting limits and effects. Select by levels[].grade, not array position. levels[].ankama_id is the separate spell-level record ID. min_player_level records a player-level requirement and is not a grade number.  Pass grade to return only that variant inside the same spell object. An unavailable grade returns 404. For example, /spells/10198?grade=1 selects spell grade 1. This does not imply that monster grade 1 is the only monster variant using it.  Keep normal effects and critical_effects separate. Each effect has its own combat-cell zone, target_mask and triggers. These describe where, who and when it affects. Preview and script zones do not replace effect zones. Use resolved names and descriptions instead of decoding raw tokens. Templated text is localized display text, not a formula to parse. This endpoint supplies definitions, not a full fight simulation or final damage calculation.
 
 ### Example
 
@@ -779,6 +792,7 @@ No authorization required
 # **getSpells**
 > MappedEntityCollection getSpells()
 
+Lists independent spell records as compact summaries. Request fields[spells]=all for their grades and effects, or use the spell detail endpoint for one spell. The levels field contains spell variants called grades, not player levels. Existing GET pagination and field parameters remain unchanged. Structured filters and sorting belong to QUERY and do not trim grades from matching spell records.
 
 ### Example
 
@@ -842,6 +856,7 @@ No authorization required
 # **getSubareaById**
 > WorldArea getSubareaById()
 
+Returns one geographic subarea with its parent area and super-area, maps and monster references. Its level is a geographic difficulty indicator, not a monster grade or the combat level of every associated monster.  A map\'s ankama_id identifies the map. Interpret position_x and position_y with world_map_id because coordinates alone are not globally unique. Map membership does not prove that a monster spawns on every map or is currently present. Monster references can be followed through the monster endpoint for grade-specific statistics, base drop rates and known spawn subareas. This endpoint does not provide spawn percentages.
 
 ### Example
 
@@ -899,6 +914,7 @@ No authorization required
 # **getSubareas**
 > MappedEntityCollection getSubareas()
 
+Lists subarea summaries. A subarea belongs to an area and super-area and contains maps. Request fields[subareas]=all or a detail record for map membership and monster associations. Associations are not live monster presence or per-map spawn probabilities.
 
 ### Example
 
@@ -962,6 +978,7 @@ No authorization required
 # **getSuperAreaById**
 > WorldArea getSuperAreaById()
 
+Returns one broad geographic region with its child areas and world_map_id. Follow child area IDs to the areas endpoint to continue toward subareas and maps. World geography is independent of spell and weapon combat-cell geometry.
 
 ### Example
 
@@ -1019,6 +1036,7 @@ No authorization required
 # **getSuperAreas**
 > MappedEntityCollection getSuperAreas()
 
+Lists summaries of the broadest geographic regions. The hierarchy is super-area to area to subarea to map. These world areas are unrelated to combat-cell effect zones. Request fields[super_areas]=all or a detail record for child area references and world-map context.
 
 ### Example
 
@@ -1082,6 +1100,7 @@ No authorization required
 # **searchAreas**
 > Array<MappedEntityListEntry> searchAreas()
 
+Searches localized geographic area names by relevance and returns compact summaries. Use the detail endpoint to obtain the parent super-area and child subareas.
 
 ### Example
 
@@ -1142,6 +1161,7 @@ No authorization required
 # **searchClasses**
 > Array<MappedEntityListEntry> searchClasses()
 
+Searches localized class names by relevance and returns compact summaries. Search is distinct from structured filtering. Use a returned ankama_id with the class detail endpoint for characteristics, appearance and assigned spell definitions.
 
 ### Example
 
@@ -1202,6 +1222,7 @@ No authorization required
 # **searchMonsters**
 > Array<MappedEntityListEntry> searchMonsters()
 
+Searches localized monster names by relevance and returns summaries. Each result identifies a monster definition, not one combat-level variant. Use the detail endpoint for grades, taxonomy, drops and known spawn subareas.
 
 ### Example
 
@@ -1262,6 +1283,7 @@ No authorization required
 # **searchSpells**
 > Array<MappedEntityListEntry> searchSpells()
 
+Searches localized spell names by relevance and returns compact summaries. The result ID identifies the spell, not a grade. Request the detail endpoint for available grades, or pass grade to that detail endpoint to select one variant.
 
 ### Example
 
@@ -1322,6 +1344,7 @@ No authorization required
 # **searchSubareas**
 > Array<MappedEntityListEntry> searchSubareas()
 
+Searches localized subarea names by relevance and returns summaries. Use the detail endpoint for parent areas, map positions and monster associations. Search results do not indicate live monster populations.
 
 ### Example
 
@@ -1382,6 +1405,7 @@ No authorization required
 # **searchSuperAreas**
 > Array<MappedEntityListEntry> searchSuperAreas()
 
+Searches localized super-area names by relevance. Results are geographic-region summaries. Use a returned ID with the detail endpoint for child areas and world-map context.
 
 ### Example
 
